@@ -1,0 +1,2053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel_3_xl" />
+        <device id="pixel_2" />
+        <device id="pixel" />
+        <device id="Nexus 7" />
+        <device id="pixel_2_xl" />
+        <device id="Nexus 5X" />
+        <device id="pixel_xl" />
+        <device id="Galaxy Nexus" />
+        <device id="Nexus 6" />
+        <device id="Nexus 4" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AvailableLibraryUpdateStorage">
+    <library-updates>
+      <library-update>
+        <group-id>org.jetbrains.kotlin</group-id>
+        <name>kotlin-stdlib-jdk7</name>
+        <version>1.3.40</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>de.hdodenhof</group-id>
+        <name>circleimageview</name>
+        <version>3.0.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>org.greenrobot</group-id>
+        <name>eventbus</name>
+        <version>3.1.1</version>
+        <repository>Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.onesignal</group-id>
+        <name>OneSignal</name>
+        <version>3.10.9</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.android.gms</group-id>
+        <name>play-services-analytics</name>
+        <version>16.0.8</version>
+        <repository>Google,Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.retrofit2</group-id>
+        <name>converter-gson</name>
+        <version>2.6.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>commons-codec</group-id>
+        <name>commons-codec</name>
+        <version>20041127.091804</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.github.rubensousa</group-id>
+        <name>bottomsheetbuilder</name>
+        <version>1.3</version>
+        <repository>Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.retrofit2</group-id>
+        <name>retrofit</name>
+        <version>2.6.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.zxing</group-id>
+        <name>core</name>
+        <version>3.4.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>recyclerview-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.jakewharton</group-id>
+        <name>butterknife-compiler</name>
+        <version>10.1.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.daimajia.swipelayout</group-id>
+        <name>library</name>
+        <version>1.2.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>appcompat-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.flaviofaria</group-id>
+        <name>kenburnsview</name>
+        <version>1.0.7</version>
+        <repository>Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>design</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.jakewharton</group-id>
+        <name>butterknife</name>
+        <version>10.1.0</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>cardview-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.robinhood.ticker</group-id>
+        <name>ticker</name>
+        <version>2.0.1</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.picasso</group-id>
+        <name>picasso</name>
+        <version>2.71828</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.koushikdutta.ion</group-id>
+        <name>ion</name>
+        <version>2.2.1</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.orhanobut</group-id>
+        <name>dialogplus</name>
+        <version>1.11</version>
+        <repository>JCenter,Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.constraint</group-id>
+        <name>constraint-layout</name>
+        <version>2.0.0-beta1</version>
+        <repository>Google</repository>
+      </library-update>
+    </library-updates>
+    <last-search-timestamp>1561124386001</last-search-timestamp>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../../Prit Server Apps Backup/GoogleNews/app/src/main/java/com/example/admin/googlenews/MainActivity.java" description="sendImagetoServer();" line="284" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a223c576-db36-42db-82dc-4ab31ada622d" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="logobs-vyapari-v2-android-f6af73917c2e" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="logobs-vyapari-v2-android-f6af73917c2e" type="f1a62948:ProjectNode" />
+                <item name=":app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="logobs-vyapari-v2-android-f6af73917c2e" type="f1a62948:ProjectNode" />
+                <item name=":app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="logobs-vyapari-v2-android-f6af73917c2e" type="f1a62948:ProjectNode" />
+                <item name=":app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductDetailForInvoiceActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="299" column="21" lean-forward="true" selection-start-line="299" selection-start-column="21" selection-end-line="299" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="87" column="81" selection-start-line="87" selection-start-column="81" selection-end-line="87" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="347" column="85" selection-start-line="347" selection-start-column="85" selection-end-line="347" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/ServiceRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="79" column="3" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/SplashActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4199">
+              <caret line="293" column="15" selection-start-line="282" selection-start-column="8" selection-end-line="293" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/CurrencyUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/CollectionFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1564">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3094">
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>STATE_EXPANDED</find>
+      <find>bottomSheetLayout</find>
+      <find>getSaleInvoiceDetailCall</find>
+      <find>othera</find>
+      <find>RetailSalesinvoice</find>
+      <find>pan</find>
+      <find>icon_up</find>
+      <find>layoutFabwholsale</find>
+      <find>layoutFabSettings</find>
+      <find>fab</find>
+      <find>PaymentAmount</find>
+      <find>Mainac</find>
+      <find>createInvoice</find>
+      <find>fragmentTransaction</find>
+      <find>frame</find>
+      <find>onBackPressed</find>
+      <find>CreateInvoiceActivity</find>
+      <find>partybalance</find>
+      <find>/api/firm/search</find>
+      <find>balance</find>
+      <find>CurrencyUtil.doubleToCurrency</find>
+      <find>Rs.</find>
+      <find>invoices_item_price</find>
+      <find>price</find>
+      <find>setCollectionTypeInSharedPrefrenceFirst</find>
+      <find>DashboardAdapter</find>
+      <find>Add and sa</find>
+      <find>create_and_add_product</find>
+      <find>setSACHSNCode</find>
+      <find>HSNSACCodesActivity</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>companyImageViews</replace>
+      <replace>reg</replace>
+      <replace>in.co.vyapari.new</replace>
+      <replace>in.co.vyapari.prit</replace>
+      <replace>in.co.vyapari</replace>
+      <replace>collection_rv</replace>
+      <replace>payment_rv</replace>
+      <replace>payment_ll</replace>
+      <replace>webView</replace>
+      <replace />
+      <replace>invoicedto</replace>
+      <replace>RegisterActivity1</replace>
+      <replace>Create.equalsIgnoreCase(&quot;true&quot;)</replace>
+      <replace>mContext</replace>
+      <replace>optionss</replace>
+      <replace>optionsCustomer</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app\src\main\java\in\co\vyapari\prit\ui\activity\common</dir>
+    </dirStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="D:\Pritesh\Logo Vyapari App\keystore\logokeyplaystore1.jks" />
+    <option name="KEY_ALIAS" value="logoinfosoft" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_product.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/constant/Constants.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/setting_popup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_body_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/ServiceRequest.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dasboardbotomshitadapter.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/generic/BottomSheetLayout.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/toolbar_invoice.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_approve.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_material.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_customer_chart.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_collection_details.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/invoice/InvoicesAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/leftrightcorner.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/rightcorner.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/rightcornerblue.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/leftcornerblue.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/leftcorner.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_material_chart.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fab_payment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/setting_update_popup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/photo_selection.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fab_submenu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_products.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_purchases.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_firms.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/collection_popup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/EditProductActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java" />
+        <option value="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MswipeWseriesUniversalDRDSDKVer1.0.14v3.5.1.aar/531e3c871f862100aad0260951bc61e6/res/values/values.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/SalesFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dasboardbotomsheetadapter.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CollectionDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/DashboardAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/CollectionPaymentAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/CurrencyUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/Dashboard/MaterialChartActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/Dashboard/CustomerChartActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/Dashboard/DashboardActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductDetailForInvoiceActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/LoginActivity.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="100" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="820" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="firm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="invoice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="PaymentCollection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logobs-vyapari-v2-android-f6af73917c2e" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vyapari" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="motorola-motoe2-T00940U2EX" />
+    <property name="DEBUGGABLE_PROCESS" value="in.co.vyapari" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="ExportApk.ApkPath" value="D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app" />
+    <property name="ExportApk.BuildType" value="release" />
+    <property name="ExportApk.Flavors" value="" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="Nexus_5X_API_27" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/android-fit-master/android-fit-master/StepCounter" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="project.structure.last.edited" value="Suggestions" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="instant.run" />
+    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.2.1" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1557226259436" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app\src\main\res\layout" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="in.co.vyapari.ui.fragment" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="in.co.vyapari.ui.activity.Dashboard" />
+      <recent name="in.co.vyapari.ui.activity.ChatWithUs" />
+      <recent name="in.co.vyapari.ui.activity.PaymentCollection" />
+      <recent name="in.co.vyapari.ui.activity.management" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="in.co.vyapari.model" />
+      <recent name="in.co.vyapari.model.response" />
+      <recent name="in.co.vyapari.model.response.dto" />
+      <recent name="in.co.vyapari.ui.activity.user" />
+      <recent name="in.co.vyapari.ui.activity.invoice" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app\src\main\res\drawable-hdpi" />
+      <recent name="D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app\src\main\res\drawable-xhdpi" />
+      <recent name="D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app\lib" />
+      <recent name="D:\Pritesh\Logo Vyapari App\logobs-vyapari-v2-android-f6af73917c2e\app\src\main\res\layout" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a223c576-db36-42db-82dc-4ab31ada622d" name="Default" comment="" />
+      <created>1553509839830</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553509839830</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.706334" visible="true" weight="0.2866324" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Build Variants" order="3" sideWeight="0.29366603" side_tool="true" weight="0.23071979" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Captures" order="6" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Resources Explorer" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32839838" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32839838" />
+      <window_info anchor="bottom" x="22" y="322" width="1556" height="215" id="Debug" order="3" sideWeight="0.4974293" weight="0.28936744" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32839838" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4974293" weight="0.25706595" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5025707" side_tool="true" weight="0.25706595" />
+      <window_info anchor="bottom" x="-12" y="610" width="1556" height="225" id="Logcat" order="10" sideWeight="0.49871466" visible="true" weight="0.29475102" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32974428" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Device File Explorer" order="4" sideWeight="0.501002" side_tool="true" weight="0.32969153" />
+      <window_info anchor="right" id="Gradle" order="5" sideWeight="0.498998" weight="0.32969153" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Preview" order="8" weight="0.2667095" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.32969153" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/InvoiceService.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>398</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>1369</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>1327</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>1356</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/FirmService.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/FirmService.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/FirmService.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/CreateFirmActivity.java</url>
+          <line>512</line>
+          <properties />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java</url>
+          <line>304</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>193</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>200</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/CreateFirmActivity.java</url>
+          <line>523</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/CreateFirmActivity.java</url>
+          <line>517</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>167</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/FirmService.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/model/response/dto/pradrobjDTO.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>505</line>
+          <properties />
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>228</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/UserService.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/UserService.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>514</line>
+          <properties />
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/management/EditCompanyActivity.java</url>
+          <line>771</line>
+          <properties />
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/swipe/SwipeController.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/swipe/SwipeController.java</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>667</line>
+          <properties />
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/ProductsFragment.java</url>
+          <line>296</line>
+          <properties />
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/prit/ui/activity/product/CreateProductActivity.java</url>
+          <line>283</line>
+          <properties />
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/prit/middleware/service/ProductService.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/prit/ui/fragment/ProductsFragment.java</url>
+          <line>321</line>
+          <properties />
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>249</line>
+          <properties />
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/EditFirmActivity.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/invoice/InvoicesAdapter.java</url>
+          <line>965</line>
+          <properties />
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java</url>
+          <line>316</line>
+          <properties />
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java</url>
+          <line>300</line>
+          <properties />
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/EditProductActivity.java</url>
+          <line>378</line>
+          <properties />
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/EditProductActivity.java</url>
+          <line>382</line>
+          <properties />
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/EditProductActivity.java</url>
+          <line>389</line>
+          <properties />
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>226</line>
+          <properties />
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java</url>
+          <line>309</line>
+          <properties />
+          <option name="timeStamp" value="248" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>241</line>
+          <properties />
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>207</line>
+          <properties />
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>117</line>
+          <properties />
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/CreateFirmActivity.java</url>
+          <line>180</line>
+          <properties />
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/CreateFirmActivity.java</url>
+          <line>463</line>
+          <properties />
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="277" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/common/address/CreateAddressActivity.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="278" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/firm/CreateFirmActivity.java</url>
+          <line>503</line>
+          <properties />
+          <option name="timeStamp" value="279" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/UserService.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="300" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/CollectionFragment.java</url>
+          <line>202</line>
+          <properties />
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="357" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>238</line>
+          <properties />
+          <option name="timeStamp" value="358" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>484</line>
+          <properties />
+          <option name="timeStamp" value="360" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductForInvoiceActivity.java</url>
+          <line>364</line>
+          <properties />
+          <option name="timeStamp" value="362" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductForInvoiceActivity.java</url>
+          <line>349</line>
+          <properties />
+          <option name="timeStamp" value="365" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/invoice/InvoicesAdapter.java</url>
+          <line>836</line>
+          <properties />
+          <option name="timeStamp" value="368" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/invoice/InvoicesAdapter.java</url>
+          <line>413</line>
+          <properties />
+          <option name="timeStamp" value="369" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreatePaymentActivity.java</url>
+          <line>294</line>
+          <properties />
+          <option name="timeStamp" value="371" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreateCollectionActivity.java</url>
+          <line>307</line>
+          <properties />
+          <option name="timeStamp" value="372" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java</url>
+          <line>174</line>
+          <properties />
+          <option name="timeStamp" value="386" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductForInvoiceActivity.java</url>
+          <line>371</line>
+          <properties />
+          <option name="timeStamp" value="387" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductForInvoiceActivity.java</url>
+          <line>374</line>
+          <properties />
+          <option name="timeStamp" value="388" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>207</line>
+          <properties />
+          <option name="timeStamp" value="395" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>213</line>
+          <properties />
+          <option name="timeStamp" value="396" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="412" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1121</line>
+          <properties />
+          <option name="timeStamp" value="419" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="420" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1156</line>
+          <properties />
+          <option name="timeStamp" value="421" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1158</line>
+          <properties />
+          <option name="timeStamp" value="422" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1093</line>
+          <properties />
+          <option name="timeStamp" value="423" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1095</line>
+          <properties />
+          <option name="timeStamp" value="424" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>307</line>
+          <properties />
+          <option name="timeStamp" value="425" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>313</line>
+          <properties />
+          <option name="timeStamp" value="426" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>1314</line>
+          <properties />
+          <option name="timeStamp" value="427" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>1307</line>
+          <properties />
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>829</line>
+          <properties />
+          <option name="timeStamp" value="430" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>854</line>
+          <properties />
+          <option name="timeStamp" value="431" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>622</line>
+          <properties />
+          <option name="timeStamp" value="439" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>609</line>
+          <properties />
+          <option name="timeStamp" value="440" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>578</line>
+          <properties />
+          <option name="timeStamp" value="441" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>613</line>
+          <properties />
+          <option name="timeStamp" value="442" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java</url>
+          <line>628</line>
+          <properties />
+          <option name="timeStamp" value="443" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1077</line>
+          <properties />
+          <option name="timeStamp" value="444" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>303</line>
+          <properties />
+          <option name="timeStamp" value="445" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>304</line>
+          <properties />
+          <option name="timeStamp" value="446" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>230</line>
+          <properties />
+          <option name="timeStamp" value="460" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreateCollectionActivity.java</url>
+          <line>406</line>
+          <properties />
+          <option name="timeStamp" value="487" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/InvoiceDetailActivity.java</url>
+          <line>416</line>
+          <properties />
+          <option name="timeStamp" value="514" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/invoice/InvoicesAdapter.java</url>
+          <line>794</line>
+          <properties />
+          <option name="timeStamp" value="516" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CollectionDetailActivity.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="517" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CollectionDetailActivity.java</url>
+          <line>191</line>
+          <properties />
+          <option name="timeStamp" value="518" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreatePaymentActivity.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="519" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CollectionDetailActivity.java</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="521" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreateCollectionActivity.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="522" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreateCollectionActivity.java</url>
+          <line>310</line>
+          <properties />
+          <option name="timeStamp" value="523" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreateCollectionActivity.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="524" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CollectionDetailActivity.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="526" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1144</line>
+          <properties />
+          <option name="timeStamp" value="540" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>203</line>
+          <properties />
+          <option name="timeStamp" value="541" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1173</line>
+          <properties />
+          <option name="timeStamp" value="542" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>566</line>
+          <properties />
+          <option name="timeStamp" value="543" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/management/EditCompanyActivity.java</url>
+          <line>165</line>
+          <properties />
+          <option name="timeStamp" value="544" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java</url>
+          <line>189</line>
+          <properties />
+          <option name="timeStamp" value="555" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>282</line>
+          <properties />
+          <option name="timeStamp" value="561" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/management/EditCompanyActivity.java</url>
+          <line>535</line>
+          <properties />
+          <option name="timeStamp" value="565" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java</url>
+          <line>1503</line>
+          <properties />
+          <option name="timeStamp" value="571" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java</url>
+          <line>246</line>
+          <properties />
+          <option name="timeStamp" value="587" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/CollectionFragment.java</url>
+          <line>335</line>
+          <properties />
+          <option name="timeStamp" value="593" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/management/EditCompanyActivity.java</url>
+          <line>156</line>
+          <properties />
+          <option name="timeStamp" value="602" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/management/EditCompanyActivity.java</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="603" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>1454</line>
+          <properties />
+          <option name="timeStamp" value="608" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java</url>
+          <line>826</line>
+          <properties />
+          <option name="timeStamp" value="611" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/CurrencyUtil.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="613" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java</url>
+          <line>266</line>
+          <properties />
+          <option name="timeStamp" value="615" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java</url>
+          <line>269</line>
+          <properties />
+          <option name="timeStamp" value="616" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/CurrencyUtil.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="619" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/CurrencyUtil.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="620" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java</url>
+          <line>232</line>
+          <properties />
+          <option name="timeStamp" value="623" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java</url>
+          <line>241</line>
+          <properties />
+          <option name="timeStamp" value="625" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java</url>
+          <line>277</line>
+          <properties />
+          <option name="timeStamp" value="626" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java</url>
+          <line>256</line>
+          <properties />
+          <option name="timeStamp" value="627" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductDetailForInvoiceActivity.java</url>
+          <line>681</line>
+          <properties />
+          <option name="timeStamp" value="628" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductDetailForInvoiceActivity.java</url>
+          <line>653</line>
+          <properties />
+          <option name="timeStamp" value="634" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductDetailForInvoiceActivity.java</url>
+          <line>685</line>
+          <properties />
+          <option name="timeStamp" value="635" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="((Class)((MainThreadExecutor)((ExecutorCallbackCall)call).callbackExecutor).shadow$_klass_).ifTable" custom="retrofit2.Platform.Android.MainThreadExecutor,retrofit2.ExecutorCallAdapterFactory.ExecutorCallbackCall,java.lang.Class" />
+        <watch expression="response.data" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fab_submenu.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <element signature="e#389#424#0" expanded="true" />
+            <element signature="e#448#481#0" expanded="true" />
+            <element signature="e#507#542#0" expanded="true" />
+            <element signature="e#569#602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_firms.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/collection_popup.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="239" column="30" selection-start-line="239" selection-start-column="30" selection-end-line="239" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/EditProductActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
+          <folding>
+            <element signature="e#13105#13151#0" expanded="true" />
+            <element signature="e#13215#13237#0" expanded="true" />
+            <element signature="e#13244#13539#0" expanded="true" />
+            <element signature="e#13538#13539#0" expanded="true" />
+            <element signature="e#13561#13587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MswipeWseriesUniversalDRDSDKVer1.0.14v3.5.1.aar/531e3c871f862100aad0260951bc61e6/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="626" column="34" selection-start-line="626" selection-start-column="34" selection-end-line="626" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/generic/firecrasher/CrashHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#1768#2785#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/InvoiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/base/SohoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_invoice.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="67" column="49" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/FirmService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/FirmsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="274" column="32" lean-forward="true" selection-start-line="274" selection-start-column="32" selection-end-line="274" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_firm.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="118" column="50" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/FirmsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/model/Invoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="e#7339#7340#0" expanded="true" />
+            <element signature="e#7370#7371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/model/Currency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dasboardbotomsheetadapter.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_invoices.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3672">
+          <caret line="216" column="52" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-27/android.jar!/java/text/NumberFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CollectionDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="228" column="87" selection-start-line="228" selection-start-column="87" selection-end-line="228" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/PaymentCollection/CreatePaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="229" column="82" selection-start-line="229" selection-start-column="12" selection-end-line="229" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/invoice/InvoicesAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="245" column="11" selection-start-line="245" selection-start-column="11" selection-end-line="245" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#49173#49174#0" expanded="true" />
+            <element signature="e#49217#49218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/CollectionPaymentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="189" column="87" selection-start-line="189" selection-start-column="87" selection-end-line="189" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/adapter/DashboardAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/Dashboard/MaterialChartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="228" column="34" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/Dashboard/CustomerChartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="137" column="9" selection-start-line="137" selection-start-column="9" selection-end-line="137" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+          <folding>
+            <element signature="e#7111#7144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3638">
+          <caret line="268" column="34" selection-start-line="268" selection-start-column="34" selection-end-line="268" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/SalesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="200" column="22" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/CreateInvoiceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="201" column="62" selection-start-line="201" selection-start-column="62" selection-end-line="201" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-27/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="688" column="22" selection-start-line="688" selection-start-column="22" selection-end-line="688" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/Dashboard/DashboardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/app/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/product/CreateProductActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4199">
+          <caret line="293" column="15" selection-start-line="282" selection-start-column="8" selection-end-line="293" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/util/CurrencyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/fragment/CollectionFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3094">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/invoice/SelectProductDetailForInvoiceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/CommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="347" column="85" selection-start-line="347" selection-start-column="85" selection-end-line="347" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="87" column="81" selection-start-line="87" selection-start-column="81" selection-end-line="87" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/middleware/ServiceRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="79" column="3" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/co/vyapari/ui/activity/user/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="299" column="21" lean-forward="true" selection-start-line="299" selection-start-column="21" selection-end-line="299" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

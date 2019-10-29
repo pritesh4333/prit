@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_radius">5dp</dimen>
+
+    <dimen name="collapsed_height">80dp</dimen>
+    <dimen name="collapsed_height_product">50dp</dimen>
+</resources>

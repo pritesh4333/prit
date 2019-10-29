@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_detail" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textview_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/BRANCH" />
+
+                <EditText
+                    android:id="@+id/edit_bank_branch"
+                    style="@style/edittext_1"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@color/border_5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/textview_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/BRANCH_CODE" />
+
+                        <EditText
+                            android:id="@+id/edit_bank_branch_code"
+                            style="@style/edittext_1"
+                            android:layout_width="match_parent"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:scaleType="fitXY"
+                            android:src="@color/border_5" />
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/textview_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FOREIGN_EXCHANGE" />
+
+                        <in.co.vyapari.ui.generic.MySpinner
+                            android:id="@+id/edit_bank_currency_sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/font_5" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:scaleType="fitXY"
+                            android:src="@color/border_5" />
+                    </LinearLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textview_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ACCOUNT_NUMBER" />
+
+                    <EditText
+                        android:id="@+id/edit_bank_account_number"
+                        style="@style/edittext_1"
+                        android:layout_width="match_parent"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:scaleType="fitXY"
+                        android:src="@color/border_5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textview_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/IBAN" />
+
+                    <EditText
+                        android:id="@+id/edit_bank_iban"
+                        style="@style/edittext_1"
+                        android:layout_width="match_parent"
+                        android:inputType="textCapCharacters|textNoSuggestions"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:scaleType="fitXY"
+                        android:src="@color/border_5" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_bottom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/edit_bank_delete_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="10"
+                android:background="@color/soho_red"
+                android:text="@string/delete"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/edit_bank_submit_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="24"
+                android:background="@color/soho_blue"
+                android:text="@string/save"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

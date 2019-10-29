@@ -1,0 +1,343 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        card_view:cardCornerRadius="@dimen/card_radius">
+
+        <LinearLayout
+            android:id="@+id/invoiceLine_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="23"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/invoiceLine_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Logo CRM"
+                        android:textColor="@color/font_24"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/invoiceLine_hsn_sac_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/invoiceLine_tax_layout_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/item_invoice_io_sgst_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="@string/SGST2"
+                                android:textColor="@color/font_12"
+                                android:textSize="9sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_sgst_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginBottom="1dp"
+                                android:gravity="center"
+                                android:text="₺120,00"
+                                android:textColor="@color/font_10"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/item_invoice_io_cgst_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="@string/CGST2"
+                                android:textColor="@color/font_12"
+                                android:textSize="9sp"
+                                android:visibility="visible" />
+
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_cgst_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginBottom="1dp"
+                                android:gravity="center"
+                                android:text="₺120,00"
+                                android:textColor="@color/font_10"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/item_invoice_io_igst_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="@string/IGST2"
+                                android:textColor="@color/font_12"
+                                android:textSize="9sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_igst_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginBottom="1dp"
+                                android:gravity="center"
+                                android:text="₺120,00"
+                                android:textColor="@color/font_10"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/item_invoice_io_cess_layout"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/background_2" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:text="@string/CESS2"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/item_invoice_io_cess_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="130.68"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_discount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="@string/DISCOUNT"
+                                android:textColor="@color/font_12"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_discount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="₺500,00"
+                                android:textColor="@color/font_10"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/item_invoice_io_general_discount_label_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_general_discount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/font_12"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/item_invoice_io_general_discount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="₺500,00"
+                                android:textColor="@color/font_10"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/line_7" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/invoiceLine_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxLines="2"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="₺100,00"
+                        android:textColor="@color/font_7"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/invoiceLine_quantity_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/invoiceLine_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="end"
+                            android:text="3"
+                            android:textColor="@color/font_12"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/invoiceLine_quantity_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="end"
+                            android:text="@string/PIECE"
+                            android:textAllCaps="true"
+                            android:textColor="@color/font_12"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

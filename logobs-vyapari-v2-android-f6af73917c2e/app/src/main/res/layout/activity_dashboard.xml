@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.Dashboard.DashboardActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <include layout="@layout/toolbar_invoice" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/box_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.6"
+                    android:text="@string/cash"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <com.robinhood.ticker.TickerView
+                    android:id="@+id/cash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.4"
+                    android:gravity="end"
+                    android:text="₹0.00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:ticker_animationDuration="1000"
+                    app:ticker_defaultCharacterList="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/box_border"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.6"
+                    android:text="@string/bank"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <com.robinhood.ticker.TickerView
+                    android:id="@+id/Bank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.4"
+                    android:gravity="end"
+                    android:text="₹0.00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:ticker_animationDuration="1000"
+                    app:ticker_defaultCharacterList="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/box_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.6"
+                    android:text="@string/Collection"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <com.robinhood.ticker.TickerView
+                    android:id="@+id/Collection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.4"
+                    android:gravity="end"
+                    android:text="₹0.00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:ticker_animationDuration="1000"
+                    app:ticker_defaultCharacterList="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/box_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.6"
+                    android:text="@string/payments"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <com.robinhood.ticker.TickerView
+                    android:id="@+id/Payment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0.4"
+                    android:gravity="end"
+                    android:text="₹0.00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:ticker_animationDuration="1000"
+                    app:ticker_defaultCharacterList="number" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/HighestGrossingMaterial"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/material"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/itemchart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/KeyCustomers"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/customer"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/customerchart"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+
+    >
+    <!--<com.robinhood.ticker.TickerView-->
+        <!--android:id="@+id/tickerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--app:ticker_defaultCharacterList="number"-->
+        <!--android:textSize="20sp"-->
+        <!--app:ticker_animationDuration="6000"-->
+      <!--/>-->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:indeterminate="true" />
+
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+
+</LinearLayout>

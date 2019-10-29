@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="warehousedelivery.taaxgenie.in.androidrestart">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- This permission is need to check the internet connection state !-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--&lt;!&ndash; This permission is need to get backgroun app and intent requir to start setting !&ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>-->
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/download"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/download"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name=".BootCompletedIntentReceiver"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <!-- For pre-N devices -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!--<service android:name=".HelloService"-->
+            <!--android:permission="android.permission.BIND_JOB_SERVICE"-->
+            <!--&gt;</service>-->
+        <receiver
+            android:name=".DBAlarmReceiver"
+            android:exported="true"
+            android:process=":remote" >
+        </receiver>
+        <receiver
+            android:name=".ServerAlarmReceiver"
+            android:exported="true"
+            android:process=":remote" >
+        </receiver>
+        <service android:name=".BackgroundService" />
+    </application>
+
+</manifest>

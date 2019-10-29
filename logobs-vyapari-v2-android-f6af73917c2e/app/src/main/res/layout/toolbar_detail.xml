@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:contentScrim="@color/colorAccent">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapsing_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentScrim="@color/colorAccent"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ico_mini_ar_ap" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/toolbar_name_et"
+                    style="@style/edittext_1"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/detail_top_et_bg"
+                    android:fontFamily="roboto"
+                    android:gravity="center"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#80FFFFFF"
+                    android:textCursorDrawable="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_collapseMode="pin" />
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:adjustViewBounds="true"
+        android:background="#F4F4F4"
+        android:scaleType="fitXY" />
+</android.support.design.widget.AppBarLayout>
