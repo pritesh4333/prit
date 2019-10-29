@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<EditText
+    android:id="@+id/msg"
+    android:hint="Message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/grps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/dontmsg"
+            android:layout_width="wrap_content"
+            android:text="Call ke msg nai karta/karti hu na karu tya suthi"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:text="Aju/pritesh ghare che"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioButton
+            android:id="@+id/office"
+            android:layout_width="wrap_content"
+            android:text="Aju/pritesh office nathi gayo"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioButton
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:text="Msg/Call kari sake che"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioButton
+            android:id="@+id/boy"
+            android:layout_width="wrap_content"
+            android:text="chokro avyo"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioButton
+            android:id="@+id/girl"
+            android:layout_width="wrap_content"
+            android:text="chokri avi"
+            android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/send"
+        android:text="Send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalllogOrMap">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/Maps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google Map"
+            android:padding="30dp"
+            android:textColor="#000000"
+            android:textSize="@dimen/txt_24"
+            />
+
+        <Button
+            android:id="@+id/Call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:padding="30dp"
+            android:textSize="@dimen/txt_24"
+            android:text="Call Log"
+            />
+
+        <Button
+            android:id="@+id/Bhavisha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:padding="30dp"
+            android:textSize="@dimen/txt_24"
+            android:text="Check For Msg"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
