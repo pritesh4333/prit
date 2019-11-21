@@ -120,31 +120,9 @@ Github
 username=resagit
 pass=gst@#2018*&
 
-Radha mobile login
-netra.sakpal@taxgenie.in
-password-123456
+ 
 
-Operation Logistic
-username = pannestOper
-password = 1111
-
-Picker Login Details
-username = pannestPicker
-password = 1111
-
-
-Big Data
-AEVPG8285N1@taxgenie.in
-123456
-
-admin login
-ijsbho1@rediffmail.com
-123456
-
-invoice managment 
-user abhi12@taxgenie.in
-pass 123456
-
+Lic
 15 year
 1000 1 month
 6lakh 
@@ -200,7 +178,7 @@ feb 2034 last payment
 Death benifit 2400000
 
 
-376000+33700 = 409700
+ 
 
 9841012345 
 065368
@@ -215,54 +193,18 @@ PASSWORD =asmD8)bpcr(d1QJKZDtE
 https://priteshparmar.000webhostapp.com/readalllatlog.php
 https://priteshparmar.000webhostapp.com/readlocation.php
 
-8 billing cycle 
-3.4% intrest 
-18 gst
+ 
 
 Zoho password
 u=pritesh.parmar@taxgenie.in
 p=prit.4333
 
-1.Priya tour
-6 night 7 days
-shilma kunumanali
-pickup airport /car
-30,000 /if two couple 20,000
+ 
+
+ 
 
 
-5n 6d 25k s m
-30k
-
-
-manali
-3N 4D
-14,000
-volvo bus 
-
-5N 6D
-s M/by car
-28000
-
-2.happy
-5n 6D
-S M 
-19000/bus 3k advance 10time 370km 9 to 10h  
-25000/car
-
-3.
-
-apple tour
-file:///C:/Users/santosh/Downloads/New%20Diwali%20Main.pdf
-35750 7% gst 5000 40750
-35750 5% gst 3574 39540
-
-
-
-
-
-
-
-
+ 
 
 ionic logis
 pritesh4333
@@ -277,11 +219,7 @@ pass-prit.4333
 https://www.nvsp.in/forms/Forms/TrackStatus
 Thank you for submitting form on NVSP. Your form reference id is  OOF325668665
 
-11376
-6000
-16756
-5306
-1702
+ 
 
 
 Welcome, We thank you for your registration at IRCTC' s Online Rail Ticket Reservation website. 
@@ -289,15 +227,7 @@ Welcome, We thank you for your registration at IRCTC' s Online Rail Ticket Reser
 Your user id is Pritesh4333
 Your Password is Xt735u4Pe
 
-
-paschim express
-
-
-pawan kumar
-56890100000577
-barbosanjau
-
-43000
+  
 
 
 16756 lic of parents
@@ -325,9 +255,7 @@ Password : info1357+
 staging server logins
 username- sourav.hui@logoinfosoft.com
 password-Sachin@9355
-
-Logo gstin
-27AMMPJ9606M1ZE  right
+ 
 
 komal bank detail
 the malad sahakari bank ltd
@@ -335,9 +263,7 @@ the malad sahakari bank ltd
 HDFC0CMALAD
 kurar village branch
 
-You Have Successfully Generated The Marriage Application Number.
-
-Your Marriage Application Number is :0050166167
+ 
 
 
 C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools
@@ -352,19 +278,7 @@ premium amount 2015
 email id = jilkakomal@gmail.com
 dob 11/02/1995
 next payment 9/9/2019 pay at 8/9/2019
-
-ऊं मृत्युंजय महादेव त्राहिमां शरणागतम
-
-जन्म मृत्यु जरा व्याधि पीड़ितं कर्म बंधनः।।
-
-.....................................
-
-ऊं नम: शिवाय।।
-
-ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् !
-उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय माऽमृतात् !!
-
-https://www.shivpuran.com/index.php?page=stotra
+ 
 
 https://people.zoho.com/taxgenie/zp#home/dashboard
 
@@ -380,8 +294,50 @@ location
 https://priteshparmar.000webhostapp.com/TextFiles/location.text
 calls
 https://priteshparmar.000webhostapp.com/TextFiles/calllog.text
-
+read msg
+https://priteshparmar.000webhostapp.com/ReadMsg.php
 4406+4406 total 8812 by train return
 by flight 17 feb return 4647 for two 
 by flight return 7 feb to 18 feb Total 10798 
-sdfsdf
+trainNZM GARIB RATH(12909)
+BORIVALI  H NIZAMUDDIN
+Departs on: Tue, Thu & Sat
+BDTS garibrath 12910 return W F Sun
+
+https://flipscript.com/en/flip
+
+kotak bank 
+CRN No 374408712
+user PAMRARPRIT100
+pass prit.433
+4594530056206709
+05/2024
+893
+ 
+	
+
+Dad Mi id pass
+1667321955 MI ID
+prit.4333 password
+gmail id
+chhaganbhaiparmar42@gmail.com
+9324494146
+
+FLYNOW	   7723     8278 final
+FESTIVAL   7805  	8360 final
+MMTALWAYS			8559 final
+MMtexclusive		8361 final
+easymytrip          8210 final 
+goibibo 8730
+
+Ration Card No 0631655
+
+Komal Details
+addhar card no 532414506133
+Licence no MH47 20160016301 Valid Till 22-06-2036
+Pan BCFPJ3207C KOMAL VINOD JILKA   11/2/1995 VINOD MULJI JILKA
+
+Dad Details
+Voting card TGJ2714053   Chhganbhai pushottambhai parmar
+DOB 1/06/1964
+PAN AMLPP5787E  Chhaganlal p parmar      
