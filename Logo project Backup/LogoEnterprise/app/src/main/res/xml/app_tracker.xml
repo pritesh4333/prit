@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ga_sessionTimeout">300</integer>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <string name="ga_trackingId">UA-67286116-18</string>
+    <!--<string name="ga_trackingId">UA-117509122-1</string>-->
+    <string name="ga_sampleFrequency">100.0</string>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <screenName name="in.co.vyaparienterprise.ui.activity.user.LoginActivity">Login</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.user.FirstLoginActivity">First Login</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.user.LostPWActivity">Lost PW</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.user.RegisterActivity">Register</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.app.SplashActivity">SplashScreen</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.app.MainActivity">Homepage</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.address.AddressesActivity">Addresses</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.address.CreateAddressActivity">Address (Add)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.address.EditAddressActivity">Address (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.bank.BanksActivity">Banks</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.bank.CreateBankActivity">Bank (Add)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.bank.EditBankActivity">Bank (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.employee.EmployeesActivity">Employees</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.employee.CreateEmployeeActivity">Employee (Add)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.employee.EditEmployeeActivity">Employee (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.common.hsnsac.HSNSACCodesActivity">HSNSAC Codes</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.firm.CreateFirmActivity">AR/AP (Add)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.firm.EditFirmActivity">AR/AP (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.product.CreateProductActivity">Product/Services (Add)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.product.EditProductActivity">Product/Services (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.management.EditCompanyActivity">Company (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.management.EditProfileActivity">Profile (Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.PurchaseOrder.CreatePurchaseInvoiceActivity">Invoice (Add/Edit)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.PurchaseOrder.PurchaseInvoiceDetailActivity">Invoice Detail</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.InvoicePdfShowActivity">Invoice PDF Print</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.SelectAddressForInvoiceActivity">Addresses (in Invoice)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.SelectFirmForInvoiceActivity">AR/AP List (in Invoice)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.SelectProductForInvoiceActivity">Product/Services List (in Invoice)</screenName>
+    <screenName name="in.co.vyaparienterprise.ui.activity.invoice.SelectProductDetailForInvoiceActivity">Invoice Line</screenName>
+</resources>

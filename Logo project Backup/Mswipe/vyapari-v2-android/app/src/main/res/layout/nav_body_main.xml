@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bg">
+
+    <ScrollView
+        android:id="@+id/nav_body_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nav_body_bottom_menu"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="15dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/vyapari_logo" />
+
+            <include layout="@layout/nav_header_main" />
+
+            <LinearLayout
+                android:id="@+id/draw_invoices"
+                style="@style/nav_item_style"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ico_invoices" />
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/invoices"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/invoice_expand"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_expand"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/invoice_collapse"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_collapse" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invoices_sublist_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1667ae"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/draw_sale"
+                    style="@style/nav_item_style"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_sales" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/sales"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/draw_purchase"
+                    style="@style/nav_item_style"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_purchases" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/purchases"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--payment and collection layout-->
+            <LinearLayout
+                android:id="@+id/draw_payment_collection"
+                style="@style/nav_item_style"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ico_invoices" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/payment"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/payment_expand"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_collapse"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/payment_collapse"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_expand" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/payment_sublist_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1667ae"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/draw_collection"
+                    style="@style/nav_item_style"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_sales" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/Collection"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/draw_payment"
+                    style="@style/nav_item_style"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_purchases" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/payments"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/draw_product"
+                style="@style/nav_item_style"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ico_products" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/products"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/draw_firm"
+                style="@style/nav_item_style"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ico_firm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/ar_ap"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/draw_management_firm"
+                style="@style/nav_item_style"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ico_company" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/company"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Setting_Layout"
+                style="@style/nav_item_style"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/setting"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+            <!--
+                       <LinearLayout
+                           android:id="@+id/draw_management"
+                           style="@style/nav_item_style"
+                           android:orientation="horizontal">
+
+                           <ImageView
+                               android:layout_width="25dp"
+                               android:layout_height="25dp"
+                               android:layout_gravity="center_vertical"
+                               android:src="@drawable/ico_management" />
+
+                           <TextView
+                               android:layout_width="170dp"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginLeft="25dp"
+                               android:text="@string/management"
+                               android:textColor="@android:color/white"
+                               android:textSize="17sp" />
+
+                           <ImageView
+                               android:id="@+id/management_expand"
+                               android:layout_width="15dp"
+                               android:layout_height="15dp"
+                               android:layout_gravity="center_vertical"
+                               android:src="@drawable/arrow_expand" />
+
+                           <ImageView
+                               android:id="@+id/management_collapse"
+                               android:layout_width="15dp"
+                               android:layout_height="15dp"
+                               android:layout_gravity="center_vertical"
+                               android:src="@drawable/arrow_collapse"
+                               android:visibility="gone" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:id="@+id/management_sublist_layout"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="#1667ae"
+                           android:orientation="vertical"
+                           android:visibility="gone">
+
+                           <LinearLayout
+                               android:id="@+id/draw_management_profile"
+                               style="@style/nav_item_style"
+                               android:layout_marginLeft="20dp"
+                               android:orientation="horizontal">
+
+                               <ImageView
+                                   android:layout_width="25dp"
+                                   android:layout_height="25dp"
+                                   android:layout_gravity="center_vertical"
+                                   android:src="@drawable/ico_profile" />
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center_vertical"
+                                   android:layout_marginLeft="25dp"
+                                   android:text="@string/profile"
+                                   android:textColor="@android:color/white"
+                                   android:textSize="14sp" />
+
+                           </LinearLayout>
+
+                           <LinearLayout
+                               android:id="@+id/draw_management_firm"
+                               style="@style/nav_item_style"
+                               android:layout_marginLeft="20dp"
+                               android:orientation="horizontal">
+
+                               <ImageView
+                                   android:layout_width="25dp"
+                                   android:layout_height="25dp"
+                                   android:layout_gravity="center_vertical"
+                                   android:src="@drawable/ico_company" />
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center_vertical"
+                                   android:layout_marginLeft="25dp"
+                                   android:text="@string/company"
+                                   android:textColor="@android:color/white"
+                                   android:textSize="14sp" />
+
+                           </LinearLayout>
+                       </LinearLayout>
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:orientation="vertical"
+                                       android:visibility="gone">
+
+                                       <LinearLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="30dp"
+                                           android:layout_marginTop="20dp"
+                                           android:orientation="horizontal"
+                                           android:weightSum="14">
+
+                                           <ImageView
+                                               android:layout_width="0dp"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_weight="4"
+                                               android:src="@drawable/line_2" />
+
+                                           <TextView
+                                               android:layout_width="0dp"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_weight="6"
+                                               android:text="PEK YAKINDA"
+                                               android:textAlignment="center"
+                                               android:textColor="@android:color/white"
+                                               android:textSize="14dp" />
+
+                                           <ImageView
+                                               android:layout_width="0dp"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_weight="4"
+                                               android:src="@drawable/line_2" />
+                                       </LinearLayout>
+
+                                       <TextView
+                                           android:layout_width="200dp"
+                                           android:layout_height="wrap_content"
+                                           android:layout_gravity="center_horizontal"
+                                           android:text="çok yakında bunlar da olacak!"
+                                           android:textAlignment="center"
+                                           android:textColor="@color/font_1"
+                                           android:textSize="12dp" />
+
+                                       <LinearLayout
+                                           style="@style/nav_item_style"
+                                           android:orientation="horizontal">
+
+                                           <ImageView
+                                               android:layout_width="30dp"
+                                               android:layout_height="30dp"
+                                               android:layout_gravity="center_vertical"
+                                               android:src="@drawable/icon_revenue" />
+
+                                           <TextView
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_marginLeft="30dp"
+                                               android:text="Tahsilatlarım"
+                                               android:textColor="@color/font_2"
+                                               android:textSize="16sp" />
+                                       </LinearLayout>
+
+                                       <LinearLayout
+                                           style="@style/nav_item_style"
+                                           android:orientation="horizontal">
+
+                                           <ImageView
+                                               android:layout_width="30dp"
+                                               android:layout_height="30dp"
+                                               android:layout_gravity="center_vertical"
+                                               android:src="@drawable/icon_cost" />
+
+                                           <TextView
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_marginLeft="30dp"
+                                               android:text="Giderlerim"
+                                               android:textColor="@color/font_2"
+                                               android:textSize="16sp" />
+                                       </LinearLayout>
+
+                                       <LinearLayout
+                                           style="@style/nav_item_style"
+                                           android:orientation="horizontal">
+
+                                           <ImageView
+                                               android:layout_width="30dp"
+                                               android:layout_height="30dp"
+                                               android:layout_gravity="center_vertical"
+                                               android:src="@drawable/icon_payment" />
+
+                                           <TextView
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_marginLeft="30dp"
+                                               android:text="Ödemelerim"
+                                               android:textColor="@color/font_2"
+                                               android:textSize="16sp" />
+                                       </LinearLayout>
+
+                                       <LinearLayout
+                                           style="@style/nav_item_style"
+                                           android:orientation="horizontal">
+
+                                           <ImageView
+                                               android:layout_width="30dp"
+                                               android:layout_height="30dp"
+                                               android:layout_gravity="center_vertical"
+                                               android:src="@drawable/icon_account" />
+
+                                           <TextView
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_marginLeft="30dp"
+                                               android:text="Hesaplar"
+                                               android:textColor="@color/font_2"
+                                               android:textSize="16sp" />
+                                       </LinearLayout>
+
+                                       <LinearLayout
+                                           style="@style/nav_item_style"
+                                           android:orientation="horizontal">
+
+                                           <ImageView
+                                               android:layout_width="30dp"
+                                               android:layout_height="30dp"
+                                               android:layout_gravity="center_vertical"
+                                               android:src="@drawable/icon_report" />
+
+                                           <TextView
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:layout_gravity="center_vertical"
+                                               android:layout_marginLeft="30dp"
+                                               android:text="Raporlar"
+                                               android:textColor="@color/font_2"
+                                               android:textSize="16sp" />
+                                       </LinearLayout>
+                                   </LinearLayout> -->
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/nav_body_bottom_menu"
+        android:background="#1667ae" />
+
+    <LinearLayout
+        android:id="@+id/nav_body_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/draw_support"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ico_support" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="@string/support"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="#1667ae" />
+
+        <LinearLayout
+            android:id="@+id/draw_logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ico_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="@string/logout"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

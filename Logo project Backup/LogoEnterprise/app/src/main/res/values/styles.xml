@@ -1,0 +1,133 @@
+<resources>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoTitleBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="actionMenuTextColor">@color/black</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="gray_edittext" parent="@android:style/Widget.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/font_19</item>
+        <item name="android:textColorHint">@color/font_19</item>
+        <item name="android:hint">"---"</item>
+    </style>
+
+    <style name="nav_item_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">25dp</item>
+    </style>
+
+    <style name="textview_1" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/font_12</item>
+
+    </style>
+
+    <style name="textview_3" parent="android:Widget.TextView">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/font_5</item>
+    </style>
+
+    <style name="textview_4" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/font_16</item>
+    </style>
+
+    <style name="textview_5" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/font_5</item>
+    </style>
+
+    <style name="edittext_1" parent="@android:style/Widget.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/font_5</item>
+        <item name="android:textColorHint">@color/font_5</item>
+    </style>
+
+    <style name="edittext_5" parent="@android:style/Widget.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@drawable/edittext_cursor_color</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="button_1" parent="@android:style/Widget.Button">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/font_17</item>
+        <item name="android:textColorHint">@color/font_17</item>
+    </style>
+
+    <style name="button_2" parent="@android:style/Widget.Button">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/font_7</item>
+        <item name="android:textColorHint">@color/font_7</item>
+    </style>
+
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetStyle">@style/AppTheme.BottomSheetStyle</item>
+    </style>
+
+    <style name="AppTheme.BottomSheetDialog.Custom" parent="AppTheme.BottomSheetDialog">
+        <item name="bottomSheetBuilderItemTextColor">@color/black</item>
+        <item name="bottomSheetBuilderBackgroundColor">@android:color/white</item>
+        <item name="bottomSheetBuilderTitleTextColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_skipCollapsed">true</item>
+    </style>
+    <style name="MswipeDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/primaryColorDark</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/white</item>
+        <item name="android:windowMinWidthMajor">96%</item>
+        <item name="android:windowMinWidthMinor">96%</item>
+    </style>
+</resources>

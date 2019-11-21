@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/search_bg">
+
+        <ImageView
+            android:id="@+id/search_mag_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ico_search" />
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/qr_mag_icon"
+            android:layout_toLeftOf="@+id/qr_mag_icon"
+            android:layout_toEndOf="@+id/search_mag_icon"
+            android:layout_toRightOf="@+id/search_mag_icon"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_6"
+            android:textColorHint="@color/search_hint_color"
+            android:textSize="14sp"
+            android:windowSoftInputMode="stateHidden" />
+
+        <ImageView
+            android:id="@+id/qr_mag_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ico_barcode" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_sheet_layout_view">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/products_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:tint="@color/black"
+                app:backgroundTint="@color/colorAccent"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ico_fab" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/bottom_sheet_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/collapsed_height_product"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+        <in.co.vyaparienterprise.ui.generic.BottomSheetLayout
+            android:id="@+id/bottom_sheet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:visibility="gone"
+            app:collapsedHeight="@dimen/collapsed_height_product">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/add_to_invoice"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/collapsed_height_product"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="@color/white"></View>
+
+                    <LinearLayout
+                        android:id="@+id/up_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/collapsed_height_product"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/icon_up"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:padding="5dp"
+                            android:src="@drawable/ico_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/selected_products_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </in.co.vyaparienterprise.ui.generic.BottomSheetLayout>
+    </RelativeLayout>
+</LinearLayout>

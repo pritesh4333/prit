@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#207eb6</color>
+    <color name="colorPrimaryDark">#F4F4F4</color>
+    <color name="colorAccent">#207eb6</color>
+    <color name="fab_color">#00ce16</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primaryColorDark">#0D47A1</color>
+    <color name="soho_green">#5CB85C</color>
+    <color name="soho_blue">#3598db</color>
+    <color name="soho_red">#dd4848</color>
+    <color name="partycash">#42f4ee</color>
+    <color name="toolbar_bg">#3C3C3C</color>
+
+    <color name="font_1">#99FFFFFF</color>
+    <color name="font_2">#4dffffff</color>
+    <color name="font_5">#4A4A4A</color>
+    <color name="font_6">#BFBFBF</color>
+    <color name="font_7">#0a0a0a</color>
+    <color name="font_10">#2A2F35</color>
+    <color name="font_12">#688796</color>
+    <color name="font_16">#416EFF</color>
+    <color name="font_17">#A4AAB3</color>
+    <color name="font_19">#b34a4a4a</color>
+    <color name="font_23">#688796</color>
+    <color name="font_24">#7084ff</color>
+    <color name="darkgray">#525656</color>
+
+    <color name="border_1">#7084ff</color>
+    <color name="border_5">#eceff3</color>
+
+    <color name="background_6">#fcfcfc</color>
+    <color name="background_8">#2C3742</color>
+
+    <color name="ripple_blue_dark">#2f50b2</color>
+    <color name="ripple_green_dark">#408040</color>
+
+    <color name="toolbar_1">#33ffffff</color>
+    <color name="menubg">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="dark_gray">#888888</color>
+    <color name="delivery_address_text">#7084ff</color>
+    <color name="delivery_address_bg">#F3FAFF</color>
+    <color name="total_bg">#0a0a0a</color>
+
+    <color name="toolbar_text_color">#171e22</color>
+    <color name="date_color">#8fa6b1</color>
+    <color name="price_color">#4c4c4c</color>
+    <color name="search_hint_color">#a4b6bf</color>
+    <color name="search_bg_color">#F4F4F4</color>
+    <color name="price_title_color">#91a7b2</color>
+    <color name="green_view">#4cbb53</color>
+    <color name="red_view">#f44a44</color>
+    <color name="purple">#ab4da1</color>
+</resources>

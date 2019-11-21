@@ -1,0 +1,84 @@
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.8.1'
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "in.co.vyapari"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 38
+        versionName "0.9.9.3"
+        multiDexEnabled true
+        manifestPlaceholders = [onesignal_app_id               : "62b69aa0-9219-445e-94fe-21221ce10696",
+                                onesignal_google_project_number: "REMOTE"]
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable false
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        jumboMode true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.google.android.gms:play-services-analytics:15.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.GrenderG:Toasty:1.2.8'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation 'com.afollestad.material-dialogs:core:0.9.5.0'
+    implementation 'com.onesignal:OneSignal:[3.8.3, 3.99.99]'
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation 'com.github.rubensousa:bottomsheetbuilder:1.6.1'
+    implementation 'es.voghdev.pdfviewpager:library:1.0.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.robinhood.ticker:ticker:1.2.2'
+    implementation "com.microsoft.appcenter:appcenter-analytics:1.11.2"
+    implementation "com.microsoft.appcenter:appcenter-crashes:1.11.2"
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+    implementation 'com.koushikdutta.ion:ion:2.+'
+    implementation 'com.github.amanjeetsingh150:ImageZipper:1.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation files('lib/MswipeWseriesUniversalDRDSDKVer1.0.14v3.5.1.aar')
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/invoice_options">
+        <menu>
+            <item
+                android:id="@+id/menu_invoice_send_pdf"
+                android:icon="@drawable/ico_menu_pdf"
+                android:title="@string/send" />
+
+            <item
+                android:id="@+id/menu_invoice_print"
+                android:icon="@drawable/ico_menu_print"
+                android:title="@string/print" />
+        </menu>
+    </item>
+</menu>

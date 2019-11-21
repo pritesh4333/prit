@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bg"
+    android:orientation="vertical"
+    tools:context=".ui.activity.Filter.FilterActivity">
+
+    <include layout="@layout/toolbar_invoice" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/formNo_selection_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/ORDERNO"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/Ordr_no_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/datetextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/DATE"
+                    android:textColor="@color/colorAccent" />
+
+                <LinearLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/FromDatetextview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="From"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ToDatetextview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="To"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/STATUS"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/filter_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/customersupp_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/CUSTOMERSUPPLIER"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/CUSTOMERSUPPLIER"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/customer_stagingtextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/CUSTOMERSTATGING"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/filter_customer_staging"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/OrderNo_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/ORDERNO"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/OrderNo_Edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/Paymentdroptextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/PAYMENTMODE"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/PaymentDropEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/Collectiondroptextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/COLLECTIONMODE"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/CollectionDropEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/Warehouseinventorytextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/WAREHOUSEINVENTORY"
+                    android:textColor="@color/colorAccent" />
+
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/WarehouseinventoryEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+
+
+
+                <TextView
+                    android:id="@+id/formtypetextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/FORMTYPES"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/filter_form_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/Dispatchtextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/DISPATCHNOS"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/DispatchEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/PAymentstatustextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/PAYMENTSTATUS"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/PAymentstatusEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:id="@+id/Collectionstatustextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/COLLECTIONSTATUS"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <in.co.vyaparienterprise.ui.generic.MyEditText
+                    android:id="@+id/CollectionstatusEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:hint="ALL"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/Apply"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

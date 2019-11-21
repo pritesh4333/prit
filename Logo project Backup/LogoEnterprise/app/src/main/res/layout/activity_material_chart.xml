@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.Dashboard.MaterialChartActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <include layout="@layout/toolbar_invoice" />
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
+
+        <com.highsoft.highcharts.core.HIChartView
+            android:id="@+id/hc"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/quantity_values"
+            android:layout_marginBottom="50dp"
+            android:layout_height="510dp" />
+        <LinearLayout
+            android:id="@+id/quantity_values"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/quantity"
+                android:text="@string/QUANTITY"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/leftcornerblue"
+                android:layout_height="40dp" />
+            <Button
+                android:id="@+id/value"
+                android:text="@string/VALUE"
+                android:textColor="@color/white"
+                android:background="@drawable/rightcorner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:id="@+id/bottom_sheet"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="50dp"
+        app:layout_anchorGravity="bottom|end"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        tools:ignore="MissingPrefix">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="45"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/Material"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon_up"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/ico_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="45"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/invoice_detail_currency_symbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+
+                    android:layout_marginRight="10dp"
+                    android:text="@string/quantity"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"></View>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/materialList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout >
