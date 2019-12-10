@@ -1,11 +1,16 @@
-package com.example.fcmnotificationdemo;
+package com.example.fcmnotificationdemo12.FCM;
 
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
+
+
+import androidx.core.app.NotificationCompat;
+
+import com.example.fcmnotificationdemo12.MainActivity;
+import com.example.fcmnotificationdemo12.R;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
 
@@ -44,7 +49,7 @@ public class MyNotificationManager {
          *  But for your project you can customize it as you want
          * */
 
-        Intent resultIntent = new Intent(mCtx, MainActivity1.class);
+        Intent resultIntent = new Intent(mCtx, MainActivity.class);
 
         /*
          *  Now we will create a pending intent

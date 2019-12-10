@@ -4,4 +4,14 @@
         <item>notifications</item>
         <item>promotional_messages</item>
     </array>
+    <string name="msg_welcome">Welcome to Admob. Click on the below button to launch the Interstitial ad.</string>
+    <string name="btn_fullscreen_ad">Show Interstitial Ad</string>
+    <string name="btn_rewarded_video">Show Rewarded Video Ad</string>
+    <!-- TODO - add your ad unit Ids -->
+    <!-- AdMob ad unit IDs -->
+    <string name="admob_app_id">ca-app-pub-4959089160488184~8670066397</string>
+    <string name="banner_home_footer">ca-app-pub-4959089160488184/1377313002</string>
+    <string name="interstitial_full_screen">ca-app-pub-4959089160488184/2307251292</string>
+    <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>
+    <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>
 </resources>

@@ -150,7 +150,7 @@ Pin = 4333
 all cards pin
 Ic 4333 corp 5237 IDFC 4333 SBI 4333
 
-
+7 Q Ekta socity mahajanwadi mira gaonthan near vishnu mandir gaondevi compund near bapa sitaram mandir thane 401107
 
 my card number 4799320281004704
 12/17  07/23  495
@@ -164,13 +164,19 @@ pradeep password= 0963
 7363 
  13622
  19881
+ Lic Loan Details  Loan      Intrest 		Total 
+ 901857056 	    	13250     10258			23508
+ 902693377			25250     18983			44233
+ 902930668
+ 903664806			8000	   6012			14012
+ Total 				46500	+	35253   =   Total 81753
 LIC policy Details
-901857056 muktaben parmar 1351 13/08/2017 25000
-902693377 pradip chagnbbhai parmar 5015 16/11/2017 100000 
-902930668 pritesh parmar 5026 23/1/2018 100000
-903664806 chagnabhai parmar 5364  15/11/2017  100000
+901857056 muktaben parmar 1351 13/08/2017 25000 DOB 01/06/1963   real DOB in berth certerificate  13/8/1967
+902693377 pradip chagnbbhai parmar 5015 16/11/2017 100000  DOB 16/11/1987
+902930668 pritesh parmar 5026 23/1/2018 100000 DOB 30/12/1993
+903664806 chagnabhai parmar 5364  15/11/2017  100000 DOB 01/06/1963
 
-909894383 pritesh parmar LIC Policy NO  Premium 991
+909894383 pritesh parmar LIC Policy NO  Premium 948
 Lic jeevan  labh 836 
 2,40,000 SA 	total payment we do and return will get 6,48,0000
 16 year payement we do return 25year ma malse 2043 malse
@@ -179,6 +185,15 @@ Death benifit 2400000
 
 
  
+Tata AIA Login detail
+policy no C206202725
+email id parmarprit100@gmail
+8767957178
+30/12/1993
+2771 premium amount 
+user 8767957178
+pass prit.4333
+https://myinsurance.tataaia.com/wps/portal/Customer/Customer/CustomerLogin payment link
 
 9841012345 
 065368
@@ -313,8 +328,9 @@ pass prit.433
 4594530056206709
 05/2024
 893
+UPID 8767957178@kotak
  
-	
+	blue dart curior 36922883432 
 
 Dad Mi id pass
 1667321955 MI ID
@@ -341,4 +357,6 @@ Dad Details
 Voting card TGJ2714053   Chhganbhai pushottambhai parmar
 DOB 1/06/1964
 PAN AMLPP5787E  Chhaganlal p parmar      
+
+93304040828
 
