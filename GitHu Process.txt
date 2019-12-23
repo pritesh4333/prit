@@ -1,0 +1,20 @@
+GitHub Process
+1. git clone "repositery link"
+2. cd : workspce
+3. git checkout -b branchname (create branch for this project)
+4. git checkout branchname(switch master to branch)
+5. copy past project in workspase 
+6. git add *
+7. git commit -m "message"
+8. git checkout master
+9. git merge branchname
+10.git pull origin master(check for conflict)
+11.git push -u origin master(send to server)
+
+
+conflict
+1. press I
+2. type commit msg
+3. escap : wq
+
+
