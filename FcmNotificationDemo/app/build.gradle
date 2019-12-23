@@ -21,6 +21,9 @@ android {
     defaultConfig {
         multiDexEnabled true // enable mun
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
@@ -52,5 +55,9 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
 
     implementation 'com.google.android.gms:play-services-ads:18.3.0'
+
+    implementation files('libs/httpclient-4.3.6.jar')
+    implementation files('libs/httpcore-4.3.3.jar')
+    implementation files('libs/httpmime-4.3.6.jar')
 }
 apply plugin: 'com.google.gms.google-services'

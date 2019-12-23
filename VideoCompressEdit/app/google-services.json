@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "88540802455",
+    "firebase_url": "https://video-compressor-pro-7441e.firebaseio.com",
+    "project_id": "video-compressor-pro-7441e",
+    "storage_bucket": "video-compressor-pro-7441e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88540802455:android:3ec977b1eab73ac05b68d2",
+        "android_client_info": {
+          "package_name": "com.prit.videocompressorpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88540802455-ibu6djchvfkg227fbk331neulntepk7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prit.videocompressorpro",
+            "certificate_hash": "c868b654a4376b521b4dc7bd7019052c47ff6595"
+          }
+        },
+        {
+          "client_id": "88540802455-c7qi5qsgce8g9dblp4mftba7oorq3ehn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbTBBkc7X2ifLlcfiNprPpZ1WEq-0NOgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88540802455-c7qi5qsgce8g9dblp4mftba7oorq3ehn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

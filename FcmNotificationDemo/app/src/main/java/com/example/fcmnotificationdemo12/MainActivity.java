@@ -2,18 +2,27 @@ package com.example.fcmnotificationdemo12;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -27,6 +36,7 @@ import com.crashlytics.android.Crashlytics;
 
 import com.example.fcmnotificationdemo12.ApiClients.APIClient;
 import com.example.fcmnotificationdemo12.ApiClients.APIInterface;
+import com.example.fcmnotificationdemo12.FileUpload.AndroidMultiPartEntity;
 import com.example.fcmnotificationdemo12.Fingerprint.FingerprintActivity;
 import com.example.fcmnotificationdemo12.admob.InterstitialAdActivity;
 import com.example.fcmnotificationdemo12.admob.RewardedVideoAdActivity;
@@ -35,20 +45,36 @@ import com.example.fcmnotificationdemo12.model.Warehouse;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
+
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -64,14 +90,20 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinner;
     private String TAG;
     private String DATA_URL = "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?";
+    private static final int REQUEST_PERMISSIONS = 100;
     APIInterface apiInterface;
     APIInterface apiInterfaceswagger;
     private AdView mAdView;
     private Button btnFullscreenAd, btnShowRewardedVideoAd,fingerprint;
+    private ProgressBar progressBar;
+    private TextView txtPercentage;
+    long totalSize = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        txtPercentage = (TextView) findViewById(R.id.txtPercentage);
         try {
             int i = 0 / 100;
             int k = 100 / 0;
@@ -196,10 +228,199 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         // LoadJson();
-
+        chekpermisstion();
         //LoadRetorofitJson();
+        new UploadFileToServer().execute();
     }
 
+    public void chekpermisstion(){
+        if ((ContextCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) && (ContextCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
+            if ((ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)) && (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE))) {
+
+
+
+
+            } else {
+                ActivityCompat.requestPermissions(MainActivity.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
+                        REQUEST_PERMISSIONS);
+
+
+            }
+        }else {
+
+
+            //fn_imagespath();
+        }
+    }
+    /**
+     * This function upload the large file to server with other POST values.
+     * @param filename
+     * @param targetUrl
+     * @return
+     */
+    public static String uploadFileToServer(String filename, String targetUrl) {
+        String response = "error";
+        HttpURLConnection connection = null;
+        DataOutputStream outputStream = null;
+
+        String pathToOurFile = filename;
+        String urlServer = targetUrl;
+        String lineEnd = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "*****";
+
+        int bytesRead, bytesAvailable, bufferSize;
+        byte[] buffer;
+        int maxBufferSize = 1 * 1024;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(new File(
+                    pathToOurFile));
+
+            URL url = new URL(urlServer);
+            connection = (HttpURLConnection) url.openConnection();
+
+            // Allow Inputs & Outputs
+            connection.setDoInput(true);
+            connection.setDoOutput(true);
+            connection.setUseCaches(false);
+            connection.setChunkedStreamingMode(1024);
+            // Enable POST method
+            connection.setRequestMethod("POST");
+
+            connection.setRequestProperty("Connection", "Keep-Alive");
+            connection.setRequestProperty("Content-Type",
+                    "multipart/form-data; boundary=" + boundary);
+
+            outputStream = new DataOutputStream(connection.getOutputStream());
+            outputStream.writeBytes(twoHyphens + boundary + lineEnd);
+
+            String token = "anyvalye";
+            outputStream.writeBytes("Content-Disposition: form-data; name=\"Token\"" + lineEnd);
+            outputStream.writeBytes("Content-Type: text/plain;charset=UTF-8" + lineEnd);
+            outputStream.writeBytes("Content-Length: " + token.length() + lineEnd);
+            outputStream.writeBytes(lineEnd);
+            outputStream.writeBytes(token + lineEnd);
+            outputStream.writeBytes(twoHyphens + boundary + lineEnd);
+
+            String taskId = "anyvalue";
+            outputStream.writeBytes("Content-Disposition: form-data; name=\"TaskID\"" + lineEnd);
+            outputStream.writeBytes("Content-Type: text/plain;charset=UTF-8" + lineEnd);
+            outputStream.writeBytes("Content-Length: " + taskId.length() + lineEnd);
+            outputStream.writeBytes(lineEnd);
+            outputStream.writeBytes(taskId + lineEnd);
+            outputStream.writeBytes(twoHyphens + boundary + lineEnd);
+
+            String connstr = null;
+            connstr = "Content-Disposition: form-data; name=\"UploadFile\";filename=\""
+                    + pathToOurFile + "\"" + lineEnd;
+
+            outputStream.writeBytes(connstr);
+            outputStream.writeBytes(lineEnd);
+
+            bytesAvailable = fileInputStream.available();
+            bufferSize = Math.min(bytesAvailable, maxBufferSize);
+            buffer = new byte[bufferSize];
+
+            // Read file
+            bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+            System.out.println("Image length " + bytesAvailable + "");
+            try {
+                while (bytesRead > 0) {
+                    try {
+                        outputStream.write(buffer, 0, bufferSize);
+                    } catch (OutOfMemoryError e) {
+                        e.printStackTrace();
+                        response = "outofmemoryerror";
+                        return response;
+                    }
+                    bytesAvailable = fileInputStream.available();
+                    bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                    bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                response = "error";
+                return response;
+            }
+            outputStream.writeBytes(lineEnd);
+            outputStream.writeBytes(twoHyphens + boundary + twoHyphens
+                    + lineEnd);
+
+            // Responses from the server (code and message)
+            int serverResponseCode = connection.getResponseCode();
+            String serverResponseMessage = connection.getResponseMessage();
+            System.out.println("Server Response Code " + " " + serverResponseCode);
+            System.out.println("Server Response Message "+ serverResponseMessage);
+
+            if (serverResponseCode == 200) {
+                response = "true";
+            }else
+            {
+                response = "false";
+            }
+
+            fileInputStream.close();
+            outputStream.flush();
+
+            connection.getInputStream();
+            //for android InputStream is = connection.getInputStream();
+            java.io.InputStream is = connection.getInputStream();
+
+            int ch;
+            StringBuffer b = new StringBuffer();
+            while( ( ch = is.read() ) != -1 ){
+                b.append( (char)ch );
+            }
+
+            String responseString = b.toString();
+            System.out.println("response string is" + responseString); //Here is the actual output
+
+            outputStream.close();
+            outputStream = null;
+
+        } catch (Exception ex) {
+            // Exception handling
+            response = "error";
+            System.out.println("Send file Exception" + ex.getMessage() + "");
+            ex.printStackTrace();
+        }
+        return response;
+    }
+
+
+    public static void downloadFileFromServer(String filename, String urlString) throws MalformedURLException, IOException
+    {
+        BufferedInputStream in = null;
+        FileOutputStream fout = null;
+        try
+        {
+            URL url = new URL(urlString);
+
+            in = new BufferedInputStream(url.openStream());
+            fout = new FileOutputStream(filename);
+
+            byte data[] = new byte[1024];
+            int count;
+            while ((count = in.read(data, 0, 1024)) != -1)
+            {
+                fout.write(data, 0, count);
+                System.out.println(count);
+            }
+        }
+        finally
+        {
+            if (in != null)
+                in.close();
+            if (fout != null)
+                fout.close();
+        }
+        System.out.println("Done");
+    }
     private void LoadRetorofitJson() {
         Call<UserList> call2 = apiInterface.doGetUserList("2");
         call2.enqueue(new Callback<UserList>() {
@@ -357,5 +578,170 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onDestroy();
     }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
+        switch (requestCode) {
+            case REQUEST_PERMISSIONS: {
+                for (int i = 0; i < grantResults.length; i++) {
+                    if (grantResults.length > 0 && grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                        //Toast.makeText(MainActivity.this, "granted", Toast.LENGTH_LONG).show();
+                        //fn_imagespath();
+                       // new UploadFileToServer().execute();
+                        new UploadFileToServer().execute();
+                    } else {
+
+                        Toast.makeText(MainActivity.this, "The app was not allowed to read or write to your storage. Hence, it cannot function properly. Please consider granting it this permission", Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+        }
+    }
+//    private class UploadFileToServer extends AsyncTask<Void, Integer, String> {
+//        @Override
+//        protected void onPreExecute() {
+//            // setting progress bar to zero
+//            progressBar.setProgress(0);
+//            super.onPreExecute();
+//        }
+//
+//        @Override
+//        protected void onProgressUpdate(Integer... progress) {
+//            // Making progress bar visible
+//            progressBar.setVisibility(View.VISIBLE);
+//
+//            // updating progress bar value
+//            progressBar.setProgress(progress[0]);
+//
+//            // updating percentage value
+//            txtPercentage.setText(String.valueOf(progress[0]) + "%");
+//        }
+//
+//        @Override
+//        protected String doInBackground(Void... params) {
+//
+//            return uploadFileToServer("/storage/emulated/0/DCIM/Camera/VID_20191216_165052.mp4","https://priteshparmar.000webhostapp.com/BigFileUpload/fileUpload.php");
+//        }
+//
+//
+//
+//        @Override
+//        protected void onPostExecute(String result) {
+//            Log.e(TAG, "Response from server: " + result);
+//
+//            // showing the server response in an alert dialog
+//            showAlert(result);
+//
+//            super.onPostExecute(result);
+//        }
+//
+//    }
+private class UploadFileToServer extends AsyncTask<Void, Integer, String> {
+    @Override
+    protected void onPreExecute() {
+        // setting progress bar to zero
+        progressBar.setProgress(0);
+        super.onPreExecute();
+    }
+
+    @Override
+    protected void onProgressUpdate(Integer... progress) {
+        // Making progress bar visible
+        progressBar.setVisibility(View.VISIBLE);
+
+        // updating progress bar value
+        progressBar.setProgress(progress[0]);
+
+        // updating percentage value
+        txtPercentage.setText(String.valueOf(progress[0]) + "%");
+    }
+
+    @Override
+    protected String doInBackground(Void... params) {
+        return uploadFile();
+    }
+
+    @SuppressWarnings("deprecation")
+    private String uploadFile() {
+        String responseString = null;
+
+        HttpClient httpclient = new DefaultHttpClient();
+        //HttpPost httppost = new HttpPost("https://priteshparmar.000webhostapp.com/BigFileUpload/fileUpload.php" );
+        HttpPost httppost = new HttpPost("http://192.168.100.60/fileUpload.php" );
+/// upload big file we have to change in xampp config button (PHP)php.ini file with below change
+//        max_execution_time = 5000
+//        max_input_time = 5000
+//        memory_limit = 1000M
+//                post_max_size = 750M
+//                upload_max_filesize = 750M
+        try {
+            AndroidMultiPartEntity entity = new AndroidMultiPartEntity(
+                    new AndroidMultiPartEntity.ProgressListener() {
+
+                        @Override
+                        public void transferred(long num) {
+                            publishProgress((int) ((num / (float) totalSize) * 100));
+                        }
+                    });
+
+           // File sourceFile = new File("/storage/emulated/0/DCIM/Camera/VID_20191216_165052.mp4");
+            File sourceFile = new File("/storage/emulated/0/DCIM/Camera/VID_20191216_161925.mp4");
+            // Adding file data to http body
+            entity.addPart("image", new FileBody(sourceFile));
+
+            // Extra parameters if you want to pass to server
+            entity.addPart("website",
+                    new StringBody("www.androidhive.info"));
+            entity.addPart("email", new StringBody("abc@gmail.com"));
+
+            totalSize = entity.getContentLength();
+            httppost.setEntity(entity);
+
+            // Making server call
+            HttpResponse response = httpclient.execute(httppost);
+            HttpEntity r_entity = response.getEntity();
+
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode == 200) {
+                // Server response
+                responseString = EntityUtils.toString(r_entity);
+            } else {
+                responseString = "Error occurred! Http Status Code: "
+                        + statusCode;
+            }
+
+        } catch (ClientProtocolException e) {
+            responseString = e.toString();
+        } catch (IOException e) {
+            responseString = e.toString();
+        }
+
+        return responseString;
+
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        Log.e(TAG, "Response from server: " + result);
+
+        // showing the server response in an alert dialog
+        showAlert(result);
+
+        super.onPostExecute(result);
+    }
+
+}
+    private void showAlert(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message).setTitle("Response from Servers")
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // do nothing
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }
