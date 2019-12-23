@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mp4parser:muxer:1.9.39@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mp4parser/muxer/1.9.39/19aa5fb5b2e3a6eb199391e0e81db8ae3a154713/muxer-1.9.39.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mp4parser/muxer/1.9.39/9d7daf5704faebcee499a19c436327cb2a90bbcd/muxer-1.9.39-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mp4parser/muxer/1.9.39/4196b1f39033d1cdcccd8e9f616a5e0ffd2a2547/muxer-1.9.39-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
