@@ -88,7 +88,7 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
                     Intent intent_gallery = new Intent(context, CompressorActivity.class);
                     intent_gallery.putExtra("video",al_menu.get(position).getStr_path());
                     activity.startActivity(intent_gallery);
-
+                    activity.finish();
 
                     //  VideoConver(al_video.get(position).getStr_path());
 
@@ -96,7 +96,7 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
             });
             convertView.setTag(viewHolder);
         } else {
-            viewHolder = (Adapter_Video.ViewHolder) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
 

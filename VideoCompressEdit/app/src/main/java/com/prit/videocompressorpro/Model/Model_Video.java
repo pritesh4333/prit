@@ -4,6 +4,17 @@ package com.prit.videocompressorpro.Model;
 public class Model_Video {
     String str_path,str_thumb;
     boolean boolean_selected;
+    int size;
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+
 
     public String getStr_path() {
         return str_path;
