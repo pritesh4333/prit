@@ -19,6 +19,8 @@
         android:visibility="gone"
         ></GridView>
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,33 +39,38 @@
                 android:textColor="@color/primary_dark"
                 android:backgroundTint="@color/accent"
                 android:text="Select video to compress"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.7"
+            android:layout_weight="2.3"
             android:orientation="vertical">
-            <com.flaviofaria.kenburnsview.KenBurnsView
+            <ImageView
                 android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg" />
+            <!--  This is your template view -->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/bg" />
-        </LinearLayout>
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_weight="0.3"-->
-<!--            android:orientation="vertical">-->
-<!--            <com.google.android.gms.ads.AdView-->
-<!--                android:id="@+id/adView"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                ads:adSize="FULL_BANNER"-->
-<!--                android:layout_gravity="bottom"-->
+                ads:adSize="FULL_BANNER"
+                android:layout_gravity="bottom"
 
-<!--                android:background="@color/primary_dark"-->
-<!--                ads:adUnitId="@string/banner_home_footer">-->
-<!--            </com.google.android.gms.ads.AdView>-->
-<!--        </LinearLayout>-->
+                android:background="@color/primary_dark"
+                ads:adUnitId="@string/banner_home_footer">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

@@ -3,49 +3,59 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.NativeExpressAdView;
+import com.prit.videocompressorpro.BuildConfig;
 import com.prit.videocompressorpro.Model.Model_images;
 import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.Utils.Helper;
 import com.prit.videocompressorpro.ViewModel.Adapter_Photos;
-import com.flaviofaria.kenburnsview.KenBurnsView;
-import com.flaviofaria.kenburnsview.RandomTransitionGenerator;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
     private GridView gv_folder;
     private Button videlist;
     private AdView mAdView;
 
+
     public static ArrayList<Model_images> al_images = new ArrayList<>();
     boolean boolean_folder;
-    private int backButtonCount = 0;
     private static final int REQUEST_PERMISSIONS = 100;
     private Boolean chekpermistion = false;
+    String result;
     private Adapter_Photos obj_adapter;
+   // RequestQueue queue;
+    static String URL = "https://priteshparmar.000webhostapp.com/appversion/version.txt";
+
 
 
     @Override
@@ -55,17 +65,18 @@ public class MainActivity extends AppCompatActivity {
         gv_folder = (GridView) findViewById(R.id.gv_folder);
         videlist = (Button) findViewById(R.id.videlist);
 
-        /// floating view image liabrary
-        KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
-        AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
-        RandomTransitionGenerator generator = new RandomTransitionGenerator(10000, ACCELERATE_DECELERATE);
-        kbv.setTransitionGenerator(generator);
+
 
         // Loading banner add
         MobileAds.initialize(this, getString(R.string.admob_app_id));
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        //mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);
+
+
+
+
+
 
         // Onclik Listner
         videlist.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (chekpermistion) {
                     Intent ii = new Intent(MainActivity.this, VideoListActivity.class);
+                    //Intent ii = new Intent(MainActivity.this, ExampleActivity.class);
                     startActivity(ii);
                 } else {
                     ActivityCompat.requestPermissions(MainActivity.this,
@@ -94,11 +106,93 @@ public class MainActivity extends AppCompatActivity {
         // Checkpermition
         chekpermisstion();
 
+        new checkforupdate().execute();
 
 
     }
+    public class checkforupdate extends AsyncTask<String, Void, String> {
+        public static final String REQUEST_METHOD = "GET";
+        public static final int READ_TIMEOUT = 15000;
+        public static final int CONNECTION_TIMEOUT = 15000;
+        @Override
+        protected String doInBackground(String... params){
 
 
+            String inputLine;
+            try {
+                //Create a URL object holding our url
+                java.net.URL myUrl = new URL(URL);
+                //Create a connection
+                HttpURLConnection connection =(HttpURLConnection)
+                        myUrl.openConnection();
+                //Set methods and timeouts
+                connection.setRequestMethod(REQUEST_METHOD);
+                connection.setReadTimeout(READ_TIMEOUT);
+                connection.setConnectTimeout(CONNECTION_TIMEOUT);
+
+                //Connect to our url
+                connection.connect();
+                //Create a new InputStreamReader
+                InputStreamReader streamReader = new
+                        InputStreamReader(connection.getInputStream());
+                //Create a new buffered reader and String Builder
+                BufferedReader reader = new BufferedReader(streamReader);
+                StringBuilder stringBuilder = new StringBuilder();
+                //Check if the line we are reading is not null
+                while((inputLine = reader.readLine()) != null){
+                    stringBuilder.append(inputLine);
+                }
+                //Close our InputStream and Buffered reader
+                reader.close();
+                streamReader.close();
+                //Set our result equal to our stringBuilder
+                result = stringBuilder.toString();
+                Helper.LogPrint("app Version",result);
+
+
+            }
+            catch(IOException e){
+                e.printStackTrace();
+                result = null;
+            }
+            return result;
+        }
+        protected void onPostExecute(String result){
+            super.onPostExecute(result);
+            showUpdatepopup();
+        }
+    }
+
+    private void showUpdatepopup() {
+        try {
+            PackageInfo pInfo = MainActivity.this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            int   versionCode = pInfo.versionCode;
+            if (Integer.parseInt(result)>versionCode){
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+                alertDialog.setTitle("Please update your app");
+                alertDialog.setCancelable(false);
+                alertDialog.setMessage("This app version is no longer supported. Please update your app from the Play Store.");
+                alertDialog.setPositiveButton("UPDATE NOW", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        final String appPackageName = getPackageName();
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                        }
+                    }
+                });
+                alertDialog.show();
+            }else{
+
+            }
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public void chekpermisstion() {
@@ -213,15 +307,61 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        if (backButtonCount >= 1) {
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Press the back button once again to close the application.", Toast.LENGTH_SHORT).show();
-            backButtonCount++;
-        }
+        ViewGroup viewGroup = findViewById(android.R.id.content);
+
+        //then we will inflate the custom alert dialog xml that we created
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.alert_layout, viewGroup, false);
+
+
+        //Now we need an AlertDialog.Builder object
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+//        // For Live Native Express Adview
+//        NativeExpressAdView mAdView = (NativeExpressAdView) findViewById(R.id.adViewNative);
+//        AdRequest adRequests = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequests);
+
+// For Testing Native Express Adview
+        NativeExpressAdView mAdView = (NativeExpressAdView)dialogView. findViewById(R.id.adViewNative);
+        AdRequest adRequests = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequests);
+        final AlertDialog alertDialog = builder.create();
+        Button rateus=(Button)dialogView.findViewById(R.id.rateus_btn);
+        Button no=(Button)dialogView.findViewById(R.id.no_btn);
+        Button yes=(Button)dialogView.findViewById(R.id.yes_btn);
+
+        rateus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                }
+            }
+        });
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.cancel();
+            }
+        });
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+
+        alertDialog.show();
+
     }
 
     @Override
@@ -247,6 +387,148 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onDestroy();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menushare, menu);
+
+        MenuItem item = menu.findItem(R.id.mShare);
+        MenuItem feedback = menu.findItem(R.id.feedback);
+
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Video Compressor Pro");
+                    String shareMessage = "\nLet me recommend you this application\n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                } catch (Exception e) {
+                    //e.toString();
+                }
+
+                return false;
+            }
+        });
+        feedback.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+
+                LayoutInflater factory = LayoutInflater.from(MainActivity.this);
+                final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
+                final AlertDialog deleteDialog = new AlertDialog.Builder(MainActivity.this).create();
+                deleteDialog.setTitle("Feedback");
+                deleteDialog.setView(deleteDialogView);
+
+
+
+                Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
+
+                feedbacksubmit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                        }
+//                            String feedbackvalue =text.getText().toString().trim();
+//                            if (feedbackvalue.equalsIgnoreCase("")) {
+//                                Toast.makeText(MainActivity.this,"Please provide feedback hear or in play store",Toast.LENGTH_LONG).show();
+//                            }else{
+//                                String androidSDK = "null", androidVersion = "null", androidBrand = "null",
+//                                        androidManufacturer = "null", androidModel = "null", androidDeviceId = "null";
+//                                String versionCode = "null", versionName = "null";
+//                                PackageInfo pInfo = null;
+//                                String deviceDetail = "null";
+//                                pInfo = MainActivity.this.getPackageManager().getPackageInfo(MainActivity.this.getPackageName(), 0);
+//                                versionCode = String.valueOf(pInfo.versionCode).trim();
+//                                versionName = String.valueOf(pInfo.versionName).trim();
+//                                androidSDK = String.valueOf(android.os.Build.VERSION.SDK_INT);
+//                                androidVersion = android.os.Build.VERSION.RELEASE;
+//                                androidBrand = android.os.Build.BRAND;
+//                                androidManufacturer = android.os.Build.MANUFACTURER;
+//                                androidModel = android.os.Build.MODEL;
+//                                androidDeviceId = Settings.Secure.getString(MainActivity.this.getContentResolver(), Settings.Secure.ANDROID_ID);
+//                                deviceDetail = "App Version Code: " + versionCode + "\nApp Version Number: " + versionName + "\nSDK: " + androidSDK + "\nVersion: " + androidVersion + "\nBrand: " + androidBrand +
+//                                        "\nManufacturer: " + androidManufacturer + "\nModel: " + androidModel + "\nAndroid Device Id: " + androidDeviceId;
+//
+//                                JSONObject feed = new JSONObject();
+//
+//                                feed.put("Feedback", feedbackvalue);
+//                                feed.put("deviceDetail", deviceDetail);
+//
+//
+//                                sendMessageToserver(feed);
+//                            }
+                        deleteDialog.dismiss();
+                    }
+                });
+
+                deleteDialog.show();
+                return false;
+            }
+        });
+
+
+        return super.onCreateOptionsMenu(menu);
+    }
+//    private void sendMessageToserver(JSONObject json) {
+//
+//        try {
+//            final ProgressDialog pDialog = new ProgressDialog(this);
+//            pDialog.setMessage("Sending Please Wait...");
+//            pDialog.show();
+//            Log.e("JSON", "" + json);
+//            String url = "https://priteshparmar.000webhostapp.com/appversion/feedback.php";
+//            Log.e("url", "" + url);
+//
+//
+//            JsonObjectRequest strReq = new JsonObjectRequest(Request.Method.POST,
+//                    url, json, new Response.Listener<JSONObject>() {
+//
+//                @Override
+//                public void onResponse(JSONObject response) {
+//                    pDialog.dismiss();
+//                    Log.e("Respose", response.toString());
+//                    Toast.makeText(MainActivity.this,"Thank you for your feedback",Toast.LENGTH_LONG).show();
+//
+//                }
+//            }, new Response.ErrorListener() {
+//
+//                @Override
+//                public void onErrorResponse(VolleyError error) {
+//                    pDialog.dismiss();
+//                    VolleyLog.e("TAG", "Error: " + error.getMessage());
+//
+//                }
+//
+//            }) {
+//
+//
+//                @Override
+//                public Map<String, String> getHeaders() throws AuthFailureError {
+//                    HashMap<String, String> headers = new HashMap<String, String>();
+//                    headers.put("Content-Type", "application/json");
+//                    headers.put("apiKey", "xxxxxxxxxxxxxxx");
+//                    return headers;
+//                }
+//            };
+//
+//
+//// Adding request to request queue
+//            queue.add(strReq);
+//        } catch (Exception e) {
+//
+//        }
+//    }
 }
 
 

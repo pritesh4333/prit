@@ -171,7 +171,7 @@ pradeep password= 0963
  903664806			8000	   6012			14012
  Total 				46500	+	35253   =   Total 81753
 LIC policy Details
-901857056 muktaben parmar 1351 13/08/2017 25000 DOB 01/06/1963   real DOB in berth certerificate  13/8/1967
+901857056 muktaben parmar 1351 13/08/2017 25000 DOB 01/06/1963   real DOB in berth certerificate  13/8/1967        
 902693377 pradip chagnbbhai parmar 5015 16/11/2017 100000  DOB 16/11/1987
 902930668 pritesh parmar 5026 23/1/2018 100000 DOB 30/12/1993
 903664806 chagnabhai parmar 5364  15/11/2017  100000 DOB 01/06/1963
@@ -194,6 +194,11 @@ email id parmarprit100@gmail
 user 8767957178
 pass prit.4333
 https://myinsurance.tataaia.com/wps/portal/Customer/Customer/CustomerLogin payment link
+
+
+Future genrali rider payemt link
+https://customer.life.futuregenerali.in/WebAppln/Pages/Transaction/QuickPay.aspx
+
 
 9841012345 
 065368
@@ -364,3 +369,9 @@ Play Store developer ID   5948244429315631275
 
 playstorekey while uploading 433343
 
+office mobile gmail login detail
+email taxgeniemobile@gmail.com
+pass Reg!me@2018
+
+
+DIM acceptance 

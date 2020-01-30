@@ -1,40 +1,36 @@
 <resources>
     <string name="app_name">Video Compressor Pro</string>
     <string name="convert">Compress this video</string>
-    <string name="cancel">Cancel</string>
-    <string name="ok">OK</string>
     <string name="output_video">Output:</string>
     <string name="input_video">Input:</string>
-    <string name="conversion_not_supported">Video conversion is not supported by your phone</string>
-    <string name="conversion_in_progress">Conversion in progress</string>
-    <string name="please_select_video">Please select video</string>
-    <string name="select_video">Select video</string>
-    <string name="reselect">Reselect</string>
-    <string name="bad_video">Not a video</string>
-    <string name="trim_info">%1$s - %2$s (duration %3$s)</string>
     <string name="video_info">%1$sx%2$s, %3$s, %4$s</string>
-    <string name="video_info_output">%1$dx%2$d, %3$s, ~%4$s</string>
-    <string name="conversion_failed">Failed to convert</string>
-    <string name="seconds_elapsed">%d sec. elapsed</string>
-    <string name="quality_240p">240p</string>
-    <string name="quality_360p">360p</string>
-    <string name="quality_480p">480p</string>
+    <!--    <string name="quality_240p">Low</string>-->
+    <!--    <string name="quality_360p">Medium</string>-->
+    <!--    <string name="quality_480p">High</string>-->
+    <string name="quality_186p">186p</string>
+    <string name="quality_426p">426p</string>
+    <string name="quality_512p">512p</string>
+    <string name="quality_640p">640p</string>
     <string name="quality_720p">720p</string>
-    <string name="quality_720p_h265">720p, h265</string>
+    <string name="quality_960p">960p</string>
     <string name="quality_1080p">1080p</string>
-    <string name="quality_1080p_h265">1080p, h265</string>
-<!--production-->
-<!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
-    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
-    <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>
-    <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>
-<!--&lt;!&ndash;    <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>&ndash;&gt;-->
-<!--&lt;!&ndash;    <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>&ndash;&gt;-->
+    <string name="quality_1920p">1920p</string>
+    <!--production-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
+        <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>
+        <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>
+        <string name="natice_advanceadd">ca-app-pub-4959089160488184/9068586831</string>
+    <!--&lt;!&ndash;    <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>&ndash;&gt;-->
 
-<!--//Test-->
-        <!-- AdMob ad unit IDs -->
-<!--        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
-<!--        <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
-<!--        <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+    <!--//Test-->
+    <!-- AdMob ad unit IDs -->
+<!--    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+<!--    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="natice_advanceadd">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
+
 
 </resources>

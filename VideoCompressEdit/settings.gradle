@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':android-ffmpeg'
 rootProject.name='Video Compress & Edit'
