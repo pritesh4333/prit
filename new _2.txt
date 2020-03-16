@@ -371,4 +371,7 @@ https://filmora.wondershare.com/video-editing-tips/what-is-video-bitrate.html
 https://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
 https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg
 
+asdad
+
+
 
