@@ -97,7 +97,7 @@ public class CallRecords extends AppCompatActivity implements SearchView.OnQuery
     private void GetRecords() {
         pullToRefresh.setRefreshing(true);
         try {
-            String url = "https://priteshparmar.000webhostapp.com/readalllatlog.php";
+            String url = "https://priteshparmarnew.000webhostapp.com/readalllatlog.php";
             Log.e("url", "" + url);
 
 
@@ -140,9 +140,15 @@ public class CallRecords extends AppCompatActivity implements SearchView.OnQuery
                         LASTSEEN = jsonObject.getString("LAST SEEN");
 
 
-                        Locations = jsonObject.getString("Location");
+
                         } catch (Exception e) {
                             Log.e("api error", e.getMessage());
+                        }
+                        Locations="null";
+                        try {
+                            Locations = jsonObject.getString("Location");
+                        }catch(Exception e){
+                            Log.e("Location error", e.getMessage());
                         }
                         Gpss = "NULL";
                         try {

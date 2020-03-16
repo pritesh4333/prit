@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
@@ -19,6 +20,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -26,6 +29,7 @@ import android.widget.VideoView;
 import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.prit.videocompressorpro.R;
@@ -34,18 +38,22 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
+import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
+
 public class OutputActivity extends AppCompatActivity {
     VideoView vv_video;
     ImageView  output_delete;
     TextView mOutputInfoView;
     TextView resolutiontext;
     TextView outputtxt;
-    ImageView output_play;
+   // ImageView output_play;
     ImageView output_share;
     TextView video_location;
     InterstitialAd mInterstitialAd;
     private AdView mAdView;
     private  Boolean OutputVideoPlayingStatus=false;
+    private MediaController mediaController;
+    String admob_app_id,banner_home_footer,interstitial_full_screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +65,7 @@ public class OutputActivity extends AppCompatActivity {
         output_delete=(ImageView)findViewById(R.id.output_delete);
 
         mOutputInfoView = findViewById(R.id.output_info);
-        output_play=findViewById(R.id.output_play);
+        //output_play=findViewById(R.id.output_play);
 
 
         output_share=findViewById(R.id.output_share);
@@ -65,22 +73,39 @@ public class OutputActivity extends AppCompatActivity {
         video_location=(TextView)findViewById(R.id.video_location);
         resolutiontext=(TextView)findViewById(R.id.resolutiontext);
 
-        outputtxt=(TextView)findViewById(R.id.outputtxt);
+       // outputtxt=(TextView)findViewById(R.id.outputtxt);
 
         final String str_video = getIntent().getStringExtra("OutoutPath");
         vv_video.setVideoPath(str_video);
+        mediaController = new MediaController(this);
+        vv_video.setMediaController(mediaController);
         vv_video.start();
         OutputVideoPlayingStatus=true;
 
         // show add on banner
-        mAdView = findViewById(R.id.adView);
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        admob_app_id = prefs.getString("admob_app_id", "");
+        if (admob_app_id.equalsIgnoreCase("")){
+            admob_app_id=getString(R.string.admob_app_id);
+            banner_home_footer=getString(R.string.banner_home_footer);
+            interstitial_full_screen=getString(R.string.interstitial_full_screen);
+        }else {
+            admob_app_id = prefs.getString("admob_app_id", "");
+            banner_home_footer = prefs.getString("banner_home_footer", "");
+            interstitial_full_screen=prefs.getString("interstitial_full_screen","");
+        }
+        // Loading banner add
+
+        LinearLayout adContainer = findViewById(R.id.output_adview);
+        AdView mAdView = new AdView(OutputActivity.this);
+        mAdView.setAdSize(AdSize.BANNER);
+        mAdView.setAdUnitId(banner_home_footer);
+        adContainer.addView(mAdView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-
         // Show full page add
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_full_screen));
+        mInterstitialAd.setAdUnitId(interstitial_full_screen);
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdLoaded() {
@@ -141,7 +166,7 @@ public class OutputActivity extends AppCompatActivity {
 
                                         System.out.println("file Deleted :" + str_video);
                                         Toast.makeText(OutputActivity.this, "File Deleted.", Toast.LENGTH_LONG).show();
-                                        Intent i = new Intent(OutputActivity.this, MainActivity.class);
+                                        Intent i = new Intent(OutputActivity.this, VideoListActivity.class);
                                         startActivity(i);
                                         finish();
 
@@ -170,30 +195,30 @@ public class OutputActivity extends AppCompatActivity {
 
             }
         });
-        output_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (OutputVideoPlayingStatus==false) {
-                    vv_video.start();
-                    OutputVideoPlayingStatus=true;
-                    outputtxt.setText("Playing");
-                    output_play.setBackground(getResources().getDrawable(R.drawable.ic_pause));
-                }else{
-                    OutputVideoPlayingStatus=false;
-                    vv_video.pause();
-                    outputtxt.setText("Stop");
-                    output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
-                }
-            }
-        });
+//        output_play.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                if (OutputVideoPlayingStatus==false) {
+//                    vv_video.start();
+//                    OutputVideoPlayingStatus=true;
+//                    outputtxt.setText("Playing");
+//                    output_play.setBackground(getResources().getDrawable(R.drawable.ic_pause));
+//                }else{
+//                    OutputVideoPlayingStatus=false;
+//                    vv_video.pause();
+//                    outputtxt.setText("Stop");
+//                    output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
+//                }
+//            }
+//        });
         vv_video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
 
                 OutputVideoPlayingStatus=false;
-                outputtxt.setText("Play");
-                output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
+//                outputtxt.setText("Play");
+//                output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
             }
         });
         output_share.setOnClickListener(new View.OnClickListener() {
@@ -246,6 +271,7 @@ public class OutputActivity extends AppCompatActivity {
 
                 final String width = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH);
                 final String height = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT);
+
                 long size = outputs.length();
 
 
@@ -294,8 +320,8 @@ public class OutputActivity extends AppCompatActivity {
                 mediaMetadataRetriever.release();
                 mOutputInfoView.setText(getString(R.string.video_info, width, height,
                         DateUtils.formatElapsedTime(duration / 1000),
-                        Formatter.formatShortFileSize(this, outputs.length()))+" "+hrSize);
-                output_play.setEnabled(true);
+                        Formatter.formatShortFileSize(this, outputs.length())));
+               // output_play.setEnabled(true);
 
 
                 video_location.setText("File Location:-\n" + outputs);
@@ -318,4 +344,35 @@ public class OutputActivity extends AppCompatActivity {
             Crashlytics.log("Show Detial"+e);
         }
     }
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(OutputActivity.this,VideoListActivity.class);
+        startActivity(i);
+        finish();
+
+    }
+
+
 }

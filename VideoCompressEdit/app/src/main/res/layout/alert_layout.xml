@@ -1,70 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
     >
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rate Us if u like this"
-        android:background="@color/accent"
-        android:padding="10dp"
-        android:textSize="15sp"
-        android:textColor="@color/primary_dark"></TextView>
+        android:layout_height="wrap_content">
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Do you want to Exit?"
-        android:padding="10dp"
-        android:textSize="15sp"
-        android:textColor="#FFFFFF"></TextView>
-
-    <com.google.android.gms.ads.NativeExpressAdView
-        android:id="@+id/adViewNative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="320x250"
-        ads:adUnitId="@string/natice_advanceadd">
-    </com.google.android.gms.ads.NativeExpressAdView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="3"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/rateus_btn"
-            android:layout_width="0dp"
-            android:layout_weight="1.4"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:textColor="@color/accent"
-            android:text="Rate/Feedback"></Button>
-
-        <Button
-            android:id="@+id/no_btn"
-            android:layout_width="0dp"
-            android:layout_weight="0.8"
-            android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:textColor="@color/accent"
-            android:text="No"></Button>
-        <Button
-            android:id="@+id/yes_btn"
-            android:layout_width="0dp"
-            android:layout_weight="0.8"
-            android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:textColor="@color/accent"
-            android:text="Yes"></Button>
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate Us if u like this"
+                android:background="@color/accent"
+                android:padding="13dp"
+                android:textSize="12sp"
+                android:textColor="@color/primary_dark"></TextView>
 
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you want to Exit?"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"></TextView>
+
+
+
+
+
+
+
+
+            <FrameLayout
+                android:id="@+id/fl_adplaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/rateus_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.4"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:padding="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:background="@color/gray"
+                    android:textColor="@color/accent"
+                    android:text="Rate/Feedback"></TextView>
+
+                <TextView
+                    android:id="@+id/no_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:padding="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:background="@color/gray"
+                    android:textColor="@color/accent"
+                    android:text="No"></TextView>
+                <TextView
+                    android:id="@+id/yes_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:background="@color/gray"
+                    android:padding="5dp"
+                    android:textColor="@color/accent"
+                    android:text="Yes"></TextView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

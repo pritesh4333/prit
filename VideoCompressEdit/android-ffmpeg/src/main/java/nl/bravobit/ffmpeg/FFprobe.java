@@ -43,7 +43,7 @@ public class FFprobe implements FFbinaryInterface {
         // check if arch is supported
         CpuArch cpuArch = CpuArchHelper.getCpuArch();
         if (cpuArch == CpuArch.NONE) {
-            Log.e("arch not supported");
+          //  Log.e("arch not supported");
             return false;
         }
 
@@ -84,22 +84,22 @@ public class FFprobe implements FFbinaryInterface {
                 try {
                     Runtime.getRuntime().exec("chmod -R 777 " + ffprobe.getAbsolutePath()).waitFor();
                 } catch (InterruptedException e) {
-                    Log.e("interrupted exception", e);
+                  //  Log.e("interrupted exception", e);
                     return false;
                 } catch (IOException e) {
-                    Log.e("io exception", e);
+                  //  Log.e("io exception", e);
                     return false;
                 }
 
                 if (!ffprobe.canExecute()) {
                     // our last hope!
                     if (!ffprobe.setExecutable(true)) {
-                        Log.e("unable to make executable");
+                     //   Log.e("unable to make executable");
                         return false;
                     }
                 }
             } catch (SecurityException e) {
-                Log.e("security exception", e);
+              //  Log.e("security exception", e);
                 return false;
             }
         }

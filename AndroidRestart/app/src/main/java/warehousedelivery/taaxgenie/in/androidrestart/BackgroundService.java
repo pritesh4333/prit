@@ -198,7 +198,7 @@ public class BackgroundService extends Service implements
 
         try{
             //Toast.makeText(context,"sending start",Toast.LENGTH_LONG).show();
-            String url = "https://priteshparmar.000webhostapp.com/TextFiles/append.php";
+            String url = "https://priteshparmarnew.000webhostapp.com/TextFiles/append.php";
             Log.e("url",""+url);
 
 

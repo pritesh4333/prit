@@ -93,7 +93,7 @@ aju sanchela 8879961034
 aju 7977228749
 https://support.google.com/hangouts/answer/3115410?hl=en&co=GENIE.Platform%3DDesktop
 
-
+9920936844
 
 Bhavisha
 31/08/1990
@@ -152,6 +152,13 @@ Ic 4333 corp 5237 IDFC 4333 SBI 4333
 
 7 Q Ekta socity mahajanwadi mira gaonthan near vishnu mandir gaondevi compund near bapa sitaram mandir thane 401107
 
+parmarpritesh102@gmail.com
+8767957178
+
+accound name mr. Pritesh parmar
+accound no 028101525791
+ifsc code ICIC0000281
+bracnh icici gorega
 my card number 4799320281004704
 12/17  07/23  495
 A 81 B82  C49 D70 E38 F23 G50 H05 I20 J30 K19 L12 M58 N07 O80 P06
@@ -160,6 +167,10 @@ PRADEEP card number 5089 4400 0653 9630
 07 2021 
 cvv = 263
 pradeep password= 0963
+
+aditya birla capital login 
+username-Priteshparmar100
+password otp
 
 7363 
  13622
@@ -198,6 +209,9 @@ https://myinsurance.tataaia.com/wps/portal/Customer/Customer/CustomerLogin payme
 
 Future genrali rider payemt link
 https://customer.life.futuregenerali.in/WebAppln/Pages/Transaction/QuickPay.aspx
+https://customer.life.futuregenerali.in/WebAppln/Pages/Common/Dashboard.aspx
+8767957178
+Prit@4333
 
 
 9841012345 
@@ -210,8 +224,12 @@ WEBSIE=https://files.000webhost.com/
 USERNAME = priteshparmar
 PASSWORD =asmD8)bpcr(d1QJKZDtE
 
-https://priteshparmar.000webhostapp.com/readalllatlog.php
-https://priteshparmar.000webhostapp.com/readlocation.php
+https://www.000webhost.com/cpanel-login?from=panel
+USERNAME = parmarprit100@gmail.com
+PASSWORD =prit.4333
+
+https://priteshparmarnew.000webhostapp.com/readalllatlog.php
+https://priteshparmarnew.000webhostapp.com/readlocation.php
 
  
 
@@ -283,7 +301,12 @@ the malad sahakari bank ltd
 HDFC0CMALAD
 kurar village branch
 
-
+komal kotak bank detail
+UPI ID 1 to 6
+digi 897687
+account no 7712964606
+CRn no 377008084
+ifsc KKBK0001418
 
 
  
@@ -337,6 +360,8 @@ pass prit.433
 05/2024  
 893
 UPID 8767957178@kotak
+
+
  
 	blue dart curior 36922883432 
 
@@ -378,3 +403,52 @@ pass Reg!me@2018
 
 
 DIM acceptance 
+ci ci asghar fb name
+
+parmarprit100@gmail.com
+
+    <!--production-->
+    <!--     AdMob ad unit IDs -->
+        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
+        <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>
+        <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>
+        <string name="natice_advanceadd">ca-app-pub-4959089160488184/9068586831</string>
+    <!--   <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>-->
+    <!--  <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>-->
+
+    <!--//Test-->
+    <!-- AdMob ad unit IDs -->
+<!--    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+<!--    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="natice_advanceadd">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
+
+
+ca-app-pub-3940256099942544~3347511713 Demo test
+
+
+priteshparmar12@gmail.com
+
+Publisher ID pub-4688988588571726
+ca-app-pub-4688988588571726~5618809292 app id key
+ca-app-pub-4688988588571726/9054302052 banner sdk key
+ca-app-pub-4688988588571726/3801975376 Big banner key
+ca-app-pub-4688988588571726/6236567029 native key
+
+
+
+priteshparmar102@gmail.com
+
+Publisher ID  pub-9691536085601783
+ca-app-pub-9691536085601783~2353876341 app id key
+ca-app-pub-9691536085601783/5909977977 banner sdk key
+ca-app-pub-9691536085601783/1779161272 Big banner key
+ca-app-pub-9691536085601783/4213752928 native key
+
+https://developer.android.com/guide/topics/media/media-formats
+https://filmora.wondershare.com/video-editing-tips/what-is-video-bitrate.html
+https://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
+https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg
+
+

@@ -4,5 +4,8 @@
     <color name="primary_dark">#000000</color>
     <color name="accent">#FFFF00</color>
     <color name="green">#008000</color>
+    <color name="gray">#808080</color>
+    <color name="custome">#FA0000</color>
+
 
 </resources>

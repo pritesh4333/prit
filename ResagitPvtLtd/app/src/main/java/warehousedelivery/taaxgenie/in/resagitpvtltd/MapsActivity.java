@@ -57,7 +57,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                   public void run() {
                                       //Called each time when 1000 milliseconds (1 second) (the period parameter)
                                       try{
-                                          String url = "https://priteshparmar.000webhostapp.com/readlocation.php";
+                                          String url = "https://priteshparmarnew.000webhostapp.com/readlocation.php";
                                           Log.e("url",""+url);
 
 
