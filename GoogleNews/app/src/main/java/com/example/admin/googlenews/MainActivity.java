@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
             final ProgressDialog pDialog = new ProgressDialog(this);
             pDialog.setMessage("Loading...");
             pDialog.show();
-            String url = "https://priteshparmar.000webhostapp.com/sendimageandrecive/Image.txt";
+            String url = "https://priteshparmarnew.000webhostapp.com/sendimageandrecive/Image.txt";
             Log.e("url", "" + url);
 
 
@@ -362,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
             pDialog.setMessage("Loading Please Wait...");
             pDialog.show();
 
-            String url = "https://priteshparmar.000webhostapp.com/sendimageandrecive/sendimage.php";
+            String url = "https://priteshparmarnew.000webhostapp.com/sendimageandrecive/sendimage.php";
             Log.e("url", "" + image);
 
 
@@ -472,7 +472,7 @@ public class MainActivity extends AppCompatActivity {
             pDialog.setMessage("Loading Please Wait...");
             pDialog.show();
 
-            String url = "https://priteshparmar.000webhostapp.com/TextFiles/writeMsg.php";
+            String url = "https://priteshparmarnew.000webhostapp.com/TextFiles/writeMsg.php";
             Log.e("url", "" + url);
 
 
@@ -520,7 +520,7 @@ public class MainActivity extends AppCompatActivity {
             final ProgressDialog pDialog = new ProgressDialog(this);
             pDialog.setMessage("Loading...");
             pDialog.show();
-            String url = "https://priteshparmar.000webhostapp.com/ReadMsg.php";
+            String url = "https://priteshparmarnew.000webhostapp.com/ReadMsg.php";
             Log.e("url", "" + url);
 
 

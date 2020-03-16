@@ -3,14 +3,31 @@ package com.prit.videocompressorpro.Model;
 
 public class Model_Video {
     String str_path,str_thumb;
-    boolean boolean_selected;
-    int size;
 
-    public int getSize() {
+    String size;
+    String duration;
+    boolean selected;
+
+    public boolean getSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
@@ -32,11 +49,5 @@ public class Model_Video {
         this.str_thumb = str_thumb;
     }
 
-    public boolean isBoolean_selected() {
-        return boolean_selected;
-    }
 
-    public void setBoolean_selected(boolean boolean_selected) {
-        this.boolean_selected = boolean_selected;
-    }
 }

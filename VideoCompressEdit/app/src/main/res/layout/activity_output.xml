@@ -14,23 +14,24 @@
         android:text=""
         android:layout_marginTop="10dp"
         android:padding="5dp"
-        android:textSize="10sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         android:textColor="#FFFFFF"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_weight="1"
+         >
 
         <VideoView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.9"
+            android:layout_height="wrap_content"
             android:id="@+id/vv_video"
             android:layout_gravity="center"
             />
-
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,12 +39,13 @@
             android:layout_marginTop="10dp"
             android:background="#1f1f1f"
             android:orientation="horizontal"
+            android:weightSum="2"
             android:padding="5dp" >
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.9"
+                android:layout_weight="1.3"
                 android:orientation="vertical" >
 
                 <TextView
@@ -61,7 +63,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1.1"
+                android:layout_weight="0.7"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <LinearLayout
@@ -69,19 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="35dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:id="@+id/output_play"
-                            style="@style/ActionBarButtonStyle"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:scaleType="center"
-                            android:background="@drawable/ic_play" />
-                    </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="35dp"
@@ -113,18 +103,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="3"
+                    android:weightSum="2"
 
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/outputtxt"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Play"
-                        android:textSize="12sp"/>
 
                     <TextView
                         android:layout_width="0dp"
@@ -150,20 +132,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:id="@+id/output_adview"
             android:gravity="end"
             android:orientation="vertical">
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                ads:adSize="FULL_BANNER"
-                android:background="@color/primary_dark"
-                ads:adUnitId="@string/banner_home_footer">
-            </com.google.android.gms.ads.AdView>
+<!--            <com.google.android.gms.ads.AdView-->
+<!--                android:id="@+id/adView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                ads:adSize="FULL_BANNER"-->
+<!--                android:background="@color/primary_dark"-->
+<!--                ads:adUnitId="@string/banner_home_footer">-->
+<!--            </com.google.android.gms.ads.AdView>-->
         </LinearLayout>
 
 
 
     </LinearLayout>
-</LinearLayout>

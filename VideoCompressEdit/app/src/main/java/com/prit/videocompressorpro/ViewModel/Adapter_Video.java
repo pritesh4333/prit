@@ -1,14 +1,18 @@
 package com.prit.videocompressorpro.ViewModel;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.prit.videocompressorpro.Model.Model_Video;
@@ -17,26 +21,48 @@ import com.prit.videocompressorpro.View.CompressorActivity;
 
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
+import uk.co.deanwild.materialshowcaseview.shape.CircleShape;
+
+import static android.content.Context.MODE_PRIVATE;
+import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
+import static com.prit.videocompressorpro.View.VideoListActivity.gallery;
+import static com.prit.videocompressorpro.View.VideoListActivity.item;
+import static com.prit.videocompressorpro.View.VideoListActivity.menu_share;
 
 
 public class Adapter_Video extends ArrayAdapter<Model_Video> {
 
-    Context context;
+
     Activity activity;
-    ViewHolder viewHolder;
-    ArrayList<Model_Video> al_menu = new ArrayList<>();
+
+    List<Model_Video> al_menu = new ArrayList<>();
+    public static  String isAnySelectec="";
+    public int showcasecount=0;
+    public int sharecount=0;
+    //private SparseBooleanArray mSelectedItemsIds;
 
 
-
-    public Adapter_Video(Context context, ArrayList<Model_Video> al_menu) {
-        super(context, R.layout.adapter_videos, al_menu);
-        this.al_menu = al_menu;
-        this.context = context;
-        this.activity = (Activity) context;
-
-
+    public Adapter_Video(Activity context, int resId, List<Model_Video> laptops) {
+        super(context, resId, laptops);
+        // mSelectedItemsIds = new SparseBooleanArray();
+        this.activity = context;
+        this.al_menu=laptops;
 
     }
+
+
+//    public void setClickLisner(VideoListActivity videoListActivity) {
+//        this.ClickListener=videoListActivity;
+//    }
+
+
+
 
     @Override
     public int getCount() {
@@ -68,40 +94,151 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
+        ViewHolder holder;
 
         if (convertView == null) {
-            viewHolder= new  ViewHolder();
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.adapter_videos, parent, false);
-            viewHolder.iv_image = (ImageView) convertView.findViewById(R.id.iv_image);
-            viewHolder.rl_select = (RelativeLayout) convertView.findViewById(R.id.rl_select);
-            Glide.with(context).load("file://" + al_menu.get(position).getStr_thumb())
-                    .skipMemoryCache(false)
-                    .centerCrop()
-                    .into(viewHolder.iv_image);
+            LayoutInflater inflater = (LayoutInflater) activity
+                    .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.adapter_videos, null);
+            holder = new ViewHolder();
+            holder.iv_image = (ImageView) convertView.findViewById(R.id.iv_image);
+            holder.select_video= (ImageView) convertView.findViewById(R.id.select_video);
+            holder.video_detail = (TextView) convertView.findViewById(R.id.video_detail);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+        Model_Video model_video= al_menu.get(position);
+        Glide.with(activity).load("file://" + model_video.getStr_thumb())
+                .skipMemoryCache(false)
+                .centerCrop()
+                .into(holder.iv_image);
+
+        holder.video_detail.setText(model_video.getSize()+" "+model_video.getDuration());
 
 
-            //viewHolder.iv_image.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            //viewHolder.rl_select.setAlpha(0);
-            viewHolder.iv_image.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent_gallery = new Intent(context, CompressorActivity.class);
-                    intent_gallery.putExtra("video",al_menu.get(position).getStr_path());
+
+
+        //viewHolder.iv_image.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        //viewHolder.rl_select.setAlpha(0);
+        holder.iv_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                if (isAnySelectec.equalsIgnoreCase("true")){
+
+                    if (!al_menu.get(position).getSelected()){
+                        holder.select_video.setVisibility(View.VISIBLE);
+                        model_video.setSelected(true);
+                        item.setVisible(true);
+
+                    }else{
+                        holder.select_video.setVisibility(View.GONE);
+                        model_video.setSelected(false);
+                        item.setVisible(false);
+
+
+                    }
+                    for (int i=0;i<al_menu.size();i++){
+                        if (al_menu.get(i).getSelected()){
+                            isAnySelectec="true";
+                            item.setVisible(true);
+                            break;
+                        }else{
+                            isAnySelectec="";
+                            item.setVisible(false);
+                        }
+                    }
+                    sharecount=0;
+                    for (int i=0;i<al_menu.size();i++){
+                        if (al_menu.get(i).getSelected()){
+                            sharecount++;
+
+                        }
+                    }
+                    if (sharecount==1){
+                        menu_share.setVisible(true);
+                    }else{
+                        menu_share.setVisible(false);
+                    }
+
+                }else {
+                    Intent intent_gallery = new Intent(activity, CompressorActivity.class);
+                    intent_gallery.putExtra("video", model_video.getStr_path());
                     activity.startActivity(intent_gallery);
                     activity.finish();
+                }
 
-                    //  VideoConver(al_video.get(position).getStr_path());
+
+            }
+        });
+        holder.iv_image.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+
+
+                if (!al_menu.get(position).getSelected()){
+                    holder.select_video.setVisibility(View.VISIBLE);
+                    model_video.setSelected(true);
+                    item.setVisible(true);
+
+
+
+
+
+
+                }else{
+                    holder.select_video.setVisibility(View.GONE);
+                    model_video.setSelected(false);
+                    item.setVisible(false);
 
                 }
-            });
-            convertView.setTag(viewHolder);
-        } else {
-            viewHolder = (ViewHolder) convertView.getTag();
+
+                for (int i=0;i<al_menu.size();i++){
+
+                    if (al_menu.get(i).getSelected()){
+                        isAnySelectec="true";
+                        item.setVisible(true);
+                        break;
+                    }else{
+                        isAnySelectec="";
+                        item.setVisible(false);
+
+                    }
+                }
+                for (int i=0;i<al_menu.size();i++){
+
+                    if (al_menu.get(i).getSelected()){
+                        if (!menu_share.isVisible()) {
+                            menu_share.setVisible(true);
+                            break;
+                        }else{
+                            menu_share.setVisible(false);
+                        }
+
+                    }else{
+
+                        menu_share.setVisible(false);
+
+                    }
+                }
+
+
+                //ClickListener.onLongClick(position,activity);
+                return true;
+            }
+        });
+
+
+
+        if (position==4){
+            if (showcasecount==0) {
+                showcasecount = 1;
+                showShowcase(holder.iv_image);
+            }
         }
-
-
-
-
 
 
 
@@ -115,10 +252,39 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
 
     }
 
+
+    public  void showShowcase(ImageView iv_image){
+        SharedPreferences prefs = activity.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        String Showcase = prefs.getString("Showcase", "");
+
+        if (Showcase.equalsIgnoreCase("")){
+
+
+            new MaterialShowcaseView.Builder(activity)
+                    .setTarget(iv_image)
+                    .setShape(new CircleShape())
+                    .setDismissText("GOT IT")
+                    .setContentText("Select Video You Want To Compress From The List")
+                    .setDelay(1000)
+                    .setFadeDuration(500)
+                    .setDismissOnTouch(true)
+                    .setMaskColour(activity.getResources().getColor(R.color.primary_dark))
+                    .setContentTextColor(activity.getResources().getColor(R.color.accent))
+                    // optional but starting animations immediately in onCreate can make them choppy
+                   // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
+                    .show();
+
+
+        }else {
+        }
+    }
+
     private static class ViewHolder {
 
-        public ImageView iv_image;
+        public ImageView iv_image,select_video;
         public RelativeLayout rl_select;
+        public TextView video_detail;
+
 
 
     }

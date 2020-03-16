@@ -43,7 +43,7 @@ public class FFmpeg implements FFbinaryInterface {
         // check if arch is supported
         CpuArch cpuArch = CpuArchHelper.getCpuArch();
         if (cpuArch == CpuArch.NONE) {
-            Log.e("arch not supported");
+      //      Log.e("arch not supported");
             return false;
         }
 
@@ -71,7 +71,7 @@ public class FFmpeg implements FFbinaryInterface {
 
                 settings.edit().putInt(KEY_PREF_VERSION, VERSION).apply();
             } catch (IOException e) {
-                Log.e("error while opening assets", e);
+          //      Log.e("error while opening assets", e);
                 return false;
             }
         }
@@ -83,7 +83,7 @@ public class FFmpeg implements FFbinaryInterface {
                 try {
                     Runtime.getRuntime().exec("chmod -R 777 " + ffmpeg.getAbsolutePath()).waitFor();
                 } catch (InterruptedException e) {
-                    Log.e("interrupted exception", e);
+           //         Log.e("interrupted exception", e);
                     return false;
                 } catch (IOException e) {
                     Log.e("io exception", e);

@@ -1,37 +1,48 @@
 package com.prit.videocompressorpro.View;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.PowerManager;
-import android.provider.MediaStore;
-import android.text.format.DateFormat;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.MediaController;
+import android.widget.ProgressBar;
+import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 
 import com.crashlytics.android.Crashlytics;
 
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.formats.MediaView;
+import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 import com.prit.videocompressorpro.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -42,19 +53,23 @@ import com.prit.videocompressorpro.Utils.Helper;
 
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 import java.util.TimeZone;
 
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
 import nl.bravobit.ffmpeg.FFtask;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
+import uk.co.deanwild.materialshowcaseview.shape.CircleShape;
+
+import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
 
 public class CompressorActivity extends Activity {
 
@@ -63,17 +78,17 @@ public class CompressorActivity extends Activity {
     TextView mInputInfoView;
     TextView mOutputInfoView;
     TextView resolutiontext;
-    TextView play_txt;
-    TextView outputtxt;
-    ImageView output_play;
-    ImageView play_img;
+    //TextView play_txt;
+   // TextView outputtxt;
+   // ImageView output_play;
+   // ImageView play_img;
     ImageView input_options;
     ImageView output_share;
     Button video_location;
     Button convert;
     private static final String TAG = "video-Compress & Edit";
     private String str_video;
-
+    public static  int fulladdcountcompressactivity=0;
     public File mInputFile; // = new File("/storage/emulated/0/Android/data/com.dstukalov.videoconverter/files/Temp/tmp.mp4");
     private File outputs=null;
     private File outputsoption=null;
@@ -85,11 +100,13 @@ public class CompressorActivity extends Activity {
     private String Resolution="";
     public String outputPath="";
     ProgressDialog progressDialog;
-
+    private MediaController mediaController;
     InterstitialAd mInterstitialAd;
     AdRequest adRequest;
     private AdView mAdView;
+    LinearLayout outoutinfo_showcase;
     private  Boolean InputVideoPlayingStatus=false,OutputVideoPlayingStatus=false;
+    String admob_app_id,banner_home_footer,interstitial_full_screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,15 +122,13 @@ public class CompressorActivity extends Activity {
         mOutputOptionsButton=(ImageView)findViewById(R.id.output_options);
         mInputInfoView = findViewById(R.id.input_info);
         mOutputInfoView = findViewById(R.id.output_info);
-        output_play=findViewById(R.id.output_play);
-        play_img=findViewById(R.id.play_img);
+
         input_options=findViewById(R.id.input_options);
         output_share=findViewById(R.id.output_share);
         convert=(Button)findViewById(R.id.convert);
         video_location=(Button)findViewById(R.id.video_location);
         resolutiontext=(TextView)findViewById(R.id.resolutiontext);
-        play_txt=(TextView)findViewById(R.id.play_txt);
-        outputtxt=(TextView)findViewById(R.id.outputtxt);
+        outoutinfo_showcase=(LinearLayout)findViewById(R.id.outoutinfo_showcase);
 
         convert.setVisibility(View.VISIBLE);
 
@@ -130,6 +145,8 @@ public class CompressorActivity extends Activity {
 
         str_video = getIntent().getStringExtra("video");
         vv_video.setVideoPath(str_video);
+        mediaController = new MediaController(this);
+        vv_video.setMediaController(mediaController);
         vv_video.start();
 
         InputVideoPlayingStatus=true;
@@ -138,14 +155,29 @@ public class CompressorActivity extends Activity {
 
 
         // show add on banner
-        mAdView = findViewById(R.id.adView);
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        admob_app_id = prefs.getString("admob_app_id", "");
+        if (admob_app_id.equalsIgnoreCase("")){
+            admob_app_id=getString(R.string.admob_app_id);
+            banner_home_footer=getString(R.string.banner_home_footer);
+            interstitial_full_screen=getString(R.string.interstitial_full_screen);
+        }else {
+            admob_app_id = prefs.getString("admob_app_id", "");
+            banner_home_footer = prefs.getString("banner_home_footer", "");
+            interstitial_full_screen=prefs.getString("interstitial_full_screen","");
+        }
+        // Loading banner add
+
+        LinearLayout adContainer = findViewById(R.id.compress_adview);
+        AdView mAdView = new AdView(CompressorActivity.this);
+        mAdView.setAdSize(AdSize.BANNER);
+        mAdView.setAdUnitId(banner_home_footer);
+        adContainer.addView(mAdView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-
         // Show full page add
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_full_screen));
+        mInterstitialAd.setAdUnitId(interstitial_full_screen);
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdLoaded() {
@@ -165,11 +197,13 @@ public class CompressorActivity extends Activity {
 
             @Override
             public void onAdLeftApplication() {
+
                 // Toast.makeText(getApplicationContext(), "Ad left application!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAdOpened() {
+                fulladdcountcompressactivity++;
                 // Toast.makeText(getApplicationContext(), "Ad is opened!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -195,63 +229,20 @@ public class CompressorActivity extends Activity {
             }
         });
 
-        play_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-
-
-                if (InputVideoPlayingStatus==false){
-                    InputVideoPlayingStatus=true;
-                    vv_video.start();
-                    play_txt.setText("Playing");
-                    play_img.setBackground(getResources().getDrawable(R.drawable.ic_pause));
-                }else{
-                    InputVideoPlayingStatus=false;
-                    vv_video.pause();
-                    play_txt.setText("Stop");
-                    play_img.setBackground(getResources().getDrawable(R.drawable.ic_play));
-                }
-
-            }
-        });
         vv_video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 InputVideoPlayingStatus=false;
                 OutputVideoPlayingStatus=false;
-                play_txt.setText("Play");
-                play_img.setBackground(getResources().getDrawable(R.drawable.ic_play));
-                outputtxt.setText("Play");
-                output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
+               // play_txt.setText("Play");
+               // play_img.setBackground(getResources().getDrawable(R.drawable.ic_play));
+              //  outputtxt.setText("Play");
+              //  output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
             }
         });
 
-        output_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-                if (OutputVideoPlayingStatus==false) {
-                    if (outputsoption != null) {
-                        vv_video.setVideoPath("" + outputsoption);
-                        vv_video.start();
-                        OutputVideoPlayingStatus=true;
-                        outputtxt.setText("Playing");
-                        output_play.setBackground(getResources().getDrawable(R.drawable.ic_pause));
-
-                    } else {
-                        showAlertError("First Compress Video To Play Output File");
-                    }
-                }else{
-                    OutputVideoPlayingStatus=false;
-                    vv_video.pause();
-                    outputtxt.setText("Stop");
-                    output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
-                }
-            }
-        });
 
         mOutputOptionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -302,7 +293,7 @@ public class CompressorActivity extends Activity {
         ShowVideoDetial();
 
 
-
+        showShowcase();
 
 
     }
@@ -325,12 +316,77 @@ public class CompressorActivity extends Activity {
 
 
             final int msec = MediaPlayer.create(this, Uri.fromFile(new File(input))).getDuration();
-            final ProgressDialog dialog = new ProgressDialog(this);
-            dialog.setMax(msec);
-            dialog.setMessage("Progress");
-            dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            dialog.setProgress(0);
-            dialog.setCancelable(false);
+        ViewGroup viewGroup = findViewById(android.R.id.content);
+
+        //then we will inflate the custom alert dialog xml that we created
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.progress_dailog, viewGroup, false);
+
+
+        //Now we need an AlertDialog.Builder object
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+
+
+
+
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+        TextView total = (TextView) dialogView.findViewById(R.id.total);
+        TextView progress = (TextView) dialogView.findViewById(R.id.progress);
+        TextView percentage = (TextView) dialogView.findViewById(R.id.percentage);
+        ProgressBar mProgressBar = (ProgressBar) dialogView.findViewById(R.id.progress_bar);
+        total.setText("" + msec);
+        String natice_advanceadd;
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        admob_app_id = prefs.getString("admob_app_id", "");
+        if (admob_app_id.equalsIgnoreCase("")){
+            admob_app_id=getString(R.string.admob_app_id);
+            natice_advanceadd=getString(R.string.natice_advanceadd);
+        }else {
+            admob_app_id = prefs.getString("admob_app_id", "");
+            natice_advanceadd = prefs.getString("natice_advanceadd","");
+        }
+        AdLoader adLoader = new AdLoader.Builder(this, natice_advanceadd)
+                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                    @Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                        // Show the ad.
+                        // Assumes you have a placeholder FrameLayout in your View layout
+                        // (with id fl_adplaceholder) where the ad is to be placed.
+                       // Log.e("add loaded",""+unifiedNativeAd);
+                        FrameLayout frameLayout =dialogView.
+                                findViewById(R.id.fl_adplaceholder);
+                        // Assumes that your ad layout is in a file call ad_unified.xml
+                        // in the res/layout folder
+                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
+                                .inflate(R.layout.unified_ads, null);
+                        // This method sets the text, images and the native ad, etc into the ad
+                        // view.
+                        populateUnifiedNativeAdView(unifiedNativeAd, adView);
+                        frameLayout.removeAllViews();
+                        frameLayout.addView(adView);
+                    }
+                })
+                .withAdListener(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(int errorCode) {
+                 //       Log.e("add loaded",""+errorCode);
+                        // Handle the failure by logging, altering the UI, and so on.
+                    }
+                })
+                .withNativeAdOptions(new NativeAdOptions.Builder()
+                        // Methods in the NativeAdOptions.Builder class can be
+                        // used here to specify individual options settings.
+                        .build())
+                .build();
+        adLoader.loadAds(new AdRequest.Builder().build(),5);
+        alertDialog.show();
+
+
 
 
             //String[] command = {"-i",selectedVideoPath, "-preset", "fast", selectedVideoPath+timeStamp};
@@ -338,7 +394,10 @@ public class CompressorActivity extends Activity {
             //String[] command = {"-i", selectedVideoPath, "-vf", "scale="+scalel.getText().toString(), "-preset", "fast", selectedVideoPath+timeStamp+".mp4"};
             //String[] command = {"-i", "/storage/emulated/0/DCIM/Camera/VID_20191216_161925.mp4", "-vf", "scale=480:320,setdar=4:3", "/storage/emulated/0/DCIM/Camera/output.mp4"};
             //String[] command = {"-i", selectedVideoPath, "-filter:v", "scale="+scalel.getText().toString()+":-1", "-preset", "fast", selectedVideoPath+timeStamp+".mp4"};
-            String[] command = {"-i", input, "-filter:v", "scale="+Resolution+":-2", "-c:a", "copy", "-preset", "fast" ,output};
+
+           // String[] command = {"-i", input, "-filter:v", "scale="+Resolution, "-c:a", "copy", "-preset", "ultrafast" ,output};
+        String[] command = {"-i", input, "-vcodec", "libx265", "-crf", "27",  "scale="+Resolution,  "ultrafast",output};
+
             for (int i =0;i<command.length;i++){
                 Helper.LogPrint(TAG,command[i]);
             }
@@ -347,14 +406,14 @@ public class CompressorActivity extends Activity {
                 public void onStart() {
 
 
-                    dialog.show();
+                    alertDialog.show();
 
                 }
 
                 @Override
                 public void onFinish() {
 
-                    dialog.dismiss();
+                    alertDialog.dismiss();
 
 
 
@@ -370,14 +429,22 @@ public class CompressorActivity extends Activity {
                     intent.setData(Uri.fromFile(outputs));
                     CompressorActivity.this.sendBroadcast(intent);
                     ShowVideoOutputDetial(new File(output));
-                    dialog.dismiss();
+                    alertDialog.dismiss();
 
                 }
 
+                @SuppressLint("SetTextI18n")
                 @Override
                 public void onProgress(String message) {
 
                     Helper.LogPrint(TAG,message);
+                    float count = msec;
+
+
+
+
+                        // Escape early if cancel() is called
+
 
                     int start = message.indexOf("time=");
                     int end = message.indexOf(" bitrate");
@@ -387,7 +454,11 @@ public class CompressorActivity extends Activity {
                             try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
                                 sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-                                dialog.setProgress((int)sdf.parse("1970-01-01 " + duration).getTime());
+
+                                progress.setText(""+(int)sdf.parse("1970-01-01 " + duration).getTime()+" / ");
+                                float i =sdf.parse("1970-01-01 " + duration).getTime();
+                                percentage.setText(new DecimalFormat("##.##").format(i/count*100)+"%");
+                                mProgressBar.setProgress(Integer.parseInt(new DecimalFormat("##").format(i/count*100)));
                             }catch (ParseException e)
                             {
                                 e.printStackTrace();
@@ -400,7 +471,7 @@ public class CompressorActivity extends Activity {
                 @Override
                 public void onFailure(String message) {
                     Helper.LogPrint(TAG,message);
-                    dialog.dismiss();
+                    alertDialog.dismiss();
                     showAlertError("Compress Fail Try Again");
 
                 }
@@ -435,8 +506,106 @@ public class CompressorActivity extends Activity {
 
 
     }
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+    private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
+        // Set the media view. Media content will be automatically populated in the media view once
+        // adView.setNativeAd() is called.
+        MediaView mediaView = adView.findViewById(R.id.ad_media);
+        adView.setMediaView(mediaView);
+
+        // Set other ad assets.
+        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
+        adView.setBodyView(adView.findViewById(R.id.ad_body));
+        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
+        adView.setPriceView(adView.findViewById(R.id.ad_price));
+        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
+        adView.setStoreView(adView.findViewById(R.id.ad_store));
+        adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
+
+        // The headline is guaranteed to be in every UnifiedNativeAd.
+        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
+
+        // These assets aren't guaranteed to be in every UnifiedNativeAd, so it's important to
+        // check before trying to display them.
+        if (nativeAd.getBody() == null) {
+            adView.getBodyView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getBodyView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
+        }
+
+        if (nativeAd.getCallToAction() == null) {
+            adView.getCallToActionView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getCallToActionView().setVisibility(View.VISIBLE);
+            ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
+        }
+
+        if (nativeAd.getIcon() == null) {
+            adView.getIconView().setVisibility(View.GONE);
+        } else {
+            ((ImageView) adView.getIconView()).setImageDrawable(
+                    nativeAd.getIcon().getDrawable());
+            adView.getIconView().setVisibility(View.VISIBLE);
+        }
+
+        if (nativeAd.getPrice() == null) {
+            adView.getPriceView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getPriceView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getPriceView()).setText(nativeAd.getPrice());
+        }
+
+        if (nativeAd.getStore() == null) {
+            adView.getStoreView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getStoreView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getStoreView()).setText(nativeAd.getStore());
+        }
+
+        if (nativeAd.getStarRating() == null) {
+            adView.getStarRatingView().setVisibility(View.INVISIBLE);
+        } else {
+            ((RatingBar) adView.getStarRatingView())
+                    .setRating(nativeAd.getStarRating().floatValue());
+            adView.getStarRatingView().setVisibility(View.VISIBLE);
+        }
+
+        if (nativeAd.getAdvertiser() == null) {
+            adView.getAdvertiserView().setVisibility(View.INVISIBLE);
+        } else {
+            ((TextView) adView.getAdvertiserView()).setText(nativeAd.getAdvertiser());
+            adView.getAdvertiserView().setVisibility(View.VISIBLE);
+        }
+
+        // This method tells the Google Mobile Ads SDK that you have finished populating your
+        // native ad view with this native ad. The SDK will populate the adView's MediaView
+        // with the media content from this native ad.
+        adView.setNativeAd(nativeAd);
 
 
+    }
     private void ShowVideoDetial() {
         final MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
         try {
@@ -508,6 +677,7 @@ public class CompressorActivity extends Activity {
                     public void onClick(DialogInterface dialog, int which) {
                         // Continue with delete operation
                         dialog.dismiss();
+
                     }
                 })
 
@@ -546,38 +716,35 @@ public class CompressorActivity extends Activity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.quality_186p:
-                        Resolution="186";
+                    case R.id.quality_240p:
+                        Resolution="426x240";
                         resolutiontext.setText(Resolution);
                         break;
-                    case R.id.quality_426p:
-                        Resolution="426";
+                    case R.id.quality_360p:
+                        Resolution="640x360";
                         resolutiontext.setText(Resolution);
                         break;
-                    case R.id.quality_512p:
-                        Resolution="512";
-                        resolutiontext.setText(Resolution);
-                        break;
-                    case R.id.quality_640p:
-                        Resolution="640";
+                    case R.id.quality_480p:
+                        Resolution="854x480";
                         resolutiontext.setText(Resolution);
                         break;
                     case R.id.quality_720p:
-                        Resolution="720";
-                        resolutiontext.setText(Resolution);
-                        break;
-                    case R.id.quality_960p:
-                        Resolution="960";
+                        Resolution="1280x720";
                         resolutiontext.setText(Resolution);
                         break;
                     case R.id.quality_1080p:
-                        Resolution="1080";
+                        Resolution="1920x1080";
                         resolutiontext.setText(Resolution);
                         break;
-                    case R.id.quality_1920p:
-                        Resolution="1920";
-                        resolutiontext.setText(Resolution);
-                        break;
+//                    case R.id.quality_1440p:
+//                        Resolution="1440x2560";
+//                        resolutiontext.setText(Resolution);
+//                        break;
+//                    case R.id.quality_2160p:
+//                        Resolution="2160x3860";
+//                        resolutiontext.setText(Resolution);
+//                        break;
+
 
                 }
 
@@ -592,8 +759,11 @@ public class CompressorActivity extends Activity {
 
 
     private void showInterstitial() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        Helper.LogPrint("addscount",""+fulladdcountcompressactivity);
+        if (fulladdcountcompressactivity<2) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
         }
     }
 
@@ -602,6 +772,8 @@ public class CompressorActivity extends Activity {
         super.onBackPressed();
         Intent i = new Intent(CompressorActivity.this, VideoListActivity.class);
         startActivity(i);
+        finish();
+
     }
     private void ShowVideoOutputDetial(File outputs) {
         try {
@@ -664,10 +836,21 @@ public class CompressorActivity extends Activity {
             mOutputInfoView.setText(getString(R.string.video_info, width, height,
                     DateUtils.formatElapsedTime(duration / 1000),
                     Formatter.formatShortFileSize(this, str_video.length()))+" "+hrSize);
-                output_play.setEnabled(true);
+                //output_play.setEnabled(true);
                 outputsoption=outputs;
                 video_location.setText("Click Here To See Output");
 
+                new MaterialShowcaseView.Builder(CompressorActivity.this)
+                        .setTarget(convert)
+                        .setShape(new CircleShape())
+                        .setDismissText("GOT IT")
+                        .setContentText("Click Hear to See Final Result After Compresing Video")
+                        .setDelay(1000)
+                        .setFadeDuration(500)
+                        .setDismissOnTouch(true)
+                        .setMaskColour(CompressorActivity.this.getResources().getColor(R.color.primary_dark))
+                        .setContentTextColor(CompressorActivity.this.getResources().getColor(R.color.accent))
+                        .show();
                 showAlertError("Video Compress Successfully Click To See Output");
                 convert.setVisibility(View.GONE);
                 outputPath=outputs.getPath();
@@ -687,6 +870,102 @@ public class CompressorActivity extends Activity {
             }
         }catch (Exception e){
             Crashlytics.log("Show Detial"+e);
+        }
+    }
+    public  void showShowcase(){
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        String Showcase = prefs.getString("Showcase", "");
+
+        if (Showcase.equalsIgnoreCase("")){
+
+            ShowcaseConfig config = new ShowcaseConfig();
+            config.setDelay(500); // half second between each showcase view
+            String alphabet = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?/.,";
+            Random rnd = new Random();
+            char charAt = alphabet.charAt(rnd.nextInt(alphabet.length()));
+
+
+            MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, String.valueOf(charAt) );
+
+
+
+            sequence.setConfig(config);
+
+
+
+
+            sequence.addSequenceItem(
+                                new MaterialShowcaseView.Builder(this)
+                    .setTarget(mOutputOptionsButton)
+                    .setShape(new CircleShape())
+                     .setDismissText("GOT IT")
+                    .setContentText("Select Resolution You Want To Compress. Video Size and Time For Compress Depends On Which Resolution You Select")
+                    .setDelay(1000)
+                    .setFadeDuration(500)
+                     .setDismissOnTouch(true)
+                    .setMaskColour(getResources().getColor(R.color.primary_dark))
+                    .setContentTextColor(getResources().getColor(R.color.accent))
+                    // optional but starting animations immediately in onCreate can make them choppy
+                   // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
+                    .build()
+            );
+
+            sequence.addSequenceItem(
+
+                    new MaterialShowcaseView.Builder(this)
+                            .setTarget(convert)
+                            .setShape(new CircleShape())
+                            .setDismissText("GOT IT")
+                            .setContentText("After Select Resolution Click Compress Video Button To Start Video Compresing")
+                            .setDelay(1000)
+                            .setDismissOnTouch(true)
+                            .setFadeDuration(500)
+                            .setMaskColour(getResources().getColor(R.color.primary_dark))
+                            .setContentTextColor(getResources().getColor(R.color.accent))
+                            // optional but starting animations immediately in onCreate can make them choppy
+                            // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
+                            .build()
+            );
+            sequence.addSequenceItem(
+                    new MaterialShowcaseView.Builder(this)
+                            .setTarget(outoutinfo_showcase)
+                            .setShape(new CircleShape())
+                            .setDismissText("GOT IT")
+                            .setContentText("After Video Compress Successfully You Can See Output Of Compress Video Size and Resolution")
+                            .setDelay(1000)
+                            .setDismissOnTouch(true)
+                            .setFadeDuration(500)
+                            .setMaskColour(getResources().getColor(R.color.primary_dark))
+                            .setContentTextColor(getResources().getColor(R.color.accent))
+                            // optional but starting animations immediately in onCreate can make them choppy
+                            // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
+                            .build()
+
+            );
+            sequence.addSequenceItem(
+                    new MaterialShowcaseView.Builder(this)
+                            .setTarget(output_share)
+                            .setShape(new CircleShape())
+                            .setDismissText("GOT IT")
+                            .setContentText("You Can Share Video By Cliking This Share Button")
+                            .setDelay(1000)
+                            .setDismissOnTouch(true)
+                            .setFadeDuration(500)
+                            .setMaskColour(getResources().getColor(R.color.primary_dark))
+                            .setContentTextColor(getResources().getColor(R.color.accent))
+                            // optional but starting animations immediately in onCreate can make them choppy
+                            // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
+                            .build()
+            );
+
+
+            sequence.start();
+
+
+            SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+            editor.putString("Showcase", "Videocompress");
+            editor.apply();
+        }else {
         }
     }
 }

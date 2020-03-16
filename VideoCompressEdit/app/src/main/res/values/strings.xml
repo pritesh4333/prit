@@ -7,20 +7,21 @@
     <!--    <string name="quality_240p">Low</string>-->
     <!--    <string name="quality_360p">Medium</string>-->
     <!--    <string name="quality_480p">High</string>-->
-    <string name="quality_186p">186p</string>
-    <string name="quality_426p">426p</string>
-    <string name="quality_512p">512p</string>
-    <string name="quality_640p">640p</string>
+    <string name="quality_240p">240p</string>
+    <string name="quality_360p">360p</string>
+    <string name="quality_480p">480p</string>
     <string name="quality_720p">720p</string>
-    <string name="quality_960p">960p</string>
     <string name="quality_1080p">1080p</string>
-    <string name="quality_1920p">1920p</string>
+<!--    <string name="quality_1440p">1440p</string>-->
+<!--    <string name="quality_2160p">2160p</string>-->
+
     <!--production-->
+    <!--parmarprit100@gmail.com-->
     <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
-        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
-        <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>
-        <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>
-        <string name="natice_advanceadd">ca-app-pub-4959089160488184/9068586831</string>
+    <!--        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+    <!--        <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>-->
+    <!--        <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>-->
+    <!--        <string name="natice_advanceadd">ca-app-pub-4959089160488184/9068586831</string>-->
     <!--&lt;!&ndash;    <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>&ndash;&gt;-->
     <!--&lt;!&ndash;    <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>&ndash;&gt;-->
 
@@ -29,8 +30,39 @@
 <!--    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
 <!--    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
 <!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
-<!--    <string name="natice_advanceadd">ca-app-pub-3940256099942544/6300978111</string>-->
-<!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
+<!--    <string name="natice_advanceadd">ca-app-pub-3940256099942544/2247696110</string>-->
+    <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
 
+
+    <!--production-->
+    <!--priteshparmar12@gmail.com-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+        <string name="admob_app_id">ca-app-pub-4688988588571726~5618809292</string>
+        <string name="banner_home_footer">ca-app-pub-4688988588571726/9054302052</string>
+        <string name="interstitial_full_screen">ca-app-pub-4688988588571726/3801975376</string>
+        <string name="natice_advanceadd">ca-app-pub-4688988588571726/6236567029</string>
+
+
+<!--    priteshparmar102@gmail.com-->
+    <!--production-->
+<!--            <string name="admob_app_id">ca-app-pub-9691536085601783~2353876341</string>-->
+<!--            <string name="banner_home_footer">ca-app-pub-9691536085601783/5909977977</string>-->
+<!--            <string name="interstitial_full_screen">ca-app-pub-9691536085601783/1779161272</string>-->
+<!--            <string name="natice_advanceadd">ca-app-pub-9691536085601783/4213752928</string>-->
+
+
+
+
+
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_id" translatable="false">VideoCompressorChannel_Id</string>
+    <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelName</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribed">Subscribed to VideoCompressorChannelName</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to VideoCompressorChannelName</string>
 
 </resources>
