@@ -1,5 +1,6 @@
 package com.prit.videocompressorpro.Fcm;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -13,18 +14,21 @@ import android.media.AudioAttributes;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
 
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import com.prit.videocompressorpro.R;
+import com.prit.videocompressorpro.Utils.Helper;
 import com.prit.videocompressorpro.View.MainActivity;
 
 import androidx.core.content.ContextCompat;
@@ -33,6 +37,7 @@ import androidx.core.content.ContextCompat;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 
@@ -51,7 +56,7 @@ import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
  */
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
-    private static final String TAG = "MyFirebaseMsgService";
+
     public static final String MY_PREFS_NAME = "VideoCompressPrefsFile";
     /**
      * Called when message is received.
@@ -107,167 +112,173 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             editor.commit();
             Log.e("Update Adsend IDs","Done");
         }
+        new sendNotification(this,title,body,image,update).execute();
 
-        sendNotification( title,body,image,update);
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
     }
-    // [END receive_message]
 
 
-    // [START on_new_token]
+    private class sendNotification extends AsyncTask<String, Void, Bitmap> {
 
-    /**
-     * Called if InstanceID token is updated. This may occur if the security of
-     * the previous token had been compromised. Note that this is called when the InstanceID token
-     * is initially generated so this is where you would retrieve the token.
-     */
-
-    // [END on_new_token]
-
-    /**
-     * Schedule async work using WorkManager.
-     */
-
-
-    /**
-     * Handle time allotted to BroadcastReceivers.
-     */
-
-
-    /**
-     * Persist token to third-party servers.
-     *
-     * Modify this method to associate the user's FCM InstanceID token with any server-side account
-     * maintained by your application.
-     *
-     * @param token The new token.
-     */
-
-    /**
-     * Create and show a simple notification containing the received FCM message.
-
-     */
-    private void sendNotification( String title, String body, String image,String update) {
+        Context ctx;
+        String title;
+        String body;
+        String image;
+        String update;
 
 
 
-        String channelId = getString(R.string.default_notification_channel_id);
-        String channername=getString(R.string.default_notification_channel_name);
-        NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
-        bpStyle.bigPicture(getBitmapFromURL(image)).build();
-        // Set the intent to fire when the user taps on notification.
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-                PendingIntent.FLAG_ONE_SHOT);
-        NotificationCompat.Builder mBuilder ;
-        Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        long[] v = {500,1000};
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        public sendNotification(Context ctx,String title, String body, String image, String update) {
+            this.ctx = ctx;
+            this.title = title;
+            this.body = body;
+            this.image = image;
+            this.update = update;
 
-            if (update.equalsIgnoreCase("Yes")) {
+        }
 
-                mBuilder = new NotificationCompat.Builder(this, channelId)
-                        .setSmallIcon(R.drawable.notification_icon2)
-                        .setContentTitle(title)
-                        .setContentText(body)
-                        .setSound(uri)
-                        .setVibrate(v)
-                        .setLargeIcon(getBitmapFromURL(image))
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                        .addAction(0, "Update", pendingIntent)
-                        .setColor(ContextCompat.getColor(this, R.color.green))
-                        .setStyle(bpStyle);
-            }else{
-                mBuilder = new NotificationCompat.Builder(this, channelId)
-                        .setSmallIcon(R.drawable.notification_icon2)
-                        .setContentTitle(title)
-                        .setContentText(body)
-                        .setSound(uri)
-                        .setVibrate(v)
-                        .setLargeIcon(getBitmapFromURL(image))
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                        .setColor(ContextCompat.getColor(this, R.color.green))
-                        .setStyle(bpStyle);
-            }
+        @Override
+        protected Bitmap doInBackground(String... params) {
+
+            InputStream in;
 
             try {
 
-                Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-                r.play();
-                Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
-                // default pattern goes here
-                vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+                URL url = new URL(image);
+                HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+                connection.setDoInput(true);
+                connection.connect();
+                in = connection.getInputStream();
+                Bitmap myBitmap = BitmapFactory.decodeStream(in);
+                return myBitmap;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
 
+        @Override
+        protected void onPostExecute(Bitmap result) {
+
+            super.onPostExecute(result);
+            try {
+
+                {
+
+
+
+                    String channelId = getString(R.string.default_notification_channel_id);
+                    String channername=getString(R.string.default_notification_channel_name);
+                    NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
+                    bpStyle.bigPicture(result).build();
+                    // Set the intent to fire when the user taps on notification.
+                    Intent intent = new Intent(ctx, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    PendingIntent pendingIntent = PendingIntent.getActivity(ctx, 0 /* Request code */, intent,
+                            PendingIntent.FLAG_ONE_SHOT);
+                    NotificationCompat.Builder mBuilder ;
+                    Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                    long[] v = {500,1000};
+
+                    Bitmap icon = BitmapFactory.decodeResource(ctx.getResources(),
+                            R.drawable.dp);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        Helper.LogPrint("Heighr orio","Heighr Orio");
+                        if (update.equalsIgnoreCase("Yes")) {
+
+                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
+                                    .setSmallIcon(R.drawable.notification_icon2)
+                                    .setContentTitle(title)
+                                    .setContentText(body)
+                                    .setSound(uri)
+                                    .setVibrate(v)
+                                    .setLargeIcon(icon)
+                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                                    .addAction(0, "Update", pendingIntent)
+                                    .setColor(ContextCompat.getColor(ctx, R.color.green))
+                                    .setStyle(bpStyle);
+                        }else{
+                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
+                                    .setSmallIcon(R.drawable.notification_icon2)
+                                    .setContentTitle(title)
+                                    .setContentText(body)
+                                    .setSound(uri)
+                                    .setVibrate(v)
+                                    .setLargeIcon(icon)
+                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                                    .setColor(ContextCompat.getColor(ctx, R.color.green))
+                                    .setStyle(bpStyle);
+                        }
+
+                        try {
+
+                            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                            Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+                            r.play();
+                            Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+                            // default pattern goes here
+                            vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+
+                        } catch (Exception e) {
+                            Helper.LogPrint("Error Playing sound ","error");
+                            e.printStackTrace();
+                        }
+
+                    }else{
+                        Helper.LogPrint("Below orio","Below Orio");
+                        if (update.equalsIgnoreCase("Yes")) {
+                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
+                                    .setSmallIcon(R.drawable.notification_icon2)
+                                    .setContentTitle(title)
+                                    //.setSubText(body)
+                                    .setContentText(body)
+                                    .setSound(uri)
+                                    .setVibrate(v)
+                                    .setLargeIcon(icon)
+                                    .addAction(0, "Update", pendingIntent)
+                                    .setColor(ContextCompat.getColor(ctx, R.color.green))
+                                    .setStyle(bpStyle);
+                        }else{
+                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
+                                    .setSmallIcon(R.drawable.notification_icon2)
+                                    .setContentTitle(title)
+                                    //.setSubText(body)
+                                    .setContentText(body)
+                                    .setSound(uri)
+                                    .setVibrate(v)
+                                    .setLargeIcon(icon)
+                                    .setColor(ContextCompat.getColor(ctx, R.color.green))
+                                    .setStyle(bpStyle);
+                        }
+                    }
+                    mBuilder.setContentIntent(pendingIntent);
+                    // Sets an ID for the notification
+                    int mNotificationId = 001;
+
+                    NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                    NotificationChannel mNotificationChannel = null;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        mNotificationChannel = new NotificationChannel(channelId,channername, NotificationManager.IMPORTANCE_HIGH);
+                        mNotificationChannel.setVibrationPattern(new long[]{ 0 });
+                        mNotificationChannel.enableVibration(true);
+                        notificationManager.createNotificationChannel(mNotificationChannel);
+                    }
+
+
+
+                    // It will display the notification in notification bar
+                    notificationManager.notify(mNotificationId, mBuilder.build());
+
+
+
+
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-        }else{
-            if (update.equalsIgnoreCase("Yes")) {
-                mBuilder = new NotificationCompat.Builder(this, channelId)
-                        .setSmallIcon(R.drawable.notification_icon2)
-                        .setContentTitle(title)
-                        .setSubText(body)
-                        .setSound(uri)
-                        .setVibrate(v)
-                        .setLargeIcon(getBitmapFromURL(image))
-                        .addAction(0, "Update", pendingIntent)
-                        .setColor(ContextCompat.getColor(this, R.color.green))
-                        .setStyle(bpStyle);
-            }else{
-                mBuilder = new NotificationCompat.Builder(this, channelId)
-                        .setSmallIcon(R.drawable.notification_icon2)
-                        .setContentTitle(title)
-                        .setSubText(body)
-                        .setSound(uri)
-                        .setVibrate(v)
-                        .setLargeIcon(getBitmapFromURL(image))
-                        .setColor(ContextCompat.getColor(this, R.color.green))
-                        .setStyle(bpStyle);
-            }
-        }
-        mBuilder.setContentIntent(pendingIntent);
-        // Sets an ID for the notification
-        int mNotificationId = 001;
-        AudioAttributes audioAttributes = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            audioAttributes = new AudioAttributes.Builder()
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .setUsage(AudioAttributes.USAGE_ALARM)
-                    .build();
-        }
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        NotificationChannel mNotificationChannel = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            mNotificationChannel = new NotificationChannel(channelId,channername, NotificationManager.IMPORTANCE_HIGH);
-            mNotificationChannel.setVibrationPattern(new long[]{ 0 });
-            mNotificationChannel.enableVibration(true);
-            mNotificationChannel.setSound(uri, audioAttributes);
-            notificationManager.createNotificationChannel(mNotificationChannel);
-        }
-
-
-
-        // It will display the notification in notification bar
-        notificationManager.notify(mNotificationId, mBuilder.build());
-
-    }
-    public Bitmap getBitmapFromURL(String strURL) {
-        try {
-            URL url = new URL(strURL);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.connect();
-            InputStream input = connection.getInputStream();
-            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            return myBitmap;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
         }
     }
-
 }

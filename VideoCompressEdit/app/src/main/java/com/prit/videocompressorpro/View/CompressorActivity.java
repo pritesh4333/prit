@@ -394,13 +394,25 @@ public class CompressorActivity extends Activity {
             //String[] command = {"-i", selectedVideoPath, "-vf", "scale="+scalel.getText().toString(), "-preset", "fast", selectedVideoPath+timeStamp+".mp4"};
             //String[] command = {"-i", "/storage/emulated/0/DCIM/Camera/VID_20191216_161925.mp4", "-vf", "scale=480:320,setdar=4:3", "/storage/emulated/0/DCIM/Camera/output.mp4"};
             //String[] command = {"-i", selectedVideoPath, "-filter:v", "scale="+scalel.getText().toString()+":-1", "-preset", "fast", selectedVideoPath+timeStamp+".mp4"};
+        //"-i" input "-c:v libx265 -preset veryfast -tag:v hvc1 -b:v 800k -bufsize 1200k -vf scale=1080:1920,format=yuv420p -b:a 128k output.mp4
+        //ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4
+         //String[] command = {"-i", input, "-vcodec",  "libx264", "-crf", "20" ,output};
+        //String[] command = {"-i", input, "-vcodec", "libx265", "-crf", "27",  "scale="+Resolution,  "ultrafast",output};
+        //String[] command = {"-i "+input+" -c:v libvpx-vp9 -b:v 0.33M -c:a libopus -b:a 96k -filter:v scale="+Resolution+" "+output+""};
 
-           // String[] command = {"-i", input, "-filter:v", "scale="+Resolution, "-c:a", "copy", "-preset", "ultrafast" ,output};
-        String[] command = {"-i", input, "-vcodec", "libx265", "-crf", "27",  "scale="+Resolution,  "ultrafast",output};
+        //add ffmpeg final and previous working with only 150p like this only
+        String[] command = {"-i", input,"-vcodec",  "libx264", "-crf", "27", "-filter:v", "scale="+Resolution+":-2", "-c:a", "copy", "-preset", "veryfast" ,output};
+        //String[] command = {"-i", input, "-vf", "scale=320:200" , "-c:a", "copy", "-crf", "10", "-preset", "ultrafast" ,output};
+        //-i input.avi -vf scale=7680:4320 -crf 10 output.avi
+        //String[] command = {"-i", input, "-vf", "-s "+Resolution,  "-preset", "fast" ,output};
+       // -i <inputfilename> -s 640x480 -b:v 512k -vcodec mpeg1video -acodec copy <outputfilename>
 
-            for (int i =0;i<command.length;i++){
-                Helper.LogPrint(TAG,command[i]);
-            }
+
+
+        for (int i =0;i<command.length;i++){
+            Helper.LogPrint(TAG,command[i]);
+        }
+
             final FFtask task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
                 @Override
                 public void onStart() {
@@ -694,12 +706,12 @@ public class CompressorActivity extends Activity {
                 null, new MediaScannerConnection.OnScanCompletedListener() {
                     public void onScanCompleted(String path, Uri uri) {
                         Intent shareIntent = new Intent(
-                                android.content.Intent.ACTION_SEND);
+                                Intent.ACTION_SEND);
                         shareIntent.setType("video/*");
                         shareIntent.putExtra(
-                                android.content.Intent.EXTRA_SUBJECT, title);
+                                Intent.EXTRA_SUBJECT, title);
                         shareIntent.putExtra(
-                                android.content.Intent.EXTRA_TITLE, title);
+                                Intent.EXTRA_TITLE, title);
                         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
                         shareIntent
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
@@ -712,39 +724,74 @@ public class CompressorActivity extends Activity {
     private void onOutputOptions() {
         final PopupMenu popup = new PopupMenu(this, mOutputOptionsButton);
         popup.getMenuInflater().inflate(R.menu.output_options, popup.getMenu());
+        if (mWidth<=186) {
+            popup.getMenu().findItem(R.id.quality_186p).setVisible(false);
+        }
+          if (mWidth<=426){
+            popup.getMenu().findItem(R.id.quality_426p).setVisible(false);
+        }
+        if (mWidth<=512){
+            popup.getMenu().findItem(R.id.quality_512p).setVisible(false);
+        }
+        if (mWidth<=640){
+            popup.getMenu().findItem(R.id.quality_640p).setVisible(false);
+        }
+          if (mWidth<=720){
+            popup.getMenu().findItem(R.id.quality_720p).setVisible(false);
+        }
+          if (mWidth<=960){
+            popup.getMenu().findItem(R.id.quality_960p).setVisible(false);
+        }
+          if (mWidth<=1080){
+            popup.getMenu().findItem(R.id.quality_1080p).setVisible(false);
+        }
+          if (mWidth<=1920){
+            popup.getMenu().findItem(R.id.quality_1920p).setVisible(false);
+        }
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.quality_240p:
-                        Resolution="426x240";
+
+
+                    case R.id.quality_186p:
+
+                            Resolution = "186";
+                            resolutiontext.setText(Resolution);
+
+                        break;
+                    case R.id.quality_426p:
+
+                        Resolution="426";
                         resolutiontext.setText(Resolution);
                         break;
-                    case R.id.quality_360p:
-                        Resolution="640x360";
+
+                    case R.id.quality_512p:
+
+                        Resolution="512";
                         resolutiontext.setText(Resolution);
                         break;
-                    case R.id.quality_480p:
-                        Resolution="854x480";
+
+                    case R.id.quality_640p:
+                        Resolution="640";
                         resolutiontext.setText(Resolution);
                         break;
                     case R.id.quality_720p:
-                        Resolution="1280x720";
+                        Resolution="720";
+                        resolutiontext.setText(Resolution);
+                        break;
+                    case R.id.quality_960p:
+                        Resolution="960";
                         resolutiontext.setText(Resolution);
                         break;
                     case R.id.quality_1080p:
-                        Resolution="1920x1080";
+                        Resolution="1080";
                         resolutiontext.setText(Resolution);
                         break;
-//                    case R.id.quality_1440p:
-//                        Resolution="1440x2560";
-//                        resolutiontext.setText(Resolution);
-//                        break;
-//                    case R.id.quality_2160p:
-//                        Resolution="2160x3860";
-//                        resolutiontext.setText(Resolution);
-//                        break;
-
+                    case R.id.quality_1920p:
+                        Resolution="1920";
+                        resolutiontext.setText(Resolution);
+                        break;
 
                 }
 
