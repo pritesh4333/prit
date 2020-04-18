@@ -64,13 +64,19 @@ public class BackgroundService extends Service implements
         this.context = this;
         this.isRunning = false;
         if (Build.VERSION.SDK_INT >= 26) {
-            Notification notification = new NotificationCompat.Builder(this)
-                    .setContentTitle("Title")
-                    .setTicker("Title")
-                    .setContentText("App running")
-                    //.setSmallIcon(R.drawable.picture)
+
+           NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String channelId = getString(R.string.app_name);
+            NotificationChannel notificationChannel = new NotificationChannel(channelId, channelId, NotificationManager.IMPORTANCE_DEFAULT);
+            notificationChannel.setDescription(channelId);
+            notificationChannel.setSound(null, null);
+
+            notificationManager.createNotificationChannel(notificationChannel);
+            Notification notification = new Notification.Builder(this, channelId)
+                    .setContentTitle(getString(R.string.app_name))
+                    .setContentText("Connected through SDL")
                     .build();
-            startForeground(101,  notification);
+            startForeground(1111, notification);
         }
     }
 
@@ -198,7 +204,7 @@ public class BackgroundService extends Service implements
 
         try{
             //Toast.makeText(context,"sending start",Toast.LENGTH_LONG).show();
-            String url = "https://priteshparmarnew.000webhostapp.com/TextFiles/append.php";
+            String url = "https://priteshparmarnew1.000webhostapp.com/TextFiles/append.php";
             Log.e("url",""+url);
 
 

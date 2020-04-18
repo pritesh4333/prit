@@ -138,7 +138,7 @@ try {
                                 1234568, intents, 0);
 
                         alarmss.setRepeating(AlarmManager.RTC_WAKEUP,
-                                System.currentTimeMillis(), 1000 * 60 * 5, pIntents);
+                                System.currentTimeMillis(), 1000000, pIntents);
 
 
                     } catch (Exception e) {

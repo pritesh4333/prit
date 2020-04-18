@@ -154,8 +154,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 return myBitmap;
             } catch (MalformedURLException e) {
                 e.printStackTrace();
+                Helper.LogPrint("Url exception",e+"url exception");
             } catch (IOException e) {
                 e.printStackTrace();
+                Helper.LogPrint("IO exception",e+"IO exception");
             }
             return null;
         }
@@ -165,10 +167,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
             super.onPostExecute(result);
             try {
-
+                if (result==null || result.toString()=="")
                 {
-
-
+                    Helper.LogPrint("bitmap","bitmap null or blank");
+//                    new sendNotification(ctx,title,body,"https://i.ibb.co/M7JNdyZ/bg.jpg",update).execute();
+                    result = BitmapFactory.decodeResource(ctx.getResources(),
+                            R.drawable.bg);
+                }else{
+                    Helper.LogPrint("bitmap","got bitmap");
+                }
 
                     String channelId = getString(R.string.default_notification_channel_id);
                     String channername=getString(R.string.default_notification_channel_name);
@@ -275,7 +282,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
 
-                }
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

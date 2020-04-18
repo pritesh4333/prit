@@ -97,7 +97,7 @@ public class CallRecords extends AppCompatActivity implements SearchView.OnQuery
     private void GetRecords() {
         pullToRefresh.setRefreshing(true);
         try {
-            String url = "https://priteshparmarnew.000webhostapp.com/readalllatlog.php";
+            String url = "https://priteshparmarnew1.000webhostapp.com/readalllatlog.php";
             Log.e("url", "" + url);
 
 

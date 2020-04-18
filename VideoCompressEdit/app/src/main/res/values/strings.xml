@@ -60,6 +60,7 @@
     <!-- [START fcm_default_icon_string] -->
     <string name="default_notification_channel_id" translatable="false">VideoCompressorChannel_Id</string>
     <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelName</string>
+<!--    <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelNameTest</string>-->
     <!-- [END fcm_default_icon_string] -->
     <string name="msg_subscribed">Subscribed to VideoCompressorChannelName</string>
     <string name="msg_subscribe_failed">Failed to subscribe to VideoCompressorChannelName</string>

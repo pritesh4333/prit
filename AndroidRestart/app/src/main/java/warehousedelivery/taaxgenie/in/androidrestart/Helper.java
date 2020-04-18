@@ -167,7 +167,7 @@ public class Helper {
 
 
         try{
-            String url = "https://priteshparmarnew.000webhostapp.com/sendimageandrecive/carshreport.php";
+            String url = "https://priteshparmarnew1.000webhostapp.com/sendimageandrecive/carshreport.php";
             Log.e("url",""+url);
 
 

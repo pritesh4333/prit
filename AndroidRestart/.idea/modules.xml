@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidRestart.iml" filepath="$PROJECT_DIR$/AndroidRestart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/AndroidRestart-app.iml" filepath="$PROJECT_DIR$/app/AndroidRestart-app.iml" group="AndroidRestart/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prit-AndroidRestart.iml" filepath="$PROJECT_DIR$/prit-AndroidRestart.iml" group="AndroidRestart" />
     </modules>
   </component>
 </project>
