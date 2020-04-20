@@ -1,4 +1,4 @@
-package com.example.admin.googlenews;
+package admin.googlenews;
 
 import android.content.Context;
 import android.database.Cursor;

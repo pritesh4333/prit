@@ -11,40 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="691187fc-adae-4f6e-909c-14b017cdc17d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/app/src/main/java/warehousedelivery/taaxgenie/in/androidrestart/BackgroundService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/app/src/main/java/warehousedelivery/taaxgenie/in/androidrestart/BackgroundService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/app/src/main/java/warehousedelivery/taaxgenie/in/androidrestart/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/app/src/main/java/warehousedelivery/taaxgenie/in/androidrestart/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/app/src/main/java/warehousedelivery/taaxgenie/in/androidrestart/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/app/src/main/java/warehousedelivery/taaxgenie/in/androidrestart/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GoogleNews/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GoogleNews/app/src/main/java/com/example/admin/googlenews/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/app/src/main/java/com/example/admin/googlenews/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GoogleNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GoogleNews/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/app/src/main/java/warehousedelivery/taaxgenie/in/resagitpvtltd/CallRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/app/src/main/java/warehousedelivery/taaxgenie/in/resagitpvtltd/CallRecords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/app/src/main/java/warehousedelivery/taaxgenie/in/resagitpvtltd/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/app/src/main/java/warehousedelivery/taaxgenie/in/resagitpvtltd/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/app/src/main/java/warehousedelivery/taaxgenie/in/resagitpvtltd/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/app/src/main/java/warehousedelivery/taaxgenie/in/resagitpvtltd/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResagitPvtLtd/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ResagitPvtLtd/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/release/app-release.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +22,6 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="ae5040f" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

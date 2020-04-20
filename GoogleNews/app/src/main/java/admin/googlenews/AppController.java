@@ -1,4 +1,4 @@
-package com.example.admin.googlenews;
+package admin.googlenews;
 
 import android.app.Application;
 import android.content.SharedPreferences;

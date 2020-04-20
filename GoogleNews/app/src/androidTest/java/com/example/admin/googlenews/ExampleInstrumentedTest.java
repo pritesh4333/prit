@@ -1,4 +1,4 @@
-package com.example.admin.googlenews;
+package admin.googlenews;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.admin.googlenews", appContext.getPackageName());
+        assertEquals("admin.googlenews", appContext.getPackageName());
     }
 }
