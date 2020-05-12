@@ -254,7 +254,10 @@ public class CompressorActivity extends Activity {
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // VideoConver(str_video);
+
+
+
+
                 File mypath=null;
 
                 try {
@@ -272,8 +275,9 @@ public class CompressorActivity extends Activity {
                 }else{
                     final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US);
 
-                    String output=mypath+"/VID_COMPRESSOR_PRO_" + dateFormat.format(new Date()) + ".mp4";
-                    VideConvertWithFFMPEG(str_video,output);
+                    String output=mypath+"/VID_COMPRESSOR_PRO_" + dateFormat.format(new Date()) + ".mp3";
+//                    VideConvertWithFFMPEG(str_video,output);
+                    getAudioandSave(str_video,output);
                 }
 
             }
@@ -297,6 +301,123 @@ public class CompressorActivity extends Activity {
 
 
     }
+
+    private void getAudioandSave(String str_video, String output) {
+        final int msec = MediaPlayer.create(this, Uri.fromFile(new File(str_video))).getDuration();
+        ViewGroup viewGroup = findViewById(android.R.id.content);
+
+        //then we will inflate the custom alert dialog xml that we created
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.progress_dailog, viewGroup, false);
+        //Now we need an AlertDialog.Builder object
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+
+
+
+
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+        TextView total = (TextView) dialogView.findViewById(R.id.total);
+        TextView progress = (TextView) dialogView.findViewById(R.id.progress);
+        TextView percentage = (TextView) dialogView.findViewById(R.id.percentage);
+        ProgressBar mProgressBar = (ProgressBar) dialogView.findViewById(R.id.progress_bar);
+        total.setText("" + msec);
+
+        alertDialog.show();
+
+
+
+
+
+        String[] command = {"-i" ,str_video,"-vn","-acodec","copy", output};
+
+
+
+
+        for (int i =0;i<command.length;i++){
+            Helper.LogPrint(TAG,command[i]);
+        }
+
+        final FFtask task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
+            @Override
+            public void onStart() {
+
+
+                alertDialog.show();
+
+            }
+
+            @Override
+            public void onFinish() {
+
+                alertDialog.dismiss();
+
+
+
+            }
+
+            @Override
+            public void onSuccess(String message) {
+                Helper.LogPrint(TAG,message);
+                resolutiontext.setText("Resolution");
+                Resolution="";
+                final Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                File  outputs= new File(output);
+                intent.setData(Uri.fromFile(outputs));
+                CompressorActivity.this.sendBroadcast(intent);
+                ShowVideoOutputDetial(new File(output));
+                alertDialog.dismiss();
+
+            }
+
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onProgress(String message) {
+
+                Helper.LogPrint(TAG,message);
+                float count = msec;
+
+
+
+
+                // Escape early if cancel() is called
+
+
+                int start = message.indexOf("time=");
+                int end = message.indexOf(" bitrate");
+                if (start != -1 && end != -1) {
+                    String duration = message.substring(start + 5, end);
+                    if (duration != "") {
+                        try {
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+                            sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+                            progress.setText(""+(int)sdf.parse("1970-01-01 " + duration).getTime()+" / ");
+                            float i =sdf.parse("1970-01-01 " + duration).getTime();
+                            percentage.setText(new DecimalFormat("##.##").format(i/count*100)+"%");
+                            mProgressBar.setProgress(Integer.parseInt(new DecimalFormat("##").format(i/count*100)));
+                        }catch (ParseException e)
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+            }
+
+            @Override
+            public void onFailure(String message) {
+                Helper.LogPrint(TAG,message);
+                alertDialog.dismiss();
+                showAlertError("Compress Fail Try Again");
+
+            }
+        });
+    }
+
     private void versionFFmpeg() {
         FFmpeg.getInstance(this).execute(new String[]{"-version"}, new ExecuteBinaryResponseHandler() {
             @Override

@@ -170,9 +170,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 if (result==null || result.toString()=="")
                 {
                     Helper.LogPrint("bitmap","bitmap null or blank");
-//                    new sendNotification(ctx,title,body,"https://i.ibb.co/M7JNdyZ/bg.jpg",update).execute();
-                    result = BitmapFactory.decodeResource(ctx.getResources(),
-                            R.drawable.bg);
+                    new sendNotification(ctx,title,body,"https://i.ibb.co/M7JNdyZ/bg.jpg",update).execute();
+//                    result = BitmapFactory.decodeResource(ctx.getResources(),
+//                            R.drawable.bg);
                 }else{
                     Helper.LogPrint("bitmap","got bitmap");
                 }

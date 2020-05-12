@@ -26,20 +26,20 @@
 
     <!--//Test-->
     <!-- AdMob ad unit IDs -->
-<!--    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
-<!--    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
-<!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
-<!--    <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>-->
+    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>
     <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
 
 
     <!--production-->
     <!--priteshparmar12@gmail.com-->
     <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
-        <string name="admob_app_id">ca-app-pub-4688988588571726~5618809292</string>
-        <string name="banner_home_footer">ca-app-pub-4688988588571726/9054302052</string>
-        <string name="interstitial_full_screen">ca-app-pub-4688988588571726/3801975376</string>
-        <string name="natice_advanceadd">ca-app-pub-4688988588571726/6236567029</string>
+<!--        <string name="admob_app_id">ca-app-pub-4688988588571726~5618809292</string>-->
+<!--        <string name="banner_home_footer">ca-app-pub-4688988588571726/9054302052</string>-->
+<!--        <string name="interstitial_full_screen">ca-app-pub-4688988588571726/3801975376</string>-->
+<!--        <string name="natice_advanceadd">ca-app-pub-4688988588571726/6236567029</string>-->
 
 
 <!--    priteshparmar102@gmail.com-->
@@ -59,8 +59,8 @@
      -->
     <!-- [START fcm_default_icon_string] -->
     <string name="default_notification_channel_id" translatable="false">VideoCompressorChannel_Id</string>
-    <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelName</string>
-<!--    <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelNameTest</string>-->
+<!--    <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelName</string>-->
+    <string name="default_notification_channel_name" translatable="true">VideoCompressorChannelNameTest</string>
     <!-- [END fcm_default_icon_string] -->
     <string name="msg_subscribed">Subscribed to VideoCompressorChannelName</string>
     <string name="msg_subscribe_failed">Failed to subscribe to VideoCompressorChannelName</string>

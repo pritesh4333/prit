@@ -40,7 +40,7 @@ Github
 username=resagit
 pass=gst@#2018*&
 
- 
+post bank m pin 4444 
 
 Lic
 15 year
@@ -188,15 +188,24 @@ Your Password is Xt735u4Pe
   
 
 
-16756 lic of parents
-1426  lic of parents
-11376 prit lic 
+16030.66 lic of parents
+1426.76  lic of parents
+11376 prit lic  969
+8240 komal lic  2060
+
 627 komal cancer
 1720 pritesh cancer 
 10965 prit komal medical
+1121 prit acident policy religare
+3528 future genrali  294
+
+1800 ppf 
+
+33252 term life   2771
 
 
-42718 total yearly pay
+
+90086.42 total yearly pay
 
 skype Login 
 USERNAME=8767957178

@@ -11,7 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="691187fc-adae-4f6e-909c-14b017cdc17d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../AndroidRestart/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AndroidRestart/app/release/app-release.aab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GoogleNews/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GoogleNews/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/app/release/app-release.aab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new _2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new _2.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +31,7 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="57bbd6ef0503" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -63,11 +73,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="BundleExportedModule" value="app" />
+    <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_note_4-57bbd6ef0503" />
+    <property name="DEBUGGABLE_PROCESS" value="com.prit.videocompressorpro" />
+    <property name="DEBUGGER_ID" value="Auto" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Mi498HA14100125" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-12-13T06:41:04.591Z" />
     <property name="ExportApk.ApkPath" value="D:\git project orignal\prit\VideoCompressEdit\app\release" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../GoogleNews" />
@@ -236,6 +250,21 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/exampl/prit/videocompressorpro/View/Activity_galleryview.java</url>
           <line>255</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
+          <line>305</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
+          <line>414</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
+          <line>364</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
