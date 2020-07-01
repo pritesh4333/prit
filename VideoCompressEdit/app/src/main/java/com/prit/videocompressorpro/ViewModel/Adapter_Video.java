@@ -256,7 +256,7 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
     public  void showShowcase(ImageView iv_image){
         SharedPreferences prefs = activity.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String Showcase = prefs.getString("Showcase", "");
-
+try{
         if (Showcase.equalsIgnoreCase("")){
 
 
@@ -277,6 +277,9 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
 
         }else {
         }
+    }catch(Exception e){
+
+    }
     }
 
     private static class ViewHolder {

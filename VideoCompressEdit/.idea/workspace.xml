@@ -11,16 +11,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="691187fc-adae-4f6e-909c-14b017cdc17d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidRestart/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidRestart/app/release/app-release.aab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GoogleNews/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GoogleNews/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../GoogleNews/app/release/app-release.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/dp1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/java/com/prit/videotomp3/View/MyFiles/Mp3FileAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/java/com/prit/videotomp3/View/MyFiles/Mp3Files.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-anydpi/ic_more.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-hdpi/ic_more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-mdpi/ic_more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xhdpi/ic_more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxhdpi/ic_more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxxhdpi/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxxhdpi/dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxxhdpi/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxxhdpi/mp3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxxhdpi/music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/drawable-xxxhdpi/untitled11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/layout/activity_mp3_files.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/layout/custome_mp3_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/menu/list_popup_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_7_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_10_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_10_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/release/app-release.aab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/ViewModel/Adapter_Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/ViewModel/Adapter_Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ffmpeg_example.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/appcompat/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/constraintlayout/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/recyclerview/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/espresso/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/ext/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/crashlytics/sdk/android/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/android/gms/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/firebase/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/sdk-registry.xml/sdk-registry.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new _2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new _2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification" beforeDir="false" afterPath="$PROJECT_DIR$/../notification" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +78,7 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="57bbd6ef0503" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="550d2c41" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -84,26 +131,26 @@
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GoogleNews" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\java\com\prit\videocompressorpro\Fcm" />
-      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\java\com\prit\videocompressorpro\View" />
-      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\values" />
-      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\menu" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\AndroidStudioProjects\VideoCompressEdit\app\src\main\res\drawable" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.exampl.prit.videocompressorpro" />
       <recent name="com.exampl.prit.videocompressedit.View" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\AndroidStudioProjects\VideoCompressEdit\app\src\main\res\drawable" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\drawable-mdpi" />
+      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\layout" />
+      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\java\com\prit\videocompressorpro\Fcm" />
+      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\java\com\prit\videocompressorpro\View" />
+      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\values" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,18 +300,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
-          <line>305</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
-          <line>414</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
-          <line>364</line>
-          <option name="timeStamp" value="36" />
+          <line>839</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

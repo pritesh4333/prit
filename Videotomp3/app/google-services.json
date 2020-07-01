@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "256657868817",
+    "firebase_url": "https://videotomp3-81777.firebaseio.com",
+    "project_id": "videotomp3-81777",
+    "storage_bucket": "videotomp3-81777.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256657868817:android:cc14f1ecaf19957eca09b0",
+        "android_client_info": {
+          "package_name": "com.prit.videotomp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256657868817-gkf9hq8to4lhbaf93pq5lupfq8hdoluq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prit.videotomp3",
+            "certificate_hash": "fae96232510cfae1f3d9ad0645559251ee0a5fd6"
+          }
+        },
+        {
+          "client_id": "256657868817-4uqva58c267fpngk1tmj5ime7qsalq7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6MlFbL9p_-cTSeojVfFklCw1jrvDAI7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256657868817-4uqva58c267fpngk1tmj5ime7qsalq7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
