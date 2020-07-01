@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">256657868817-4uqva58c267fpngk1tmj5ime7qsalq7u.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://videotomp3-81777.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">256657868817</string>
+    <string name="google_api_key" translatable="false">AIzaSyC6MlFbL9p_-cTSeojVfFklCw1jrvDAI7M</string>
+    <string name="google_app_id" translatable="false">1:256657868817:android:cc14f1ecaf19957eca09b0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC6MlFbL9p_-cTSeojVfFklCw1jrvDAI7M</string>
+    <string name="google_storage_bucket" translatable="false">videotomp3-81777.appspot.com</string>
+    <string name="project_id" translatable="false">videotomp3-81777</string>
+</resources>

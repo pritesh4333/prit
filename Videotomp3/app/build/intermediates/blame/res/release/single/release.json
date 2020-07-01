@@ -1,0 +1,502 @@
+[
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_adapter_photosfolder.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\adapter_photosfolder.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_share.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_share.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_replay_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_replay_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_img_btn_play_pressed.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\img_btn_play_pressed.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_output.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_output.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_right.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_right.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_pause.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_pause.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_replay_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_replay_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_play_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_play_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_progress_dailog.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\progress_dailog.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_play_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_play_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_bg.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\bg.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_replay_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_replay_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_play.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_play.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_share.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_share.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_more.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_right.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_right.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_line_visualizer.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_line_visualizer.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\raw_red_e.mp3.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\raw\\red_e.mp3"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_pause.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_pause.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_notification_icon2.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\notification_icon2.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21_ic_more.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_more.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_adapter_videos.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\adapter_videos.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_audio_output.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_audio_output.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_play_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_play_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_mp3.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\mp3.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_replay_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_replay_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_delete.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_delete.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\menu_output_options.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\menu\\output_options.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_img_btn_forward.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\img_btn_forward.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_more.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_dp1.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\dp1.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_untitled11.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\untitled11.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_img_btn_backward_pressed.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\img_btn_backward_pressed.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_share.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_share.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_img_btn_pause_pressed.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\img_btn_pause_pressed.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_play_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_play_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_pause.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_pause.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_feedback.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_feedback.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_videofolder.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_videofolder.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_feedback.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_feedback.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_delete.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_square_bar_visualizer.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_square_bar_visualizer.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_pause_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_pause_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21_ic_pause_red_48dp.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_pause_red_48dp.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_videotompbg.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\videotompbg.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21_ic_play_red_48dp.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_play_red_48dp.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_right.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_right.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_line_bar_visualizer.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_line_bar_visualizer.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_pause_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_pause_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_delete.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_delete.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_more.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_play_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_play_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_rename_alert.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\rename_alert.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21_ic_replay_red_48dp.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_replay_red_48dp.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_alert_more_apps.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\alert_more_apps.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_delete.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_pause.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_pause.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_more.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_replay_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_replay_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_setting.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_setting.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_right.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_right.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_alert_layout.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\alert_layout.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_pause.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_pause.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_share.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_share.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_bar_visualizer.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_bar_visualizer.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_feedback.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_feedback.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_setting.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_pause_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_pause_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_play.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_play.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_setting.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_music.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\music.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_more.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_play_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_play_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_share.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_share.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_service_example.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_service_example.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_setting.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_right.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_right.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_setting.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_pause.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_pause.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\menu_context_menu.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\menu\\context_menu.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\menu_menushare.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\menu\\menushare.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_play.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_play.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_pause_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_pause_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_pause_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_pause_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_feedbackpopup.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\feedbackpopup.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_galleryview.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_galleryview.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_play.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_play.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\menu_list_popup_menu.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\menu\\list_popup_menu.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_feedback.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_feedback.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_right.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_right.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_mp3_files.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_mp3_files.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_layout_audio_buttons.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\layout_audio_buttons.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_main.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_delete.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_delete.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable\\ic_gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_circle_visualizer.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_circle_visualizer.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_play.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_play.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_play.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_play.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_mp3_player.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_mp3_player.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_more.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_unified_ads.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\unified_ads.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_share.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-mdpi\\ic_share.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_custome_mp3_layout.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\custome_mp3_layout.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_gallery.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_gallery.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_circle_bar_visualizer.xml.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\layout\\activity_circle_bar_visualizer.xml"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_replay_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_replay_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_feedback.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_feedback.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_pause_red_48dp.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_pause_red_48dp.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_feedback.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-hdpi\\ic_feedback.png"
+    },
+    {
+        "merged": "D:\\git project orignal\\prit\\Videotomp3\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_delete.png.flat",
+        "source": "D:\\git project orignal\\prit\\Videotomp3\\app\\src\\main\\res\\drawable-xhdpi\\ic_delete.png"
+    }
+]

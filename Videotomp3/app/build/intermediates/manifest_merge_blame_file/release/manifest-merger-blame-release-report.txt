@@ -1,0 +1,446 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.prit.videotomp3"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:6:5-76
+12-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:6:22-73
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:7:5-79
+13-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:8:5-80
+14-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:8:22-77
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:9:5-81
+15-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:9:22-78
+16    <uses-permission android:name="android.permission.VIBRATE" />
+16-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:10:5-66
+16-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:10:22-63
+17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+17-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:11:5-71
+17-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:11:22-68
+18    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+18-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:12:5-80
+18-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:12:22-77
+19    <uses-permission android:name="android.permission.WAKE_LOCK" />
+19-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:25:5-68
+19-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:25:22-65
+20    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+20-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:26:5-110
+20-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:26:22-107
+21    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+21-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:26:5-82
+21-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:26:22-79
+22
+23    <application
+23-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:14:5-101:19
+24        android:name="androidx.multidex.MultiDexApplication"
+25        android:allowBackup="true"
+25-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:15:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.1.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\92637068cbcf4c7c38f96dc5b706f080\core-1.1.0\AndroidManifest.xml:24:18-86
+27        android:hardwareAccelerated="true"
+27-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:16:9-43
+28        android:icon="@drawable/dp1"
+28-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:17:9-37
+29        android:label="@string/app_name"
+29-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:18:9-41
+30        android:roundIcon="@drawable/dp1"
+30-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:19:9-42
+31        android:supportsRtl="true"
+31-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:20:9-35
+32        android:theme="@style/AppTheme" >
+32-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:21:9-40
+33        <activity android:name="com.prit.videotomp3.View.MyFiles.Mp3FileAdapter" />
+33-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:22:9-74
+33-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:22:19-62
+34        <activity
+34-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:23:9-31:20
+35            android:name="com.prit.videotomp3.View.MainActivity"
+35-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:24:13-46
+36            android:screenOrientation="portrait" >
+36-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:25:13-49
+37            <intent-filter>
+37-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:26:13-30:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:27:17-69
+38-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:27:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:29:17-77
+40-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:29:27-74
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:32:9-34:52
+44            android:name="com.prit.videotomp3.View.MyFiles.Mp3Files"
+44-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:33:13-50
+45            android:screenOrientation="portrait" />
+45-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:34:13-49
+46        <activity
+46-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:35:9-37:52
+47            android:name="com.prit.videotomp3.View.Player.Mp3Player"
+47-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:36:13-50
+48            android:screenOrientation="portrait" />
+48-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:37:13-49
+49        <activity
+49-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:38:9-40:52
+50            android:name="com.prit.videotomp3.View.CompressorActivity"
+50-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:39:13-52
+51            android:screenOrientation="portrait" />
+51-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:40:13-49
+52        <activity
+52-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:41:9-43:52
+53            android:name="com.prit.videotomp3.View.OutputActivity"
+53-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:42:13-48
+54            android:screenOrientation="portrait" />
+54-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:43:13-49
+55        <activity
+55-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:44:9-46:52
+56            android:name="com.prit.videotomp3.View.Player.AudioOutput"
+56-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:45:13-52
+57            android:screenOrientation="portrait" />
+57-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:46:13-49
+58        <activity
+58-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:47:9-49:52
+59            android:name="com.prit.videotomp3.View.VideoListActivity"
+59-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:48:13-51
+60            android:screenOrientation="portrait" />
+60-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:49:13-49
+61        <activity
+61-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:50:9-52:52
+62            android:name="com.prit.videotomp3.View.Player.LineVisualizerActivity"
+62-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:51:13-63
+63            android:screenOrientation="portrait" />
+63-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:52:13-49
+64        <activity
+64-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:53:9-55:52
+65            android:name="com.prit.videotomp3.View.Player.BarVisualizerActivity"
+65-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:54:13-62
+66            android:screenOrientation="portrait" />
+66-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:55:13-49
+67        <activity
+67-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:56:9-58:52
+68            android:name="com.prit.videotomp3.View.Player.CircleVisualizerActivity"
+68-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:57:13-65
+69            android:screenOrientation="portrait" />
+69-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:58:13-49
+70        <activity
+70-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:59:9-61:52
+71            android:name="com.prit.videotomp3.View.Player.CircleBarVisualizerActivity"
+71-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:60:13-68
+72            android:screenOrientation="portrait" />
+72-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:61:13-49
+73        <activity
+73-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:62:9-64:52
+74            android:name="com.prit.videotomp3.View.Player.LineBarVisualizerActivity"
+74-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:63:13-66
+75            android:screenOrientation="portrait" />
+75-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:64:13-49
+76
+77        <service
+77-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:66:9-68:40
+78            android:name="com.prit.videotomp3.View.Player.MediaPlayerService"
+78-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:67:13-59
+79            android:exported="false" />
+79-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:68:13-37
+80
+81        <activity
+81-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:70:9-72:52
+82            android:name="com.prit.videotomp3.View.Player.ServiceExampleActivity"
+82-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:71:13-63
+83            android:screenOrientation="portrait" />
+83-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:72:13-49
+84
+85        <meta-data
+85-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:74:9-76:52
+86            android:name="com.google.android.gms.ads.APPLICATION_ID"
+86-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:75:13-69
+87            android:value="@string/admob_app_id" /> <!-- [START fcm_default_icon] -->
+87-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:76:13-49
+88        <!--
+89 Set custom default icon. This is used when no icon is set for incoming notification messages.
+90             See README(https://goo.gl/l4GJaQ) for more.
+91        -->
+92        <meta-data
+92-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:81:9-83:63
+93            android:name="com.google.firebase.messaging.default_notification_icon"
+93-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:82:13-83
+94            android:resource="@drawable/notification_icon2" />
+94-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:83:13-60
+95        <!--
+96 Set color used with incoming notification messages. This is used when no color is set for the incoming
+97             notification message. See README(https://goo.gl/6BKBk7) for more.
+98        -->
+99        <!-- [END fcm_default_icon] -->
+100        <!-- [START fcm_default_channel] -->
+101        <meta-data
+101-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:90:9-92:71
+102            android:name="com.google.firebase.messaging.default_notification_channel_id"
+102-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:91:13-89
+103            android:value="@string/default_notification_channel_id" /> <!-- [END fcm_default_channel] -->
+103-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:92:13-68
+104        <!-- [START firebase_service] -->
+105        <service
+105-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:94:9-100:19
+106            android:name="com.prit.videotomp3.Fcm.MyFirebaseMessagingService"
+106-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:95:13-59
+107            android:exported="false" >
+107-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:96:13-37
+108            <intent-filter>
+108-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:97:13-99:29
+109                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+109-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:98:17-78
+109-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:98:25-75
+110            </intent-filter>
+111        </service>
+112
+113        <provider
+113-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\34de547b0be08a751b8239dccf80f24e\jetified-crashlytics-2.10.1\AndroidManifest.xml:19:9-23:38
+114            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+114-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\34de547b0be08a751b8239dccf80f24e\jetified-crashlytics-2.10.1\AndroidManifest.xml:20:13-75
+115            android:authorities="com.prit.videotomp3.crashlyticsinitprovider"
+115-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\34de547b0be08a751b8239dccf80f24e\jetified-crashlytics-2.10.1\AndroidManifest.xml:21:13-75
+116            android:exported="false"
+116-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\34de547b0be08a751b8239dccf80f24e\jetified-crashlytics-2.10.1\AndroidManifest.xml:22:13-37
+117            android:initOrder="90" />
+117-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\34de547b0be08a751b8239dccf80f24e\jetified-crashlytics-2.10.1\AndroidManifest.xml:23:13-35
+118        <!--
+119             FirebaseMessagingService performs security checks at runtime,
+120             but set to not exported to explicitly avoid allowing another app to call it.
+121        -->
+122        <service
+122-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:28:9-34:19
+123            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+123-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:29:13-82
+124            android:exported="false" >
+124-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:30:13-37
+125            <intent-filter android:priority="-500" >
+125-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:97:13-99:29
+126                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+126-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:98:17-78
+126-->D:\git project orignal\prit\Videotomp3\app\src\main\AndroidManifest.xml:98:25-75
+127            </intent-filter>
+128        </service>
+129        <service
+129-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:35:9-41:19
+130            android:name="com.google.firebase.components.ComponentDiscoveryService"
+130-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:36:13-84
+131            android:directBootAware="true"
+131-->[com.google.firebase:firebase-common:19.3.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\0e6ed4695c4296f3ca24c889398ca93a\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+132            android:exported="false" >
+132-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:37:13-37
+133            <meta-data
+133-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:38:13-40:85
+134                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+134-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:39:17-119
+135                android:value="com.google.firebase.components.ComponentRegistrar" />
+135-->[com.google.firebase:firebase-messaging:20.1.2] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\abcccebeec7d5be377a71e0b0f39e9e8\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:40:17-82
+136            <meta-data
+136-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\2b49ce03a16897f4fcfa8e3d060579f2\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:30:13-32:85
+137                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+137-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\2b49ce03a16897f4fcfa8e3d060579f2\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:31:17-139
+138                android:value="com.google.firebase.components.ComponentRegistrar" />
+138-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\2b49ce03a16897f4fcfa8e3d060579f2\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:32:17-82
+139            <meta-data
+139-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\8e3e25d3ee962193a1461f706eb3b1f2\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+140                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+140-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\8e3e25d3ee962193a1461f706eb3b1f2\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+141                android:value="com.google.firebase.components.ComponentRegistrar" />
+141-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\8e3e25d3ee962193a1461f706eb3b1f2\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+142            <meta-data
+142-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:32:13-34:85
+143                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+143-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:33:17-96
+144                android:value="com.google.firebase.components.ComponentRegistrar" />
+144-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:34:17-82
+145            <meta-data
+145-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\da734c9d42b5b5c2c60f0da31a79b2ff\jetified-firebase-installations-16.0.0\AndroidManifest.xml:17:13-19:85
+146                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+146-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\da734c9d42b5b5c2c60f0da31a79b2ff\jetified-firebase-installations-16.0.0\AndroidManifest.xml:18:17-127
+147                android:value="com.google.firebase.components.ComponentRegistrar" />
+147-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\da734c9d42b5b5c2c60f0da31a79b2ff\jetified-firebase-installations-16.0.0\AndroidManifest.xml:19:17-82
+148        </service> <!-- The activity will be merged into the manifest of the hosting app. -->
+149        <activity
+149-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:5-271
+150            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+150-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:15-102
+151            android:enabled="false"
+151-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:103-126
+152            android:exported="false"
+152-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:127-151
+153            android:launchMode="singleInstance"
+153-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:204-239
+154            android:process=":playcore_missing_splits_activity"
+154-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:152-203
+155            android:stateNotNeeded="true" />
+155-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:8:240-269
+156        <activity
+156-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:5-278
+157            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+157-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:15-95
+158            android:enabled="false"
+158-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:96-119
+159            android:exported="false"
+159-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:120-144
+160            android:process=":playcore_dialog_wrapper_activity"
+160-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:175-226
+161            android:stateNotNeeded="true"
+161-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:145-174
+162            android:theme="@style/Theme.PlayCore.Transparent" />
+162-->[com.google.android.play:core:1.6.5] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\d743225103c8bc1033d724815ef7b5d3\jetified-core-1.6.5\AndroidManifest.xml:9:227-276
+163
+164        <receiver
+164-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:29:9-33:20
+165            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+165-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:30:13-85
+166            android:enabled="true"
+166-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:31:13-35
+167            android:exported="false" >
+167-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:32:13-37
+168        </receiver>
+169        <receiver
+169-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:34:9-42:20
+170            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+170-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:35:13-100
+171            android:enabled="true"
+171-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:36:13-35
+172            android:exported="true"
+172-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:37:13-36
+173            android:permission="android.permission.INSTALL_PACKAGES" >
+173-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:38:13-69
+174            <intent-filter>
+174-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:39:13-41:29
+175                <action android:name="com.android.vending.INSTALL_REFERRER" />
+175-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:40:17-79
+175-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:40:25-76
+176            </intent-filter>
+177        </receiver>
+178
+179        <service
+179-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:44:9-47:40
+180            android:name="com.google.android.gms.measurement.AppMeasurementService"
+180-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:45:13-84
+181            android:enabled="true"
+181-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:46:13-35
+182            android:exported="false" />
+182-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:47:13-37
+183        <service
+183-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:48:9-52:72
+184            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+184-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:49:13-87
+185            android:enabled="true"
+185-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:50:13-35
+186            android:exported="false"
+186-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:51:13-37
+187            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+187-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4c4006618102eea0c1dae602a4d44da9\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:52:13-69
+188        <activity
+188-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:29:9-33:64
+189            android:name="com.google.android.gms.ads.AdActivity"
+189-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:30:13-65
+190            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+190-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:31:13-122
+191            android:exported="false"
+191-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:32:13-37
+192            android:theme="@android:style/Theme.Translucent" />
+192-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:33:13-61
+193
+194        <provider
+194-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:35:9-39:39
+195            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+195-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:36:13-76
+196            android:authorities="com.prit.videotomp3.mobileadsinitprovider"
+196-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:37:13-73
+197            android:exported="false"
+197-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:38:13-37
+198            android:initOrder="100" />
+198-->[com.google.android.gms:play-services-ads-lite:19.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\95f71bf6096814eb84134519b5375c6f\jetified-play-services-ads-lite-19.0.0\AndroidManifest.xml:39:13-36
+199
+200        <receiver
+200-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:37:9-44:20
+201            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+201-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:38:13-78
+202            android:exported="true"
+202-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:39:13-36
+203            android:permission="com.google.android.c2dm.permission.SEND" >
+203-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:40:13-73
+204            <intent-filter>
+204-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:41:13-43:29
+205                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+205-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:42:17-81
+205-->[com.google.firebase:firebase-iid:20.1.1] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\e42a18a03c398187922f9975112814d8\jetified-firebase-iid-20.1.1\AndroidManifest.xml:42:25-78
+206            </intent-filter>
+207        </receiver>
+208
+209        <provider
+209-->[com.google.firebase:firebase-common:19.3.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\0e6ed4695c4296f3ca24c889398ca93a\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+210            android:name="com.google.firebase.provider.FirebaseInitProvider"
+210-->[com.google.firebase:firebase-common:19.3.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\0e6ed4695c4296f3ca24c889398ca93a\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+211            android:authorities="com.prit.videotomp3.firebaseinitprovider"
+211-->[com.google.firebase:firebase-common:19.3.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\0e6ed4695c4296f3ca24c889398ca93a\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+212            android:exported="false"
+212-->[com.google.firebase:firebase-common:19.3.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\0e6ed4695c4296f3ca24c889398ca93a\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+213            android:initOrder="100" />
+213-->[com.google.firebase:firebase-common:19.3.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\0e6ed4695c4296f3ca24c889398ca93a\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+214
+215        <activity
+215-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\65f4239cf8d72f4658361681203f9090\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+216            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+216-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\65f4239cf8d72f4658361681203f9090\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+217            android:exported="false"
+217-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\65f4239cf8d72f4658361681203f9090\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+218            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+218-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\65f4239cf8d72f4658361681203f9090\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+219
+220        <meta-data
+220-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\41ac3ffa307ffa9c48d89b49be86f5d4\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+221            android:name="com.google.android.gms.version"
+221-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\41ac3ffa307ffa9c48d89b49be86f5d4\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+222            android:value="@integer/google_play_services_version" />
+222-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\41ac3ffa307ffa9c48d89b49be86f5d4\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+223
+224        <service
+224-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\716b490f188932af81dbafc50fcc7b1b\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+225            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+225-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\716b490f188932af81dbafc50fcc7b1b\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+226            android:exported="false" >
+226-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\716b490f188932af81dbafc50fcc7b1b\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+227            <meta-data
+227-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\716b490f188932af81dbafc50fcc7b1b\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+228                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+228-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\716b490f188932af81dbafc50fcc7b1b\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+229                android:value="cct" />
+229-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\716b490f188932af81dbafc50fcc7b1b\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+230        </service>
+231        <service
+231-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+232            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+232-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+233            android:exported="false"
+233-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+234            android:permission="android.permission.BIND_JOB_SERVICE" >
+234-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+235        </service>
+236
+237        <receiver
+237-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+238            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+238-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+239            android:exported="false" />
+239-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\pp\.gradle\caches\transforms-2\files-2.1\4e2bfa7c8f74039ead1820cdeeda4516\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+240    </application>
+241
+242</manifest>
