@@ -67,6 +67,14 @@ Username = parmarprit100
 Password = Prit@4333
 Pin = 4333
 
+HDFC account details
+customer id - 139493794
+pass - prit.4333
+account number 50100352191117
+ifsc code - HDFC0004417
+name - pritesh chaganbhai
+
+
 all cards pin
 Ic 4333 corp 5237 IDFC 4333 SBI 4333
 
@@ -223,6 +231,10 @@ staging server logins
 username- sourav.hui@logoinfosoft.com
 password-Sachin@9355
  
+gmail account 
+emial videotomp3prit@gmail.com
+pass 8767957178
+
 
 komal bank detail
 the malad sahakari bank ltd

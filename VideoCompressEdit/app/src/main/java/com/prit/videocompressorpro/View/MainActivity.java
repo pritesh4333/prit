@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int MY_REQUEST_CODE = 1;
     private GridView gv_folder;
     private Button videlist;
+    TextView more_apps;
     private AdView mAdView;
     private static Activity activity;
     public static final String MY_PREFS_NAME = "VideoCompressPrefsFile";
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gv_folder = (GridView) findViewById(R.id.gv_folder);
         videlist = (Button) findViewById(R.id.videlist);
-
+        more_apps=(TextView)findViewById(R.id.more_apps);
 
         activity=this;
 
@@ -156,6 +157,94 @@ public class MainActivity extends AppCompatActivity {
 
         appUpdateManager = AppUpdateManagerFactory.create(MainActivity.this);
 
+        more_apps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewGroup viewGroup = findViewById(android.R.id.content);
+                //then we will inflate the custom alert dialog xml that we created
+                View dialogView = LayoutInflater.from(MainActivity.this).inflate(R.layout.alert_more_apps, viewGroup, false);
+                //Now we need an AlertDialog.Builder object
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                //setting the view of the builder to our custom view that we already inflated
+                builder.setView(dialogView);
+
+                final AlertDialog alertDialog = builder.create();
+
+                TextView ok=(TextView)dialogView.findViewById(R.id.ok);
+                LinearLayout videocommproapp=(LinearLayout)dialogView.findViewById(R.id.videocompressorproapps);
+
+                SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String natice_advanceadd;
+                admob_app_id = prefs.getString("admob_app_id", "");
+                if (admob_app_id.equalsIgnoreCase("")){
+                    admob_app_id=getString(R.string.admob_app_id);
+                    natice_advanceadd=getString(R.string.natice_advanceadd);
+                }else {
+                    admob_app_id = prefs.getString("admob_app_id", "");
+                    natice_advanceadd = prefs.getString("natice_advanceadd","");
+                }
+                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd)
+                        .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                            @Override
+                            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                                // Show the ad.
+                                // Assumes you have a placeholder FrameLayout in your View layout
+                                // (with id fl_adplaceholder) where the ad is to be placed.
+                                //Log.e("add loaded",""+unifiedNativeAd);
+                                FrameLayout frameLayout =dialogView.
+                                        findViewById(R.id.fl_adplaceholder);
+                                // Assumes that your ad layout is in a file call ad_unified.xml
+                                // in the res/layout folder
+                                UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
+                                        .inflate(R.layout.unified_ads, null);
+                                // This method sets the text, images and the native ad, etc into the ad
+                                // view.
+                                populateUnifiedNativeAdView(unifiedNativeAd, adView);
+                                frameLayout.removeAllViews();
+                                frameLayout.addView(adView);
+                            }
+                        })
+                        .withAdListener(new AdListener() {
+                            @Override
+                            public void onAdFailedToLoad(int errorCode) {
+                                //   Log.e("add loaded",""+errorCode);
+                                // Handle the failure by logging, altering the UI, and so on.
+                                // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .withNativeAdOptions(new NativeAdOptions.Builder()
+                                // Methods in the NativeAdOptions.Builder class can be
+                                // used here to specify individual options settings.
+                                .build())
+                        .build();
+                adLoader.loadAds(new AdRequest.Builder().build(),5);
+
+                videocommproapp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.prit.videotomp3" )));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.prit.videotomp3")));
+                        }
+                    }
+
+                });
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.cancel();
+                    }
+                });
+
+
+
+
+                alertDialog.show();
+            }
+        });
 
         // Onclik Listner
         videlist.setOnClickListener(new View.OnClickListener() {
@@ -196,7 +285,9 @@ public class MainActivity extends AppCompatActivity {
             // Not Available...
             Helper.LogPrint("No Internet","No internet");
         }
-
+        SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+        editor.putString("Showcase", "Videocompress");
+        editor.apply();
         showShowcase();
 
 
@@ -293,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
     public  void showShowcase(){
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String Showcase = prefs.getString("Showcase", "");
-
+        try{
         if (Showcase.equalsIgnoreCase("")){
             new MaterialShowcaseView.Builder(this)
                     .setTarget(videlist)
@@ -313,6 +404,9 @@ public class MainActivity extends AppCompatActivity {
 //            editor.putString("Showcase", "Videocompress");
 //            editor.apply();
         }else {
+
+        }
+        }catch(Exception e){
 
         }
     }
@@ -525,6 +619,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onAdFailedToLoad(int errorCode) {
                      //   Log.e("add loaded",""+errorCode);
                         // Handle the failure by logging, altering the UI, and so on.
+                   //     Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
                     }
                 })
                 .withNativeAdOptions(new NativeAdOptions.Builder()
@@ -785,7 +880,7 @@ public class MainActivity extends AppCompatActivity {
 
                 feedbacksubmit.setVisibility(View.GONE);
                 aboutinfo.setVisibility(View.VISIBLE);
-                aboutinfo.setText("Version:-  "+BuildConfig.VERSION_NAME);
+                aboutinfo.setText("Version:-  "+ BuildConfig.VERSION_NAME);
 
                 deleteDialog.show();
                 return false;

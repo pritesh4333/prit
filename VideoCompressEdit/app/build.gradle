@@ -7,8 +7,8 @@ android {
         applicationId "com.prit.videocompressorpro"
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 15
-        versionName "1.0.15"
+        versionCode 16
+        versionName "1.0.16"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

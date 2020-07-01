@@ -55,6 +55,14 @@
             <!--  This is your template view -->
 
         </LinearLayout>
+        <TextView
+            android:id="@+id/more_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More Apps"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"></TextView>
         <LinearLayout
             android:id="@+id/banneradd"
             android:layout_width="match_parent"
