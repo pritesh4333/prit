@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         appUpdateManager = AppUpdateManagerFactory.create(MainActivity.this);
 
         more_apps.setOnClickListener(new View.OnClickListener() {
@@ -210,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                             public void onAdFailedToLoad(int errorCode) {
                                 //   Log.e("add loaded",""+errorCode);
                                 // Handle the failure by logging, altering the UI, and so on.
-                                // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
+                              //   Toast.makeText(getApplicationContext(), "Ad failed to load! error code Native: " + errorCode, Toast.LENGTH_SHORT).show();
                             }
                         })
                         .withNativeAdOptions(new NativeAdOptions.Builder()
@@ -619,7 +620,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onAdFailedToLoad(int errorCode) {
                      //   Log.e("add loaded",""+errorCode);
                         // Handle the failure by logging, altering the UI, and so on.
-                   //     Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
                     }
                 })
                 .withNativeAdOptions(new NativeAdOptions.Builder()
@@ -869,6 +870,7 @@ public class MainActivity extends AppCompatActivity {
                             public void onAdFailedToLoad(int errorCode) {
                                // Log.e("add loaded",""+errorCode);
                                 // Handle the failure by logging, altering the UI, and so on.
+                            //    Toast.makeText(getApplicationContext(), "Ad failed to load! error code Native: " + errorCode, Toast.LENGTH_SHORT).show();
                             }
                         })
                         .withNativeAdOptions(new NativeAdOptions.Builder()
@@ -957,6 +959,7 @@ public class MainActivity extends AppCompatActivity {
                             public void onAdFailedToLoad(int errorCode) {
                           //      Log.e("add loaded",""+errorCode);
                                 // Handle the failure by logging, altering the UI, and so on.
+                           //     Toast.makeText(getApplicationContext(), "Ad failed to load! error code Native: " + errorCode, Toast.LENGTH_SHORT).show();
                             }
                         })
                         .withNativeAdOptions(new NativeAdOptions.Builder()

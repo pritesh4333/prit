@@ -167,7 +167,7 @@ public class VideoListActivity extends AppCompatActivity  {
 
             @Override
             public void onAdFailedToLoad(int errorCode) {
-                // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
+              //   Toast.makeText(getApplicationContext(), "Ad failed to load! error code:List " + errorCode, Toast.LENGTH_SHORT).show();
             }
 
             @Override

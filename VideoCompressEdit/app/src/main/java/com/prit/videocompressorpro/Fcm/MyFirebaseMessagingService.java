@@ -170,15 +170,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 if (result==null || result.toString()=="")
                 {
                     Helper.LogPrint("bitmap","bitmap null or blank");
-                    new sendNotification(ctx,title,body,"https://i.ibb.co/M7JNdyZ/bg.jpg",update).execute();
+                    new sendNotification(ctx,title,body,image,update).execute();
 //                    result = BitmapFactory.decodeResource(ctx.getResources(),
 //                            R.drawable.bg);
-                }else{
-                    Helper.LogPrint("bitmap","got bitmap");
-                }
+                }else {
+                    Helper.LogPrint("bitmap", "got bitmap");
+
 
                     String channelId = getString(R.string.default_notification_channel_id);
-                    String channername=getString(R.string.default_notification_channel_name);
+                    String channername = getString(R.string.default_notification_channel_name);
                     NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
                     bpStyle.bigPicture(result).build();
                     // Set the intent to fire when the user taps on notification.
@@ -186,14 +186,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     PendingIntent pendingIntent = PendingIntent.getActivity(ctx, 0 /* Request code */, intent,
                             PendingIntent.FLAG_ONE_SHOT);
-                    NotificationCompat.Builder mBuilder ;
+                    NotificationCompat.Builder mBuilder;
                     Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                    long[] v = {500,1000};
+                    long[] v = {500, 1000};
 
                     Bitmap icon = BitmapFactory.decodeResource(ctx.getResources(),
                             R.drawable.dp);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        Helper.LogPrint("Heighr orio","Heighr Orio");
+                        Helper.LogPrint("Heighr orio", "Heighr Orio");
                         if (update.equalsIgnoreCase("Yes")) {
 
                             mBuilder = new NotificationCompat.Builder(ctx, channelId)
@@ -207,7 +207,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                                     .addAction(0, "Update", pendingIntent)
                                     .setColor(ContextCompat.getColor(ctx, R.color.green))
                                     .setStyle(bpStyle);
-                        }else{
+                        } else {
                             mBuilder = new NotificationCompat.Builder(ctx, channelId)
                                     .setSmallIcon(R.drawable.notification_icon2)
                                     .setContentTitle(title)
@@ -225,17 +225,17 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
                             Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
                             r.play();
-                            Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+                            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                             // default pattern goes here
                             vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
 
                         } catch (Exception e) {
-                            Helper.LogPrint("Error Playing sound ","error");
+                            Helper.LogPrint("Error Playing sound ", "error");
                             e.printStackTrace();
                         }
 
-                    }else{
-                        Helper.LogPrint("Below orio","Below Orio");
+                    } else {
+                        Helper.LogPrint("Below orio", "Below Orio");
                         if (update.equalsIgnoreCase("Yes")) {
                             mBuilder = new NotificationCompat.Builder(ctx, channelId)
                                     .setSmallIcon(R.drawable.notification_icon2)
@@ -248,7 +248,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                                     .addAction(0, "Update", pendingIntent)
                                     .setColor(ContextCompat.getColor(ctx, R.color.green))
                                     .setStyle(bpStyle);
-                        }else{
+                        } else {
                             mBuilder = new NotificationCompat.Builder(ctx, channelId)
                                     .setSmallIcon(R.drawable.notification_icon2)
                                     .setContentTitle(title)
@@ -268,21 +268,18 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                     NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                     NotificationChannel mNotificationChannel = null;
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        mNotificationChannel = new NotificationChannel(channelId,channername, NotificationManager.IMPORTANCE_HIGH);
-                        mNotificationChannel.setVibrationPattern(new long[]{ 0 });
+                        mNotificationChannel = new NotificationChannel(channelId, channername, NotificationManager.IMPORTANCE_HIGH);
+                        mNotificationChannel.setVibrationPattern(new long[]{0});
                         mNotificationChannel.enableVibration(true);
                         notificationManager.createNotificationChannel(mNotificationChannel);
                     }
-
 
 
                     // It will display the notification in notification bar
                     notificationManager.notify(mNotificationId, mBuilder.build());
 
 
-
-
-
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

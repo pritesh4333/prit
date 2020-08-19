@@ -31,6 +31,7 @@ import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.appcompat.widget.PopupMenu;
@@ -192,7 +193,7 @@ public class CompressorActivity extends Activity {
 
             @Override
             public void onAdFailedToLoad(int errorCode) {
-                // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
+               //  Toast.makeText(getApplicationContext(), "Ad failed to load! error code Compress: " + errorCode, Toast.LENGTH_SHORT).show();
             }
 
             @Override

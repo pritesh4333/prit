@@ -37,10 +37,17 @@
     <!--priteshparmar12@gmail.com-->
     <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
         <string name="admob_app_id">ca-app-pub-4688988588571726~5618809292</string>
-        <string name="banner_home_footer">ca-app-pub-4688988588571726/6914588755</string>
-        <string name="interstitial_full_screen">ca-app-pub-4688988588571726/2783772053</string>
-        <string name="natice_advanceadd">ca-app-pub-4688988588571726/7844527046</string>
+        <string name="banner_home_footer">ca-app-pub-4688988588571726/5296216292</string>
+        <string name="interstitial_full_screen">ca-app-pub-4688988588571726/4321195912</string>
+        <string name="natice_advanceadd">ca-app-pub-4688988588571726/1695032579</string>
 
+    <!--production-->
+    <!--jilkakomal@gmail.com-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+<!--    <string name="admob_app_id">ca-app-pub-4001279550637945~5185914976</string>-->
+<!--    <string name="banner_home_footer">ca-app-pub-4001279550637945/6115853269</string>-->
+<!--    <string name="interstitial_full_screen">ca-app-pub-4001279550637945/4611199904</string>-->
+<!--    <string name="natice_advanceadd">ca-app-pub-4001279550637945/8358873229</string>-->
 
 <!--    priteshparmar102@gmail.com-->
     <!--production-->

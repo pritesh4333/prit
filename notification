@@ -21,7 +21,7 @@ Authorization key=AIzaSyAbR12cgU1r4oZ-OUMEupbdnBzSYjAC4N4
 
 // production
 {
-    "to" : "/topics/VideoCompressorChannelName",
+    "to" : "/topics/VideoCompressorChannelNameTest",
     "data": {
     "title" : "World Heritage Day",
     "body" : "International day for Monuments and Sites.",
@@ -36,19 +36,62 @@ Authorization key=AIzaSyAbR12cgU1r4oZ-OUMEupbdnBzSYjAC4N4
 
 //new production right now for testing
 {
-     "to" : "/topics/VideoCompressorChannelName",
+     "to" : "/topics/VideoCompressorChannelNameTest",
     "data": {
     "title" : "Stay Home",
     "body" : "Stay Home Stay Safe.",
     "image" : "https://i.ibb.co/k23vRph/bg.jpg",
-    "update":"yes",
+    "update":"No",
     "admob_app_id":"ca-app-pub-4688988588571726~5618809292",
-     "banner_home_footer":"ca-app-pub-4688988588571726/6914588755",
-      "interstitial_full_screen":"ca-app-pub-4688988588571726/2783772053",
-       "natice_advanceadd":"ca-app-pub-4688988588571726/7844527046"
+     "banner_home_footer":"ca-app-pub-4688988588571726/5296216292",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/4321195912",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/1695032579"
+    }
+}
+//jilkakomal production 
+{
+    "to" : "/topics/VideoCompressorChannelNameTest",
+    "data": {
+    "title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+    "admob_app_id":"ca-app-pub-4001279550637945~5185914976",
+     "banner_home_footer":"ca-app-pub-4001279550637945/6115853269",
+      "interstitial_full_screen":"ca-app-pub-4001279550637945/4611199904",
+       "natice_advanceadd":"ca-app-pub-4001279550637945/8358873229"
     }
 }
 
+
+//priteshparmar102@gmail.com 
+{
+    "to" : "/topics/VideoCompressorChannelNameTest",
+    "data": {
+    "title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+    "admob_app_id":"ca-app-pub-8048172070898532~1314623154",
+     "banner_home_footer":"ca-app-pub-8048172070898532/3366071425",
+      "interstitial_full_screen":"ca-app-pub-8048172070898532/1327081508",
+       "natice_advanceadd":"ca-app-pub-8048172070898532/2448591482"
+    }
+}
+video to mp3 
+{
+    "to" : "/topics/VideoCompressorChannelNameTest",
+    "data": {
+    "title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+    "admob_app_id":"ca-app-pub-4688988588571726~1491794154",
+     "banner_home_footer":"ca-app-pub-4688988588571726/3902776017",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/6145795970",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/8388815939"
+    }
+}
 
 
 
