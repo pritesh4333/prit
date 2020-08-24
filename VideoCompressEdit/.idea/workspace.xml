@@ -11,16 +11,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="691187fc-adae-4f6e-909c-14b017cdc17d" name="Default Changelist" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Model/Model_Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Model/Model_images.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/Helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/InternetConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MyVideoListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/OutputActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/PhotoListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/AdapterSelectedPhoto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_List_Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_Photos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_galleryview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_my_video_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_output.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_videofolder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/adapter_photosfolder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/adapter_videos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/alert_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/feedbackpopup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/progress_dailog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/unified_ads.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/menu/context_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/menu/menushare.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/menu/output_options.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/mipmap/ic_stat_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/raw/dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/raw/notification.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android-ffmpeg/.idea/vcs.xml" afterDir="false" />
+>>>>>>> prit
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" afterDir="false" />
@@ -79,6 +115,13 @@
       <change beforePath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../new _2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new _2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notification" beforeDir="false" afterPath="$PROJECT_DIR$/../notification" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ffmpeg/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android-ffmpeg/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ffmpeg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android-ffmpeg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ffmpeg/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android-ffmpeg/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new_3.txt" afterDir="false" />
+>>>>>>> prit
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +165,7 @@
     <option name="EXPORT_PRIVATE_KEY" value="false" />
     <option name="KEY_STORE_PATH" value="D:\git project orignal\prit\VideoCompressorpro.jks" />
     <option name="KEY_ALIAS" value="VideoCompressorpro" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -143,6 +187,10 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-12-13T06:41:04.591Z" />
     <property name="ExportApk.ApkPath" value="D:\git project orignal\prit\VideoCompressEdit\app\release" />
     <property name="ExportApk.BuildVariants" value="release" />
+<<<<<<< HEAD
+=======
+    <property name="ExportApk.SignV2" value="true" />
+>>>>>>> prit
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -281,18 +329,32 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597654741585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597654741585" />
+=======
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597831417584">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597831417584" />
+>>>>>>> prit
     <state x="294" y="56" width="981" height="707" key="SettingsEditor" timestamp="1597654206347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="294" y="56" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597654206347" />
+<<<<<<< HEAD
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1597810840321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597810840321" />
+=======
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1597831141963">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597831141963" />
+>>>>>>> prit
     <state x="463" y="11" width="609" height="801" key="find.popup" timestamp="1597654215210">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

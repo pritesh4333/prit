@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/quality_186p"
+        android:title="@string/quality_186p"/>
+    <item android:id="@+id/quality_426p"
+        android:title="@string/quality_426p"/>
+    <item android:id="@+id/quality_512p"
+        android:title="@string/quality_512p"/>
+    <item android:id="@+id/quality_640p"
+        android:title="@string/quality_640p"/>
+    <item android:id="@+id/quality_720p"
+        android:title="@string/quality_720p"/>
+
+    <item android:id="@+id/quality_960p"
+        android:title="@string/quality_960p"/>
+    <item android:id="@+id/quality_1080p"
+        android:title="@string/quality_1080p"/>
+    <item android:id="@+id/quality_1920p"
+        android:title="@string/quality_1920p"/>
+
+</menu>

@@ -156,6 +156,45 @@ Authorization key=AAAAO8IASBE:APA91bFqiGJs1ImPfGZWjPWk1LJjQ0PzxoO835SdTjXW1wgJ34
 }
 
 
+///// NewVideoCompressorChannelNameTest
+
+post https://fcm.googleapis.com/fcm/send
+header key value 
+Content-Type    application/json
+Authorization key=AAAAKVodCRg:APA91bHQLeMvyX79MIO-8cpVe5UjnkbqDKTXd2bNziuo9heu9s7dOjbrpGvc28BM-6t0VHAtD5UvBJa9TLcwY59iXwXCQM1RURLcL9-mXHiuFo1myuU9Zht4xGdh1Qban9LULEzIGf6B
+
+
+//Test
+{
+    "to" : "/topics/NewVideoCompressorChannelNameTest",
+    "data": {
+    "title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+    "admob_app_id":"ca-app-pub-4959089160488184~8667649661",
+     "banner_home_footer":"ca-app-pub-3940256099942544/6300978111",
+      "interstitial_full_screen":"ca-app-pub-3940256099942544/1033173712",
+       "natice_advanceadd":"ca-app-pub-3940256099942544/1044960115"
+    }
+}
+
+// production
+{
+    "to" : "/topics/NewVideoCompressorChannelName",
+    "data": {
+    "title" : "World Heritage Day",
+    "body" : "International day for Monuments and Sites.",
+    "image" : "https://i.ibb.co/k23vRph/bg.jpg",
+    "update":"no",
+  "admob_app_id":"ca-app-pub-4001279550637945~5504686580",
+     "banner_home_footer":"ca-app-pub-4001279550637945/8649207759",
+      "interstitial_full_screen":"ca-app-pub-4001279550637945/5639901035",
+       "natice_advanceadd":"ca-app-pub-4001279550637945/8074492688"
+    }
+}
+
+
 
 
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "177605511448",
+    "firebase_url": "https://video-compressor-pro--fast.firebaseio.com",
+    "project_id": "video-compressor-pro--fast",
+    "storage_bucket": "video-compressor-pro--fast.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177605511448:android:10e4240aa02cc89641f66d",
+        "android_client_info": {
+          "package_name": "com.pritesh.videocompressorpro_fastvideocompressor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177605511448-cc8ue9i7m93rnq1lp5ss8drlkh3r4slt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pritesh.videocompressorpro_fastvideocompressor",
+            "certificate_hash": "7f9cdcd232054d591eae0839db823f847d516ce7"
+          }
+        },
+        {
+          "client_id": "177605511448-bfptjv6d87215qhn80gfsjdgrdiqb00u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEXDfL4fIoougnqNSO-7deyr-Q_bQC7II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177605511448-bfptjv6d87215qhn80gfsjdgrdiqb00u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
