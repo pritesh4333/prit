@@ -132,7 +132,7 @@ public class VideoListActivity extends AppCompatActivity {
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdLoaded() {
-                showInterstitial();
+               // showInterstitial();
             }
 
             @Override
@@ -256,13 +256,13 @@ public class VideoListActivity extends AppCompatActivity {
 
 
 
-    private void showInterstitial() {
-        if ( fulladdcount!=1) {
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            }
-        }
-    }
+//    private void showInterstitial() {
+//        if ( fulladdcount!=1) {
+//            if (mInterstitialAd.isLoaded()) {
+//                mInterstitialAd.show();
+//            }
+//        }
+//    }
     public void fn_video() {
         long duration;
         int int_position = 0;

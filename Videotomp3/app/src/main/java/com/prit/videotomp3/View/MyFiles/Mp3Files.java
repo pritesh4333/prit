@@ -23,6 +23,8 @@ import com.prit.videotomp3.View.VideoListActivity;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 
 import static com.prit.videotomp3.View.MainActivity.MY_PREFS_NAME;
 
@@ -43,7 +45,24 @@ public class Mp3Files extends AppCompatActivity {
         ArrayList<String> filepath = new ArrayList<String>();
 
         File mypath = new File(Environment.getExternalStorageDirectory(), "Video To MP3");
+
         File[] files = mypath.listFiles();
+
+        if (files != null) {
+            Arrays.sort(files, new Comparator() {
+                public int compare(Object o1, Object o2) {
+
+                    if (((File) o1).lastModified() > ((File) o2).lastModified()) {
+                        return -1;
+                    } else if (((File) o1).lastModified() < ((File) o2).lastModified()) {
+                        return +1;
+                    } else {
+                        return 0;
+                    }
+                }
+
+            });
+        }
         if (files != null) {
             for (int i = 0; i < files.length; i++) {
 

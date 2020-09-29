@@ -844,7 +844,7 @@ public class CompressorActivity extends Activity {
 
     private void showInterstitial() {
         Helper.LogPrint("addscount",""+fulladdcountcompressactivity);
-        if (fulladdcountcompressactivity<2) {
+        if (fulladdcountcompressactivity<1) {
             if (mInterstitialAd.isLoaded()) {
                 mInterstitialAd.show();
             }

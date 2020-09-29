@@ -11,53 +11,167 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="691187fc-adae-4f6e-909c-14b017cdc17d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Model/Model_Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Model/Model_images.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/InternetConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MyVideoListActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/OutputActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/PhotoListActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/AdapterSelectedPhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_List_Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_Photos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_galleryview.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_my_video_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/activity_videofolder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/adapter_photosfolder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/adapter_videos.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/alert_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/feedbackpopup.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/progress_dailog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/unified_ads.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/menu/context_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/menu/menushare.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/menu/output_options.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/mipmap/ic_stat_name.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/raw/dp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/raw/notification.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android-ffmpeg/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/drawable-xhdpi/dp.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/mipmap-hdpi/dp.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/androidTest/java/com/prit/videomerger_videojoinerindianapp/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/Model/Model_Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/Model/Model_images.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/Utils/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/Utils/Helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/Utils/InternetConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/CompressorActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/MergeActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/MyVideoListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/OutputActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/PhotoListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/View/VideoListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/ViewModel/AdapterSelectedPhoto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/ViewModel/Adapter_List_Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/ViewModel/Adapter_Photos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/java/com/prit/videomerger_videojoinerindianapp/ViewModel/Adapter_Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-hdpi/notification_icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/dp1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-mdpi/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xhdpi/video.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxhdpi/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable-xxxhdpi/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/drawable/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/activity_galleryview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/activity_my_video_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/activity_output.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/activity_videofolder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/adapter_photosfolder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/adapter_videos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/alert_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/feedbackpopup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/progress_dailog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/layout/unified_ads.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/menu/context_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/menu/menushare.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/menu/output_options.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-hdpi/ic_skylight_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap-xxxhdpi/transs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap/dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/mipmap/ic_stat_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/raw/dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/raw/notification.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/app/src/test/java/com/prit/videomerger_videojoinerindianapp/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MergeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MyVideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MyVideoListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/drawable-xhdpi/dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/fastvideo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/mipmap-mdpi/dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_7_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_10_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_10_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-ffmpeg/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android-ffmpeg/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-ffmpeg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android-ffmpeg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-ffmpeg/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android-ffmpeg/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/release/app-release.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/release/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/VideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/VideoListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/ViewModel/Adapter_Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/ViewModel/Adapter_Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/alert_more_apps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/src/main/java/com/prit/videotomp3/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/java/com/prit/videotomp3/View/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new _2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new _2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification" beforeDir="false" afterPath="$PROJECT_DIR$/../notification" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../private_key.pepk" beforeDir="false" afterPath="$PROJECT_DIR$/../private_key.pepk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +215,6 @@
     <option name="EXPORT_PRIVATE_KEY" value="false" />
     <option name="KEY_STORE_PATH" value="D:\git project orignal\prit\VideoCompressorpro.jks" />
     <option name="KEY_ALIAS" value="VideoCompressorpro" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -116,20 +229,19 @@
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="app" />
     <property name="BundleExportedModule" value="app" />
-    <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_note_4-57bbd6ef0503" />
+    <property name="DEBUGGABLE_DEVICE" value="xiaomi-poco_f1-550d2c41" />
     <property name="DEBUGGABLE_PROCESS" value="com.prit.videocompressorpro" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Mi498HA14100125" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-12-13T06:41:04.591Z" />
     <property name="ExportApk.ApkPath" value="D:\git project orignal\prit\VideoCompressEdit\app\release" />
     <property name="ExportApk.BuildVariants" value="release" />
-    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Videotomp3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -140,15 +252,16 @@
       <recent name="C:\Users\Admin\AndroidStudioProjects\VideoCompressEdit\app\src\main\res\drawable" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.prit.videocompressorpro.View" />
       <recent name="com.exampl.prit.videocompressorpro" />
       <recent name="com.exampl.prit.videocompressedit.View" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\drawable-hdpi" />
       <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\drawable-mdpi" />
       <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\layout" />
       <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\java\com\prit\videocompressorpro\Fcm" />
       <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\java\com\prit\videocompressorpro\View" />
-      <recent name="D:\git project orignal\prit\VideoCompressEdit\app\src\main\res\values" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -262,10 +375,54 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597831417584">
+    <state x="524" y="115" key="#xdebugger.evaluate" timestamp="1599632368819">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597831417584" />
+    <state x="524" y="115" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1599632368819" />
+    <state x="624" y="177" key="AndroidProcessChooserDialog" timestamp="1599632243605">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="624" y="177" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1599632243605" />
+    <state width="406" height="466" key="DebuggerActiveHint" timestamp="1599629187491">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="406" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1599629187491" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1599642252170">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599642252170" />
+    <state width="1476" height="257" key="GridCell.Tab.0.bottom" timestamp="1599632385879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1476" height="257" key="GridCell.Tab.0.center" timestamp="1599632385879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1476" height="257" key="GridCell.Tab.0.left" timestamp="1599632385879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1476" height="257" key="GridCell.Tab.0.right" timestamp="1599632385879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1476" height="257" key="GridCell.Tab.1.bottom" timestamp="1599632385880">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599632385880" />
+    <state width="1476" height="257" key="GridCell.Tab.1.center" timestamp="1599632385879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1476" height="257" key="GridCell.Tab.1.left" timestamp="1599632385879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1476" height="257" key="GridCell.Tab.1.right" timestamp="1599632385880">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1599632385880" />
     <state x="294" y="56" width="981" height="707" key="SettingsEditor" timestamp="1597654206347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -306,6 +463,16 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/CompressorActivity.java</url>
           <line>840</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MergeActivity.java</url>
+          <line>481</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

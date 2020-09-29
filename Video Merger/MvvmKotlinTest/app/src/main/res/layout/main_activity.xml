@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="MainActivityViewModel"
+            type="com.prit.mvvmkotlintest.viewmodel.MainActivityViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:text="@={MainActivityViewModel.username}"
+    ></EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:text="@={MainActivityViewModel.password}"
+            ></EditText>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> MainActivityViewModel.onClickLogin()}"
+            android:text="Login" />
+
+        <Spinner
+            android:id="@+id/spinner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:onItemSelected="@{(parent,view,pos,id)-> MainActivityViewModel.onSpinnerSelect(parent,view,pos,id)}">
+
+        </Spinner>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</layout>

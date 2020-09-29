@@ -31,10 +31,10 @@
 
     <!--//Test-->
     <!-- AdMob ad unit IDs -->
-    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
-    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>
+<!--    <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+<!--    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>-->
 
     <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
 
@@ -42,10 +42,10 @@
     <!--production-->
     <!--priteshparmar12@gmail.com-->
     <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
-<!--            <string name="admob_app_id">ca-app-pub-4688988588571726~1491794154</string>-->
-<!--            <string name="banner_home_footer">ca-app-pub-4688988588571726/3902776017</string>-->
-<!--            <string name="interstitial_full_screen">ca-app-pub-4688988588571726/6145795970</string>-->
-<!--            <string name="natice_advanceadd">ca-app-pub-4688988588571726/8388815939</string>-->
+            <string name="admob_app_id">ca-app-pub-4688988588571726~1491794154</string>
+            <string name="banner_home_footer">ca-app-pub-4688988588571726/3902776017</string>
+            <string name="interstitial_full_screen">ca-app-pub-4688988588571726/6145795970</string>
+            <string name="natice_advanceadd">ca-app-pub-4688988588571726/8388815939</string>
 
 
     <!--    priteshparmar102@gmail.com-->
