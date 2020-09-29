@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:paddingRight="10dp">
+    <TextView
+        android:id="@+id/txtVw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Now Playing: " />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_weight="2"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/filename"
+                    android:layout_weight="1.8"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:text="TextViewnlknlkllkml" />
+
+                <ImageView
+                    android:id="@+id/editfilename"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/ic_menu_edit"
+
+                    ></ImageView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.2"
+            android:orientation="vertical">
+            <com.chibde.visualizer.LineBarVisualizer
+                android:id="@+id/visualizer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:id="@+id/txtStartTime"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="0.00:00" />
+                    <SeekBar
+                        android:id="@+id/sBar"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:id="@+id/txtSongTime"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        android:text="0.00:00" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="4">
+
+                    <ImageView
+                        android:id="@+id/btnBackward"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:src="@drawable/img_btn_backward_pressed" />
+                    <ImageView
+                        android:id="@+id/btnPlay"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:src="@drawable/img_btn_play_pressed" />
+                    <ImageView
+                        android:id="@+id/btnPause"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:src="@drawable/img_btn_pause_pressed" />
+                    <ImageView
+                        android:id="@+id/btnForward"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:src="@drawable/img_btn_forward" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/circle_bar_visualizer_adview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--            <com.google.android.gms.ads.AdView-->
+            <!--                android:id="@+id/adView"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                ads:adSize="FULL_BANNER"-->
+            <!--                android:background="@color/primary_dark"-->
+            <!--                ads:adUnitId="@string/banner_home_footer">-->
+            <!--            </com.google.android.gms.ads.AdView>-->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

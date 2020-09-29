@@ -138,7 +138,7 @@ public class MyVideoListActivity extends AppCompatActivity {
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdLoaded() {
-                showInterstitial();
+               // showInterstitial();
             }
 
             @Override
@@ -242,7 +242,21 @@ public class MyVideoListActivity extends AppCompatActivity {
         File[] files = mypath.listFiles();
 
         if (files != null) {
-            Arrays.sort(files, Comparator.comparingLong(File::lastModified));
+            Arrays.sort( files, new Comparator()
+            {
+                public int compare(Object o1, Object o2) {
+
+                    if (((File)o1).lastModified() > ((File)o2).lastModified()) {
+                        return -1;
+                    } else if (((File)o1).lastModified() < ((File)o2).lastModified()) {
+                        return +1;
+                    } else {
+                        return 0;
+                    }
+                }
+
+            });
+           // Arrays.sort(files, Comparator.comparingLong(File::lastModified));
             for (int i = 0; i < files.length; i++) {
                 Model_Video obj_model = new Model_Video();
                 String file_name = files[i].getName();
@@ -293,7 +307,7 @@ public class MyVideoListActivity extends AppCompatActivity {
 
             if (al_video.size()>0) {
 
-                Collections.reverse(al_video);
+
                 mAdapter = new Adapter_List_Video(this, R.layout.adapter_videos, al_video);
                 recyclerView.setAdapter(mAdapter);
                 //mAdapter.notifyDataSetChanged();
@@ -307,13 +321,13 @@ public class MyVideoListActivity extends AppCompatActivity {
     }
 
 
-    private void showInterstitial() {
-        if ( fulladdcount!=1) {
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            }
-        }
-    }
+//    private void showInterstitial() {
+//        if ( fulladdcount!=1) {
+//            if (mInterstitialAd.isLoaded()) {
+//                mInterstitialAd.show();
+//            }
+//        }
+//    }
 
 
     @Override

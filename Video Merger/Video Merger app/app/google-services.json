@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "83582111826",
+    "firebase_url": "https://video-merger-video-joiner.firebaseio.com",
+    "project_id": "video-merger-video-joiner",
+    "storage_bucket": "video-merger-video-joiner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83582111826:android:19f13984f1b6c70751cf8b",
+        "android_client_info": {
+          "package_name": "com.prit.videomerger_videojoinerindianapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83582111826-jgip6jlhhb50p03b565tlfv5iusmtvp2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prit.videomerger_videojoinerindianapp",
+            "certificate_hash": "7f9cdcd232054d591eae0839db823f847d516ce7"
+          }
+        },
+        {
+          "client_id": "83582111826-g6fm9pjjoldghgsm0aid8gh66gbj95mc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2FDDVJ9aFBpKAHOh_b4UuG_c7uJqCtIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83582111826-g6fm9pjjoldghgsm0aid8gh66gbj95mc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

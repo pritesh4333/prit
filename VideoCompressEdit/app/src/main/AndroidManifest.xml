@@ -40,6 +40,9 @@
         <activity
             android:name=".View.OutputActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.MergeActivity"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

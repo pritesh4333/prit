@@ -20,10 +20,12 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/dp"
         android:supportsRtl="true"
-        android:extractNativeLibs="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.MyVideoListActivity"></activity>
-        <!-- android:requestLegacyExternalStorage="true" -->
+        <activity android:name=".View.MyVideoListActivity" />
+        <!--
+ android:requestLegacyExternalStorage="true"
+          android:extractNativeLibs="true"
+        -->
         <activity
             android:name=".View.MainActivity"
             android:screenOrientation="portrait">

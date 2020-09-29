@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Video To MP3 Pro</string>
+    <string name="convert">Convert Video To MP3</string>
+    <string name="output_video">Output:</string>
+    <string name="input_video">Input:</string>
+    <string name="video_info">%1$sx%2$s, %3$s, %4$s</string>
+
+
+    <string name="quality_24k">24k</string>
+    <string name="quality_40k">40k</string>
+    <string name="quality_64k">64k</string>
+    <string name="quality_96k">96k</string>
+    <string name="quality_128k">128k</string>
+    <string name="quality_160k">160k</string>
+    <string name="quality_192k">192k</string>
+    <string name="quality_224k">224k</string>
+    <string name="quality_320k">320k</string>
+
+    <string name="image_play_pause">Play Pause Button</string>
+    <string name="image_replay_button">Replay Button</string>
+
+    <!--production-->
+    <!--parmarprit100@gmail.com-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+    <!--        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+    <!--        <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>-->
+    <!--        <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>-->
+    <!--        <string name="natice_advanceadd">ca-app-pub-4959089160488184/9068586831</string>-->
+    <!--&lt;!&ndash;    <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>&ndash;&gt;-->
+
+    <!--//Test-->
+    <!-- AdMob ad unit IDs -->
+        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
+        <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+        <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+        <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>
+
+    <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
+
+
+    <!--production-->
+    <!--priteshparmar12@gmail.com-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+<!--    <string name="admob_app_id">ca-app-pub-4688988588571726~1491794154</string>-->
+<!--    <string name="banner_home_footer">ca-app-pub-4688988588571726/3902776017</string>-->
+<!--    <string name="interstitial_full_screen">ca-app-pub-4688988588571726/6145795970</string>-->
+<!--    <string name="natice_advanceadd">ca-app-pub-4688988588571726/8388815939</string>-->
+
+
+    <!--    priteshparmar102@gmail.com-->
+    <!--production-->
+    <!--            <string name="admob_app_id">ca-app-pub-9691536085601783~2353876341</string>-->
+    <!--            <string name="banner_home_footer">ca-app-pub-9691536085601783/5909977977</string>-->
+    <!--            <string name="interstitial_full_screen">ca-app-pub-9691536085601783/1779161272</string>-->
+    <!--            <string name="natice_advanceadd">ca-app-pub-9691536085601783/4213752928</string>-->
+
+
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_id" translatable="false">VideoToMp3ProChannel_Id</string>
+<!--    <string name="default_notification_channel_name" translatable="true">VideoToMp3ProChannelName</string>-->
+        <string name="default_notification_channel_name" translatable="true">VideoToMp3ProChannelNameTest</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribed">Subscribed to VideoCompressorChannelName</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to VideoCompressorChannelName</string>
+</resources>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Message</title>
+ <script type = "text/javascript">
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "0000000000") {
+    window.location.href='https://priteshparmarnew1.000webhostapp.com/ReadMsg.php';
+    return false
+  }else{
+  alert('Wrong Message');
+  }
+}
+</script>
+<body>
+
+<form name="myForm" action="file:///D:/git%20project%20orignal/prit/MessagePage.html" onsubmit="return validateForm()" method="post" autocomplete="off">
+  Enter Message: <input type="text" name="fname"maxlength="10">
+  <input type="submit" value="Submit" >
+</form>
+
+</body>
+</head>
+
+</html>

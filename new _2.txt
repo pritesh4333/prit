@@ -223,6 +223,7 @@ Username :- pritparmar
 Password: :-  prit.433333
 
 SBI
+website https://www.sbicard.com/
 Username = parmarprit100
 Password = Prit@4333
 Pin = 4333
@@ -230,6 +231,7 @@ Pin = 4333
 HDFC account details
 customer id - 139493794
 pass - prit.4333
+mobile pass -prit4333
 account number 50100352191117
 ifsc code - HDFC0004417
 name - pritesh chaganbhai
@@ -268,16 +270,19 @@ password otp
  13622
  19881
  Lic Loan Details  Loan      Intrest 		Total 
- 901857056 	    	13250     10258			23508
- 902693377			25250     18983			44233
+ 901857056 	    	13250     12,847			25097 Done
+ 902693377			25250     24,481			49731 Done
  902930668
- 903664806			8000	   6012			14012
- Total 				46500	+	35253   =   Total 81753
+ 903664806			8000	   7,756			15756 Done
+ 
+ Total 				46500	+	44948   	=   91448
 LIC policy Details
 901857056 muktaben parmar 1351 13/08/2017 25000 DOB 01/06/1963   real DOB in berth certerificate  13/8/1967        
 902693377 pradip chagnbbhai parmar 5015 16/11/2017 100000  DOB 16/11/1987
 902930668 pritesh parmar 5026 23/1/2018 100000 DOB 30/12/1993
 903664806 chagnabhai parmar 5364  15/11/2017  100000 DOB 01/06/1963
+
+Loan Payment  Done for LIC
 
 909894383 pritesh parmar LIC Policy NO  Premium 948
 Lic jeevan  labh 836 
@@ -428,7 +433,7 @@ mobile no 8976876079
 premium amount 2015
 email id = jilkakomal@gmail.com
 dob 11/02/1995
-next payment 9/9/2019 pay at 8/9/2019
+
  
 
 https://people.zoho.com/taxgenie/zp#home/dashboard
@@ -498,6 +503,7 @@ PAN AMLPP5787E  Chhaganlal p parmar
 
 Webseries download link
 http://vofomovies.co/Watch?id=9215HD264x7s/XXX-Uncensored-Season-2-Ep-4-5/
+https://filmyzilla.cyou/movie/3471/Lalbazaar-(2020)-web-series.html
 
 93304040828
 
@@ -566,3 +572,23 @@ ca-app-pub-4001279550637945~5185914976  app id
 ca-app-pub-4001279550637945/6115853269 Banner
 ca-app-pub-4001279550637945/4611199904 Interstitial
 ca-app-pub-4001279550637945/8358873229 Native 
+
+moview download url
+https://thepiratebay10.org/
+Download from torrent to idm
+https://www.seedr.cc/files
+
+My manta
+2 saturday for hanumanji
+2 sunday iskon mandir
+1 time food server in borivali seva mandir
+dad manta satadhar
+nived for all mataji
+
+Komal manta
+1 year ganpati
+1 year chotila
+
+lock folder 
+https://www.youtube.com/watch?v=2bD5diiRChs
+https://codinginflow.com/tutorials/android/room-viewmodel-livedata-recyclerview-mvvm/part-10-listadapter
