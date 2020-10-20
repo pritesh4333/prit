@@ -208,9 +208,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
                         try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.prit.videotomp3" )));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.prit.videotomp3pro" )));
                         } catch (android.content.ActivityNotFoundException anfe) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.prit.videotomp3")));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.prit.videotomp3pro")));
                         }
                     }
 

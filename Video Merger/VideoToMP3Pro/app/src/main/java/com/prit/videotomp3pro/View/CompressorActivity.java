@@ -473,26 +473,31 @@ public void sendtoplayer(String output){
     if(index==0){
         Intent i = new Intent(CompressorActivity.this, BarVisualizerActivity.class);
         i.putExtra("OutputPath",output);
+        i.putExtra("Compress","Done");
         startActivity(i);
     }
     if(index==1){
         Intent i = new Intent(CompressorActivity.this, CircleBarVisualizerActivity.class);
         i.putExtra("OutputPath",output);
+        i.putExtra("Compress","Done");
         startActivity(i);
     }
     if(index==2){
         Intent i = new Intent(CompressorActivity.this, CircleVisualizerActivity.class);
         i.putExtra("OutputPath",output);
+        i.putExtra("Compress","Done");
         startActivity(i);
     }
     if(index==3){
         Intent i = new Intent(CompressorActivity.this, LineBarVisualizerActivity.class);
         i.putExtra("OutputPath",output);
+        i.putExtra("Compress","Done");
         startActivity(i);
     }
     if(index==4){
         Intent i = new Intent(CompressorActivity.this, LineVisualizerActivity.class);
         i.putExtra("OutputPath",output);
+        i.putExtra("Compress","Done");
         startActivity(i);
     }
 

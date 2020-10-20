@@ -90,6 +90,7 @@ public class CircleVisualizerActivity extends AppCompatActivity {
     CircleVisualizer circleVisualizer;
     int Position;
     String OutputPath;
+    String Compress="";
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +115,8 @@ public class CircleVisualizerActivity extends AppCompatActivity {
         try {
             OutputPath = getIntent().getStringExtra("OutputPath");
             Position = getIntent().getIntExtra("position",00);
+            Compress = getIntent().getStringExtra("Compress");
+
         }
         catch(Exception e){
 
@@ -348,8 +351,104 @@ public class CircleVisualizerActivity extends AppCompatActivity {
         // Set your media player to the visualizer.
         circleVisualizer.setPlayer(mPlayer.getAudioSessionId());
 
-    }
+        if (Compress!=null) {
+            if (Compress.equalsIgnoreCase("Done")) {
+                SharedPreferences prefss = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String rateuse = prefss.getString("rateUs", "");
+                if (rateuse.equalsIgnoreCase("")) {
+                    feedbackPopup();
+                } else {
 
+                }
+            }
+        }
+    }
+    private void feedbackPopup() {
+
+        LayoutInflater factory = LayoutInflater.from(CircleVisualizerActivity.this);
+        final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
+        final AlertDialog deleteDialog = new AlertDialog.Builder(CircleVisualizerActivity.this).create();
+        deleteDialog.setView(deleteDialogView);
+
+
+        TextView loveapp=(TextView)deleteDialogView.findViewById(R.id.loveapp);
+        loveapp.setVisibility(View.VISIBLE);
+
+
+
+        Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
+        // For Live Native Express Adview
+        String natice_advanceadd;
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        admob_app_id = prefs.getString("admob_app_id", "");
+        if (admob_app_id.equalsIgnoreCase("")){
+            admob_app_id=getString(R.string.admob_app_id);
+            natice_advanceadd=getString(R.string.natice_advanceadd);
+        }else {
+            admob_app_id = prefs.getString("admob_app_id", "");
+            natice_advanceadd = prefs.getString("natice_advanceadd","");
+        }
+        AdLoader adLoader = new AdLoader.Builder(CircleVisualizerActivity.this, natice_advanceadd)
+
+                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                    @Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                        // Show the ad.
+                        // Assumes you have a placeholder FrameLayout in your View layout
+                        // (with id fl_adplaceholder) where the ad is to be placed.
+                        //   Log.e("add loaded",""+unifiedNativeAd);
+                        FrameLayout frameLayout =deleteDialogView.
+                                findViewById(R.id.fl_adplaceholder);
+                        // Assumes that your ad layout is in a file call ad_unified.xml
+                        // in the res/layout folder
+                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
+                                .inflate(R.layout.unified_ads, null);
+                        // This method sets the text, images and the native ad, etc into the ad
+                        // view.
+                        populateUnifiedNativeAdView(unifiedNativeAd, adView);
+                        frameLayout.removeAllViews();
+                        frameLayout.addView(adView);
+                    }
+                })
+                .withAdListener(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(int errorCode) {
+                        //      Log.e("add loaded",""+errorCode);
+                        // Handle the failure by logging, altering the UI, and so on.
+                    }
+                })
+                .withNativeAdOptions(new NativeAdOptions.Builder()
+                        // Methods in the NativeAdOptions.Builder class can be
+                        // used here to specify individual options settings.
+                        .build())
+                .build();
+        adLoader.loadAds(new AdRequest.Builder().build(),5);
+
+        feedbacksubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.putString("rateUs", "Done");
+                editor.commit();
+
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                }
+
+                deleteDialog.dismiss();
+            }
+        });
+
+        deleteDialog.show();
+
+
+
+
+    }
     private void playsong() {
         mPlayer.start();
         eTime = mPlayer.getDuration();

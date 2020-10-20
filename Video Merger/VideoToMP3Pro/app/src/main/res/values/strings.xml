@@ -31,10 +31,10 @@
 
     <!--//Test-->
     <!-- AdMob ad unit IDs -->
-        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
-        <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
-        <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
-        <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>
+<!--        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+<!--        <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--        <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--        <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>-->
 
     <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
 
@@ -42,10 +42,10 @@
     <!--production-->
     <!--priteshparmar12@gmail.com-->
     <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
-<!--    <string name="admob_app_id">ca-app-pub-4688988588571726~1491794154</string>-->
-<!--    <string name="banner_home_footer">ca-app-pub-4688988588571726/3902776017</string>-->
-<!--    <string name="interstitial_full_screen">ca-app-pub-4688988588571726/6145795970</string>-->
-<!--    <string name="natice_advanceadd">ca-app-pub-4688988588571726/8388815939</string>-->
+    <string name="admob_app_id">ca-app-pub-4688988588571726~7616115071</string>
+    <string name="banner_home_footer">ca-app-pub-4688988588571726/3676870068</string>
+    <string name="interstitial_full_screen">ca-app-pub-4688988588571726/6702827964</string>
+    <string name="natice_advanceadd">ca-app-pub-4688988588571726/7424543382</string>
 
 
     <!--    priteshparmar102@gmail.com-->
@@ -62,8 +62,8 @@
      -->
     <!-- [START fcm_default_icon_string] -->
     <string name="default_notification_channel_id" translatable="false">VideoToMp3ProChannel_Id</string>
-<!--    <string name="default_notification_channel_name" translatable="true">VideoToMp3ProChannelName</string>-->
-        <string name="default_notification_channel_name" translatable="true">VideoToMp3ProChannelNameTest</string>
+    <string name="default_notification_channel_name" translatable="true">VideoToMp3ProChannelName</string>
+<!--        <string name="default_notification_channel_name" translatable="true">VideoToMp3ProChannelNameTest</string>-->
     <!-- [END fcm_default_icon_string] -->
     <string name="msg_subscribed">Subscribed to VideoCompressorChannelName</string>
     <string name="msg_subscribe_failed">Failed to subscribe to VideoCompressorChannelName</string>

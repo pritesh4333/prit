@@ -594,6 +594,7 @@ public class MainActivity extends AppCompatActivity {
         TextView rateus=(TextView)dialogView.findViewById(R.id.rateus_btn);
         TextView no=(TextView)dialogView.findViewById(R.id.no_btn);
         TextView yes=(TextView)dialogView.findViewById(R.id.yes_btn);
+
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String natice_advanceadd;
         admob_app_id = prefs.getString("admob_app_id", "");
@@ -923,11 +924,11 @@ public class MainActivity extends AppCompatActivity {
                 LayoutInflater factory = LayoutInflater.from(MainActivity.this);
                 final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
                 final AlertDialog deleteDialog = new AlertDialog.Builder(MainActivity.this).create();
-                deleteDialog.setTitle("Feedback");
                 deleteDialog.setView(deleteDialogView);
 
 
-
+                TextView loveapp=(TextView)deleteDialogView.findViewById(R.id.loveapp);
+                loveapp.setVisibility(View.VISIBLE);
                 Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
                 // For Live Native Express Adview
                 String natice_advanceadd;

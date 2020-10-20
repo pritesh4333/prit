@@ -11,7 +11,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Video To MP3"
+        android:text="Video To MP3 Pro"
        android:background="@color/primary"
         android:padding="18dp"
         android:textColor="@color/white"></TextView>

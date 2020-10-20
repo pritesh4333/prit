@@ -56,11 +56,15 @@ import java.io.Writer;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 import java.util.TimeZone;
 
+import VideoHandle.EpEditor;
+import VideoHandle.EpVideo;
+import VideoHandle.OnEditorListener;
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
 import nl.bravobit.ffmpeg.FFtask;
@@ -109,6 +113,7 @@ public class MergeActivity extends Activity {
     LinearLayout outoutinfo_showcase;
     private  Boolean InputVideoPlayingStatus=false,OutputVideoPlayingStatus=false;
     String admob_app_id,banner_home_footer,interstitial_full_screen;
+    ArrayList<String> objects;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,11 +150,13 @@ public class MergeActivity extends Activity {
             Helper.LogPrint(TAG,"ffmpeg not supported!");
         }
 
-        str_video = getIntent().getStringExtra("video");
-        vv_video.setVideoPath(str_video);
-        mediaController = new MediaController(this);
-        vv_video.setMediaController(mediaController);
-        vv_video.start();
+    //    str_video = getIntent().getStringExtra("video");
+         objects     = (ArrayList<String>) getIntent().getSerializableExtra("video");
+        Helper.LogPrint(TAG,""+objects.size());
+//        vv_video.setVideoPath(str_video);
+//        mediaController = new MediaController(this);
+//        vv_video.setMediaController(mediaController);
+//        vv_video.start();
 
         InputVideoPlayingStatus=true;
 
@@ -419,6 +426,8 @@ public class MergeActivity extends Activity {
         //add ffmpeg final and previous working with only 150p like this only  Working command
 //-------------------------------------------------------------------------------------------------------------------------
 //       merge video command
+    //    String list = generateList(new String[] {input, input});
+      //  String[] command = {"-f", "concat",  "-i", "/storage/emulated/0/DCIM/Camera/VID_20200919_205623.mp4","-i","/storage/emulated/0/DCIM/Camera/VID_20200919_205607.mp4" , "-c", "copy",  output}; // Working video merger
         String[] command = {"-f", "concat", "-safe", "0", "-i" ,str_video, "-c", "copy",  output}; // Working video merger
 
 //-------------------------------------------------------------------------------------------------------------------------
@@ -432,33 +441,23 @@ public class MergeActivity extends Activity {
 //                "/storage/emulated/0/WhatsApp/Media/WhatsApp Video/10047de4a4a842b4a896a49776cf4352.mp4",
 //
 //            "[v0][0:a][v1][1:a][v2][2:a]concat=n=3:v=1:a=1[outv][outa]" +output};
-
-        for (int i =0;i<command.length;i++){
-            Helper.LogPrint(TAG,command[i]);
+        ArrayList<EpVideo> epVideos =  new ArrayList<>();
+        for (int i =0; i<objects.size();i++){
+            epVideos.add(new EpVideo (objects.get(i))); // Video 1
         }
+//        epVideos.add(new EpVideo ("storage/emulated/0/WhatsApp/Media/WhatsApp Video/VID-20170729-WA0045.mp4")); // Video 1
+//        epVideos.add(new EpVideo ("/storage/emulated/0/WhatsApp/Media/WhatsApp Video/VID-20170715-WA0028.mp4")); // Video 2
+//        epVideos.add(new EpVideo ("/storage/emulated/0/DCIM/Camera/VID_20200919_205305.mp4")); // Video 1
 
-
-        final FFtask task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
+        EpEditor. OutputOption outputOption =new EpEditor.OutputOption(output);
+        outputOption.setWidth(720);
+        outputOption.setHeight(1280);
+        outputOption.frameRate = 25 ;
+        outputOption.bitRate = 10 ;
+        EpEditor.merge(epVideos, outputOption, new  OnEditorListener() {
             @Override
-            public void onStart() {
+            public void onSuccess() {
 
-
-                alertDialog.show();
-
-            }
-
-            @Override
-            public void onFinish() {
-
-                alertDialog.dismiss();
-
-
-
-            }
-
-            @Override
-            public void onSuccess(String message) {
-                Helper.LogPrint(TAG,message);
                 resolutiontext.setText("Resolution");
                 Resolution="";
                 final Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
@@ -470,50 +469,109 @@ public class MergeActivity extends Activity {
 
             }
 
-            @SuppressLint("SetTextI18n")
             @Override
-            public void onProgress(String message) {
-
-                Helper.LogPrint(TAG,message);
-              //  float count = msec;
-
-
-
-
-                // Escape early if cancel() is called
-
-
-                int start = message.indexOf("time=");
-                int end = message.indexOf(" bitrate");
-                if (start != -1 && end != -1) {
-                    String duration = message.substring(start + 5, end);
-                    if (duration != "") {
-//                        try {
-//                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-//                            sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-//
-//                            progress.setText(""+(int)sdf.parse("1970-01-01 " + duration).getTime()+" / ");
-//                            float i =sdf.parse("1970-01-01 " + duration).getTime();
-//                            percentage.setText(new DecimalFormat("##.##").format(i/count*50)+"%");
-//                            mProgressBar.setProgress(Integer.parseInt(new DecimalFormat("##").format(i/count*50)));
-//                        }catch (NumberFormatException | ParseException e)
-//                        {
-//                            e.printStackTrace();
-//                        }
-                    }
-                }
-
+            public void onFailure() {
+                alertDialog.dismiss();
+                showAlertError("Compress Fail Try Again");
             }
 
             @Override
-            public void onFailure(String message) {
-                Helper.LogPrint(TAG,message);
-                alertDialog.dismiss();
-                showAlertError("Compress Fail Try Again");
+            public void onProgress(float progress) {
+
+                        try {
+
+                            percentage.setText(String.format("%.0f",progress*100)+"%");
+                            mProgressBar.setProgress(Integer.parseInt(Integer.parseInt("%.0f", (int) (progress*100))+"%"));
+                        }catch (NumberFormatException e)
+                        {
+                            e.printStackTrace();
+                        }
 
             }
         });
 
+
+//         for (int i =0;i<command.length;i++){
+//            Helper.LogPrint(TAG,command[i]);
+//        }
+
+
+//        final FFtask task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
+//            @Override
+//            public void onStart() {
+//
+//
+//                alertDialog.show();
+//
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//
+//                alertDialog.dismiss();
+//
+//
+//
+//            }
+//
+//            @Override
+//            public void onSuccess(String message) {
+//                Helper.LogPrint(TAG,message);
+//                resolutiontext.setText("Resolution");
+//                Resolution="";
+//                final Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+//                File  outputs= new File(output);
+//                intent.setData(Uri.fromFile(outputs));
+//                MergeActivity.this.sendBroadcast(intent);
+//                ShowVideoOutputDetial(new File(output));
+//                alertDialog.dismiss();
+//
+//            }
+//
+//            @SuppressLint("SetTextI18n")
+//            @Override
+//            public void onProgress(String message) {
+//
+//                Helper.LogPrint(TAG,message);
+//              //  float count = msec;
+//
+//
+//
+//
+//                // Escape early if cancel() is called
+//
+////
+////                int start = message.indexOf("time=");
+////                int end = message.indexOf(" bitrate");
+////                if (start != -1 && end != -1) {
+////                    String duration = message.substring(start + 5, end);
+////                    if (duration != "") {
+////                        try {
+////                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+////                            sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+////
+////                            progress.setText(""+(int)sdf.parse("1970-01-01 " + duration).getTime()+" / ");
+////                            float i =sdf.parse("1970-01-01 " + duration).getTime();
+////                            percentage.setText(new DecimalFormat("##.##").format(i/count*50)+"%");
+////                            mProgressBar.setProgress(Integer.parseInt(new DecimalFormat("##").format(i/count*50)));
+////                        }catch (NumberFormatException | ParseException e)
+////                        {
+////                            e.printStackTrace();
+////                        }
+////                    }
+////                }
+////
+//            }
+//
+//            @Override
+//            public void onFailure(String message) {
+//                Helper.LogPrint(TAG,message);
+//                alertDialog.dismiss();
+//                showAlertError("Compress Fail Try Again");
+//
+//            }
+//        });
+//
 //        FFmpeg ffmpeg = FFmpeg.getInstance(ExampleActivity.this);
 //        // to execute "ffmpeg -version" command you just need to pass "-version"
 //
@@ -542,6 +600,31 @@ public class MergeActivity extends Activity {
 
 
 
+    }
+    private static String generateList(String[] inputs) {
+        File list;
+        Writer writer = null;
+        try {
+            list = File.createTempFile("ffmpeg-list", ".txt");
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(list)));
+            for (String input: inputs) {
+                writer.write("file '" + input + "'\n");
+                Log.d(TAG, "Writing to list file: file '" + input + "'");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "/";
+        } finally {
+            try {
+                if (writer != null)
+                    writer.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        Log.d(TAG, "Wrote list file to " + list.getAbsolutePath());
+        return list.getAbsolutePath();
     }
     @Override
     public void onPause() {

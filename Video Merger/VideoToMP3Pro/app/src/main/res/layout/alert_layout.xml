@@ -18,7 +18,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rate Us if you like this"
+                android:text="Rate us if you like this app?"
                 android:background="@color/primary_dark"
                 android:padding="13dp"
                 android:textSize="12sp"

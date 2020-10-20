@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:padding="15dp">
+   >
 
 
     <ScrollView
@@ -43,18 +43,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:layout_marginBottom="15dp"
     android:orientation="vertical">
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="35dp"
         android:textColor="@color/white"
         android:layout_gravity="center"
         android:background="@color/gray"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:text="click here to provide your feedback"
+        android:text="Rate/Feedback"
+        android:textAllCaps="false"
         android:id="@+id/feedbacksubmit"></Button>
 
     <TextView
