@@ -274,6 +274,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        showMessagealert();
         // Checkpermition
         chekpermisstion();
         if (InternetConnection.checkConnection(this)) {
@@ -469,7 +470,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             chekpermistion = true;
-            showMessagealert();
+
 
 
 
@@ -486,6 +487,7 @@ public class MainActivity extends AppCompatActivity {
        builder.setView(dialogView);
 
        final AlertDialog alertDialog = builder.create();
+       alertDialog.setCancelable(false);
 
        TextView ok=(TextView)dialogView.findViewById(R.id.ok);
        TextView more_apps_header=(TextView)dialogView.findViewById(R.id.more_apps_header);
@@ -495,7 +497,7 @@ public class MainActivity extends AppCompatActivity {
        LinearLayout videocommproapp=(LinearLayout)dialogView.findViewById(R.id.videocompressorproapps);
 
        more_apps_header.setText("ACTION REQUIRED");
-       app_logo.setBackground(getResources().getDrawable(R.drawable.fastvideo));
+       app_logo.setBackground(getResources().getDrawable(R.drawable.dp));
 
        videocommproapp.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -524,17 +526,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-       SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-       String message1  = prefs.getString("message", "");
-       if (!message1.isEmpty()){
+       message.setText("Kindly download video compressor pro Lite version from below link to enjoy same features because this app is remove from play store.");
+       appname.setText("Video Compressor Pro - INDIAN App");
+       message.setVisibility(View.VISIBLE);
+       alertDialog.show();
 
-           message.setText(message1);
-           appname.setText("Video Compressor Pro");
-           message.setVisibility(View.VISIBLE);
-           alertDialog.show();
-       }else{
-
-       }
     }
 
     // Fetching image from gallery
@@ -616,7 +612,7 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i < grantResults.length; i++) {
                     if (grantResults.length > 0 && grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                         chekpermistion = true;
-                        showMessagealert();
+
                     } else {
                         chekpermistion = false;
                         Toast.makeText(MainActivity.this, "The app was not allowed to read or write to your storage. Hence, it cannot function properly. Please consider granting it this permission", Toast.LENGTH_LONG).show();

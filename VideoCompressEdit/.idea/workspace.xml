@@ -13,6 +13,7 @@
     <list default="true" id="691187fc-adae-4f6e-909c-14b017cdc17d" name="Default Changelist" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/google-services.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
@@ -170,10 +171,13 @@
       <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/gradlew.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Video Merger/Video Merger app/settings.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MergeActivity.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/drawable-hdpi/bg1.png" afterDir="false" />
+>>>>>>> prit
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/release/app-release.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MyVideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MyVideoListActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/drawable-xhdpi/dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/fastvideo.png" afterDir="false" />
@@ -181,6 +185,25 @@
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/build.gradle" afterDir="false" />
 >>>>>>> 2c9f45dbc010118858d1bb34c42f6560082107a4
+=======
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/OutputActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/OutputActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/alert_more_apps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/feedbackpopup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Compressor Pro ( pritesh)/app/src/main/res/layout/feedbackpopup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/CompressorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/CompressorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/BarVisualizerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/BarVisualizerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/CircleBarVisualizerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/CircleBarVisualizerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/CircleVisualizerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/CircleVisualizerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/LineBarVisualizerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/LineBarVisualizerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/LineVisualizerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/java/com/prit/videotomp3pro/View/Player/LineVisualizerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/layout/alert_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/layout/alert_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/layout/feedbackpopup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/layout/feedbackpopup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/layout/progress_dailog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/layout/progress_dailog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Video Merger/VideoToMP3Pro/app/src/main/res/values/strings.xml" afterDir="false" />
+>>>>>>> prit
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -265,24 +288,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/release/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/release/app-release.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/release/app-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/release/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/Utils/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/VideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/View/VideoListActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/ViewModel/Adapter_Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/prit/videocompressorpro/ViewModel/Adapter_Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/alert_more_apps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/alert_more_apps.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/release/app-release.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/src/main/java/com/prit/videotomp3/View/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/java/com/prit/videotomp3/View/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Videotomp3/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../new _2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../new _2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notification" beforeDir="false" afterPath="$PROJECT_DIR$/../notification" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../private_key.pepk" beforeDir="false" afterPath="$PROJECT_DIR$/../private_key.pepk" afterDir="false" />
 >>>>>>> 2c9f45dbc010118858d1bb34c42f6560082107a4
+=======
+>>>>>>> prit
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +306,10 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.181.101:5555" />
+=======
+>>>>>>> prit
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -522,22 +539,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599642252170" />
-    <state width="1476" height="257" key="GridCell.Tab.0.bottom" timestamp="1599632385879">
+    <state width="1491" height="108" key="GridCell.Tab.0.bottom" timestamp="1601958718872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
-    <state width="1476" height="257" key="GridCell.Tab.0.center" timestamp="1599632385879">
+    <state width="1491" height="108" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601958718872" />
+    <state width="1491" height="108" key="GridCell.Tab.0.center" timestamp="1601958718872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
-    <state width="1476" height="257" key="GridCell.Tab.0.left" timestamp="1599632385879">
+    <state width="1491" height="108" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601958718872" />
+    <state width="1491" height="108" key="GridCell.Tab.0.left" timestamp="1601958718871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
-    <state width="1476" height="257" key="GridCell.Tab.0.right" timestamp="1599632385879">
+    <state width="1491" height="108" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601958718871" />
+    <state width="1491" height="108" key="GridCell.Tab.0.right" timestamp="1601958718872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599632385879" />
+    <state width="1491" height="108" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601958718872" />
     <state width="1476" height="257" key="GridCell.Tab.1.bottom" timestamp="1599632385880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -560,6 +577,7 @@
     </state>
     <state x="294" y="56" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597654206347" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1597810840321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -569,6 +587,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597831141963" />
+>>>>>>> prit
+=======
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1601966179030">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1601966179030" />
 >>>>>>> prit
     <state x="463" y="11" width="609" height="801" key="find.popup" timestamp="1597654215210">
       <screen x="0" y="0" width="1536" height="824" />

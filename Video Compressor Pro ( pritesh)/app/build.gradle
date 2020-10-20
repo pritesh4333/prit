@@ -8,8 +8,8 @@ android {
         applicationId "com.pritesh.videocompressorpro_fastvideocompressor"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 5
-        versionName "1.5"
+        versionCode 6
+        versionName "1.6"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

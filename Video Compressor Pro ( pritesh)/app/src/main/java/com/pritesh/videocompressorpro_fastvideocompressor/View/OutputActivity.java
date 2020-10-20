@@ -13,11 +13,15 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -26,10 +30,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.formats.MediaView;
+import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 import com.pritesh.videocompressorpro_fastvideocompressor.R;
 
 import java.io.File;
@@ -53,6 +62,7 @@ public class OutputActivity extends AppCompatActivity {
     private MediaController mediaController;
     String admob_app_id,banner_home_footer,interstitial_full_screen;
     String Scrren;
+    String Compress="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +86,7 @@ public class OutputActivity extends AppCompatActivity {
 
         final String str_video = getIntent().getStringExtra("OutoutPath");
         Scrren = getIntent().getStringExtra("Scrren");
+        Compress = getIntent().getStringExtra("Compress");
         vv_video.setVideoPath(str_video);
         mediaController = new MediaController(this);
         vv_video.setMediaController(mediaController);
@@ -233,7 +244,106 @@ public class OutputActivity extends AppCompatActivity {
             }
         });
         ShowVideoOutputDetial(new File(str_video));
+
+        if (Compress!=null) {
+            if (Compress.equalsIgnoreCase("Done")) {
+                SharedPreferences prefss = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String rateuse = prefss.getString("rateUs", "");
+                if (rateuse.equalsIgnoreCase("")) {
+                    feedbackPopup();
+                } else {
+
+                }
+            }
+        }
     }
+    private void feedbackPopup()
+    {
+
+        LayoutInflater factory = LayoutInflater.from(OutputActivity.this);
+        final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
+        final AlertDialog deleteDialog = new AlertDialog.Builder(OutputActivity.this).create();
+        deleteDialog.setView(deleteDialogView);
+
+
+        TextView loveapp=(TextView)deleteDialogView.findViewById(R.id.header);
+        loveapp.setText("Rate us if you like this app?");
+        loveapp.setTextSize(15);
+        Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
+        // For Live Native Express Adview
+        String natice_advanceadd;
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        admob_app_id = prefs.getString("admob_app_id", "");
+        if (admob_app_id.equalsIgnoreCase("")){
+            admob_app_id=getString(R.string.admob_app_id);
+            natice_advanceadd=getString(R.string.natice_advanceadd);
+        }else {
+            admob_app_id = prefs.getString("admob_app_id", "");
+            natice_advanceadd = prefs.getString("natice_advanceadd","");
+        }
+        AdLoader adLoader = new AdLoader.Builder(OutputActivity.this, natice_advanceadd)
+
+                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                    @Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                        // Show the ad.
+                        // Assumes you have a placeholder FrameLayout in your View layout
+                        // (with id fl_adplaceholder) where the ad is to be placed.
+                        //   Log.e("add loaded",""+unifiedNativeAd);
+                        FrameLayout frameLayout =deleteDialogView.
+                                findViewById(R.id.fl_adplaceholder);
+                        // Assumes that your ad layout is in a file call ad_unified.xml
+                        // in the res/layout folder
+                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
+                                .inflate(R.layout.unified_ads, null);
+                        // This method sets the text, images and the native ad, etc into the ad
+                        // view.
+                        populateUnifiedNativeAdView(unifiedNativeAd, adView);
+                        frameLayout.removeAllViews();
+                        frameLayout.addView(adView);
+                    }
+                })
+                .withAdListener(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(int errorCode) {
+                        //      Log.e("add loaded",""+errorCode);
+                        // Handle the failure by logging, altering the UI, and so on.
+                    }
+                })
+                .withNativeAdOptions(new NativeAdOptions.Builder()
+                        // Methods in the NativeAdOptions.Builder class can be
+                        // used here to specify individual options settings.
+                        .build())
+                .build();
+        adLoader.loadAds(new AdRequest.Builder().build(),5);
+
+        feedbacksubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.putString("rateUs", "Done");
+                editor.commit();
+
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                }
+
+                deleteDialog.dismiss();
+            }
+        });
+
+        deleteDialog.show();
+
+
+
+
+    }
+
+
     private void showInterstitial() {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
@@ -382,6 +492,85 @@ public class OutputActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         }
+    }
+    private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
+        // Set the media view. Media content will be automatically populated in the media view once
+        // adView.setNativeAd() is called.
+        MediaView mediaView = adView.findViewById(R.id.ad_media);
+        adView.setMediaView(mediaView);
+
+        // Set other ad assets.
+        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
+        adView.setBodyView(adView.findViewById(R.id.ad_body));
+        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
+        adView.setPriceView(adView.findViewById(R.id.ad_price));
+        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
+        adView.setStoreView(adView.findViewById(R.id.ad_store));
+        adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
+
+        // The headline is guaranteed to be in every UnifiedNativeAd.
+        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
+
+        // These assets aren't guaranteed to be in every UnifiedNativeAd, so it's important to
+        // check before trying to display them.
+        if (nativeAd.getBody() == null) {
+            adView.getBodyView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getBodyView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
+        }
+
+        if (nativeAd.getCallToAction() == null) {
+            adView.getCallToActionView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getCallToActionView().setVisibility(View.VISIBLE);
+            ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
+        }
+
+        if (nativeAd.getIcon() == null) {
+            adView.getIconView().setVisibility(View.GONE);
+        } else {
+            ((ImageView) adView.getIconView()).setImageDrawable(
+                    nativeAd.getIcon().getDrawable());
+            adView.getIconView().setVisibility(View.VISIBLE);
+        }
+
+        if (nativeAd.getPrice() == null) {
+            adView.getPriceView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getPriceView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getPriceView()).setText(nativeAd.getPrice());
+        }
+
+        if (nativeAd.getStore() == null) {
+            adView.getStoreView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getStoreView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getStoreView()).setText(nativeAd.getStore());
+        }
+
+        if (nativeAd.getStarRating() == null) {
+            adView.getStarRatingView().setVisibility(View.INVISIBLE);
+        } else {
+            ((RatingBar) adView.getStarRatingView())
+                    .setRating(nativeAd.getStarRating().floatValue());
+            adView.getStarRatingView().setVisibility(View.VISIBLE);
+        }
+
+        if (nativeAd.getAdvertiser() == null) {
+            adView.getAdvertiserView().setVisibility(View.INVISIBLE);
+        } else {
+            ((TextView) adView.getAdvertiserView()).setText(nativeAd.getAdvertiser());
+            adView.getAdvertiserView().setVisibility(View.VISIBLE);
+        }
+
+        // This method tells the Google Mobile Ads SDK that you have finished populating your
+        // native ad view with this native ad. The SDK will populate the adView's MediaView
+        // with the media content from this native ad.
+        adView.setNativeAd(nativeAd);
+
+
     }
 
 

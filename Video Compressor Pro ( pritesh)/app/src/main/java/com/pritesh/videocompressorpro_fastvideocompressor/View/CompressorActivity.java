@@ -295,6 +295,7 @@ public class CompressorActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(CompressorActivity.this,OutputActivity.class);
                 i.putExtra("OutoutPath",outputPath);
+                i.putExtra("Compress","Done");
                 startActivity(i);
                 finish();
             }

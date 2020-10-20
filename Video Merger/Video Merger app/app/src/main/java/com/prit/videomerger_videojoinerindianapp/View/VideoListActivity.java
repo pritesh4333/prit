@@ -197,7 +197,7 @@ public class VideoListActivity extends AppCompatActivity {
                }else {
                    String list = generateList(fileselected);
                    Intent i = new Intent(VideoListActivity.this, MergeActivity.class);
-                   i.putExtra("video", list);
+                   i.putExtra("video", fileselected);
                    i.putExtra("Scrren", "Merge");
                    startActivity(i);
                    finish();
