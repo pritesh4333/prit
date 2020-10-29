@@ -207,10 +207,13 @@ Authorization key=AAAA1ulYm-M:APA91bHReFgXVAIo3e6mqEB00W63tqFUQuPCJZ8fTsGoCPJ72g
        "natice_advanceadd":"ca-app-pub-4688988588571726/7424543382"
     }
 }
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 ///// NewVideoCompressorChannelNameTest
-
+///// priteshparmar102@gmail
 post https://fcm.googleapis.com/fcm/send
 header key value 
 Content-Type    application/json
@@ -240,10 +243,10 @@ Authorization key=AAAAKVodCRg:APA91bHQLeMvyX79MIO-8cpVe5UjnkbqDKTXd2bNziuo9heu9s
     "body" : "International day for Monuments and Sites.",
     "image" : "https://i.ibb.co/k23vRph/bg.jpg",
     "update":"no",
-  "admob_app_id":"ca-app-pub-4001279550637945~5504686580",
-     "banner_home_footer":"ca-app-pub-4001279550637945/8649207759",
-      "interstitial_full_screen":"ca-app-pub-4001279550637945/5639901035",
-       "natice_advanceadd":"ca-app-pub-4001279550637945/8074492688"
+  "admob_app_id":"ca-app-pub-4688988588571726~2668217756",
+     "banner_home_footer":"ca-app-pub-4688988588571726/1163564393",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/1462947290",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/6224319385"
     }
 }
 
