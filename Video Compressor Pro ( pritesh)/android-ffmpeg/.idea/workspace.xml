@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a261502f-d482-4b85-b769-80a77b5d11bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Fcm/MyFirebaseMessagingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Model/Model_Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Model/Model_images.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/Utils/InternetConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/CompressorActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/OutputActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/PhotoListActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/View/VideoListActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/AdapterSelectedPhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_Photos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Video Compressor Pro ( pritesh)/app/src/main/java/com/pritesh/videocompressorpro_fastvideocompressor/ViewModel/Adapter_Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../new_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../new_3.txt" afterDir="false" />
-    </list>
+    <list default="true" id="a261502f-d482-4b85-b769-80a77b5d11bc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -38,7 +20,7 @@
     </system>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="D:" />
   </component>
   <component name="ProjectId" id="1cAQI8Rcwn1L1ChQs2JlpbxziZr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

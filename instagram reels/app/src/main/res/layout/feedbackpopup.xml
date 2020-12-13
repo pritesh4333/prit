@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/loveapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate Us if you like this app"
+                android:background="@color/colorPrimaryDark"
+                android:padding="13dp"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/white"></TextView>
+
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_alignParentBottom= "true"
+                android:visibility= "gone"
+                android:id= "@+id/nativeTemplateView"
+                app:gnt_template_type= "@layout/gnt_medium_template_view"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:id="@+id/layoutabout"
+    android:orientation="vertical">
+
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="35sp"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:background="@color/gray"
+        android:text="Rate/Feedback"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/feedbacksubmit"></Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:id="@+id/aboutinfo"></TextView>
+</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

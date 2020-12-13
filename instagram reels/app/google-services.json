@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "984960454994",
+    "project_id": "reels-video-downloader-4e8a4",
+    "storage_bucket": "reels-video-downloader-4e8a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984960454994:android:d4bf7ea4180cbb4b8aea8b",
+        "android_client_info": {
+          "package_name": "com.reels.video.download.instagram.video.downloader.saver.story.video"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984960454994-0oq4tjn4g1g3mvjabcqevqedgftltrus.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reels.video.download.instagram.video.downloader.saver.story.video",
+            "certificate_hash": "7f9cdcd232054d591eae0839db823f847d516ce7"
+          }
+        },
+        {
+          "client_id": "984960454994-hn8d9q7gpq1pqdn4sp38gjfvrg2au1dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj2kE6sdsVGPs-T56Vu5BBCYiNwa1JICY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984960454994-hn8d9q7gpq1pqdn4sp38gjfvrg2au1dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
