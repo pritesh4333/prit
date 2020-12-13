@@ -1,118 +1,5 @@
 
-post https://fcm.googleapis.com/fcm/send
-header key value 
-Content-Type    application/json
-Authorization key=AIzaSyAbR12cgU1r4oZ-OUMEupbdnBzSYjAC4N4
-
-//Test
-{
-    "to" : "/topics/VideoCompressorChannelNameTest",
-    "data": {
-    "title" : "test",
-    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
-    "image" : "https://i.ibb.co/HY25sV1/dp.png",
-    "update":"yes",
-    "admob_app_id":"ca-app-pub-4959089160488184~8667649661",
-     "banner_home_footer":"ca-app-pub-3940256099942544/6300978111",
-      "interstitial_full_screen":"ca-app-pub-3940256099942544/1033173712",
-       "natice_advanceadd":"ca-app-pub-3940256099942544/1044960115",
-	"message":"Kindly download video compressor pro Lite version from below link to enjoy same features because this app is going to remove from play store very soon"
-    }
-}
-
-// production
-{
-    "to" : "/topics/VideoCompressorChannelNameTest",
-    "data": {
-    "title" : "World Heritage Day",
-    "body" : "International day for Monuments and Sites.",
-    "image" : "https://i.ibb.co/k23vRph/bg.jpg",
-    "update":"no",
-    "admob_app_id":"ca-app-pub-4688988588571726~5618809292",
-     "banner_home_footer":"ca-app-pub-4688988588571726/9054302052",
-      "interstitial_full_screen":"ca-app-pub-4688988588571726/3801975376",
-       "natice_advanceadd":"ca-app-pub-4688988588571726/6236567029",
-	   	"message":"Kindly download video compressor pro Lite version from below link to enjoy same features because this app is going to remove from play store very soon"
-
-    }
-}
-
-//new production right now for testing
-{
-     "to" : "/topics/VideoCompressorChannelName",
-    "data": {
-    "title" : "Action Required",
-    "body" : "Kindly download video compressor pro Lite version.",
-    "image" : "https://i.ibb.co/k23vRph/bg.jpg",
-    "update":"No",
-    "admob_app_id":"ca-app-pub-4688988588571726~5618809292",
-     "banner_home_footer":"ca-app-pub-4688988588571726/5296216292",
-      "interstitial_full_screen":"ca-app-pub-4688988588571726/4321195912",
-       "natice_advanceadd":"ca-app-pub-4688988588571726/1695032579",
-	   	"message":"Kindly download video compressor pro Lite version from below link to enjoy same features because this app is going to remove from play store very soon"
-    }
-}
-//jilkakomal production 
-{
-    "to" : "/topics/VideoCompressorChannelNameTest",
-    "data": {
-    "title" : "test",
-    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
-    "image" : "https://i.ibb.co/HY25sV1/dp.png",
-    "update":"yes",
-    "admob_app_id":"ca-app-pub-4001279550637945~5185914976",
-     "banner_home_footer":"ca-app-pub-4001279550637945/6115853269",
-      "interstitial_full_screen":"ca-app-pub-4001279550637945/4611199904",
-       "natice_advanceadd":"ca-app-pub-4001279550637945/8358873229"
-    }
-}
-
-
-//priteshparmar102@gmail.com 
-{
-    "to" : "/topics/VideoCompressorChannelNameTest",
-    "data": {
-    "title" : "test",
-    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
-    "image" : "https://i.ibb.co/HY25sV1/dp.png",
-    "update":"yes",
-    "admob_app_id":"ca-app-pub-8048172070898532~1314623154",
-     "banner_home_footer":"ca-app-pub-8048172070898532/3366071425",
-      "interstitial_full_screen":"ca-app-pub-8048172070898532/1327081508",
-       "natice_advanceadd":"ca-app-pub-8048172070898532/2448591482"
-    }
-}
-video to mp3 
-{
-    "to" : "/topics/VideoCompressorChannelNameTest",
-    "data": {
-    "title" : "test",
-    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
-    "image" : "https://i.ibb.co/HY25sV1/dp.png",
-    "update":"yes",
-    "admob_app_id":"ca-app-pub-4688988588571726~1491794154",
-     "banner_home_footer":"ca-app-pub-4688988588571726/3902776017",
-      "interstitial_full_screen":"ca-app-pub-4688988588571726/6145795970",
-       "natice_advanceadd":"ca-app-pub-4688988588571726/8388815939"
-    }
-}
-
-
-
-before publish Check
-1. ADS Live 
-2.  Notification Live
-3. Testing 
-4. one pluse 
-5. Log comment
-6. version update 
-
-
-
-7.
-8.
-https://priteshparmarnew.000webhostapp.com/ReadMsg.php
-
+///// priteshparmar102@gmail
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 videotomp3
@@ -239,16 +126,70 @@ Authorization key=AAAAKVodCRg:APA91bHQLeMvyX79MIO-8cpVe5UjnkbqDKTXd2bNziuo9heu9s
 {
     "to" : "/topics/NewVideoCompressorChannelName",
     "data": {
-    "title" : "World Heritage Day",
-    "body" : "International day for Monuments and Sites.",
-    "image" : "https://i.ibb.co/k23vRph/bg.jpg",
-    "update":"no",
-  "admob_app_id":"ca-app-pub-4688988588571726~2668217756",
-     "banner_home_footer":"ca-app-pub-4688988588571726/1163564393",
-      "interstitial_full_screen":"ca-app-pub-4688988588571726/1462947290",
-       "natice_advanceadd":"ca-app-pub-4688988588571726/6224319385"
+    "title" : "Stay home stay safe",
+    "body" : "Stay home stay safe.",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"No",
+    "admob_app_id":"ca-app-pub-4688988588571726~2668217756",
+     "banner_home_footer":"ca-app-pub-4688988588571726/5921641441",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/6057372810",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/1982396439"
+    },"notification":{
+    	"title" : "Stay home stay safe",
+    "body" : "Stay home stay safe.",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"No",
+    "admob_app_id":"ca-app-pub-4688988588571726~2668217756",
+     "banner_home_footer":"ca-app-pub-4688988588571726/5921641441",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/6057372810",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/1982396439"
     }
 }
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+///// AllinoneaartiChannelTest
+///// priteshparmar102@gmail
+post https://fcm.googleapis.com/fcm/send
+header key value 
+Content-Type    application/json
+Authorization key=AAAAlEXD5a4:APA91bE1-8XI3YdfsFHzV5w_p_wA3E3RywloeJIq-A5k3OBGpH_ufxEIINcqmob3eAjlOje4ueyD4qfvi_-nxD73HkdTUn5Y4KKj_oNWEbIkttDSM7vrJVzdIFaaA28-aKgcgh4kwMAy
+
+
+//Test
+{
+    "to" : "/topics/AllinoneaartiChannelTest",
+    "data": {
+    "title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+    "admob_app_id":"ca-app-pub-4959089160488184~8667649661",
+     "banner_home_footer":"ca-app-pub-3940256099942544/6300978111",
+      "interstitial_full_screen":"ca-app-pub-3940256099942544/1033173712",
+       "natice_advanceadd":"ca-app-pub-3940256099942544/2247696110"
+    }
+}
+
+// production
+{
+    "to" : "/topics/NewVideoCompressorChannelName",
+    "data": {
+    "title" : "Stay home stay safe.",
+    "body" : "Stay home stay safe save lives",
+    "image" : "https://i.ibb.co/CzXzWqZ/1dd941ef-f647-49ab-beae-4af02ac39933-5e7a423d9e8d3-1280x720.jpg",
+    "update":"No",
+    "admob_app_id":"ca-app-pub-4688988588571726~5752639535",
+     "banner_home_footer":"ca-app-pub-4688988588571726/5481176791",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/7081183017",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/4715067648"
+    }
+}
+
+
 
 
 

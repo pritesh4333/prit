@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "636825626030",
+    "firebase_url": "https://all-in-one-arti.firebaseio.com",
+    "project_id": "all-in-one-arti",
+    "storage_bucket": "all-in-one-arti.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636825626030:android:97b2501c7c6eaa1529143f",
+        "android_client_info": {
+          "package_name": "com.pritesh.all.in.one.god.goddess.allinoneaarti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636825626030-fhoqm02i7e95gd9mvcd939cqjp7d3lj5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pritesh.all.in.one.god.goddess.allinoneaarti",
+            "certificate_hash": "7f9cdcd232054d591eae0839db823f847d516ce7"
+          }
+        },
+        {
+          "client_id": "636825626030-r5q8qai6t3erdj6sllrosmjq8pcfmge7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA4YOix8VqQWV3y4UVRDjEQjTsm2zkNAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636825626030-r5q8qai6t3erdj6sllrosmjq8pcfmge7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

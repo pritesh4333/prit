@@ -34,6 +34,7 @@ import android.widget.VideoView;
 import androidx.appcompat.widget.PopupMenu;
 
 import com.crashlytics.android.Crashlytics;
+import com.github.hiteshsondhi88.libffmpeg.exceptions.FFmpegCommandAlreadyRunningException;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
@@ -44,20 +45,26 @@ import com.google.android.gms.ads.formats.MediaView;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
+
 import com.prit.videomerger_videojoinerindianapp.R;
 import com.prit.videomerger_videojoinerindianapp.Utils.Helper;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.RandomAccessFile;
 import java.io.Writer;
+import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 import java.util.TimeZone;
@@ -284,6 +291,11 @@ public class MergeActivity extends Activity {
 
                     String output=mypath+"/VID_COMPRESSOR_PRO_" + dateFormat.format(new Date()) + ".mp4";
                     VideConvertWithFFMPEG(str_video,output);
+//                ArrayList<EpVideo> epVideos =  new ArrayList<>();
+//                for (int i =0; i<objects.size();i++){
+//                    epVideos.add(new EpVideo (objects.get(i))); // Video 1
+//                }
+//                appendTwoVideos(objects.get(0),objects.get(1),output);
 
 
 
@@ -426,9 +438,9 @@ public class MergeActivity extends Activity {
         //add ffmpeg final and previous working with only 150p like this only  Working command
 //-------------------------------------------------------------------------------------------------------------------------
 //       merge video command
-    //    String list = generateList(new String[] {input, input});
+        String list = generateList(new String[] {input, input});
       //  String[] command = {"-f", "concat",  "-i", "/storage/emulated/0/DCIM/Camera/VID_20200919_205623.mp4","-i","/storage/emulated/0/DCIM/Camera/VID_20200919_205607.mp4" , "-c", "copy",  output}; // Working video merger
-        String[] command = {"-f", "concat", "-safe", "0", "-i" ,str_video, "-c", "copy",  output}; // Working video merger
+       // String[] command = {"-f", "concat", "-safe", "0", "-i" ,str_video, "-c", "copy",  output}; // Working video merger
 
 //-------------------------------------------------------------------------------------------------------------------------
 //        String [] cmd={"-t",
@@ -445,50 +457,14 @@ public class MergeActivity extends Activity {
         for (int i =0; i<objects.size();i++){
             epVideos.add(new EpVideo (objects.get(i))); // Video 1
         }
+        String lists = generateList(new String[] {objects.get(0), objects.get(1)});
+
+        //     appendTwoVideos(objects.get(0),objects.get(1),output);
+
 //        epVideos.add(new EpVideo ("storage/emulated/0/WhatsApp/Media/WhatsApp Video/VID-20170729-WA0045.mp4")); // Video 1
 //        epVideos.add(new EpVideo ("/storage/emulated/0/WhatsApp/Media/WhatsApp Video/VID-20170715-WA0028.mp4")); // Video 2
 //        epVideos.add(new EpVideo ("/storage/emulated/0/DCIM/Camera/VID_20200919_205305.mp4")); // Video 1
 
-        EpEditor. OutputOption outputOption =new EpEditor.OutputOption(output);
-        outputOption.setWidth(720);
-        outputOption.setHeight(1280);
-        outputOption.frameRate = 25 ;
-        outputOption.bitRate = 10 ;
-        EpEditor.merge(epVideos, outputOption, new  OnEditorListener() {
-            @Override
-            public void onSuccess() {
-
-                resolutiontext.setText("Resolution");
-                Resolution="";
-                final Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-                File  outputs= new File(output);
-                intent.setData(Uri.fromFile(outputs));
-                MergeActivity.this.sendBroadcast(intent);
-                ShowVideoOutputDetial(new File(output));
-                alertDialog.dismiss();
-
-            }
-
-            @Override
-            public void onFailure() {
-                alertDialog.dismiss();
-                showAlertError("Compress Fail Try Again");
-            }
-
-            @Override
-            public void onProgress(float progress) {
-
-                        try {
-
-                            percentage.setText(String.format("%.0f",progress*100)+"%");
-                            mProgressBar.setProgress(Integer.parseInt(Integer.parseInt("%.0f", (int) (progress*100))+"%"));
-                        }catch (NumberFormatException e)
-                        {
-                            e.printStackTrace();
-                        }
-
-            }
-        });
 
 
 //         for (int i =0;i<command.length;i++){
@@ -496,7 +472,45 @@ public class MergeActivity extends Activity {
 //        }
 
 
-//        final FFtask task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
+      //  String command[] = {"-f", "concat", -i",  lists, "-c:v", "copy", output"};
+        ///Working command in ffmpeg with full song and not breaking video
+//        String command[] = {  "-y", "-i", objects.get(0), "-i",  objects.get(1), "-strict", "experimental", "-filter_complex",
+//                "[0:v]scale=480x640,setsar=1:1[v0];[1:v]scale=480x640,setsar=1:1[v1];[v0][0:a][v1][1:a] concat=n=2:v=1:a=1",
+//                "-ab", "48000", "-ac", "2", "-ar", "22050", "-s", "480x640", "-vcodec", "libx264","-crf","27","-q","4","-preset", "ultrafast",  output};
+        String command[] = {  "-y", "-i", objects.get(0), "-i",  objects.get(1), "-strict", "experimental", "-filter_complex",
+                "[0:v]scale=480x640,setsar=1:1[v0];[1:v]scale=480x640,setsar=1:1[v1];[v0][0:a][v1][1:a] concat=n=2:v=1:a=1",
+                   output};
+        chcek on ffmpeg command only dont searcg any thing find best command and done just find fast command this is working but slow
+        FFmpeg ffmpeg = FFmpeg.getInstance(this);
+        // to execute "ffmpeg -version" command you just need to pass "-version"
+        ffmpeg.execute(command, new ExecuteBinaryResponseHandler() {
+
+            @Override
+            public void onStart() {}
+
+            @Override
+            public void onProgress(String message) {
+                Helper.LogPrint(TAG,message);
+            }
+
+            @Override
+            public void onFailure(String message) {
+                alertDialog.dismiss();
+                Helper.LogPrint(TAG,message);
+            }
+
+            @Override
+            public void onSuccess(String message) {
+                Helper.LogPrint(TAG,message);
+                alertDialog.dismiss();
+            }
+
+            @Override
+            public void onFinish() {
+                alertDialog.dismiss();
+            }
+        });
+        //        final  FFmpeg task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
 //            @Override
 //            public void onStart() {
 //
@@ -1104,5 +1118,41 @@ public class MergeActivity extends Activity {
             editor.apply();
         }else {
         }
+    }
+    private String appendTwoVideos(String videoPath, String firstVideoPath, String secondVideoPath)
+    {
+        try {
+            ArrayList<EpVideo> epVideos =  new  ArrayList<>();
+            epVideos.add(new EpVideo (videoPath)); // Video 1
+            epVideos.add(new EpVideo (firstVideoPath)); // Video 2
+            EpEditor. OutputOption outputOption =new EpEditor.OutputOption(secondVideoPath);
+            outputOption.setWidth(720);
+            outputOption.setHeight(1280);
+            outputOption.frameRate = 25 ;
+            outputOption.bitRate = 10 ; //Default
+            EpEditor.merge(epVideos, outputOption, new  OnEditorListener() {
+                @Override
+                public  void  onSuccess () {
+                    Log.e("Status","Success");
+                }
+
+                @Override
+                public  void  onFailure () {
+
+                }
+
+                @Override
+                public  void  onProgress ( float  progress ) {
+                    // Get processing progress here
+                    Log.e("Progress",""+progress);
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
+        mFileName += "/wishbyvideo.mp4";
+        return mFileName;
     }
 }

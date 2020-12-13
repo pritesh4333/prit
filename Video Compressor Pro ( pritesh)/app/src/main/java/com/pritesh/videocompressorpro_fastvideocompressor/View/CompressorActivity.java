@@ -184,37 +184,37 @@ public class CompressorActivity extends Activity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         // Show full page add
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(interstitial_full_screen);
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-                showInterstitial();
-            }
-
-            @Override
-            public void onAdClosed() {
-                // Toast.makeText(getApplicationContext(), "Ad is closed!", Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-               //  Toast.makeText(getApplicationContext(), "Ad failed to load! error code Compress: " + errorCode, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-
-                // Toast.makeText(getApplicationContext(), "Ad left application!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdOpened() {
-                fulladdcountcompressactivity++;
-                // Toast.makeText(getApplicationContext(), "Ad is opened!", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId(interstitial_full_screen);
+//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+//        mInterstitialAd.setAdListener(new AdListener() {
+//            public void onAdLoaded() {
+//                showInterstitial();
+//            }
+//
+//            @Override
+//            public void onAdClosed() {
+//                // Toast.makeText(getApplicationContext(), "Ad is closed!", Toast.LENGTH_SHORT).show();
+//
+//            }
+//
+//            @Override
+//            public void onAdFailedToLoad(int errorCode) {
+//               //  Toast.makeText(getApplicationContext(), "Ad failed to load! error code Compress: " + errorCode, Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onAdLeftApplication() {
+//
+//                // Toast.makeText(getApplicationContext(), "Ad left application!", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onAdOpened() {
+//                fulladdcountcompressactivity++;
+//                // Toast.makeText(getApplicationContext(), "Ad is opened!", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         input_options.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -843,14 +843,14 @@ public class CompressorActivity extends Activity {
 
 
 
-    private void showInterstitial() {
-        Helper.LogPrint("addscount",""+fulladdcountcompressactivity);
-        if (fulladdcountcompressactivity<1) {
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            }
-        }
-    }
+//    private void showInterstitial() {
+//        Helper.LogPrint("addscount",""+fulladdcountcompressactivity);
+//        if (fulladdcountcompressactivity<1) {
+//            if (mInterstitialAd.isLoaded()) {
+//                mInterstitialAd.show();
+//            }
+//        }
+//    }
 
     @Override
     public void onBackPressed() {

@@ -1,0 +1,740 @@
+<resources>
+    <!--    lyrics Names-->
+    <string name="app_name">All In One Aarti</string>
+
+    <string name="arti">Aarti</string>
+    <string name="favorate">Favorite Aarti</string>
+    <string name="addfavorate">Add To Favorite Aarti</string>
+    <string name="removefavorate">Remove Favorite Aarti</string>
+    <string name="language">language हिंदी</string>
+    <string name="Moreapps">More apps</string>
+    <string name="nodata">No Favorite Aarti</string>
+    <string name="rateus">Rate us if you like this app?</string>
+    <string name="exit">Do you want to Exit?</string>
+    <string name="rate">Rate/Feedback</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="about">About</string>
+    <string name="playing">Now Playing:</string>
+    <string name="share">Share</string>
+    <string name="Feedback">Feedback</string>
+    <string name="appsfromuse">More Apps From Us</string>
+    <string name="ok">Ok</string>
+
+
+    <string name="ganpati">Ganpati Aarti</string>
+    <string name="ramchandra">Ramchandra Aarti</string>
+    <string name="vishnu">Vishnu Aarti</string>
+    <string name="hanuman">Hanuman Aarti</string>
+    <string name="shivji">Shivji Aarti</string>
+    <string name="laxmi">Laxmi Aarti</string>
+    <string name="ambama">Ambama Aarti</string>
+    <string name="krishna">Krishna Aarti</string>
+    <string name="saibaba">Saibaba Aarti</string>
+    <string name="swaminarayan">Swaminarayan Aarti</string>
+    <string name="gayatri">Gayatri Aarti</string>
+    <string name="kalima">Kalima Aarti</string>
+    <string name="saraswati">Saraswati Aarti</string>
+    <string name="santoshi">Santoshi Aarti</string>
+    <string name="ganpatimarathi">Ganpati Marathi Aarti</string>
+
+
+    <string-array name="godNames">
+        <item>@string/ganpati</item>
+        <item>@string/ramchandra</item>
+        <item>@string/vishnu </item>
+        <item>@string/hanuman </item>
+        <item>@string/shivji </item>
+        <item>@string/laxmi </item>
+        <item>@string/ambama </item>
+        <item>@string/krishna </item>
+        <item>@string/saibaba </item>
+        <item>@string/swaminarayan </item>
+        <item>@string/gayatri </item>
+        <item>@string/kalima </item>
+        <item>@string/saraswati </item>
+        <item>@string/santoshi </item>
+        <item>@string/ganpatimarathi </item>
+    </string-array>
+
+
+    <string name="ganpatilyrics">Jai Ganesh, Jai Ganesh, Jai Ganesh Deva\n
+Mata Jaaki Parvati Pita Mahadeva\n
+Jai Ganesh, Jai Ganesh, Jai Ganesh Deva\n
+Mata Jaaki Parvati Pita Mahadeva\n
+\n
+Ek Dant Dayavant, Chaar Bhuja Dhaari\n
+Maathe Pe Sindhoor Sohe, Muse Ki Savari\n
+Paan Chadhe, Phul Chadhe, Aur Chadhe Meva\n
+Ladduan Ka Bhog Lage, Sant Kare Seva\n
+\n
+Jai Ganesh, Jai Ganesh, Jai Ganesh Deva\n
+Mata Jaaki Parvati Pita Mahadeva\n
+\n
+Andhan Ko Aankh Det, Kodhin Ko Kaaya\n
+Baanjhan Ko Putra Det, Nirdhan Ko Maaya\n
+Surya Shaam Sharan Aye, Safalki Je Seva\n
+Mata Jaaki Parvati Pita Mahadeva\n
+\n
+Jai Ganesh, Jai Ganesh, Jai Ganesh Deva\n
+Mata Jaaki Parvati, Pita Mahadeva\n</string>
+
+
+    <string name="ramchandralyrics">Shri Ramachandra Kripalu Bhajuman, Harana bhavabhaya daarunam ।\n
+Navakanja lochana kanja mukhakara, Kanja pada kanjaarunam ॥1॥\n
+\n
+Kandarpa aganita amita chhav nava, Neela neerara sundaram ।\n
+Patapita maanahum tadita ruchi-shuchi ,Navmi janaka sutaavaram ॥2॥\n
+\n
+Bhaju deena bandhu dinesh daanav, Daityavansha nikandanam ।\n
+Raghunanda aananda kanda kaushala, Chanda dasharatha nandanam ॥3॥\n
+\n
+Sira mukuta kundala tilaka chaaru, Udaaru anga vibhooshanam ।\n
+Aajaanu bhuja shara chaapadhara, Sangraama-jita-khara dooshanam ॥4॥\n
+\n
+Iti vadati Tulsidas shankar, Shesha muni manaranjanam ।\n
+Mama hridayakanja nivaas kuru, Kaamaadi khaladal ganjanam ॥5॥\n
+\n
+Manu jaahin raacheu milihi so baru , Sahaja sundara saanvaro ।\n
+Karuna nidhaan sujaan seelu, Sanehu jaanat raavaro ॥6॥\n
+\n
+Ehi bhaanti gauri asees suni siya, Sahita hiyan harashi ali ।\n
+Tulsi bhavaanihi pooji puni puni, Mudit man mandir chalee ॥7॥\n
+\n
+Shri Ramachandra Kripalu Bhajuman, Harana bhavabhaya daarunam ।\n
+Navakanja lochana kanja mukhakara, Kanja pada kanjaarunam ॥8॥\n</string>
+
+
+
+    <string name="visnuaartilyrics">Om Jai Jagadish Hare, Swami Jai Jagadish Hare\n
+\n
+Bhakt Jano Ke Sankat, Daas Jano Ke Avgun,\n
+\n
+Kshan Mein Door Kare, Om Jai Jagadish Hare |\n
+\n
+Jo Dhyaave Phal Paave, Dukh Bin Se Man Kaa,\n
+\n
+Swami Dukh Bin Se Man Kaa,\n
+\n
+Sukh Sampati Ghar Ave, Bansari wala Ghar Ave,\n
+\n
+Kasht Mite Tan Kaa, Om Jai Jagadish Hare |\n
+\n
+Maat Pita Tum Mere, Sharan Gahoon Main Kiski,\n
+\n
+Swami Sharan Gahoon Main Kiski,\n
+\n
+Tum Bin Aur Na Dooja, Prabhu Bin Aur Na Dooja,\n
+\n
+Aas Karoon Mein Jiski, Om Jai Jagadish Hare |\n
+\n
+Tum Pooran Paramatam, Tum Antaryami,\n
+\n
+Swami Tum Antaryami,\n
+\n
+Paar Brahm Parameshwar, Paar Brahm Parameshwar,\n
+\n
+Tum Sabke Swami, Om Jai Jagadish Hare |\n
+\n
+Tum Karuna Ke Saagar, Tum Paalan Karta,\n
+\n
+Swami Tum Raksha Karta,\n
+\n
+Main Moorakh Khal kaami, Main Sevak Tum Swami,\n
+\n
+Kripa Karo Bharta, Om Jai Jagadish Hare |\n
+\n
+Tum Ho Ek Agochar, Sabke Praan Pati,\n
+\n
+Swami Sabke Praan Pati, Kis Vidhi Miloon Dayamay,\n
+\n
+Kis Vidhi Miloon Dayamay,\n
+\n
+Tum Ko Main Kumti, Om Jai Jagadish Hare |\n
+\n
+Deen Bandhu Dukh Harta, Thaakur Tum Mere,\n
+\n
+Swaami Rakhshak Tum Mere,\n
+\n
+Apne Haath Uthao, Apni Sharan Lagao,\n
+\n
+Dwaar Padha Main Tere, Om Jai Jagadish Hare |\n
+\n
+Vishay Vikaar Mitaao, Paap Haro Deva,\n
+\n
+Swami Kasht Haro Deva,\n
+\n
+Shraddha Bhakti Badhao, Shraddha Prem Badhao,\n
+\n
+Santan Ki Seva, Om Jai Jagadish Hare |\n
+\n
+Om Jai Jagadish Hare, Swami Jai Jagadish Hare,\n
+\n
+Bhakt Jano Ke Sankat, Daas Jano Ke Avgun,\n
+\n
+Kshan Mein Door Kare, Om Jai Jagadish Hare |\n</string>
+
+    <string name="hanumanaartilyrics">Doha\n
+\n
+Laal Deh Laali lase, Aru Dhari Laal Langoor.\n
+Vajr Deh Danav Dalan, Jai Jai Jai kapi Sur..\n
+Pavan suth Hanuman Ki Jai..\n
+\n
+Choupai\n
+\n
+Aarti Ke Jai Hanuman Lalaki.\n
+Dusht dalan Raghunath kalaki. Aarti Ke Jai…\n
+\n
+Jaakay bal say giriwar kaapay,\n
+Roog doosh jakay nikat na jhankay.\n
+\n
+Anjani putra maha balli daayee,\n
+Santan kay prabhu sada sahaye. Aarti Ke Jai…\n
+\n
+Day beeraa Raghunath pataway,\n
+Lanka jaaree seeya soodi laayee\n
+\n
+Lanka so koti Samundra Seekhaayee,\n
+Jaat pawansut baran layee\n
+\n
+Lanka Jaari Asur Sanghaaray,\n
+Seeya Ramjee kay kaaj sawaray. Aarti Ke Jai…\n
+\n
+Lakshman moor chet paray Sakaaray,\n
+Aani Sajeewan praan ubaaray\n
+\n
+Paitee pataal toori jam kaaray,\n
+Ahi Ravana kee bujaa ukhaaray\n
+\n
+Baayay bujaa asur dhal maaray,\n
+Dahinay bujaa sant jan taray. Aarti Ke Jai…\n
+\n
+Sur nar Muni arati utaray,\n
+Jai jai jai Hanuman ucharaay\n
+\n
+Kanchan thaar Kapoor loo chaayee,\n
+Aaaarati karat Anjani maayee\n
+\n
+Jo Hanuman kee Aaarati gaaway,\n
+\n
+Basee Baikoontha param pad paaway. Aarti Ke Jai…\n</string>
+
+
+
+    <string name="shivaartilyrics">jai Shiv Omkaara, Prabhu Jai Shiva Omkara,\n
+Bramha, Vishnu, Sadashiv, Ardhangi Dhaara.\n
+Om Jai Shiv Omkara\n
+\n
+Ekanan Chaturanan Panchanan Raje,\n
+Hansanan Garudaaan Vrishvaahan Saaje.\n
+Om Jai Shiv Omkara\n
+\n
+Do Bhuj Chaar Chaturbhuj Dasamukh Ati Sohe,\n
+Trigun Rup Nirakhate Tribhuvan Jan Mohe.\n
+Om Jai Shiv Omkara\n
+\n
+Akshamala Vanamala Mundamala Dhari,\n
+Tripurari Kansari Kar Mala Dhari.\n
+Om Jai Shiv Omkara\n
+\n
+Shvetambar Pitambar Baghambar Ange,\n
+Sanakadik Garunadik Bhutadik Sange.\n
+Om Jai Shiv Omkara\n
+\n
+Kar Ke Madhy Kamandal Charka Trishuladhari,\n
+Sukhakari Dukhahari Jagapalan Kari.\n
+Om Jai Shiv Omkara\n
+\n
+Bramha Vishnu Sadashiv Jaanat Aviveka,\n
+Pranavakshar Mein Shobhit Ye Tino Eka.\n
+Om Jai Shiv Omkara\n
+\n
+Lakshmi Va Savitri Parvati Sangaa,\n
+Parvati Ardhangi, Shivalahari Ganga.\n
+Om Jai Shiv Omkara\n
+\n
+Parvat Sohe Parvati, Shankar Kailasa,\n
+Bhang Dhatur Ka Bhojan, Bhasmi Mein Vasa.\n
+Om Jai Shiv Omkara\n
+\n
+Jata Me Gang Bahat Hai, Gal Mundan Maala,\n
+Shesh Naag Lipatavat, Odhat Mrugachala.\n
+Om Jai Shiv Omkara\n
+\n
+Kashi Me Viraje Vishvanath, Nandi Bramhchari,\n
+Nit Uthh Darshan Pavat, Mahima Ati Bhari.\n
+Om Jai Shiv Omkara\n
+\n
+Trigunasvamiji Ki Aarti Jo Koi Nar Gave,\n
+Kahat Shivanand Swami Sukh Sampati Pave.\n
+Om Jai Shiv Omkara</string>
+
+
+    <string name="laxmiaartilyrics">Om Jai Lakshmi Mata,Maiya Jai Lakshmi Mata\n
+Tumko Nishidin Sevat,Hari Vishnu Vidhata\n
+Om Jai Lakshmi Mata\n
+\n
+Uma Rama Brahmani,Tum Hi Jag-Mata\n
+Surya, Chandrama Dhyavat, Naarad Rishi Gata\n
+Om Jai Lakshmi Mata\n
+\n
+Durga Roop Niranjani,Sukh Sampatti Data\n
+Jo Koi Tumko Dhyavat,Riddhi-Siddhi Dhan Pata\n
+Om Jai Lakshmi Mata\n
+\n
+Tum Patal-Nivasini, Tum Hi Shubhdata\n
+Karma Prabhav Prakashini, Bhavanidhi Ki Trata\n
+Om Jai Lakshmi Mata\n
+\n
+Jis Ghar Mein Tum Rahti, Sab Sadgun Aata\n
+Sab Sambhav Ho Jata,Man Nahi Ghabrata\n
+Om Jai Lakshmi Mata\n
+\n
+Tum Bin Yagya Na Hote, Vastra Na Koi Pata\n
+Khan Pan Ka Vaibhav, Sab Tumase Aata\n
+Om Jai Lakshmi Mata\n
+\n
+Shubh-Gun Mandir Sundar,Kshirodadhi Jata\n
+Ratna Chaturdash Tum Bin, Koi Nahi Pata\n
+Om Jai Lakshmi Mata\n
+\n
+Mahalakshmi Ji Ki Aarti,Jo Koi Jan Gata\n
+Ur Anand Samata,Paap Utar Jata\n
+Om Jai Lakshmi Mata</string>
+
+    <string name="ambemaaartilyrics"> Jay Adhya shakti Maa jay Adhya shakti\n
+Akhand brahmand dipavya, padve pragatya Maa\n
+Om jayo jayo Maa jagdambe....\n
+\n
+Dritiya be swarup Shivshakti janu (2)\n
+Brahma Ganapati gaau (2) har gaau har Maa.... Om jayo ....\n
+\n
+Tritiya tran swarup tribhuvan ma betha (2)\n
+Trayathaki Tarveni (2) tu Tarveni Maa.... Om jayo....\n
+\n
+Chothe chatura Mahalaxmi Maa sachra char vya pyya (2)\n
+Chaar bhuja choudisha (2) pragatya dakshin Maa... Om\n
+jayo....\n
+\n
+Panchami panch rushi panchmi gun padma (2)\n
+Panch sahastra tya sohiye (2) Panche tatvo Maa. Om jayo....\n
+\n
+Shashthi tu Narayani Mahisasur maryo (2)\n
+Narnari na roope (2) vyapya saghde Maa.... Om jayo....\n
+\n
+Sapta mi sapta patal sandhya Savitri (2)\n
+Gau Ganga Gayatri (2) Gauri Geeta Maa.... Om jayo....\n
+\n
+Ashthami ashth bhuja aayi ananda (2)\n
+Sunivar munivar janamya (2) Dev daityo Maa.... Om jayo...\n
+\n
+Navmi nav kul naag seve Nav Durga (2)\n
+Navratri na poojan Shivratri na archan kidha har Brahma. Om\n
+jayo....\n
+\n
+Dashmi dash avtaar jay Vijyadashmi (2)\n
+Rame Ram ramadya (2) Ravan rodyo Maa....Om jayo....\n
+\n
+Ekadashi agiyarash katyayanika Maa (2)\n
+Kaam Durga Kalika (2) Shyaama ne Raama.... Om jayo....\n
+\n
+Baarse bara roop Bahuchari Ambe Maa (2)\n
+Batuk bhairav sohiye kal bhairav sohiye taara chhe tuj\n
+Maa.... Om jayo....\n
+\n
+Terse tulja roop tame Taruni Maata (2)\n
+Brahma Vishnu sada Shiv (2) gun tara gata.... Om jayo....\n
+\n
+Chaudashe chuda roop Chandi Chamunda (2)\n
+Bhhav bhakti kai aapo, chaturai kai aapo Sihwahani Maata....\n
+Om jayo....\n
+\n
+Pooname kumbh bharyo sambhadjo karuna (2)\n
+Vashishtha deve wakhanya, Markand deve wakhanya gaaye shubh\n
+kavita....\n
+Om jayo...\n
+\n
+Savant sole satavan solse baavis Maa (2)\n
+Savant sole pragatya (2) reva ne tire Maa Ganga ne tire....\n
+Om jayo...\n
+\n
+Ekme ek swarup, antar nav dharso (2)\n
+Bhola Bhavani ne bhajata (2) Bhavsagar tarso. Om jayo jayo\n
+Maa jagdambe....\n
+\n
+Trambavati nagari Maa Roopavati nagari (2)\n
+Sol sahastra tya sohiye (2) Kshma karo Gauri Maa daya karo\n
+Gauri.... Om\n
+jayo....\n
+\n
+Maa ni Chund-di laal gulal, sobha bahu sari (2)\n
+Aangad kunkad nache, jai bahucharwali... Om jayo....\n
+\n
+Shiv Shakti ni aarti je bhaave gashe (2)\n
+Bhane Shivanand Swami (2) Sukh smapati thaashe har Kailashe\n
+jase,\n
+Maa amba dukh harse.... Om jayo....\n
+\n
+Jay Adhya shakti Maa jay Adhya shakti\n
+Akhand brahmand ni paavya, padve pragatya Maa\n
+Om jayo jayo Maa jagdambe....\n
+\n
+Kapuura Gauram Karunaa Vataaram\n
+Sansaara Saaram Bhujagendra Haaram\n
+Sadaa Vasantam Hridayaa Ravinde\n
+Bhavam Bhavaanii Sahitam Namaami\n</string>
+
+
+
+    <string name="krishartilyrics">Aarti Kunj Bihari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+Aarti Kunj Bihari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+\n
+Gale Mein Baijanti Mala,\n
+Bajave Murali Madhur Bala ।\n
+Shravan Mein Kundal Jhalakala,\n
+Nand Ke Anand Nandlala ।\n
+Gagan Sam Ang Kanti Kali,\n
+Radhika Chamak Rahi Aali ।\n
+Latan Mein Thadhe Banamali\n
+Bhramar Si Alak,\n
+Kasturi Tilak,\n
+Chandra Si Jhalak,\n
+Lalit Chavi Shyama Pyari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+॥ Aarti Kunj Bihari Ki...॥\n
+\n
+Kanakmay Mor Mukut Bilse,\n
+Devata Darsan Ko Tarse ।\n
+Gagan So Suman Raasi Barse\n
+Baje Murchang,\n
+Madhur Mridang,\n
+Gwaalin Sang\n
+Atual Rati Gop Kumari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+॥ Aarti Kunj Bihari Ki...॥\n
+\n
+Jahaan Te Pragat Bhayi Ganga,\n
+Sakal Man Haarini Shri Ganga ।\n
+Smaran Te Hot Moh Bhanga\n
+Basi Shiv Shish,\n
+Jataa Ke Beech,\n
+Harei Agh Keech,\n
+Charan Chhavi Shri Banvaari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+॥ Aarti Kunj Bihari Ki...॥\n
+\n
+Chamakati Ujjawal Tat Renu,\n
+Baj Rahi Vrindavan Benu।\n
+Chahu Disi Gopi Gwaal Dhenu\n
+Hansat Mridu Mand,\n
+Chandani Chandra,\n
+Katat Bhav Phand,\n
+Ter Sun Deen Dukhari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+॥ Aarti Kunj Bihari Ki...॥\n
+\n
+Aarti Kunj Bihari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n
+Aarti Kunj Bihari Ki,\n
+Shri Girdhar Krishna Murari Ki ॥\n</string>
+
+    <string name="saibabartilyrics">Aarti Shri Sai Guruvar Ki |\n
+ Parmanand Sada Survar Ki ||\n
+ \n
+ Jaki Kripa Vipul Sukhkari |\n
+ Dukh, Shok, Sankat, Bhayhari ||\n
+ \n
+ Shirdi Mein Avtar Rachaya |\n
+ Chamatkar Se Tatva Dikhaya ||\n
+ \n
+ Kitne Bhakt Sharan Main Aaye |\n
+ Ve Sukh-Shanti Nirantar Paye ||\n
+ \n
+ Bhaav Dhare Jo Mann Me Jaisa |\n
+ Sai Ka Anubhav Ho Waisa ||\n
+ \n
+ Guru Ki Udi Lagave Tan Ko |\n
+ Samadhan Laabhat Uss Mannko ||\n
+ \n
+ Sai Naam Sadaa Jo Gave |\n
+ So Phal Jag Me Shashvat Pave ||\n
+ \n
+ Guruvasar Kari Pooja-Seva |\n
+ Uss Par Kripa Karat Gurudeva ||\n
+ \n
+ Ram, Krishna, Hanuman Roop Mein |\n
+ De Darshan Jaanat Jo Mann Mein ||\n
+ \n
+ Vividh Dharm Ke Sevak Aate |\n
+ Darshan Kar Ichchit Phal Pate ||\n
+ \n
+ Jai Bolo Saibaba Ki |\n
+ Jai Bolo Avdhootguru Ki ||\n
+ \n
+ Sai Ki Aarti Jo Koi Gave |\n
+ Ghar Me Basi Sukh, Mangal Pave ||\n
+ \n
+ Anantkoti, Brahmandnayak |\n
+ Rajadhiraj, Yogiraj ||\n
+ \n
+ Jai Jai Jai Saibaba Ki |\n
+ Aarti Shri Sai Guruvar Ki ||\n</string>
+
+
+
+    <string name="swaminarayanlyrics">Jaya Sadguru Swāmī, Prabhu Jay Sadguru Swāmī\n
+Sahajānand Dayāḷū (X2), Baḷavant Bahunāmī… Jaya Sadguru Swāmī\n
+\n
+Charana-Saroj Tamārā Vandu Karjoḍi, Prabhu Vandu Karjoḍi\n
+Charane Shīsh Dhāryathī (X2), Dukh Nākhya Toḍi… Jaya Sadguru Swāmī\n
+\n
+Nārāyaṇ Narbhātā Dvijkul Tanu Dhārī, Prabhu Dvijkul Tanu Dhārī\n
+Pārmar Patit Uddhāryā (X2), Agaṇit Narnārī… Jaya Sadguru Swāmī\n
+\n
+Nity Nity Nautam Līlā, Kartā Avināshī, Prabhu Kartā Avināshī\n
+Aḍsath Tirth Charane (X2), Koti Gayā Kāshī… Jaya Sadguru Swāmī.\n
+\n
+Puruṣottam Pragatnu, Je Darshan Karshe, Prabhu Jaya Darshan Karshe\n
+Kāḷ Karmthī Chhūti (X2), Kuṭumb Sahit Tarashe… Jaya Sadguru Swāmī\n
+\n
+Aa Avsar Karunaanidhi, Karunā Bahu Kīdhī, Vaḷe Karuṇā Bahu Kīdhī\n
+Muktānand Kahe Mukti (X2), Sugam Karī Sidhī… Jay Sadguru Swāmī\n
+\n
+Jay Sadguru Swāmī, Prabhu Jay Sadguru Swāmī\n
+Sahajānand Dayālū (X2), Balavant Bahunāmī… Jay Sadguru Swāmī\n</string>
+
+
+    <string name="gaytriaartilyrics">Jayati Jai Gayatri Mata, Jayati Jai Gayatri Mata।\n
+Sat Marag Par Hamen Chalao, Jo Hai Sukhadata॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Aadi Shakti Tum Alakh Niranjan Jagapalak Ka‌rtri।\n
+Dukh Shok, Bhay, Klesh Kalash Daridra Dainy Hatri॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Brahm Rupini, Pranat Palin Jagat Dhatra Ambe।\n
+Bhav Bhayahari, Jan-Hitakari, Sukhada Jagadambe॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Bhay Harini, Bhavatarini, Anagheaj Aanand Rashi।\n
+Avikari, Akhahari, Avichalit, Amale, Avinashi॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Kaamadhenu Satachit Aanand Jai Ganga Geeta।\n
+Savita Ki Shashvat, Shakti Tum Savitri Sita॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Rig, Yaju Saam, Atharv Pranayani, Pranav Mahamahime।\n
+Kundalini Sahastra Sushuman Shobha Gun Garime॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Swaha, Svadha, Shachi Brahmani Radha Rudrani।\n
+Jai Sataroopa, Vani, Vidya, Kamala Kalyani॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Janani Ham Hain Deen-Heen, DuKh-Daridra Ke Ghere।\n
+Yadpi Kutil, Kapati Kapoot Tau Balak Hain Tere॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Snehasani Karunamay Mata Charan Sharan Deejai।\n
+Vilakh Rahe Ham Shishu Sut Tere Daya Drashti Keejai॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Kaam, Krodh, Mad, Lobh, Dambh, Durbhav Dvesh Hariye।\n
+Shuddh Buddhi Nishpap Hrday Man Ko Pavitra Kariye॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Tum Samarth Sab Bhanti Tarini Tushti-Pushti Ddata।\n
+Sat Marg Par Hamen Chalao, Jo Hai Sukhadata॥\n
+॥ Jayati Jai Gayatri Mata...॥\n
+\n
+Jayati Jai Gayatri Mata, Jayati Jai Gayatri Mata।\n
+Sat Marag Par Hamen Chalao, Jo Hai Sukhadata॥\n</string>
+
+
+    <string name="kalimalyrics">Ambe Tu Hai Jagdambe Kali\n
+Jai Durge Khappar Wali\n
+Tere Hi Gun Gaaye Bharati\n
+O Maiya, Hum Sab Utarey Teri Aarti\n
+\n
+Tere Jagat Ke Bhakt Janan Par Bhid Padi Hai Bhari Maa\n
+Daanav Dal Par Toot Pado Maa Karke Singh Sawari\n
+So So Singho Se Tu Bal Shali\n
+Asth Bhujao Wali, Dushton Ko Pal Mein Sangharti\n
+O Maiya, Hum Sab Utarey Teri Aarti\n
+\n
+Maa Bete Ka Hai Ish Jag Mein Bada Hi Nirmal Nata\n
+Poot Kaput Sune Hai Par Na Mata Suni Kumata\n
+Sab Par Karuna Darshaney Wali, Amrut Barsaney Wali\n
+Dukhiyon Ke Dukhdae Nivarti\n
+O Maiya, Hum Sab Utarey Teri Aarti\n
+\n
+Nahi Maangtey Dhan Aur Daulat Na Chaandi Na Sona Maa\n
+Hum To Maangey Maa Tere Man Mein Ek Chota Sa Kona\n
+Sab Ki Bigdi Banane Wali, Laaj Bachane Wali\n
+Satiyo Ke Sat Ko Sanvarti\n
+O Maiya, Hum Sab Utarey Teri Aarti\n</string>
+
+
+    <string name="sarasvatiartilyrics">Om jai saraswati mata, jai jai saraswati mata\n
+Sadgun vaibhav shalini, tribhuvan vikhyata\n
+Jai jai saraswati mata\n
+\n
+Chandravadani padmasini dyuti mangal kaari\n
+Sohe shubh hans sawaari, atul tej dhaari\n
+Jai jai saraswati mata\n
+\n
+Baaye kar mein veena, daaye kar mala\n
+Sheesh mukut mani shohe, gale motiyan mala\n
+Jai jai saraswati mata\n
+\n
+Devi sharan jo aaye, unka uddhar kiya\n
+Baithi manthra dasi, rawan sanhar kiya\n
+Jai jai saraswati mata\n
+\n
+Vidya gyan pradayini, jag mein gyan prakash bharo\n
+Moh aur agyan timir ka jag se nash karo\n
+Jai jai saraswati mata\n
+\n
+Dhoop deep fal meva, man swikaar karo\n
+Gyanchkshu de mata , jag nistar karo\n
+Jai jai saraswati mata\n
+\n
+Maa sarswati ji aarti jo koi nar gave\n
+Hitkari shukhkari gyan bhakti pave\n
+Jai jai saraswati mata\n</string>
+
+    <string name="santoshiaartilyrics">Jai santoshi mata maiya jai santoshi mata\n
+ apne sevak jan ki apne sevak jan ki\n
+ sukh sampati data jai jai santoshi mata\n
+ jai santoshi mata maiya jai santoshi mata\n
+ apne sevak jan ki apne sevak jan ki\n
+ sukh sampati data jai jai santoshi mata\n
+ \n
+ Sundar jiv sunheri maa dhaaran ki ho maiya maa dhaaran ki ho\n
+ heera panna damke heera panna\n
+ damke tan shringar ki ho jai jai santoshi mata\n
+ deru laal chata chhabi vadan kamal\n
+ sobhe maiya vadan kamal sobhe\n
+ mand hasat karunamayi mand hasat\n
+ karunamayi tribhuvan man mohe jai jai santoshi mata\n
+ swarn sinhaasan baithi chavar dhure\n
+ pyare maiya chavar dhure pyare\n
+ dhup deep madhumeva dhup deep\n
+ madhumeva bhog dhare nyare jai jai santoshi mata\n
+ dur archana parampriya maa santoshi kiyo maiya maa santoshi kiyo\n
+ santoshi kahlayi santoshi kahlayi bhaktan vibhav diyo\n
+ jai jai santoshi mata\n
+ \n
+ Shukravar priy maanat aaj divas sohi maiya aaj divas sohi\n
+ bhakt mandali chhai bhakt mandali\n
+ chhai katha sunat mohi jai jai santoshi mata\n
+ mandir jagmag jyoti mangal dhwani\n
+ chhai maiya mangal dhwani chhai\n
+ vinay kare hum baalak vinay kare hum\n
+ baalak charanan sir naayi jai jai santoshi mata\n
+ bhakti bhav may pooja angi trutki jai maiya angi trutki jai\n
+ jo mann base humare jo mann base humare ichit phal deeje\n
+ jai jai santoshi mata\n
+ dukh garib aur rogi sankat mukt kiye maiya sankat mukt kiye\n
+ bahu dhan dhaan dhare ghar bahu dhan dhaan dhare ghar\n
+ sukh saubhagya diye jai jai santoshi mata\n
+ \n
+ Bhaan dharajo nar deyo vanchit phal payo maiya vanchit phal payo\n
+ pooja katha shravan kar pooja katha shravan kar ghar anand aayo\n
+ jai jai santoshi mata\n
+ sharan gahe ji lajja rakhio jagdambe maiya rakhio jagdambe\n
+ sankat tu hi nivare sankat tu hi nivare daya mayi ambe\n
+ jai jai santoshi mata\n
+ santoshi maa ki aarti jo koi nar gave maiya jo koi nar gave\n
+ riddhi siddhi sukh sampati riddhi siddhi\n
+ sukh sampati ji bhar ke paave jai jai santoshi mata\n
+ jai jai santoshi mata maiya jai santoshi mata\n
+ apne sevak jan ki apne sevak jan ki sukhcsampati data\n
+ jai jai santoshi mata\n</string>
+
+
+
+    <string name="ganpatimarathilyrics">Sukh Karta Dukhharta Varta Vighnachi\n
+Noorvi Poorvi Prem Krupya Jayachi\n
+Sarwangi Sundar Utishendu Rachi\n
+Kanthi Jhalke Maad Mukhta Padhanchi\n
+Jai Dev Jai Dev\n
+Jai Dev Jai Dev Jai Mangal Murti\n
+Darshan Marte Maan Kamana Purti\n
+Jai Dev Jai Dev Jai Mangal Murti…\n
+\n
+Ratnakhachit Phara Tujh Gaurikumra\n
+Chandanaachi Uti Kumkum Ke Shara\n
+Hire Jadit Mukut Shobhato Bara\n
+Runjhunati Nupure Charani Ghagriya\n
+Jai Dev Jai Dev\n
+Jai Dev Jai Dev Jai Mangal Murti\n
+Darshan Marte Maan Kamana Purti\n
+Jai Dev Jai Dev Jai Mangal Murti….\n
+\n
+Lambodar Pitaambar Phanivar Vandana\n
+Sarala Sonda Vakratunda Trinayana\n
+Das Ramacha Vat Pahe Sadna\n
+Sankati Pavave Nirvani Rakshave Survaru Vandana\n
+Jai Dev Jai Dev\n
+Jai Dev Jai Dev Jai Mangal Murti\n
+Darshan Marte Maan Kamana Purti\n
+Jai Dev Jai Dev…\n</string>
+
+
+
+
+    <!--production-->
+    <!--parmarprit100@gmail.com-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+    <!--        <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+    <!--        <string name="banner_home_footer">ca-app-pub-4959089160488184/8251882548</string>-->
+    <!--        <string name="interstitial_full_screen">ca-app-pub-4959089160488184/9357914802</string>-->
+    <!--        <string name="natice_advanceadd">ca-app-pub-4959089160488184/9068586831</string>-->
+    <!--&lt;!&ndash;    <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>&ndash;&gt;-->
+
+    <!--//Test-->
+    <!-- AdMob ad unit IDs -->
+<!--            <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>-->
+<!--            <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--            <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--            <string name="natice_advanceadd">ca-app-pub-3940256099942544/2247696110</string>-->
+
+<!--            <string name="natice_advanceadd">ca-app-pub-3940256099942544/2247696110</string>    New-->
+    <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>    old-->
+
+
+    <!--production-->
+    <!--priteshparmar12@gmail.com-->
+    <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
+    <string name="admob_app_id">ca-app-pub-4688988588571726~5752639535</string>
+    <string name="banner_home_footer">ca-app-pub-4688988588571726/5481176791</string>
+    <string name="interstitial_full_screen">ca-app-pub-4688988588571726/7081183017</string>
+    <string name="natice_advanceadd">ca-app-pub-4688988588571726/4715067648</string>
+
+
+    <!--    priteshparmar102@gmail.com-->
+    <!--production-->
+    <!--            <string name="admob_app_id">ca-app-pub-9691536085601783~2353876341</string>-->
+    <!--            <string name="banner_home_footer">ca-app-pub-9691536085601783/5909977977</string>-->
+    <!--            <string name="interstitial_full_screen">ca-app-pub-9691536085601783/1779161272</string>-->
+    <!--            <string name="natice_advanceadd">ca-app-pub-9691536085601783/4213752928</string>-->
+
+
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_id" translatable="false">AllinoneaartiChannel_Id</string>
+        <string name="default_notification_channel_name" translatable="true">AllinoneaartiChannelName</string>
+<!--    <string name="default_notification_channel_name" translatable="true">AllinoneaartiChannelTest</string>-->
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribed">Subscribed to VideoCompressorChannelName</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to VideoCompressorChannelName</string>
+
+</resources>
