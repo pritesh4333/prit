@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.reels.video.download.instagram.video.downloader.saver.story.video",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "1.0",
+        "outputFile": "app-debug.apk",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.reels.video.download.instagram.video.downloader.saver.story.video",
+        "split": "",
+        "minSdkVersion": "16"
+      }
+    }
+  ]
+}

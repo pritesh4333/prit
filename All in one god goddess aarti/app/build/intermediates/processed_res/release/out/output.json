@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.pritesh.all.in.one.god.goddess.allinoneaarti",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "PROCESSED_RES"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 5,
+        "versionName": "1.5",
+        "outputFile": "app-release.apk",
+        "fullName": "release",
+        "baseName": "release",
+        "dirName": ""
+      },
+      "path": "resources-release.ap_",
+      "properties": {
+        "packageId": "com.pritesh.all.in.one.god.goddess.allinoneaarti",
+        "split": "",
+        "minSdkVersion": "16"
+      }
+    }
+  ]
+}

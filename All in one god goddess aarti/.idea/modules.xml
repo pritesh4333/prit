@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/All_in_oneAarti.iml" filepath="$PROJECT_DIR$/.idea/modules/All_in_oneAarti.iml" group="All_in_oneAarti" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="All in oneAarti/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/nativetemplates.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/nativetemplates.iml" group="All in oneAarti/nativetemplates" />
+    </modules>
+  </component>
+</project>

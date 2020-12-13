@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">984960454994-hn8d9q7gpq1pqdn4sp38gjfvrg2au1dn.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">984960454994</string>
+    <string name="google_api_key" translatable="false">AIzaSyAj2kE6sdsVGPs-T56Vu5BBCYiNwa1JICY</string>
+    <string name="google_app_id" translatable="false">1:984960454994:android:d4bf7ea4180cbb4b8aea8b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAj2kE6sdsVGPs-T56Vu5BBCYiNwa1JICY</string>
+    <string name="google_storage_bucket" translatable="false">reels-video-downloader-4e8a4.appspot.com</string>
+    <string name="project_id" translatable="false">reels-video-downloader-4e8a4</string>
+</resources>

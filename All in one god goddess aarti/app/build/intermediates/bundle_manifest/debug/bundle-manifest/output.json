@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.pritesh.all.in.one.god.goddess.allinoneaarti",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "BUNDLE_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 4,
+        "versionName": "1.4",
+        "outputFile": "app-debug.apk",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.pritesh.all.in.one.god.goddess.allinoneaarti",
+        "split": "",
+        "minSdkVersion": "16"
+      }
+    }
+  ]
+}
