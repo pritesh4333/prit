@@ -48,10 +48,10 @@ class FFcommandExecuteAsyncTask extends AsyncTask<Void, String, CommandResult> i
             checkAndUpdateProcess();
             return CommandResult.getOutputFromProcess(process);
         } catch (TimeoutException e) {
-           // Log.e("FFmpeg binary timed out", e);
+            Log.e("FFmpeg binary timed out", e);
             return new CommandResult(false, e.getMessage());
         } catch (Exception e) {
-         //   Log.e("Error running FFmpeg binary", e);
+            Log.e("Error running FFmpeg binary", e);
         } finally {
             Util.destroyProcess(process);
         }

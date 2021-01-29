@@ -291,6 +291,10 @@ Lic jeevan  labh 836
 feb 2034 last payment 
 Death benifit 2400000
 
+komal policy 
+918721400   1456  65.50   1521.5
+918721399   1993   89.50  2082.5
+totoal                     3605
 
  
 Tata AIA Login detail
@@ -610,7 +614,10 @@ Card No 5108 2000 0136 9103
 06 24  EXP
 9103 646 cvv
 
-
+PF detail
+UAN - 101576981118
+PF- KDMAL02117310000010248
+pass - MSacpp$&@986
 
 lock folder 
 https://www.youtube.com/watch?v=2bD5diiRChs
@@ -631,3 +638,4 @@ Hi Tech surgical system LLP
 
 
 https://www.instagram.com/reel/CIC1H-LpzQ-/?__a=1
+

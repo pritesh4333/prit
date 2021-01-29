@@ -4,11 +4,13 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -229,12 +231,12 @@ public class MyVideoListActivity extends AppCompatActivity {
             fn_video();
         }
     }
-    @RequiresApi(api = Build.VERSION_CODES.N)
+
     public void fn_video() {
 
-
-        File mypath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-
+        al_video = new ArrayList<>();
+        File mypath = new File(Environment.getExternalStorageDirectory(), "Reels Video Downloader");
+//        File mypath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File[] files = mypath.listFiles();
 
         if (files != null) {
@@ -310,11 +312,11 @@ public class MyVideoListActivity extends AppCompatActivity {
                 recyclerView.setAdapter(mAdapter);
                 //mAdapter.notifyDataSetChanged();
             }else{
-                Toast.makeText(this,"No video found", Toast.LENGTH_LONG).show();
+           //     Toast.makeText(this,"No video found", Toast.LENGTH_LONG).show();
             }
 
         }else{
-            Toast.makeText(MyVideoListActivity.this,"No video found", Toast.LENGTH_LONG).show();
+        //    Toast.makeText(MyVideoListActivity.this,"No video found", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -485,34 +487,42 @@ public class MyVideoListActivity extends AppCompatActivity {
                                         al_video.get(i).setSelected(false);
 
                                         String path = al_video.get(i).getStr_path();
+                                        File file = new File(path);
+                                        if (file.exists()) {
+                                            file.delete();
 
-                                        try {
-                                            File fdelete = new File(path);
-                                            if (fdelete.exists()) {
-                                                final String where = MediaStore.MediaColumns.DATA + "=?";
-                                                final String[] selectionArgs = new String[] {
-                                                        fdelete.getAbsolutePath()
-                                                };
-                                                final ContentResolver contentResolver = MyVideoListActivity.this.getContentResolver();
-                                                final Uri filesUri = MediaStore.Files.getContentUri("external");
-
-                                                contentResolver.delete(filesUri, where, selectionArgs);
-
+                                            MediaScannerConnection.scanFile(MyVideoListActivity.this,
+                                                    new String[]{file.toString()},
+                                                    new String[]{file.getName()}, null);
+                                            dialog.dismiss();
+                                            try {
+                                                File fdelete = new File(path);
                                                 if (fdelete.exists()) {
+                                                    final String where = MediaStore.MediaColumns.DATA + "=?";
+                                                    final String[] selectionArgs = new String[]{
+                                                            fdelete.getAbsolutePath()
+                                                    };
+                                                    final ContentResolver contentResolver = MyVideoListActivity.this.getContentResolver();
+                                                    final Uri filesUri = MediaStore.Files.getContentUri("external");
 
                                                     contentResolver.delete(filesUri, where, selectionArgs);
-                                                }
-                                                dialog.dismiss();
-                                                System.out.println("file Deleted :" + path);
 
-                                            } else {
+                                                    if (fdelete.exists()) {
+
+                                                        contentResolver.delete(filesUri, where, selectionArgs);
+                                                    }
+                                                    dialog.dismiss();
+                                                    System.out.println("file Deleted :" + path);
+
+                                                } else {
+                                                    dialog.dismiss();
+                                                   // Toast.makeText(MyVideoListActivity.this, "File Not Found.", Toast.LENGTH_LONG).show();
+                                                    System.out.println("file not Found :" + path);
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
                                                 dialog.dismiss();
-                                                Toast.makeText(MyVideoListActivity.this,"File Not Found.", Toast.LENGTH_LONG).show();
-                                                System.out.println("file not Found :" + path);
                                             }
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                            dialog.dismiss();
                                         }
                                     }
 

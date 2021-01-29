@@ -1,7 +1,6 @@
 package com.prit.videocompressorpro.View;
 
 import android.os.Bundle;
-
 import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -14,4 +14,12 @@
     <string name="interstitial_full_screen">ca-app-pub-4959089160488184/2307251292</string>
     <string name="rewarded_video">ca-app-pub-4959089160488184/3941619363</string>
     <string name="testidforrewarded_video">ca-app-pub-3940256099942544/5224354917</string>
+
+    <string name="default_notification_channel_id" translatable="false">NotificationDemo_Id</string>
+    <!--    <string name="default_notification_channel_name" translatable="true">InstagramReelsChannelName</string>-->
+    <string name="default_notification_channel_name" translatable="true">NotificationDemo</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribed">Subscribed to NofificationDemo</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to NotificationDemo</string>
+    <string name="msg_token_fmt">msg_token_fmt</string>
 </resources>

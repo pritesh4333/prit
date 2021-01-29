@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "416441631306",
+    "project_id": "video-to-mp3-converter-2021",
+    "storage_bucket": "video-to-mp3-converter-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416441631306:android:cce7e5d7b77fc1d052dcb3",
+        "android_client_info": {
+          "package_name": "mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416441631306-nms7ncu05mfns89h11jov6g7icmb3n68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio",
+            "certificate_hash": "7f9cdcd232054d591eae0839db823f847d516ce7"
+          }
+        },
+        {
+          "client_id": "416441631306-4n1ijaob34onu1043kj8bcg0ru7e1nut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB53oxK4KheAybyNm8rzbhLHzGe1jj8HI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416441631306-4n1ijaob34onu1043kj8bcg0ru7e1nut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

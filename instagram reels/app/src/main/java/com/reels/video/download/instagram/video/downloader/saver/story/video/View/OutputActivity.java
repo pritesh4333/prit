@@ -165,10 +165,17 @@ public class OutputActivity extends AppCompatActivity {
 
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 //your deleting code
-                                dialog.dismiss();
+
                                 try {
                                 File fdelete = new File(str_video);
-                                if (fdelete.exists()) {
+                                    if(fdelete.exists()) {
+                                        fdelete.delete();
+
+                                    MediaScannerConnection.scanFile(OutputActivity.this,
+                                            new String[]{fdelete.toString()},
+                                            new String[]{fdelete.getName()},null);
+                                    dialog.dismiss();
+
                                     final String where = MediaStore.MediaColumns.DATA + "=?";
                                     final String[] selectionArgs = new String[] {
                                             fdelete.getAbsolutePath()
@@ -190,7 +197,7 @@ public class OutputActivity extends AppCompatActivity {
                                         finish();
 
                                     } else {
-                                        Toast.makeText(OutputActivity.this,"File Not Found.", Toast.LENGTH_LONG).show();
+                                     //   Toast.makeText(OutputActivity.this,"File Not Found.", Toast.LENGTH_LONG).show();
                                         System.out.println("file not Found :" + str_video);
                                     }
                                 } catch (Exception e) {

@@ -1,4 +1,2 @@
-include ':android-ffmpeg'
-include ':android-ffmpeg'
-include ':app'
-rootProject.name = "Video Compressor Pro- Fast Video Compressor"
+include ':nativetemplates'
+include ':android-ffmpeg',':app'

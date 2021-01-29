@@ -6,6 +6,6 @@ public class Helper {
 
     public static void LogPrint(String tag, String message){
 
-       // Log.e(tag, message);
+       //Log.e(tag, message);
     }
 }

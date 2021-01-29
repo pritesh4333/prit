@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
     android:orientation="vertical"
@@ -42,12 +43,14 @@
 
 
 
-            <FrameLayout
-                android:id="@+id/fl_adplaceholder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:layout_marginTop="2dp" />
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_alignParentBottom= "true"
+                android:visibility= "gone"
+                android:id= "@+id/nativeTemplateView"
+                app:gnt_template_type= "@layout/gnt_medium_template_view"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content" />
+
 
 
             <LinearLayout

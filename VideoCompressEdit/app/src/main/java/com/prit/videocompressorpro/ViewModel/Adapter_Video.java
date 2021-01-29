@@ -1,38 +1,32 @@
 package com.prit.videocompressorpro.ViewModel;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaMetadataRetriever;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.prit.videocompressorpro.Model.Model_Video;
 import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.View.CompressorActivity;
-import com.prit.videocompressorpro.View.MergeActivity;
-
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
-import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 import uk.co.deanwild.materialshowcaseview.shape.CircleShape;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
-import static com.prit.videocompressorpro.View.VideoListActivity.gallery;
 import static com.prit.videocompressorpro.View.VideoListActivity.item;
 import static com.prit.videocompressorpro.View.VideoListActivity.menu_share;
 
@@ -43,7 +37,7 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
     Activity activity;
 
     List<Model_Video> al_menu = new ArrayList<>();
-    public static  String isAnySelectec="";
+    public static String isAnySelectec="";
     public int showcasecount=0;
     public int sharecount=0;
     //private SparseBooleanArray mSelectedItemsIds;
@@ -165,11 +159,24 @@ public class Adapter_Video extends ArrayAdapter<Model_Video> {
                     }
 
                 }else {
-//                    Intent intent_gallery = new Intent(activity, CompressorActivity.class);
-                    Intent intent_gallery = new Intent(activity, MergeActivity.class);
-                    intent_gallery.putExtra("video", model_video.getStr_path());
-                    activity.startActivity(intent_gallery);
-                    activity.finish();
+                    final MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+
+                        try {
+                            mediaMetadataRetriever.setDataSource(model_video.getStr_path());
+                            final String width = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH);
+                            if (Integer.parseInt(width)<187){
+                                showAlertError("Can not convert this file video size  is to small for compress");
+                            }else {
+                                Intent intent_gallery = new Intent(activity, CompressorActivity.class);
+                                intent_gallery.putExtra("video", model_video.getStr_path());
+                                intent_gallery.putExtra("Scrren", "Gallery");
+                                activity.startActivity(intent_gallery);
+                                activity.finish();
+                            }
+                        }catch (Exception e ){
+
+                        }
+
                 }
 
 
@@ -271,7 +278,7 @@ try{
                     .setFadeDuration(500)
                     .setDismissOnTouch(true)
                     .setMaskColour(activity.getResources().getColor(R.color.primary_dark))
-                    .setContentTextColor(activity.getResources().getColor(R.color.accent))
+                    .setContentTextColor(activity.getResources().getColor(R.color.yellow))
                     // optional but starting animations immediately in onCreate can make them choppy
                    // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
                     .show();
@@ -294,5 +301,26 @@ try{
 
     }
 
+    public void showAlertError(String message){
+        new AlertDialog.Builder(activity)
+                .setTitle("Alert")
+                .setMessage(message)
+
+                // Specifying a listener allows you to take an action before dismissing the dialog.
+                // The dialog is automatically dismissed when a dialog button is clicked.
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Continue with delete operation
+                        dialog.dismiss();
+
+
+                    }
+                })
+
+                // A null listener allows the button to dismiss the dialog and take no further action.
+                .setNegativeButton(android.R.string.no, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
 
 }

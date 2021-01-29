@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/quality_24k"
+        android:title="@string/quality_24k"/>
+    <item android:id="@+id/quality_40k"
+        android:title="@string/quality_40k"/>
+    <item android:id="@+id/quality_64k"
+        android:title="@string/quality_64k"/>
+    <item android:id="@+id/quality_96k"
+        android:title="@string/quality_96k"/>
+    <item android:id="@+id/quality_128k"
+        android:title="@string/quality_128k"/>
+    <item android:id="@+id/quality_160k"
+        android:title="@string/quality_160k"/>
+    <item android:id="@+id/quality_192k"
+        android:title="@string/quality_192k"/>
+    <item android:id="@+id/quality_224k"
+        android:title="@string/quality_224k"/>
+    <item android:id="@+id/quality_320k"
+        android:title="@string/quality_320k"/>
+</menu>

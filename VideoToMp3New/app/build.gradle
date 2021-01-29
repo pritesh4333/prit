@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+android {
+    compileSdkVersion 30
+
+
+    defaultConfig {
+        applicationId "mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 2
+        versionName "1.2"
+        multiDexEnabled true
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    packagingOptions {
+        exclude 'builddef.lst'
+    }
+}
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
+    implementation project(':nativetemplates')
+    implementation project(':android-ffmpeg')
+
+// app update
+    implementation 'com.google.android.play:core:1.8.3'
+// Add the Firebase Crashlytics SDK.
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.4'
+
+}
+apply plugin: 'com.google.gms.google-services'

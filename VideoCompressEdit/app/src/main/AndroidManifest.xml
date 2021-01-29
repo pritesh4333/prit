@@ -17,6 +17,8 @@
         android:largeHeap="true"
         android:roundIcon="@drawable/dp"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:extractNativeLibs="true"
         android:theme="@style/AppTheme">
         <!-- android:requestLegacyExternalStorage="true" -->
         <activity
@@ -41,7 +43,7 @@
             android:name=".View.OutputActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".View.MergeActivity"
+            android:name=".View.MyVideoListActivity"
             android:screenOrientation="portrait" />
 
         <meta-data

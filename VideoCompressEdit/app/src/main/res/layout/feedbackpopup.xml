@@ -7,7 +7,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp">
+    android:background="@color/black"
+   >
 
 
     <ScrollView
@@ -19,27 +20,43 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="@color/primary"></TextView>
 
 
-    <FrameLayout
-        android:id="@+id/fl_adplaceholder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp" />
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_alignParentBottom= "true"
+                android:visibility= "gone"
+                android:id= "@+id/nativeTemplateViewFeedback"
+                app:gnt_template_type= "@layout/gnt_medium_template_view"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content" />
 
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:layout_marginBottom="15dp"
     android:orientation="vertical">
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        android:textColor="@color/white"
         android:layout_gravity="center"
-        android:text="click here to provide your feedback"
+        android:background="@color/gray"
+        android:text="Rate/Feedback"
+        android:textAllCaps="false"
         android:id="@+id/feedbacksubmit"></Button>
 
     <TextView
@@ -47,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone"
+        android:textColor="@color/white"
         android:id="@+id/aboutinfo"></TextView>
 </LinearLayout>
         </LinearLayout>

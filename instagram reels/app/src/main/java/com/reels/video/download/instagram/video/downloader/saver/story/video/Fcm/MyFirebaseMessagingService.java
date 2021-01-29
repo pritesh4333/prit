@@ -15,15 +15,18 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.reels.video.download.instagram.video.downloader.saver.story.video.View.MainActivity;
 import com.reels.video.download.instagram.video.downloader.saver.story.video.R;
 import com.reels.video.download.instagram.video.downloader.saver.story.video.Utils.Helper;
+import com.reels.video.download.instagram.video.downloader.saver.story.video.View.MainActivity;
 
 
 import java.io.IOException;
@@ -32,6 +35,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
+
+import static com.reels.video.download.instagram.video.downloader.saver.story.video.View.MainActivity.MY_PREFS_NAME;
 
 /**
  * NOTE: There can only be one service in each app that receives FCM messages. If multiple
@@ -46,8 +51,8 @@ import java.util.Map;
  */
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
+    private static final String TAG = "MyFirebaseMsgService";
 
-    public static final String MY_PREFS_NAME = "InstagramReelsPrefsFile";
     /**
      * Called when message is received.
      *
@@ -74,214 +79,117 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         // TODO(developer): Handle FCM messages here.
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
+        Log.e(TAG, "From: " + remoteMessage.getFrom());
 
+        // Check if message contains a data payload.
+        if (remoteMessage.getData().size() > 0) {
+            Log.e(TAG, "Message data payload: " + remoteMessage.getData());
 
-        Map<String, String> data = remoteMessage.getData();
-        String title = data.get("title");
-        String body = data.get("body");
-        String image = data.get("image");
-        String update=data.get("update");
-        String admob_app_id=data.get("admob_app_id");
-        String banner_home_footer=data.get("banner_home_footer");
-        String interstitial_full_screen=data.get("interstitial_full_screen");
-        String natice_advanceadd=data.get("natice_advanceadd");
+            if (/* Check if data needs to be processed by long running job */ true) {
+                // For long-running tasks (10 seconds or more) use WorkManager.
+                scheduleJob();
+            } else {
+                // Handle message within 10 seconds
+                handleNow();
+            }
 
-        Helper.LogPrint("title",title);
-        Helper.LogPrint("body",body);
-        Helper.LogPrint("image",image);
-        Helper.LogPrint("update",update);
-        Helper.LogPrint("admob_app_id",admob_app_id);
-        Helper.LogPrint("banner_home_footer",banner_home_footer);
-        Helper.LogPrint("interstitial_full_screen",interstitial_full_screen);
-        Helper.LogPrint("natice_advanceadd",natice_advanceadd);
-
-
-        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-        String Default_admob_app_id = prefs.getString("admob_app_id", "");
-
-
-
-        if (!Default_admob_app_id.equalsIgnoreCase(admob_app_id)) {
-
-            SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
-            editor.putString("admob_app_id", admob_app_id);
-            editor.putString("banner_home_footer", banner_home_footer);
-            editor.putString("interstitial_full_screen", interstitial_full_screen);
-            editor.putString("natice_advanceadd", natice_advanceadd);
-            editor.commit();
-            Helper.LogPrint("Update Adsend IDs","Done");
         }
-        new sendNotification(this,title,body,image,update).execute();
 
+        // Check if message contains a notification payload.
+        if (remoteMessage.getNotification() != null) {
+            Log.e(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+        }
+        sendNotification(remoteMessage.getNotification().getBody());
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
     }
+    // [END receive_message]
 
 
-    private class sendNotification extends AsyncTask<String, Void, Bitmap> {
+    // [START on_new_token]
+    /**
+     * There are two scenarios when onNewToken is called:
+     * 1) When a new token is generated on initial app startup
+     * 2) Whenever an existing token is changed
+     * Under #2, there are three scenarios when the existing token is changed:
+     * A) App is restored to a new device
+     * B) User uninstalls/reinstalls the app
+     * C) User clears app data
+     */
+    @Override
+    public void onNewToken(String token) {
+        Log.e(TAG, "Refreshed token: " + token);
 
-        Context ctx;
-        String title;
-        String body;
-        String image;
-        String update;
+        // If you want to send messages to this application instance or
+        // manage this apps subscriptions on the server side, send the
+        // FCM registration token to your app server.
+        sendRegistrationToServer(token);
+    }
+    // [END on_new_token]
 
+    /**
+     * Schedule async work using WorkManager.
+     */
+    private void scheduleJob() {
+        // [START dispatch_job]
+        OneTimeWorkRequest work = new OneTimeWorkRequest.Builder(MyWorker.class)
+                .build();
+        WorkManager.getInstance().beginWith(work).enqueue();
+        // [END dispatch_job]
+    }
 
+    /**
+     * Handle time allotted to BroadcastReceivers.
+     */
+    private void handleNow() {
+        Log.e(TAG, "Short lived task is done.");
+    }
 
-        public sendNotification(Context ctx, String title, String body, String image, String update) {
-            this.ctx = ctx;
-            this.title = title;
-            this.body = body;
-            this.image = image;
-            this.update = update;
+    /**
+     * Persist token to third-party servers.
+     *
+     * Modify this method to associate the user's FCM registration token with any
+     * server-side account maintained by your application.
+     *
+     * @param token The new token.
+     */
+    private void sendRegistrationToServer(String token) {
+        // TODO: Implement this method to send token to your app server.
+    }
 
+    /**
+     * Create and show a simple notification containing the received FCM message.
+     *
+     * @param messageBody FCM message body received.
+     */
+    private void sendNotification(String messageBody) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
+                PendingIntent.FLAG_ONE_SHOT);
+
+        String channelId = getString(R.string.default_notification_channel_id);
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        NotificationCompat.Builder notificationBuilder =
+                new NotificationCompat.Builder(this, channelId)
+                        .setSmallIcon(R.drawable.notification_icon2)
+                        .setContentTitle(getString(R.string.app_name))
+                        .setContentText(messageBody)
+                        .setAutoCancel(true)
+                        .setSound(defaultSoundUri)
+                        .setContentIntent(pendingIntent);
+
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        // Since android Oreo notification channel is needed.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(channelId,
+                    "Channel human readable title",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            notificationManager.createNotificationChannel(channel);
         }
 
-        @Override
-        protected Bitmap doInBackground(String... params) {
-
-            InputStream in;
-
-            try {
-
-                URL url = new URL(image);
-                HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-                connection.setDoInput(true);
-                connection.connect();
-                in = connection.getInputStream();
-                Bitmap myBitmap = BitmapFactory.decodeStream(in);
-                return myBitmap;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                Helper.LogPrint("Url exception",e+"url exception");
-            } catch (IOException e) {
-                e.printStackTrace();
-                Helper.LogPrint("IO exception",e+"IO exception");
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap result) {
-
-            super.onPostExecute(result);
-            try {
-                if (result==null || result.toString()=="")
-                {
-                    Helper.LogPrint("bitmap","bitmap null or blank");
-                    new sendNotification(ctx,title,body,image,update).execute();
-//                    result = BitmapFactory.decodeResource(ctx.getResources(),
-//                            R.drawable.bg);
-                }else {
-                    Helper.LogPrint("bitmap", "got bitmap");
-
-                    String channelId = getString(R.string.default_notification_channel_id);
-                    String channername = getString(R.string.default_notification_channel_name);
-                    NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
-                    bpStyle.bigPicture(result).build();
-                    // Set the intent to fire when the user taps on notification.
-                    Intent intent = new Intent(ctx, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    PendingIntent pendingIntent = PendingIntent.getActivity(ctx, 0 /* Request code */, intent,
-                            PendingIntent.FLAG_ONE_SHOT);
-                    NotificationCompat.Builder mBuilder;
-                    Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                    long[] v = {500, 1000};
-
-                    Bitmap icon = BitmapFactory.decodeResource(ctx.getResources(),
-                            R.mipmap.ic_launcher);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        Helper.LogPrint("Heighr orio", "Heighr Orio");
-                        if (update.equalsIgnoreCase("Yes")) {
-
-                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
-                                    .setSmallIcon(R.drawable.notification_icon2)
-                                    .setContentTitle(title)
-                                    .setContentText(body)
-                                    .setSound(uri)
-                                    .setVibrate(v)
-                                    .setLargeIcon(icon)
-                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                                    .addAction(0, "Update", pendingIntent)
-                                    .setColor(ContextCompat.getColor(ctx, R.color.colorAccent))
-                                    .setStyle(bpStyle);
-                        } else {
-                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
-                                    .setSmallIcon(R.drawable.notification_icon2)
-                                    .setContentTitle(title)
-                                    .setContentText(body)
-                                    .setSound(uri)
-                                    .setVibrate(v)
-                                    .setLargeIcon(icon)
-                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                                    .setColor(ContextCompat.getColor(ctx, R.color.colorAccent))
-                                    .setStyle(bpStyle);
-                        }
-
-                        try {
-
-                            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                            Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-                            r.play();
-                            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                            // default pattern goes here
-                            vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-
-                        } catch (Exception e) {
-                            Helper.LogPrint("Error Playing sound ", "error");
-                            e.printStackTrace();
-                        }
-
-                    } else {
-                        Helper.LogPrint("Below orio", "Below Orio");
-                        if (update.equalsIgnoreCase("Yes")) {
-                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
-                                    .setSmallIcon(R.drawable.notification_icon2)
-                                    .setContentTitle(title)
-                                    //.setSubText(body)
-                                    .setContentText(body)
-                                    .setSound(uri)
-                                    .setVibrate(v)
-                                    .setLargeIcon(icon)
-                                    .addAction(0, "Update", pendingIntent)
-                                    .setColor(ContextCompat.getColor(ctx, R.color.colorAccent))
-                                    .setStyle(bpStyle);
-                        } else {
-                            mBuilder = new NotificationCompat.Builder(ctx, channelId)
-                                    .setSmallIcon(R.drawable.notification_icon2)
-                                    .setContentTitle(title)
-                                    //.setSubText(body)
-                                    .setContentText(body)
-                                    .setSound(uri)
-                                    .setVibrate(v)
-                                    .setLargeIcon(icon)
-                                    .setColor(ContextCompat.getColor(ctx, R.color.colorAccent))
-                                    .setStyle(bpStyle);
-                        }
-                    }
-                    mBuilder.setContentIntent(pendingIntent);
-                    // Sets an ID for the notification
-                    int mNotificationId = 001;
-
-                    NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                    NotificationChannel mNotificationChannel = null;
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        mNotificationChannel = new NotificationChannel(channelId, channername, NotificationManager.IMPORTANCE_HIGH);
-                        mNotificationChannel.setVibrationPattern(new long[]{0});
-                        mNotificationChannel.enableVibration(true);
-                        notificationManager.createNotificationChannel(mNotificationChannel);
-                    }
-
-
-                    // It will display the notification in notification bar
-                    notificationManager.notify(mNotificationId, mBuilder.build());
-
-
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+        notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
     }
 }

@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,7 +33,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.crashlytics.android.Crashlytics;
 
 import com.example.fcmnotificationdemo12.ApiClients.APIClient;
 import com.example.fcmnotificationdemo12.ApiClients.APIInterface;
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         } catch (Exception e) {
-            Crashlytics.logException(e);
+          //  Crashlytics.logException(e);
         }
         btnFullscreenAd = (Button) findViewById(R.id.btn_fullscreen_ad);
         btnShowRewardedVideoAd = (Button) findViewById(R.id.btn_show_rewarded_video);
@@ -178,59 +178,83 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAdView.loadAd(adRequest);
+        //mAdView.loadAd(adRequest);
 
 
         spinner = findViewById(R.id.spinnerTopics);
         apiInterface = APIClient.getClient().create(APIInterface.class);
         apiInterfaceswagger = APIClient.getClientswagger().create(APIInterface.class);
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationManager mNotificationManager =
-                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-            int importance = NotificationManager.IMPORTANCE_HIGH;
-            NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance);
-            mChannel.setDescription(CHANNEL_DESCRIPTION);
-            mChannel.enableLights(true);
-            mChannel.setLightColor(Color.RED);
-            mChannel.enableVibration(true);
-            mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
-            mNotificationManager.createNotificationChannel(mChannel);
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+//            NotificationManager mNotificationManager =
+//                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+//            int importance = NotificationManager.IMPORTANCE_HIGH;
+//            NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance);
+//            mChannel.setDescription(CHANNEL_DESCRIPTION);
+//            mChannel.enableLights(true);
+//            mChannel.setLightColor(Color.RED);
+//            mChannel.enableVibration(true);
+//            mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+//            mNotificationManager.createNotificationChannel(mChannel);
+//        }
+//
+//        findViewById(R.id.buttonSubscribe).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                String topic = spinner.getSelectedItem().toString();
+//                FirebaseMessaging.getInstance().subscribeToTopic(topic);
+//                Toast.makeText(getApplicationContext(), "Topic Subscribed", Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // Create channel to show notifications.
+            String channelId  = getString(R.string.default_notification_channel_id);
+            String channelName = getString(R.string.default_notification_channel_name);
+            NotificationManager notificationManager =
+                    getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+                    channelName, NotificationManager.IMPORTANCE_LOW));
         }
-
-        findViewById(R.id.buttonSubscribe).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String topic = spinner.getSelectedItem().toString();
-                FirebaseMessaging.getInstance().subscribeToTopic(topic);
-                Toast.makeText(getApplicationContext(), "Topic Subscribed", Toast.LENGTH_LONG).show();
-            }
-        });
-        // MyNotificationManager.getInstance(this).displayNotification("Greetings", "Hello how are you?");
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+        FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+                        String msg = getString(R.string.msg_subscribed);
                         if (!task.isSuccessful()) {
-                            Log.w(TAG, "getInstanceId failed", task.getException());
+                            msg = getString(R.string.msg_subscribe_failed);
+                        }
+                        Log.d("Notification", msg);
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+
+
+                });
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w("TAG", "Fetching FCM registration token failed", task.getException());
                             return;
                         }
 
-                        // Get new Instance ID token
-                        String token = task.getResult().getToken();
-                        Log.e("token ", token);
+                        // Get new FCM registration token
+                        String token = task.getResult();
 
                         // Log and toast
-
-                        Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
+                        String msg = getString(R.string.msg_token_fmt, token);
+                        Log.d("TAG", msg);
+                        Toast.makeText(MainActivity.this, "token"+msg, Toast.LENGTH_SHORT).show();
                     }
-                });
 
+
+                });
         // LoadJson();
         chekpermisstion();
         //LoadRetorofitJson();
-        new UploadFileToServer().execute();
+     //   new UploadFileToServer().execute();
     }
 
     public void chekpermisstion(){
