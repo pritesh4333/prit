@@ -3,20 +3,22 @@ package com.prit.videocompressorpro.View;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -24,34 +26,33 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 
-import com.crashlytics.android.Crashlytics;
-
-import com.google.android.gms.ads.AdLoader;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.formats.MediaView;
-import com.google.android.gms.ads.formats.NativeAdOptions;
-import com.google.android.gms.ads.formats.UnifiedNativeAd;
-import com.google.android.gms.ads.formats.UnifiedNativeAdView;
-import com.prit.videocompressorpro.R;
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.formats.MediaView;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAdView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.Utils.Helper;
-//import com.vincent.videocompressor.VideoCompress;
-
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -72,10 +73,12 @@ import uk.co.deanwild.materialshowcaseview.shape.CircleShape;
 
 import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
 
+//import com.vincent.videocompressor.VideoCompress;
+
 public class CompressorActivity extends Activity {
 
     VideoView vv_video;
-    ImageView  mOutputOptionsButton;
+    ImageView mOutputOptionsButton;
     TextView mInputInfoView;
     TextView mOutputInfoView;
     TextView resolutiontext;
@@ -99,15 +102,19 @@ public class CompressorActivity extends Activity {
     private int mHeight;
     private int msize;
     private String Resolution="";
+    private String isCompressDone ="";
     public String outputPath="";
     ProgressDialog progressDialog;
     private MediaController mediaController;
     InterstitialAd mInterstitialAd;
-    AdRequest adRequest;
-    private AdView mAdView;
+
+
     LinearLayout outoutinfo_showcase;
-    private  Boolean InputVideoPlayingStatus=false,OutputVideoPlayingStatus=false;
+    private Boolean InputVideoPlayingStatus=false,OutputVideoPlayingStatus=false;
     String admob_app_id,banner_home_footer,interstitial_full_screen;
+    private Math Crashlytics;
+    AdRequest adRequest;
+    AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,6 +122,7 @@ public class CompressorActivity extends Activity {
         setContentView(R.layout.activity_galleryview);
 
         init();
+        FCMregistration();
     }
 
     private void init() {
@@ -135,14 +143,23 @@ public class CompressorActivity extends Activity {
 
 
         //FFmpeg Instance
+
+
+
+
+
         if (FFmpeg.getInstance(this).isSupported()) {
+
             // ffmpeg is supported
+
             versionFFmpeg();
             //ffmpegTestTaskQuit();
         } else {
+          //  Toast.makeText(this,"not support",Toast.LENGTH_LONG).show();
             // ffmpeg is not supported
             Helper.LogPrint(TAG,"ffmpeg not supported!");
         }
+
 
         str_video = getIntent().getStringExtra("video");
         vv_video.setVideoPath(str_video);
@@ -170,11 +187,11 @@ public class CompressorActivity extends Activity {
         // Loading banner add
 
         LinearLayout adContainer = findViewById(R.id.compress_adview);
-        AdView mAdView = new AdView(CompressorActivity.this);
+          mAdView = new AdView(CompressorActivity.this);
         mAdView.setAdSize(AdSize.BANNER);
         mAdView.setAdUnitId(banner_home_footer);
         adContainer.addView(mAdView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+          adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         // Show full page add
         mInterstitialAd = new InterstitialAd(this);
@@ -288,6 +305,7 @@ public class CompressorActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(CompressorActivity.this,OutputActivity.class);
                 i.putExtra("OutoutPath",outputPath);
+                i.putExtra("Compress","Done");
                 startActivity(i);
                 finish();
             }
@@ -357,40 +375,29 @@ public class CompressorActivity extends Activity {
             admob_app_id = prefs.getString("admob_app_id", "");
             natice_advanceadd = prefs.getString("natice_advanceadd","");
         }
-        AdLoader adLoader = new AdLoader.Builder(this, natice_advanceadd)
-                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+        final TemplateView[] template = new TemplateView[1];
 
-                    @Override
-                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                        // Show the ad.
-                        // Assumes you have a placeholder FrameLayout in your View layout
-                        // (with id fl_adplaceholder) where the ad is to be placed.
-                        // Log.e("add loaded",""+unifiedNativeAd);
-                        FrameLayout frameLayout =dialogView.
-                                findViewById(R.id.fl_adplaceholder);
-                        // Assumes that your ad layout is in a file call ad_unified.xml
-                        // in the res/layout folder
-                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
-                                .inflate(R.layout.unified_ads, null);
-                        // This method sets the text, images and the native ad, etc into the ad
-                        // view.
-                        populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                        frameLayout.removeAllViews();
-                        frameLayout.addView(adView);
-                    }
-                })
-                .withAdListener(new AdListener() {
-                    @Override
-                    public void onAdFailedToLoad(int errorCode) {
-                        //       Log.e("add loaded",""+errorCode);
-                        // Handle the failure by logging, altering the UI, and so on.
-                    }
-                })
-                .withNativeAdOptions(new NativeAdOptions.Builder()
-                        // Methods in the NativeAdOptions.Builder class can be
-                        // used here to specify individual options settings.
-                        .build())
-                .build();
+        //Initializing the AdLoader   objects
+        AdLoader adLoader = new AdLoader.Builder(CompressorActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+            private ColorDrawable background;@Override
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                NativeTemplateStyle styles = new
+                        NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                template[0] = dialogView.findViewById(R.id.nativeTemplateViewProgress);
+                template[0].setStyles(styles);
+                template[0].setNativeAd(unifiedNativeAd);
+                dialogView.findViewById(R.id.nativeTemplateViewProgress).setVisibility(View.VISIBLE);
+                // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            }
+
+        }).build();
+
+
+        // load Native Ad with the Request
         adLoader.loadAds(new AdRequest.Builder().build(),5);
         alertDialog.show();
 
@@ -420,13 +427,17 @@ public class CompressorActivity extends Activity {
         for (int i =0;i<command.length;i++){
             Helper.LogPrint(TAG,command[i]);
         }
-
+        final Boolean[] one = {true};
+        final Boolean[] two = {true};
+        final Boolean[] three = {true};
+        final Boolean[] four = {true};
         final FFtask task = FFmpeg.getInstance(this).execute(command, new ExecuteBinaryResponseHandler() {
             @Override
             public void onStart() {
 
 
                 alertDialog.show();
+
 
             }
 
@@ -444,8 +455,9 @@ public class CompressorActivity extends Activity {
                 Helper.LogPrint(TAG,message);
                 resolutiontext.setText("Resolution");
                 Resolution="";
+                isCompressDone="done";
                 final Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-                File  outputs= new File(output);
+                File outputs= new File(output);
                 intent.setData(Uri.fromFile(outputs));
                 CompressorActivity.this.sendBroadcast(intent);
                 ShowVideoOutputDetial(new File(output));
@@ -460,7 +472,7 @@ public class CompressorActivity extends Activity {
                 Helper.LogPrint(TAG,message);
                 float count = msec;
 
-
+                isCompressDone="working";
 
 
                 // Escape early if cancel() is called
@@ -468,6 +480,7 @@ public class CompressorActivity extends Activity {
 
                 int start = message.indexOf("time=");
                 int end = message.indexOf(" bitrate");
+
                 if (start != -1 && end != -1) {
                     String duration = message.substring(start + 5, end);
                     if (duration != "") {
@@ -478,6 +491,35 @@ public class CompressorActivity extends Activity {
                             progress.setText(""+(int)sdf.parse("1970-01-01 " + duration).getTime()+" / ");
                             float i =sdf.parse("1970-01-01 " + duration).getTime();
                             percentage.setText(new DecimalFormat("##.##").format(i/count*100)+"%");
+                            if (i/count*100>25){
+                                if (one[0]) {
+                                    adLoader.loadAds(new AdRequest.Builder().build(),3);
+                                    mAdView.loadAd(adRequest);
+                                    one[0] =false;
+                                }
+                            }
+                            if (i/count*100>50){
+                                if (two[0]) {
+                                    adLoader.loadAds(new AdRequest.Builder().build(),3);
+                                    mAdView.loadAd(adRequest);
+                                    two[0] =false;
+                                }
+                            }
+                            if (i/count*100>75){
+                                if (three[0]) {
+                                    adLoader.loadAds(new AdRequest.Builder().build(),3);
+                                    mAdView.loadAd(adRequest);
+                                    three[0] =false;
+                                }
+
+                            }
+                            if (i/count*100>90){
+                                if (four[0]) {
+                                    adLoader.loadAds(new AdRequest.Builder().build(),3);
+                                    mAdView.loadAd(adRequest);
+                                    four[0] =false;
+                                }
+                            }
                             mProgressBar.setProgress(Integer.parseInt(new DecimalFormat("##").format(i/count*100)));
                         }catch (NumberFormatException | ParseException e)
                         {
@@ -497,34 +539,6 @@ public class CompressorActivity extends Activity {
             }
         });
 
-//        FFmpeg ffmpeg = FFmpeg.getInstance(ExampleActivity.this);
-//        // to execute "ffmpeg -version" command you just need to pass "-version"
-//
-//        ffmpeg.execute(command, new ExecuteBinaryResponseHandler() {
-//
-//            @Override
-//            public void onStart() {    status.setText("Start");}
-//
-//            @Override
-//            public void onProgress(String message) {    status.setText("progress"+message);}
-//
-//            @Override
-//            public void onFailure(String message) {    status.setText("fail"+message);}
-//
-//            @Override
-//            public void onSuccess(String message) {    status.setText("Sucess"+message);}
-//
-//            @Override
-//            public void onFinish() {
-//                status.setText("finish");
-//            }
-//
-//        });
-
-
-
-
-
     }
     @Override
     public void onPause() {
@@ -537,6 +551,18 @@ public class CompressorActivity extends Activity {
     public void onDestroy() {
         if (mAdView != null) {
             mAdView.destroy();
+        }
+        if (isCompressDone.equalsIgnoreCase("working")){
+            if (outputs!=null) {
+                File fdelete = new File(outputs.getPath());
+                if (fdelete.exists()) {
+                    if (fdelete.delete()) {
+                        System.out.println("file Deleted :" + outputs.getPath());
+                    } else {
+                        System.out.println("file not Deleted :" + outputs.getPath());
+                    }
+                }
+            }
         }
         super.onDestroy();
     }
@@ -626,6 +652,7 @@ public class CompressorActivity extends Activity {
 
 
     }
+
     private void ShowVideoDetial() {
         final MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
         try {
@@ -677,9 +704,10 @@ public class CompressorActivity extends Activity {
             mInputInfoView.setText(getString(R.string.video_info, width, height,
                     DateUtils.formatElapsedTime(duration / 1000),
                     Formatter.formatShortFileSize(this, str_video.length())+" "+hrSize));
-        } catch (Exception  e) {
+        } catch (Exception e) {
             //Toast.makeText(getBaseContext(), R.string.bad_video, Toast.LENGTH_SHORT).show();
-            Crashlytics.log("Line no 384"+e);
+            FirebaseCrashlytics.getInstance().log("Line no 384"+e);
+
             // str_video = null;
             showAlertError("Can't support this file choose another video and try again");
 
@@ -738,30 +766,32 @@ public class CompressorActivity extends Activity {
     private void onOutputOptions() {
         final PopupMenu popup = new PopupMenu(this, mOutputOptionsButton);
         popup.getMenuInflater().inflate(R.menu.output_options, popup.getMenu());
-        if (mWidth<=186) {
-            popup.getMenu().findItem(R.id.quality_186p).setVisible(false);
-        }
-        if (mWidth<=426){
-            popup.getMenu().findItem(R.id.quality_426p).setVisible(false);
-        }
-        if (mWidth<=512){
-            popup.getMenu().findItem(R.id.quality_512p).setVisible(false);
-        }
-        if (mWidth<=640){
-            popup.getMenu().findItem(R.id.quality_640p).setVisible(false);
-        }
-        if (mWidth<=720){
-            popup.getMenu().findItem(R.id.quality_720p).setVisible(false);
-        }
-        if (mWidth<=960){
-            popup.getMenu().findItem(R.id.quality_960p).setVisible(false);
-        }
-        if (mWidth<=1080){
-            popup.getMenu().findItem(R.id.quality_1080p).setVisible(false);
-        }
-        if (mWidth<=1920){
-            popup.getMenu().findItem(R.id.quality_1920p).setVisible(false);
-        }
+
+            if (mWidth <= 186) {
+                popup.getMenu().findItem(R.id.quality_186p).setVisible(false);
+            }
+            if (mWidth <= 426) {
+                popup.getMenu().findItem(R.id.quality_426p).setVisible(false);
+            }
+            if (mWidth <= 512) {
+                popup.getMenu().findItem(R.id.quality_512p).setVisible(false);
+            }
+            if (mWidth <= 640) {
+                popup.getMenu().findItem(R.id.quality_640p).setVisible(false);
+            }
+            if (mWidth <= 720) {
+                popup.getMenu().findItem(R.id.quality_720p).setVisible(false);
+            }
+            if (mWidth <= 960) {
+                popup.getMenu().findItem(R.id.quality_960p).setVisible(false);
+            }
+            if (mWidth <= 1080) {
+                popup.getMenu().findItem(R.id.quality_1080p).setVisible(false);
+            }
+            if (mWidth <= 1920) {
+                popup.getMenu().findItem(R.id.quality_1920p).setVisible(false);
+            }
+
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -816,12 +846,9 @@ public class CompressorActivity extends Activity {
         popup.show();
     }
 
-
-
-
     private void showInterstitial() {
         Helper.LogPrint("addscount",""+fulladdcountcompressactivity);
-        if (fulladdcountcompressactivity<2) {
+        if (fulladdcountcompressactivity<1) {
             if (mInterstitialAd.isLoaded()) {
                 mInterstitialAd.show();
             }
@@ -878,7 +905,7 @@ public class CompressorActivity extends Activity {
                     mWidth = Integer.parseInt(width);
                     mHeight = Integer.parseInt(height);
                 } catch (NumberFormatException e) {
-                    Crashlytics.log("Line no 510"+e);
+                    FirebaseCrashlytics.getInstance().log("Line no 510"+e);
                     //Toast.makeText(getBaseContext(), R.string.bad_video, Toast.LENGTH_SHORT).show();
                     File fdelete = new File(outputs.getPath());
                     if (fdelete.exists()) {
@@ -910,7 +937,7 @@ public class CompressorActivity extends Activity {
                             .setFadeDuration(500)
                             .setDismissOnTouch(true)
                             .setMaskColour(CompressorActivity.this.getResources().getColor(R.color.primary_dark))
-                            .setContentTextColor(CompressorActivity.this.getResources().getColor(R.color.accent))
+                            .setContentTextColor(CompressorActivity.this.getResources().getColor(R.color.yellow))
                             .show();
                 }catch(Exception e){
 
@@ -933,7 +960,7 @@ public class CompressorActivity extends Activity {
                 video_location.setVisibility(View.GONE);
             }
         }catch (Exception e){
-            Crashlytics.log("Show Detial"+e);
+            FirebaseCrashlytics.getInstance().log("Show Detial"+e);
         }
     }
     public  void showShowcase(){
@@ -968,7 +995,7 @@ public class CompressorActivity extends Activity {
                                 .setFadeDuration(500)
                                 .setDismissOnTouch(true)
                                 .setMaskColour(getResources().getColor(R.color.primary_dark))
-                                .setContentTextColor(getResources().getColor(R.color.accent))
+                                .setContentTextColor(getResources().getColor(R.color.yellow))
                                 // optional but starting animations immediately in onCreate can make them choppy
                                 // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
                                 .build()
@@ -986,7 +1013,7 @@ public class CompressorActivity extends Activity {
                                 .setDismissOnTouch(true)
                                 .setFadeDuration(500)
                                 .setMaskColour(getResources().getColor(R.color.primary_dark))
-                                .setContentTextColor(getResources().getColor(R.color.accent))
+                                .setContentTextColor(getResources().getColor(R.color.yellow))
                                 // optional but starting animations immediately in onCreate can make them choppy
                                 // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
                                 .build()
@@ -1004,5 +1031,40 @@ public class CompressorActivity extends Activity {
             editor.apply();
         }else {
         }
+    }
+    public void FCMregistration(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // Create channel to show notifications.
+            String channelId  = getString(R.string.default_notification_channel_id);
+            String channelName = getString(R.string.default_notification_channel_name);
+            NotificationManager notificationManager =
+                    getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+                    channelName, NotificationManager.IMPORTANCE_LOW));
+        }
+
+        // If a notification message is tapped, any data accompanying the notification
+        // message is available in the intent extras. In this sample the launcher
+        // intent is fired when the notification is tapped, so any accompanying data would
+        // be handled here. If you want a different intent fired, set the click_action
+        // field of the notification message to the desired intent. The launcher intent
+        // is used when no click_action is specified.
+        //
+        // Handle possible data accompanying notification message.
+        // [START handle_data_extras]
+
+        // [END handle_data_extras]
+        FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+                        String msg = getString(R.string.msg_subscribed);
+                        if (!task.isSuccessful()) {
+                            msg = getString(R.string.msg_subscribe_failed);
+                        }
+                        Log.d("Output Activity", msg);
+                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

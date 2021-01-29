@@ -1,0 +1,4 @@
+include ':android-ffmpeg'
+include ':nativetemplates'
+include ':app'
+rootProject.name = "Video To MP3 Converter 2021 INDIAN App"

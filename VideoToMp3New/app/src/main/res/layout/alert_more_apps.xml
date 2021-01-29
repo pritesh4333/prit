@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More Apps From Us"
+                android:background="@color/primary_dark"
+                android:padding="13dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginBottom="5dp"
+                android:gravity="center">
+                <LinearLayout
+                    android:id="@+id/videocompressorproapps"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dp"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video Compressor Pro"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"></TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/reelsapps"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/reels"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instagram Reels Download"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"></TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/aartiapp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/aartiapp"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aarti All In One "
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_alignParentBottom= "true"
+                android:visibility= "gone"
+                android:id= "@+id/nativeTemplateView"
+                app:gnt_template_type= "@layout/gnt_medium_template_view"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content" />
+
+            <TextView
+                android:id="@+id/ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ok"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:background="@color/gray"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                ></TextView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

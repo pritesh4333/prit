@@ -1,7 +1,6 @@
 package com.prit.videocompressorpro.ViewModel;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.prit.videocompressorpro.Model.Model_images;
 import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.Utils.Helper;
-
 
 import java.util.ArrayList;
 

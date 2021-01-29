@@ -1,18 +1,23 @@
 package com.pritesh.videocompressorpro_fastvideocompressor.View;
 
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,9 +31,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
@@ -39,6 +46,9 @@ import com.google.android.gms.ads.formats.MediaView;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.pritesh.videocompressorpro_fastvideocompressor.R;
 
 import java.io.File;
@@ -63,6 +73,7 @@ public class OutputActivity extends AppCompatActivity {
     String admob_app_id,banner_home_footer,interstitial_full_screen;
     String Scrren;
     String Compress="";
+    public   int fulladdcount=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,7 +137,7 @@ public class OutputActivity extends AppCompatActivity {
             @Override
             public void onAdClosed() {
                 // Toast.makeText(getApplicationContext(), "Ad is closed!", Toast.LENGTH_SHORT).show();
-
+                fulladdcount=1;
             }
 
             @Override
@@ -136,11 +147,13 @@ public class OutputActivity extends AppCompatActivity {
 
             @Override
             public void onAdLeftApplication() {
+                fulladdcount=1;
                 // Toast.makeText(getApplicationContext(), "Ad left application!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAdOpened() {
+                fulladdcount=1;
                 // Toast.makeText(getApplicationContext(), "Ad is opened!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -228,6 +241,17 @@ public class OutputActivity extends AppCompatActivity {
             public void onCompletion(MediaPlayer mp) {
 
                 OutputVideoPlayingStatus=false;
+                if (Compress!=null) {
+                    if (Compress.equalsIgnoreCase("Done")) {
+                        SharedPreferences prefss = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                        String rateuse = prefss.getString("rateUs", "");
+                        if (rateuse.equalsIgnoreCase("")) {
+                            feedbackPopup();
+                        } else {
+
+                        }
+                    }
+                }
 //                outputtxt.setText("Play");
 //                output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
             }
@@ -245,6 +269,7 @@ public class OutputActivity extends AppCompatActivity {
         });
         ShowVideoOutputDetial(new File(str_video));
 
+        FCMregistration();
         if (Compress!=null) {
             if (Compress.equalsIgnoreCase("Done")) {
                 SharedPreferences prefss = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -256,6 +281,7 @@ public class OutputActivity extends AppCompatActivity {
                 }
             }
         }
+
     }
     private void feedbackPopup()
     {
@@ -281,41 +307,29 @@ public class OutputActivity extends AppCompatActivity {
             admob_app_id = prefs.getString("admob_app_id", "");
             natice_advanceadd = prefs.getString("natice_advanceadd","");
         }
-        AdLoader adLoader = new AdLoader.Builder(OutputActivity.this, natice_advanceadd)
+        final TemplateView[] template = new TemplateView[1];
 
-                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+        //Initializing the AdLoader   objects
+        AdLoader adLoader = new AdLoader.Builder(OutputActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
 
-                    @Override
-                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                        // Show the ad.
-                        // Assumes you have a placeholder FrameLayout in your View layout
-                        // (with id fl_adplaceholder) where the ad is to be placed.
-                        //   Log.e("add loaded",""+unifiedNativeAd);
-                        FrameLayout frameLayout =deleteDialogView.
-                                findViewById(R.id.fl_adplaceholder);
-                        // Assumes that your ad layout is in a file call ad_unified.xml
-                        // in the res/layout folder
-                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
-                                .inflate(R.layout.unified_ads, null);
-                        // This method sets the text, images and the native ad, etc into the ad
-                        // view.
-                        populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                        frameLayout.removeAllViews();
-                        frameLayout.addView(adView);
-                    }
-                })
-                .withAdListener(new AdListener() {
-                    @Override
-                    public void onAdFailedToLoad(int errorCode) {
-                        //      Log.e("add loaded",""+errorCode);
-                        // Handle the failure by logging, altering the UI, and so on.
-                    }
-                })
-                .withNativeAdOptions(new NativeAdOptions.Builder()
-                        // Methods in the NativeAdOptions.Builder class can be
-                        // used here to specify individual options settings.
-                        .build())
-                .build();
+            private ColorDrawable background;@Override
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                NativeTemplateStyle styles = new
+                        NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                template[0] = deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback);
+                template[0].setStyles(styles);
+                template[0].setNativeAd(unifiedNativeAd);
+                deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback).setVisibility(View.VISIBLE);
+                // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            }
+
+        }).build();
+
+
+        // load Native Ad with the Request
         adLoader.loadAds(new AdRequest.Builder().build(),5);
 
         feedbacksubmit.setOnClickListener(new View.OnClickListener() {
@@ -345,8 +359,10 @@ public class OutputActivity extends AppCompatActivity {
 
 
     private void showInterstitial() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if ( fulladdcount!=1) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
         }
     }
     public void shareVideo(final String title, String path) {
@@ -412,7 +428,7 @@ public class OutputActivity extends AppCompatActivity {
 
 
                 } catch (NumberFormatException e) {
-                    Crashlytics.log("Line no 510"+e);
+                    FirebaseCrashlytics.getInstance().log("Line no 510"+e);
                     //Toast.makeText(getBaseContext(), R.string.bad_video, Toast.LENGTH_SHORT).show();
                     File fdelete = new File(outputs.getPath());
                     if (fdelete.exists()) {
@@ -451,7 +467,7 @@ public class OutputActivity extends AppCompatActivity {
                 video_location.setVisibility(View.GONE);
             }
         }catch (Exception e){
-            Crashlytics.log("Show Detial"+e);
+            FirebaseCrashlytics.getInstance().log("Show Detial"+e);
         }
     }
     @Override
@@ -493,85 +509,41 @@ public class OutputActivity extends AppCompatActivity {
             finish();
         }
     }
-    private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
-        // Set the media view. Media content will be automatically populated in the media view once
-        // adView.setNativeAd() is called.
-        MediaView mediaView = adView.findViewById(R.id.ad_media);
-        adView.setMediaView(mediaView);
 
-        // Set other ad assets.
-        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
-        adView.setBodyView(adView.findViewById(R.id.ad_body));
-        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
-        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
-        adView.setPriceView(adView.findViewById(R.id.ad_price));
-        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
-        adView.setStoreView(adView.findViewById(R.id.ad_store));
-        adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
-
-        // The headline is guaranteed to be in every UnifiedNativeAd.
-        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
-
-        // These assets aren't guaranteed to be in every UnifiedNativeAd, so it's important to
-        // check before trying to display them.
-        if (nativeAd.getBody() == null) {
-            adView.getBodyView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getBodyView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
-        }
-
-        if (nativeAd.getCallToAction() == null) {
-            adView.getCallToActionView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getCallToActionView().setVisibility(View.VISIBLE);
-            ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
-        }
-
-        if (nativeAd.getIcon() == null) {
-            adView.getIconView().setVisibility(View.GONE);
-        } else {
-            ((ImageView) adView.getIconView()).setImageDrawable(
-                    nativeAd.getIcon().getDrawable());
-            adView.getIconView().setVisibility(View.VISIBLE);
-        }
-
-        if (nativeAd.getPrice() == null) {
-            adView.getPriceView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getPriceView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getPriceView()).setText(nativeAd.getPrice());
-        }
-
-        if (nativeAd.getStore() == null) {
-            adView.getStoreView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getStoreView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getStoreView()).setText(nativeAd.getStore());
-        }
-
-        if (nativeAd.getStarRating() == null) {
-            adView.getStarRatingView().setVisibility(View.INVISIBLE);
-        } else {
-            ((RatingBar) adView.getStarRatingView())
-                    .setRating(nativeAd.getStarRating().floatValue());
-            adView.getStarRatingView().setVisibility(View.VISIBLE);
-        }
-
-        if (nativeAd.getAdvertiser() == null) {
-            adView.getAdvertiserView().setVisibility(View.INVISIBLE);
-        } else {
-            ((TextView) adView.getAdvertiserView()).setText(nativeAd.getAdvertiser());
-            adView.getAdvertiserView().setVisibility(View.VISIBLE);
-        }
-
-        // This method tells the Google Mobile Ads SDK that you have finished populating your
-        // native ad view with this native ad. The SDK will populate the adView's MediaView
-        // with the media content from this native ad.
-        adView.setNativeAd(nativeAd);
-
-
+public void FCMregistration(){
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        // Create channel to show notifications.
+        String channelId  = getString(R.string.default_notification_channel_id);
+        String channelName = getString(R.string.default_notification_channel_name);
+        NotificationManager notificationManager =
+                getSystemService(NotificationManager.class);
+        notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+                channelName, NotificationManager.IMPORTANCE_LOW));
     }
 
+    // If a notification message is tapped, any data accompanying the notification
+    // message is available in the intent extras. In this sample the launcher
+    // intent is fired when the notification is tapped, so any accompanying data would
+    // be handled here. If you want a different intent fired, set the click_action
+    // field of the notification message to the desired intent. The launcher intent
+    // is used when no click_action is specified.
+    //
+    // Handle possible data accompanying notification message.
+    // [START handle_data_extras]
+
+    // [END handle_data_extras]
+    FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
+            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+                    String msg = getString(R.string.msg_subscribed);
+                    if (!task.isSuccessful()) {
+                        msg = getString(R.string.msg_subscribe_failed);
+                    }
+                    Log.d("Output Activity", msg);
+                    //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                }
+            });
+}
 
 }

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:background="@color/primary"
+    android:background="@color/black"
     android:orientation="vertical">
 
     <LinearLayout
@@ -22,7 +22,6 @@
         android:horizontalSpacing="1dp"
         android:verticalSpacing="1dp"
         android:stretchMode="columnWidth"
-        android:background="@color/primary_dark"
         ></GridView>
         <LinearLayout
             android:id="@+id/videlist_adview"

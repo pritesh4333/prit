@@ -3,59 +3,48 @@ package com.prit.videocompressorpro.View;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.media.MediaMetadataRetriever;
-import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-
-import android.text.format.DateUtils;
 import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.ActionMode;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.RecyclerView;
-
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.Task;
-import com.prit.videocompressorpro.BuildConfig;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.prit.videocompressorpro.*;
 import com.prit.videocompressorpro.Model.Model_Video;
 import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.Utils.FileUtil;
@@ -63,30 +52,23 @@ import com.prit.videocompressorpro.Utils.Helper;
 import com.prit.videocompressorpro.Utils.InternetConnection;
 import com.prit.videocompressorpro.ViewModel.Adapter_Video;
 
-
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import uk.co.deanwild.materialshowcaseview.shape.CircleShape;
 
 import static com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE;
-//import static com.prit.videocompressorpro.ViewModel.Adapter_Video.ViewHolder.select_video;
 import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
 import static com.prit.videocompressorpro.ViewModel.Adapter_Video.isAnySelectec;
 
 
-public class VideoListActivity extends AppCompatActivity  {
+//import static import com.prit.videocompressorpro.ViewModel.Adapter_Video.ViewHolder.select_video;
+
+
+public class VideoListActivity extends AppCompatActivity {
 
     Adapter_Video obj_adapter;
     private static final int PICK_VIDEO_REQUEST = 2;
@@ -112,7 +94,7 @@ public class VideoListActivity extends AppCompatActivity  {
 
         appUpdateManager = AppUpdateManagerFactory.create(VideoListActivity.this);
         init();
-
+        FCMregistration();
 
 
     }
@@ -212,7 +194,7 @@ public class VideoListActivity extends AppCompatActivity  {
                 .setDelay(1000)
                 .setFadeDuration(500)
                 .setMaskColour(getResources().getColor(R.color.primary_dark))
-                .setContentTextColor(getResources().getColor(R.color.accent))
+                .setContentTextColor(getResources().getColor(R.color.yellow))
                 // optional but starting animations immediately in onCreate can make them choppy
                 // .singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
                 .show();
@@ -276,70 +258,10 @@ public class VideoListActivity extends AppCompatActivity  {
         }else {
             Helper.LogPrint("Else","Else");
             fn_video();
-            showMessagealert();
         }
     }
 
-    public void  showMessagealert(){
-        ViewGroup viewGroup = findViewById(android.R.id.content);
-        //then we will inflate the custom alert dialog xml that we created
-        View dialogView = LayoutInflater.from(VideoListActivity.this).inflate(R.layout.alert_more_apps, viewGroup, false);
-        //Now we need an AlertDialog.Builder object
-        AlertDialog.Builder builder = new AlertDialog.Builder(VideoListActivity.this);
-        //setting the view of the builder to our custom view that we already inflated
-        builder.setView(dialogView);
 
-        final AlertDialog alertDialog = builder.create();
-
-        TextView ok=(TextView)dialogView.findViewById(R.id.ok);
-        TextView more_apps_header=(TextView)dialogView.findViewById(R.id.more_apps_header);
-        TextView message=(TextView)dialogView.findViewById(R.id.message);
-        TextView appname=(TextView)dialogView.findViewById(R.id.appname);
-        ImageView app_logo=(ImageView)dialogView.findViewById(R.id.app_logo);
-        LinearLayout videocommproapp=(LinearLayout)dialogView.findViewById(R.id.videocompressorproapps);
-
-        more_apps_header.setText("ACTION REQUIRED");
-        app_logo.setBackground(getResources().getDrawable(R.drawable.fastvideo));
-
-        videocommproapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.pritesh.videocompressorpro_fastvideocompressor" )));
-                } catch (android.content.ActivityNotFoundException anfe) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.pritesh.videocompressorpro_fastvideocompressor")));
-                }
-            }
-
-        });
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.pritesh.videocompressorpro_fastvideocompressor" )));
-                } catch (android.content.ActivityNotFoundException anfe) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.pritesh.videocompressorpro_fastvideocompressor")));
-                }
-            }
-        });
-
-
-
-
-
-        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-        String message1  = prefs.getString("message", "");
-        if (!message1.isEmpty()){
-
-            message.setText(message1);
-            appname.setText("Video Compressor Pro");
-            message.setVisibility(View.VISIBLE);
-            alertDialog.show();
-        }else{
-
-        }
-    }
 
     private void showInterstitial() {
         if ( fulladdcount!=1) {
@@ -358,7 +280,7 @@ public class VideoListActivity extends AppCompatActivity  {
         String absolutePathOfImage = null;
         uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
 
-        String[] projection = {MediaStore.MediaColumns.DATA, MediaStore.Video.Media.BUCKET_DISPLAY_NAME,MediaStore.Video.Media._ID,MediaStore.Video.Thumbnails.DATA};
+        String[] projection = {MediaStore.MediaColumns.DATA, MediaStore.Video.Media.BUCKET_DISPLAY_NAME, MediaStore.Video.Media._ID, MediaStore.Video.Thumbnails.DATA};
 
         final String orderBy = MediaStore.Images.Media.DATE_MODIFIED;
         cursor = getApplicationContext().getContentResolver().query(uri, projection, null, null, orderBy + " DESC");
@@ -625,12 +547,12 @@ public class VideoListActivity extends AppCompatActivity  {
                         null, new MediaScannerConnection.OnScanCompletedListener() {
                             public void onScanCompleted(String path, Uri uri) {
                                 Intent shareIntent = new Intent(
-                                        android.content.Intent.ACTION_SEND);
+                                        Intent.ACTION_SEND);
                                 shareIntent.setType("video/*");
                                 shareIntent.putExtra(
-                                        android.content.Intent.EXTRA_SUBJECT, "Share");
+                                        Intent.EXTRA_SUBJECT, "Share");
                                 shareIntent.putExtra(
-                                        android.content.Intent.EXTRA_TITLE, "Share");
+                                        Intent.EXTRA_TITLE, "Share");
                                 shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
                                 shareIntent
                                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
@@ -695,7 +617,7 @@ public class VideoListActivity extends AppCompatActivity  {
 
                                             } else {
                                                 dialog.dismiss();
-                                                Toast.makeText(VideoListActivity.this,"File Not Found.",Toast.LENGTH_LONG).show();
+                                                Toast.makeText(VideoListActivity.this,"File Not Found.", Toast.LENGTH_LONG).show();
                                                 System.out.println("file not Found :" + path);
                                             }
                                         } catch (Exception e) {
@@ -706,7 +628,7 @@ public class VideoListActivity extends AppCompatActivity  {
 
                                 }
 
-                                Toast.makeText(VideoListActivity.this,"Delete",Toast.LENGTH_LONG).show();
+                                Toast.makeText(VideoListActivity.this,"Delete", Toast.LENGTH_LONG).show();
                                 Intent i = new Intent(VideoListActivity.this, VideoListActivity.class);
                                 startActivity(i);
                                 finish();
@@ -752,7 +674,41 @@ public class VideoListActivity extends AppCompatActivity  {
             }
         }
     }
+    public void FCMregistration(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // Create channel to show notifications.
+            String channelId  = getString(R.string.default_notification_channel_id);
+            String channelName = getString(R.string.default_notification_channel_name);
+            NotificationManager notificationManager =
+                    getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+                    channelName, NotificationManager.IMPORTANCE_LOW));
+        }
 
+        // If a notification message is tapped, any data accompanying the notification
+        // message is available in the intent extras. In this sample the launcher
+        // intent is fired when the notification is tapped, so any accompanying data would
+        // be handled here. If you want a different intent fired, set the click_action
+        // field of the notification message to the desired intent. The launcher intent
+        // is used when no click_action is specified.
+        //
+        // Handle possible data accompanying notification message.
+        // [START handle_data_extras]
+
+        // [END handle_data_extras]
+        FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+                        String msg = getString(R.string.msg_subscribed);
+                        if (!task.isSuccessful()) {
+                            msg = getString(R.string.msg_subscribe_failed);
+                        }
+                        Log.d("Output Activity", msg);
+                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
 
 
 

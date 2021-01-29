@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-    >
+    android:background="@color/black">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,60 +16,108 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/more_apps_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="More Apps From Us"
-                android:background="@color/accent"
+                android:background="@color/primary"
                 android:padding="13dp"
                 android:textSize="12sp"
-                android:textColor="@color/primary"></TextView>
+                android:textColor="@color/white"></TextView>
 
-        <LinearLayout
-            android:id="@+id/videocompressorproapps"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/message"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:gravity="center"
-                android:padding="5dp"
-                android:textSize="18sp"
-                android:visibility="visible"
-                android:background="@color/white"
-                android:textColor="@color/custome"></TextView>
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center">
+        <LinearLayout
+            android:id="@+id/videocompressorproapps"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
 
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/app_logo"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:background="@drawable/dp1"></ImageView>
+                android:background="@drawable/videotompthree"></ImageView>
 
             <TextView
-                android:id="@+id/appname"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Video To MP3"
+                android:text="Video To MP3 Converter"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:padding="5dp"
                 android:textSize="12sp"
                 android:textColor="#FFFFFF"></TextView>
 
         </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/reelsapps"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
-            <FrameLayout
-                android:id="@+id/fl_adplaceholder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp" />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/reels"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instagram Reels Download"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"></TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/aartiapp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/aartiapp"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aarti All In One "
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_alignParentBottom= "true"
+                android:visibility= "gone"
+                android:layout_marginTop="10dp"
+                android:id= "@+id/nativeTemplateViewAlert"
+                app:gnt_template_type= "@layout/gnt_medium_template_view"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content" />
 
             <TextView
                 android:id="@+id/ok"
@@ -80,7 +128,7 @@
                 android:gravity="center"
                 android:background="@color/gray"
                 android:padding="10dp"
-                android:textColor="@color/accent"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 ></TextView>

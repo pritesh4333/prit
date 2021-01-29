@@ -1,38 +1,31 @@
 package com.prit.videocompressorpro.Fcm;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.AudioAttributes;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
-import androidx.core.app.NotificationCompat;
-
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
-import android.widget.RemoteViews;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
+import com.prit.videocompressorpro.*;
 import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.Utils.Helper;
 import com.prit.videocompressorpro.View.MainActivity;
-
-import androidx.core.content.ContextCompat;
-
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,8 +33,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
-
-import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
 
 /**
  * NOTE: There can only be one service in each app that receives FCM messages. If multiple
@@ -57,7 +48,7 @@ import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
-    public static final String MY_PREFS_NAME = "VideoCompressPrefsFile";
+    public static final String MY_PREFS_NAME = "NewVideoCompressPrefsFile";
     /**
      * Called when message is received.
      *
@@ -95,27 +86,22 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         String banner_home_footer=data.get("banner_home_footer");
         String interstitial_full_screen=data.get("interstitial_full_screen");
         String natice_advanceadd=data.get("natice_advanceadd");
-        String message=data.get("message");
 
 
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String Default_admob_app_id = prefs.getString("admob_app_id", "");
 
-        SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+
 
         if (!Default_admob_app_id.equalsIgnoreCase(admob_app_id)) {
 
-
+            SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
             editor.putString("admob_app_id", admob_app_id);
             editor.putString("banner_home_footer", banner_home_footer);
             editor.putString("interstitial_full_screen", interstitial_full_screen);
             editor.putString("natice_advanceadd", natice_advanceadd);
-            editor.putString("message", message);
             editor.commit();
             Log.e("Update Adsend IDs","Done");
-        }else{
-            editor.putString("message", message);
-            editor.commit();
         }
         new sendNotification(this,title,body,image,update).execute();
 
@@ -134,7 +120,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
 
-        public sendNotification(Context ctx,String title, String body, String image, String update) {
+        public sendNotification(Context ctx, String title, String body, String image, String update) {
             this.ctx = ctx;
             this.title = title;
             this.body = body;

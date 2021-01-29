@@ -17,17 +17,17 @@
     <string name="admob_app_id">ca-app-pub-4959089160488184~8667649661</string>
     <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
     <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="natice_advanceadd">ca-app-pub-3940256099942544/1044960115</string>
+    <string name="natice_advanceadd"> ca-app-pub-3940256099942544/2247696110</string>
     <!--    <string name="natice_advanceaddvideo">ca-app-pub-3940256099942544/1044960115</string>-->
 
 
     <!--production-->
     <!--priteshparmar12@gmail.com-->
     <!--    &lt;!&ndash; AdMob ad unit IDs &ndash;&gt;-->
-    <!--        <string name="admob_app_id">ca-app-pub-4688988588571726~2668217756</string>-->
-    <!--        <string name="banner_home_footer">ca-app-pub-4688988588571726/5921641441</string>-->
-    <!--        <string name="interstitial_full_screen">ca-app-pub-4688988588571726/6057372810</string>-->
-    <!--        <string name="natice_advanceadd">ca-app-pub-4688988588571726/1982396439</string>-->
+<!--            <string name="admob_app_id">ca-app-pub-4688988588571726~5979981617</string>-->
+<!--            <string name="banner_home_footer">ca-app-pub-4688988588571726/1222478959</string>-->
+<!--            <string name="interstitial_full_screen">ca-app-pub-4688988588571726/8223001572</string>-->
+<!--            <string name="natice_advanceadd">ca-app-pub-4688988588571726/7213172236</string>-->
 
     <!--production-->
     <!--jilkakomal@gmail.com-->
@@ -51,10 +51,11 @@
      -->
     <!-- [START fcm_default_icon_string] -->
     <string name="default_notification_channel_id" translatable="false">InstagramReelsChannel_Id</string>
-    <string name="default_notification_channel_name" translatable="true">InstagramReelsChannelName</string>
-    <!--    <string name="default_notification_channel_name" translatable="true">InstagramReelsChannelNameTest</string>-->
+<!--    <string name="default_notification_channel_name" translatable="true">InstagramReelsChannelName</string>-->
+        <string name="default_notification_channel_name" translatable="true">InstagramReelsChannelNameTest</string>
     <!-- [END fcm_default_icon_string] -->
     <string name="msg_subscribed">Subscribed to InstagramReelsChannelName</string>
     <string name="msg_subscribe_failed">Failed to subscribe to InstagramReelsChannelName</string>
+    <string name="msg_token_fmt">msg_token_fmt</string>
 
 </resources>

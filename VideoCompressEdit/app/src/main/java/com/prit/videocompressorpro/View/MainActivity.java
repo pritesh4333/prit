@@ -1,31 +1,20 @@
 package com.prit.videocompressorpro.View;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
-import android.media.AudioAttributes;
-import android.media.AudioManager;
-import android.media.RingtoneManager;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
-import android.provider.MediaStore;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -35,11 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,21 +33,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
-
-
-import com.google.android.gms.ads.AdListener;
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
-import com.google.android.gms.ads.VideoOptions;
-import com.google.android.gms.ads.formats.MediaView;
-import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
-import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -75,19 +58,14 @@ import com.prit.videocompressorpro.R;
 import com.prit.videocompressorpro.Utils.Helper;
 import com.prit.videocompressorpro.Utils.InternetConnection;
 import com.prit.videocompressorpro.ViewModel.Adapter_Photos;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
-
+import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
+import nl.bravobit.ffmpeg.FFmpeg;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import uk.co.deanwild.materialshowcaseview.shape.CircleShape;
-import uk.co.deanwild.materialshowcaseview.shape.NoShape;
-import uk.co.deanwild.materialshowcaseview.shape.RectangleShape;
 
-import static com.crashlytics.android.Crashlytics.log;
 import static com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE;
 
 
@@ -95,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
     private static final int RC_APP_UPDATE = 0;
     private static final int MY_REQUEST_CODE = 1;
     private GridView gv_folder;
-    private Button videlist;
+    private LinearLayout videlist,video_List;
     TextView more_apps;
     private AdView mAdView;
     private static Activity activity;
-    public static final String MY_PREFS_NAME = "VideoCompressPrefsFile";
+    public static final String MY_PREFS_NAME = "NewVideoCompressPrefsFile";
 
     public static ArrayList<Model_images> al_images = new ArrayList<>();
     boolean boolean_folder;
@@ -121,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         gv_folder = (GridView) findViewById(R.id.gv_folder);
-        videlist = (Button) findViewById(R.id.videlist);
+        videlist = (LinearLayout) findViewById(R.id.videlist);
+        video_List = (LinearLayout) findViewById(R.id.video_List);
         more_apps=(TextView)findViewById(R.id.more_apps);
 
         activity=this;
@@ -150,7 +129,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        if (FFmpeg.getInstance(this).isSupported()) {
 
+            // ffmpeg is supported
+
+            versionFFmpeg();
+            //ffmpegTestTaskQuit();
+        } else {
+            // ffmpeg is not supported
+          //  Toast.makeText(this,"not support",Toast.LENGTH_LONG).show();
+            Helper.LogPrint("TAG","ffmpeg not supported!");
+        }
 
 
 
@@ -173,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
 
                 TextView ok=(TextView)dialogView.findViewById(R.id.ok);
                 LinearLayout videocommproapp=(LinearLayout)dialogView.findViewById(R.id.videocompressorproapps);
+                LinearLayout reelsapps=(LinearLayout)dialogView.findViewById(R.id.reelsapps);
+                LinearLayout aartiapp=(LinearLayout)dialogView.findViewById(R.id.aartiapp);
 
                 SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
                 String natice_advanceadd;
@@ -184,41 +175,29 @@ public class MainActivity extends AppCompatActivity {
                     admob_app_id = prefs.getString("admob_app_id", "");
                     natice_advanceadd = prefs.getString("natice_advanceadd","");
                 }
-                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd)
-                        .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+                final TemplateView[] template = new TemplateView[1];
 
-                            @Override
-                            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                                // Show the ad.
-                                // Assumes you have a placeholder FrameLayout in your View layout
-                                // (with id fl_adplaceholder) where the ad is to be placed.
-                                //Log.e("add loaded",""+unifiedNativeAd);
-                                FrameLayout frameLayout =dialogView.
-                                        findViewById(R.id.fl_adplaceholder);
-                                // Assumes that your ad layout is in a file call ad_unified.xml
-                                // in the res/layout folder
-                                UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
-                                        .inflate(R.layout.unified_ads, null);
-                                // This method sets the text, images and the native ad, etc into the ad
-                                // view.
-                                populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                                frameLayout.removeAllViews();
-                                frameLayout.addView(adView);
-                            }
-                        })
-                        .withAdListener(new AdListener() {
-                            @Override
-                            public void onAdFailedToLoad(int errorCode) {
-                                //   Log.e("add loaded",""+errorCode);
-                                // Handle the failure by logging, altering the UI, and so on.
-                              //   Toast.makeText(getApplicationContext(), "Ad failed to load! error code Native: " + errorCode, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .withNativeAdOptions(new NativeAdOptions.Builder()
-                                // Methods in the NativeAdOptions.Builder class can be
-                                // used here to specify individual options settings.
-                                .build())
-                        .build();
+                //Initializing the AdLoader   objects
+                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                    private ColorDrawable background;@Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                        NativeTemplateStyle styles = new
+                                NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                        template[0] = dialogView.findViewById(R.id.nativeTemplateViewAlert);
+                        template[0].setStyles(styles);
+                        template[0].setNativeAd(unifiedNativeAd);
+                        dialogView.findViewById(R.id.nativeTemplateViewAlert).setVisibility(View.VISIBLE);
+                        // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                        //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+                    }
+
+                }).build();
+
+
+                // load Native Ad with the Request
                 adLoader.loadAds(new AdRequest.Builder().build(),5);
 
                 videocommproapp.setOnClickListener(new View.OnClickListener() {
@@ -226,9 +205,33 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
                         try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.prit.videotomp3" )));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio" )));
                         } catch (android.content.ActivityNotFoundException anfe) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.prit.videotomp3")));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio")));
+                        }
+                    }
+
+                });
+                reelsapps.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.reels.video.download.instagram.video.downloader.saver.story.video" )));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.reels.video.download.instagram.video.downloader.saver.story.video")));
+                        }
+                    }
+
+                });
+                aartiapp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.pritesh.all.in.one.god.goddess.allinoneaarti" )));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.pritesh.all.in.one.god.goddess.allinoneaarti")));
                         }
                     }
 
@@ -265,6 +268,23 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        video_List.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (chekpermistion) {
+
+                    Intent ii = new Intent(MainActivity.this, MyVideoListActivity.class);
+                   // Intent ii = new Intent(MainActivity.this, NativeAdd.class);
+                    startActivity(ii);
+                } else {
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
+                            REQUEST_PERMISSIONS);
+                }
+
+            }
+        });
         gv_folder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -274,7 +294,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        showMessagealert();
         // Checkpermition
         chekpermisstion();
         if (InternetConnection.checkConnection(this)) {
@@ -397,7 +416,7 @@ public class MainActivity extends AppCompatActivity {
                     .setFadeDuration(500)
                     .setDismissOnTouch(true)
                     .setMaskColour(getResources().getColor(R.color.primary_dark))
-                    .setContentTextColor(getResources().getColor(R.color.accent))
+                    .setContentTextColor(getResources().getColor(R.color.yellow))
                     // optional but starting animations immediately in onCreate can make them choppy
                     //.singleUse("Videocompress") // provide a unique ID used to ensure it is only shown once
                     .show();
@@ -412,7 +431,20 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+    private void versionFFmpeg() {
+        FFmpeg.getInstance(this).execute(new String[]{"-version"}, new ExecuteBinaryResponseHandler() {
+            @Override
+            public void onSuccess(String message) {
+                Helper.LogPrint("TAG",message);
+            }
 
+            @Override
+            public void onProgress(String message) {
+                Helper.LogPrint("TAG",message);
+            }
+        });
+
+    }
     private void checkforUpdate() {
 
         // Creates instance of the manager.
@@ -459,8 +491,6 @@ public class MainActivity extends AppCompatActivity {
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)) && (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
                     Manifest.permission.READ_EXTERNAL_STORAGE))) {
 
-
-
             } else {
                 ActivityCompat.requestPermissions(MainActivity.this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
@@ -471,66 +501,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             chekpermistion = true;
 
-
-
-
         }
-    }
-
-   public void  showMessagealert(){
-       ViewGroup viewGroup = findViewById(android.R.id.content);
-       //then we will inflate the custom alert dialog xml that we created
-       View dialogView = LayoutInflater.from(MainActivity.this).inflate(R.layout.alert_more_apps, viewGroup, false);
-       //Now we need an AlertDialog.Builder object
-       AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-       //setting the view of the builder to our custom view that we already inflated
-       builder.setView(dialogView);
-
-       final AlertDialog alertDialog = builder.create();
-       alertDialog.setCancelable(false);
-
-       TextView ok=(TextView)dialogView.findViewById(R.id.ok);
-       TextView more_apps_header=(TextView)dialogView.findViewById(R.id.more_apps_header);
-       TextView message=(TextView)dialogView.findViewById(R.id.message);
-       TextView appname=(TextView)dialogView.findViewById(R.id.appname);
-       ImageView app_logo=(ImageView)dialogView.findViewById(R.id.app_logo);
-       LinearLayout videocommproapp=(LinearLayout)dialogView.findViewById(R.id.videocompressorproapps);
-
-       more_apps_header.setText("ACTION REQUIRED");
-       app_logo.setBackground(getResources().getDrawable(R.drawable.dp));
-
-       videocommproapp.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-
-               try {
-                   startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.pritesh.videocompressorpro_fastvideocompressor" )));
-               } catch (android.content.ActivityNotFoundException anfe) {
-                   startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.pritesh.videocompressorpro_fastvideocompressor")));
-               }
-           }
-
-       });
-       ok.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               try {
-                   startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.pritesh.videocompressorpro_fastvideocompressor" )));
-               } catch (android.content.ActivityNotFoundException anfe) {
-                   startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.pritesh.videocompressorpro_fastvideocompressor")));
-               }
-           }
-       });
-
-
-
-
-
-       message.setText("Kindly download video compressor pro Lite version from below link to enjoy same features because this app is remove from play store.");
-       appname.setText("Video Compressor Pro - INDIAN App");
-       message.setVisibility(View.VISIBLE);
-       alertDialog.show();
-
     }
 
     // Fetching image from gallery
@@ -612,7 +583,6 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i < grantResults.length; i++) {
                     if (grantResults.length > 0 && grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                         chekpermistion = true;
-
                     } else {
                         chekpermistion = false;
                         Toast.makeText(MainActivity.this, "The app was not allowed to read or write to your storage. Hence, it cannot function properly. Please consider granting it this permission", Toast.LENGTH_LONG).show();
@@ -656,41 +626,29 @@ public class MainActivity extends AppCompatActivity {
             admob_app_id = prefs.getString("admob_app_id", "");
             natice_advanceadd = prefs.getString("natice_advanceadd","");
         }
-        AdLoader adLoader = new AdLoader.Builder(this, natice_advanceadd)
-                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+        final TemplateView[] template = new TemplateView[1];
 
-                    @Override
-                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                        // Show the ad.
-                        // Assumes you have a placeholder FrameLayout in your View layout
-                        // (with id fl_adplaceholder) where the ad is to be placed.
-                        //Log.e("add loaded",""+unifiedNativeAd);
-                        FrameLayout frameLayout =dialogView.
-                                findViewById(R.id.fl_adplaceholder);
-                        // Assumes that your ad layout is in a file call ad_unified.xml
-                        // in the res/layout folder
-                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
-                                .inflate(R.layout.unified_ads, null);
-                        // This method sets the text, images and the native ad, etc into the ad
-                        // view.
-                        populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                        frameLayout.removeAllViews();
-                        frameLayout.addView(adView);
-                    }
-                })
-                .withAdListener(new AdListener() {
-                    @Override
-                    public void onAdFailedToLoad(int errorCode) {
-                     //   Log.e("add loaded",""+errorCode);
-                        // Handle the failure by logging, altering the UI, and so on.
-                       // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .withNativeAdOptions(new NativeAdOptions.Builder()
-                        // Methods in the NativeAdOptions.Builder class can be
-                        // used here to specify individual options settings.
-                        .build())
-                .build();
+        //Initializing the AdLoader   objects
+        AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+            private ColorDrawable background;@Override
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                NativeTemplateStyle styles = new
+                        NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                template[0] = dialogView.findViewById(R.id.nativeTemplateView);
+                template[0].setStyles(styles);
+                template[0].setNativeAd(unifiedNativeAd);
+                dialogView.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
+                // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            }
+
+        }).build();
+
+
+        // load Native Ad with the Request
         adLoader.loadAds(new AdRequest.Builder().build(),5);
 
         rateus.setOnClickListener(new View.OnClickListener() {
@@ -723,85 +681,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
-    private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
-        // Set the media view. Media content will be automatically populated in the media view once
-        // adView.setNativeAd() is called.
-        MediaView mediaView = adView.findViewById(R.id.ad_media);
-        adView.setMediaView(mediaView);
 
-        // Set other ad assets.
-        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
-        adView.setBodyView(adView.findViewById(R.id.ad_body));
-        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
-        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
-        adView.setPriceView(adView.findViewById(R.id.ad_price));
-        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
-        adView.setStoreView(adView.findViewById(R.id.ad_store));
-        adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
-
-        // The headline is guaranteed to be in every UnifiedNativeAd.
-        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
-
-        // These assets aren't guaranteed to be in every UnifiedNativeAd, so it's important to
-        // check before trying to display them.
-        if (nativeAd.getBody() == null) {
-            adView.getBodyView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getBodyView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
-        }
-
-        if (nativeAd.getCallToAction() == null) {
-            adView.getCallToActionView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getCallToActionView().setVisibility(View.VISIBLE);
-            ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
-        }
-
-        if (nativeAd.getIcon() == null) {
-            adView.getIconView().setVisibility(View.GONE);
-        } else {
-            ((ImageView) adView.getIconView()).setImageDrawable(
-                    nativeAd.getIcon().getDrawable());
-            adView.getIconView().setVisibility(View.VISIBLE);
-        }
-
-        if (nativeAd.getPrice() == null) {
-            adView.getPriceView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getPriceView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getPriceView()).setText(nativeAd.getPrice());
-        }
-
-        if (nativeAd.getStore() == null) {
-            adView.getStoreView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getStoreView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getStoreView()).setText(nativeAd.getStore());
-        }
-
-        if (nativeAd.getStarRating() == null) {
-            adView.getStarRatingView().setVisibility(View.INVISIBLE);
-        } else {
-            ((RatingBar) adView.getStarRatingView())
-                    .setRating(nativeAd.getStarRating().floatValue());
-            adView.getStarRatingView().setVisibility(View.VISIBLE);
-        }
-
-        if (nativeAd.getAdvertiser() == null) {
-            adView.getAdvertiserView().setVisibility(View.INVISIBLE);
-        } else {
-            ((TextView) adView.getAdvertiserView()).setText(nativeAd.getAdvertiser());
-            adView.getAdvertiserView().setVisibility(View.VISIBLE);
-        }
-
-        // This method tells the Google Mobile Ads SDK that you have finished populating your
-        // native ad view with this native ad. The SDK will populate the adView's MediaView
-        // with the media content from this native ad.
-        adView.setNativeAd(nativeAd);
-
-
-    }
     @Override
     public void onPause() {
         if (mAdView != null) {
@@ -888,13 +768,14 @@ public class MainActivity extends AppCompatActivity {
                 final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
 
                 final AlertDialog deleteDialog = new AlertDialog.Builder(MainActivity.this).create();
-                deleteDialog.setTitle("About");
                 deleteDialog.setView(deleteDialogView);
 
 
 
                 Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
                   TextView aboutinfo=(TextView) deleteDialogView.findViewById(R.id.aboutinfo);
+                  TextView header=(TextView) deleteDialogView.findViewById(R.id.header);
+                header.setText("About");
                 // For Live Native Express Adview
                 String natice_advanceadd;
                 SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -906,41 +787,29 @@ public class MainActivity extends AppCompatActivity {
                     admob_app_id = prefs.getString("admob_app_id", "");
                     natice_advanceadd = prefs.getString("natice_advanceadd","");
                 }
-                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd)
-                        .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+                final TemplateView[] template = new TemplateView[1];
 
-                            @Override
-                            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                                // Show the ad.
-                                // Assumes you have a placeholder FrameLayout in your View layout
-                                // (with id fl_adplaceholder) where the ad is to be placed.
-                              //  Log.e("add loaded",""+unifiedNativeAd);
-                                FrameLayout frameLayout =deleteDialogView.
-                                        findViewById(R.id.fl_adplaceholder);
-                                // Assumes that your ad layout is in a file call ad_unified.xml
-                                // in the res/layout folder
-                                UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
-                                        .inflate(R.layout.unified_ads, null);
-                                // This method sets the text, images and the native ad, etc into the ad
-                                // view.
-                                populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                                frameLayout.removeAllViews();
-                                frameLayout.addView(adView);
-                            }
-                        })
-                        .withAdListener(new AdListener() {
-                            @Override
-                            public void onAdFailedToLoad(int errorCode) {
-                               // Log.e("add loaded",""+errorCode);
-                                // Handle the failure by logging, altering the UI, and so on.
-                            //    Toast.makeText(getApplicationContext(), "Ad failed to load! error code Native: " + errorCode, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .withNativeAdOptions(new NativeAdOptions.Builder()
-                                // Methods in the NativeAdOptions.Builder class can be
-                                // used here to specify individual options settings.
-                                .build())
-                        .build();
+                //Initializing the AdLoader   objects
+                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                    private ColorDrawable background;@Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                        NativeTemplateStyle styles = new
+                                NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                        template[0] = deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback);
+                        template[0].setStyles(styles);
+                        template[0].setNativeAd(unifiedNativeAd);
+                        deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback).setVisibility(View.VISIBLE);
+                        // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                        //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+                    }
+
+                }).build();
+
+
+                // load Native Ad with the Request
                 adLoader.loadAds(new AdRequest.Builder().build(),5);
 
                 feedbacksubmit.setVisibility(View.GONE);
@@ -958,7 +827,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Video Compressor Pro");
-                    String shareMessage = "\nLet me recommend you this application\n\n";
+                    String shareMessage = "\nLet me recommend you this application\n\n You can easily compress video without lossing quality and share in any other app you want.\n\n";
                     shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "choose one"));
@@ -977,12 +846,14 @@ public class MainActivity extends AppCompatActivity {
                 LayoutInflater factory = LayoutInflater.from(MainActivity.this);
                 final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
                 final AlertDialog deleteDialog = new AlertDialog.Builder(MainActivity.this).create();
-                deleteDialog.setTitle("Feedback");
+
                 deleteDialog.setView(deleteDialogView);
 
 
 
                 Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
+                TextView header=(TextView) deleteDialogView.findViewById(R.id.header);
+                header.setText("Feedback");
                 // For Live Native Express Adview
                 String natice_advanceadd;
                 SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -994,42 +865,29 @@ public class MainActivity extends AppCompatActivity {
                     admob_app_id = prefs.getString("admob_app_id", "");
                     natice_advanceadd = prefs.getString("natice_advanceadd","");
                 }
-                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd)
+                final TemplateView[] template = new TemplateView[1];
 
-                        .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+                //Initializing the AdLoader   objects
+                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
 
-                            @Override
-                            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                                // Show the ad.
-                                // Assumes you have a placeholder FrameLayout in your View layout
-                                // (with id fl_adplaceholder) where the ad is to be placed.
-                             //   Log.e("add loaded",""+unifiedNativeAd);
-                                FrameLayout frameLayout =deleteDialogView.
-                                        findViewById(R.id.fl_adplaceholder);
-                                // Assumes that your ad layout is in a file call ad_unified.xml
-                                // in the res/layout folder
-                                UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
-                                        .inflate(R.layout.unified_ads, null);
-                                // This method sets the text, images and the native ad, etc into the ad
-                                // view.
-                                populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                                frameLayout.removeAllViews();
-                                frameLayout.addView(adView);
-                            }
-                        })
-                        .withAdListener(new AdListener() {
-                            @Override
-                            public void onAdFailedToLoad(int errorCode) {
-                          //      Log.e("add loaded",""+errorCode);
-                                // Handle the failure by logging, altering the UI, and so on.
-                           //     Toast.makeText(getApplicationContext(), "Ad failed to load! error code Native: " + errorCode, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .withNativeAdOptions(new NativeAdOptions.Builder()
-                                // Methods in the NativeAdOptions.Builder class can be
-                                // used here to specify individual options settings.
-                                .build())
-                        .build();
+                    private ColorDrawable background;@Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                        NativeTemplateStyle styles = new
+                                NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                        template[0] = deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback);
+                        template[0].setStyles(styles);
+                        template[0].setNativeAd(unifiedNativeAd);
+                        deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback).setVisibility(View.VISIBLE);
+                        // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                        //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+                    }
+
+                }).build();
+
+
+                // load Native Ad with the Request
                 adLoader.loadAds(new AdRequest.Builder().build(),5);
 
                 feedbacksubmit.setOnClickListener(new View.OnClickListener() {

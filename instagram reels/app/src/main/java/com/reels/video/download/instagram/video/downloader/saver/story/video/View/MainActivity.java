@@ -4,14 +4,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -22,12 +29,15 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,29 +66,49 @@ import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.android.play.core.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.reels.video.download.instagram.video.downloader.saver.story.video.BuildConfig;
+import com.reels.video.download.instagram.video.downloader.saver.story.video.Download;
+import com.reels.video.download.instagram.video.downloader.saver.story.video.DownloadService;
 import com.reels.video.download.instagram.video.downloader.saver.story.video.R;
+import com.reels.video.download.instagram.video.downloader.saver.story.video.RetrofitInterface;
 import com.reels.video.download.instagram.video.downloader.saver.story.video.Utils.Helper;
 import com.reels.video.download.instagram.video.downloader.saver.story.video.Utils.InternetConnection;
+import com.reels.video.download.instagram.video.downloader.saver.story.video.instagramlogin.util.InstagramApp;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+
+import okhttp3.Callback;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Retrofit;
 
 import static com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE;
 
 public class MainActivity extends AppCompatActivity {
-
+    TextView progress;
+    ProgressBar progressBar;
+    AdLoader  adLoader;
     EditText URL;
     AlertDialog alertDialog;
     View pd;
@@ -91,11 +121,20 @@ public class MainActivity extends AppCompatActivity {
     AdView mAdView;
     InterstitialAd mInterstitialAd;
     TextView moreapps;
+    ArrayList<String> imgUrls=new ArrayList<>();
+    public static final String MESSAGE_PROGRESS = "message_progress";
+    Boolean one=true ,two=true,three=true,four=true,five=true;
+
+    AdRequest adRequest;
+    File mypath=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        chekpermisstion();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+
+
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         admob_app_id = prefs.getString("admob_app_id", "");
         if (admob_app_id.equalsIgnoreCase("")){
@@ -114,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         mAdView.setAdSize(AdSize.BANNER);
         mAdView.setAdUnitId(banner_home_footer);
         adContainer.addView(mAdView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+          adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         //test creashlatecs
@@ -148,10 +187,23 @@ public class MainActivity extends AppCompatActivity {
         moreapps=(TextView) findViewById(R.id.more_apps);
         URL=(EditText)findViewById(R.id.URL);
 
+
+
         getall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (chekpermistion) {
+
+
+                    try {
+                        mypath = new File(Environment.getExternalStorageDirectory(), "Reels Video Downloader");
+
+                        if (!mypath.exists()) {
+                            if (!mypath.mkdirs()) {
+                                Helper.LogPrint("App", "failed to create directory");
+                            }
+                        }
+                    }catch(Exception e){}
                     Intent i = new Intent(MainActivity.this,MyVideoListActivity.class);
                     startActivity(i);
                 } else {
@@ -166,16 +218,31 @@ public class MainActivity extends AppCompatActivity {
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                ///// Downliad images url codition && !URL.getText().toString().trim().contains("www.instagram.com/p")
                 if (chekpermistion) {
 
                     if (URL.getText().toString().trim().isEmpty()){
                         URL.setError("Please Enter URL");
-                    }else if(!URL.getText().toString().trim().contains("www.instagram.com/reel") && !URL.getText().toString().trim().contains("www.instagram.com/tv")
-                            && !URL.getText().toString().trim().contains("www.instagram.com/p")){
+                    }else if(!URL.getText().toString().trim().contains("www.instagram.com/reel") &&
+                            !URL.getText().toString().trim().contains("www.instagram.com/tv")
+                            ){
                         URL.setError("Provide Instagram Reel or IGTV URL");
                     }else if(!InternetConnection.checkConnection(MainActivity.this)) {
                         Toast.makeText(MainActivity.this,"Please check Internet connection",Toast.LENGTH_LONG).show();
                     }else{
+                        registerReceiver();
+
+                        try {
+                            mypath = new File(Environment.getExternalStorageDirectory(), "Reels Video Downloader");
+
+                            if (!mypath.exists()) {
+                                if (!mypath.mkdirs()) {
+                                    Helper.LogPrint("App", "failed to create directory");
+                                }
+                            }
+                        }catch(Exception e){}
                         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(download.getWindowToken(), 0);
                         String fileUrl = URL.getText().toString().trim();
@@ -272,9 +339,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
                         try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.prit.videotomp3pro" )));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio" )));
                         } catch (android.content.ActivityNotFoundException anfe) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.prit.videotomp3pro")));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=mp3videoconverter.videotomp3converter.audioconverter.converter.videomaker.videotoaudio")));
                         }
                     }
 
@@ -299,14 +366,32 @@ public class MainActivity extends AppCompatActivity {
             Helper.LogPrint("No Internet","No internet");
         }
 
-//        try {
-//
-//            Integer i = null;
-//                    int c=i/0;
-//        }catch(Exception e){
-//            Crashlytics.log("Line no 384"+e);
-//        }
 
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            // Create channel to show notifications.
+//            String channelId  = getString(R.string.default_notification_channel_id);
+//            String channelName = getString(R.string.default_notification_channel_name);
+//            NotificationManager notificationManager =
+//                    getSystemService(NotificationManager.class);
+//            notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+//                    channelName, NotificationManager.IMPORTANCE_LOW));
+//        }
+//
+//
+//
+//        FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
+//                .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+//                        String msg = getString(R.string.msg_subscribed);
+//                        if (!task.isSuccessful()) {
+//                            msg = getString(R.string.msg_subscribe_failed);
+//                        }
+//                        Helper.LogPrint("LOG_TAG", msg);
+//                        // Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // Create channel to show notifications.
             String channelId  = getString(R.string.default_notification_channel_id);
@@ -316,20 +401,6 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(new NotificationChannel(channelId,
                     channelName, NotificationManager.IMPORTANCE_LOW));
         }
-
-        // If a notification message is tapped, any data accompanying the notification
-        // message is available in the intent extras. In this sample the launcher
-        // intent is fired when the notification is tapped, so any accompanying data would
-        // be handled here. If you want a different intent fired, set the click_action
-        // field of the notification message to the desired intent. The launcher intent
-        // is used when no click_action is specified.
-        //
-        // Handle possible data accompanying notification message.
-        // [START handle_data_extras]
-
-        // [END handle_data_extras]
-
-
         FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -338,10 +409,33 @@ public class MainActivity extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             msg = getString(R.string.msg_subscribe_failed);
                         }
-                        Helper.LogPrint("LOG_TAG", msg);
-                        // Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        Log.d("Notification", msg);
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
+
+
                 });
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w("TAG", "Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+
+                        // Log and toast
+                        String msg = getString(R.string.msg_token_fmt, token);
+                        Log.d("TAG", msg);
+                        Toast.makeText(MainActivity.this, "token"+msg, Toast.LENGTH_SHORT).show();
+                    }
+
+
+                });
+        chekpermisstion();
     }
     @Override
     public void onBackPressed() {
@@ -476,6 +570,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+        URL.setText("");
+
         if (mAdView != null) {
             mAdView.resume();
         }
@@ -677,35 +773,7 @@ public class MainActivity extends AppCompatActivity {
                         } catch (android.content.ActivityNotFoundException anfe) {
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
                         }
-//                            String feedbackvalue =text.getText().toString().trim();
-//                            if (feedbackvalue.equalsIgnoreCase("")) {
-//                                Toast.makeText(MainActivity.this,"Please provide feedback hear or in play store",Toast.LENGTH_LONG).show();
-//                            }else{
-//                                String androidSDK = "null", androidVersion = "null", androidBrand = "null",
-//                                        androidManufacturer = "null", androidModel = "null", androidDeviceId = "null";
-//                                String versionCode = "null", versionName = "null";
-//                                PackageInfo pInfo = null;
-//                                String deviceDetail = "null";
-//                                pInfo = MainActivity.this.getPackageManager().getPackageInfo(MainActivity.this.getPackageName(), 0);
-//                                versionCode = String.valueOf(pInfo.versionCode).trim();
-//                                versionName = String.valueOf(pInfo.versionName).trim();
-//                                androidSDK = String.valueOf(android.os.Build.VERSION.SDK_INT);
-//                                androidVersion = android.os.Build.VERSION.RELEASE;
-//                                androidBrand = android.os.Build.BRAND;
-//                                androidManufacturer = android.os.Build.MANUFACTURER;
-//                                androidModel = android.os.Build.MODEL;
-//                                androidDeviceId = Settings.Secure.getString(MainActivity.this.getContentResolver(), Settings.Secure.ANDROID_ID);
-//                                deviceDetail = "App Version Code: " + versionCode + "\nApp Version Number: " + versionName + "\nSDK: " + androidSDK + "\nVersion: " + androidVersion + "\nBrand: " + androidBrand +
-//                                        "\nManufacturer: " + androidManufacturer + "\nModel: " + androidModel + "\nAndroid Device Id: " + androidDeviceId;
-//
-//                                JSONObject feed = new JSONObject();
-//
-//                                feed.put("Feedback", feedbackvalue);
-//                                feed.put("deviceDetail", deviceDetail);
-//
-//
-//                                sendMessageToserver(feed);
-//                            }
+
                         deleteDialog.dismiss();
                     }
                 });
@@ -717,6 +785,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    private void registerReceiver(){
+
+        LocalBroadcastManager bManager = LocalBroadcastManager.getInstance(this);
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(MESSAGE_PROGRESS);
+        bManager.registerReceiver(broadcastReceiver, intentFilter);
+
     }
 
     public void chekpermisstion() {
@@ -761,9 +838,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private class JsonTask extends AsyncTask<String, String, String> {
-        TextView progress;
-        ProgressBar progressBar;
-        AdLoader  adLoader;
+
         protected void onPreExecute() {
             super.onPreExecute();
 
@@ -878,12 +953,34 @@ public class MainActivity extends AppCompatActivity {
             String loudScreaming="";
             String src="";
             try {
-                if (result == null) {
+                if (result == null ) {
                     alertDialog.dismiss();
                     String fileUrl = URL.getText().toString().trim();
-                    String[] parts = fileUrl.split("igshid");
-                    Helper.LogPrint("Log",parts[0]+"__a=1");
-                    new JsonTask().execute(parts[0]+"__a=1");
+                    if (fileUrl.contains("-")||fileUrl.contains("_")){
+
+                        new AlertDialog.Builder(MainActivity.this)
+                                .setTitle("Private Account")
+
+
+                                // Specifying a listener allows you to take an action before dismissing the dialog.
+                                // The dialog is automatically dismissed when a dialog button is clicked.
+                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Continue with delete operation
+                                        URL.setText("");
+
+                                    }
+                                })
+
+                                // A null listener allows the button to dismiss the dialog and take no further action.
+
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                    }else {
+                        String[] parts = fileUrl.split("igshid");
+                        Helper.LogPrint("Log", parts[0] + "__a=1");
+                        new JsonTask().execute(parts[0] + "__a=1");
+                    }
                 } else {
 
 
@@ -893,109 +990,27 @@ public class MainActivity extends AppCompatActivity {
                     try {
                           loudScreaming = jsonObject2.getString("video_url");
                     }catch(Exception e){
+                        imgUrls= new ArrayList<>();
                         JSONArray jsonArray=jsonObject2.getJSONArray("display_resources");
                         for (int i =0;i<jsonArray.length();i++){
                             JSONObject jsonObject3= jsonArray.getJSONObject(i);
                               src = jsonObject3.getString("src");
+                            imgUrls.add(src);
                             Helper.LogPrint("SRC",src);
                         }
 
                     }
-                    DownloadManager.Request request;
-                    if (loudScreaming.equalsIgnoreCase("")){
-                          request = new DownloadManager.Request(Uri.parse(src));
-                    }else{
-                          request = new DownloadManager.Request(Uri.parse(loudScreaming));
-                    }
-
-                    final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US);
-
-                    if (loudScreaming.equalsIgnoreCase("")) {
-                        request.setDescription("Instagram Post");
-                        request.setTitle("Post" + dateFormat.format(new Date()) + ".jpg");
-                    }else{
-                        request.setDescription("Instagram Reels");
-                        request.setTitle("Reels" + dateFormat.format(new Date()) + ".mp4");
-                    }
-                    request.allowScanningByMediaScanner();
-                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                    //request.setDestinationUri(Uri.fromFile(mypath));
-                    //Helper.LogPrint("path : ",Environment.getExternalStorageDirectory()+"/Instagram Reel"+"/Reels" + dateFormat.format(new Date()) + ".mp4" );
-                    //request.setDestinationInExternalFilesDir(MainActivity.this,null,"Reels" + dateFormat.format(new Date()) + ".mp4" );
-                    String name ="";
-                    if (URL.getText().toString().trim().contains("www.instagram.com/p")){
-                        if (loudScreaming.equalsIgnoreCase("")){
-                            name = "POST";
-                        }else {
-                            name = "IGTV";
-                        }
-                    }else{
-                        name="Reels";
-                    }
-                    if (loudScreaming.equalsIgnoreCase("")){
-                        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, name + dateFormat.format(new Date()) + ".jpg");
-                    }else {
-                        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, name + dateFormat.format(new Date()) + ".mp4");
-                    }
 
 
-                    final DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-
-                    final long downloadId = manager.enqueue(request);
-
-
-                    new Thread(new Runnable() {
-
-                        @Override
-                        public void run() {
-
-                            boolean downloading = true;
-
-                            while (downloading) {
-
-                                DownloadManager.Query q = new DownloadManager.Query();
-                                q.setFilterById(downloadId);
-
-                                Cursor cursor = manager.query(q);
-                                cursor.moveToFirst();
-                                int bytes_downloaded = cursor.getInt(cursor
-                                        .getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
-                                int bytes_total = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
-
-                                if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_SUCCESSFUL) {
-                                    downloading = false;
-                                }
-
-                                final int dl_progress = (int) ((bytes_downloaded * 100l) / bytes_total);
-
-                                runOnUiThread(new Runnable() {
-
-                                    @Override
-                                    public void run() {
-
-                                        //     Helper.LogPrint("Progrress percentage ", String.valueOf(dl_progress));
-                                        progress.setText(String.valueOf(dl_progress)+"%");
-                                        progressBar.setProgress(dl_progress);
-                                        if (dl_progress>25){
-                                            adLoader.loadAds(new AdRequest.Builder().build(),5);
-                                        }
-                                        if (dl_progress>50){
-                                            adLoader.loadAds(new AdRequest.Builder().build(),5);
-                                        }
-                                        if (dl_progress>75){
-                                            adLoader.loadAds(new AdRequest.Builder().build(),5);
-                                        }
+                        Intent intent = new Intent(MainActivity.this, DownloadService.class);
+                        intent.putExtra("url",loudScreaming.substring(39));
+                        intent.putExtra("path",mypath.toString());
+                        startService(intent);
 
 
-                                    }
-                                });
-                                statusMessage(cursor);
-                                //    Helper.LogPrint("MainActivity", statusMessage(cursor,dl_progress));
-                                cursor.close();
-                            }
 
-                        }
-                    }).start();
+
+
                 }
             } catch(JSONException e){
                 e.printStackTrace();
@@ -1010,65 +1025,66 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-    private String statusMessage(Cursor c) {
-       String msg = "";
 
-        switch (c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS))) {
-            case DownloadManager.STATUS_FAILED:
-                msg = "Download failed!";
-
-                alertDialog.dismiss();
-                MainActivity.this.runOnUiThread(new Runnable() {
-                    public void run() {
-
-                        showmessage("Download failed!");
-                    }
-                });
-                break;
-
-            case DownloadManager.STATUS_PAUSED:
-                msg = "Download paused!";
-
-                alertDialog.dismiss();
-
-                break;
-
-            case DownloadManager.STATUS_PENDING:
-                msg = "Download pending!";
-
-
-
-                break;
-
-            case DownloadManager.STATUS_RUNNING:
-                msg = "Download Running";
-                break;
-
-            case DownloadManager.STATUS_SUCCESSFUL:
-                msg = "Download complete! store in My Reels";
-                if (alertDialog.isShowing()) {
-                    alertDialog.dismiss();
-                    MainActivity.this.runOnUiThread(new Runnable() {
-                        public void run() {
-
-                            showmessage("Download complete save in My Reels.");
-                        }
-                    });
-                }
-
-
-                break;
-
-            default:
-                msg = "Download is nowhere in sight";
-
-                alertDialog.dismiss();
-
-                break;
-        }
-
-        return (msg);
-    }
+//    private String statusMessage(Cursor c) {
+//       String msg = "";
+//
+//        switch (c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS))) {
+//            case DownloadManager.STATUS_FAILED:
+//                msg = "Download failed!";
+//
+//                alertDialog.dismiss();
+//                MainActivity.this.runOnUiThread(new Runnable() {
+//                    public void run() {
+//
+//                        showmessage("Download failed!");
+//                    }
+//                });
+//                break;
+//
+//            case DownloadManager.STATUS_PAUSED:
+//                msg = "Download paused!";
+//
+//                alertDialog.dismiss();
+//
+//                break;
+//
+//            case DownloadManager.STATUS_PENDING:
+//                msg = "Download pending!";
+//
+//
+//
+//                break;
+//
+//            case DownloadManager.STATUS_RUNNING:
+//                msg = "Download Running";
+//                break;
+//
+//            case DownloadManager.STATUS_SUCCESSFUL:
+//                msg = "Download complete! store in My Reels";
+//                if (alertDialog.isShowing()) {
+//                    alertDialog.dismiss();
+//                    MainActivity.this.runOnUiThread(new Runnable() {
+//                        public void run() {
+//
+//                            showmessage("Download complete save in My Reels.");
+//                        }
+//                    });
+//                }
+//
+//
+//                break;
+//
+//            default:
+//                msg = "Download is nowhere in sight";
+//
+//                alertDialog.dismiss();
+//
+//                break;
+//        }
+//
+//        return (msg);
+//    }
 
 
     public void showmessage(String message){
@@ -1133,4 +1149,72 @@ public class MainActivity extends AppCompatActivity {
         aboutinfo.setLayoutParams(params);
         deleteDialog.show();
     }
+
+
+
+    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Download download = intent.getParcelableExtra("download");
+            if(intent.getAction().equals(MESSAGE_PROGRESS)) {
+
+                if (one) {
+                    if (download.getProgress() > 20) {
+                        adLoader.loadAds(new AdRequest.Builder().build(), 5);
+                        mAdView.loadAd(adRequest);
+                        one = false;
+                    }
+                }
+                if (two) {
+                    if (download.getProgress() > 40) {
+                        adLoader.loadAds(new AdRequest.Builder().build(), 5);
+                        mAdView.loadAd(adRequest);
+                        two = false;
+                    }
+                }
+                if (three) {
+                    if (download.getProgress() > 60) {
+                        adLoader.loadAds(new AdRequest.Builder().build(), 5);
+                        mAdView.loadAd(adRequest);
+                        three = false;
+                    }
+                }
+                if (four) {
+                    if (download.getProgress() > 80) {
+                        adLoader.loadAds(new AdRequest.Builder().build(), 5);
+                        mAdView.loadAd(adRequest);
+                        four = false;
+                    }
+                }
+                if (five) {
+                    if (download.getProgress() > 90) {
+                        adLoader.loadAds(new AdRequest.Builder().build(), 5);
+                        mAdView.loadAd(adRequest);
+                        five = false;
+                    }
+                }
+            }
+
+            progressBar.setProgress(download.getProgress());
+            if(download.getProgress() == 100){
+
+                progress.setText("File Download Complete");
+                if (alertDialog.isShowing()) {
+                    alertDialog.dismiss();
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        public void run() {
+
+                            showmessage("Download complete save in My Reels.");
+                        }
+                    });
+                }
+            } else {
+
+                progress.setText("Downloading "+" ( "+download.getCurrentFileSize()+" / "+download.getTotalFileSize()+" )");
+
+            }
+        }
+
+    };
 }

@@ -1,21 +1,24 @@
 package com.prit.videocompressorpro.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.documentfile.provider.DocumentFile;
-
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -26,23 +29,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.crashlytics.android.Crashlytics;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.prit.videocompressorpro.R;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.DecimalFormat;
 
 import static com.prit.videocompressorpro.View.MainActivity.MY_PREFS_NAME;
 
+
 public class OutputActivity extends AppCompatActivity {
     VideoView vv_video;
-    ImageView  output_delete;
+    ImageView output_delete;
     TextView mOutputInfoView;
     TextView resolutiontext;
     TextView outputtxt;
@@ -51,9 +63,12 @@ public class OutputActivity extends AppCompatActivity {
     TextView video_location;
     InterstitialAd mInterstitialAd;
     private AdView mAdView;
-    private  Boolean OutputVideoPlayingStatus=false;
+    private Boolean OutputVideoPlayingStatus=false;
     private MediaController mediaController;
     String admob_app_id,banner_home_footer,interstitial_full_screen;
+    String Scrren;
+    String Compress="";
+    public   int fulladdcount=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +91,8 @@ public class OutputActivity extends AppCompatActivity {
        // outputtxt=(TextView)findViewById(R.id.outputtxt);
 
         final String str_video = getIntent().getStringExtra("OutoutPath");
+        Scrren = getIntent().getStringExtra("Scrren");
+        Compress = getIntent().getStringExtra("Compress");
         vv_video.setVideoPath(str_video);
         mediaController = new MediaController(this);
         vv_video.setMediaController(mediaController);
@@ -115,7 +132,7 @@ public class OutputActivity extends AppCompatActivity {
             @Override
             public void onAdClosed() {
                 // Toast.makeText(getApplicationContext(), "Ad is closed!", Toast.LENGTH_SHORT).show();
-
+                fulladdcount=1;
             }
 
             @Override
@@ -125,11 +142,13 @@ public class OutputActivity extends AppCompatActivity {
 
             @Override
             public void onAdLeftApplication() {
+                fulladdcount=1;
                 // Toast.makeText(getApplicationContext(), "Ad left application!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAdOpened() {
+                fulladdcount=1;
                 // Toast.makeText(getApplicationContext(), "Ad is opened!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -171,7 +190,7 @@ public class OutputActivity extends AppCompatActivity {
                                         finish();
 
                                     } else {
-                                        Toast.makeText(OutputActivity.this,"File Not Found.",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(OutputActivity.this,"File Not Found.", Toast.LENGTH_LONG).show();
                                         System.out.println("file not Found :" + str_video);
                                     }
                                 } catch (Exception e) {
@@ -217,6 +236,17 @@ public class OutputActivity extends AppCompatActivity {
             public void onCompletion(MediaPlayer mp) {
 
                 OutputVideoPlayingStatus=false;
+                if (Compress!=null) {
+                    if (Compress.equalsIgnoreCase("Done")) {
+                        SharedPreferences prefss = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                        String rateuse = prefss.getString("rateUs", "");
+                        if (rateuse.equalsIgnoreCase("")) {
+                            feedbackPopup();
+                        } else {
+
+                        }
+                    }
+                }
 //                outputtxt.setText("Play");
 //                output_play.setBackground(getResources().getDrawable(R.drawable.ic_play));
             }
@@ -233,10 +263,101 @@ public class OutputActivity extends AppCompatActivity {
             }
         });
         ShowVideoOutputDetial(new File(str_video));
+
+        FCMregistration();
+        if (Compress!=null) {
+            if (Compress.equalsIgnoreCase("Done")) {
+                SharedPreferences prefss = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String rateuse = prefss.getString("rateUs", "");
+                if (rateuse.equalsIgnoreCase("")) {
+                    feedbackPopup();
+                } else {
+
+                }
+            }
+        }
+
     }
+    private void feedbackPopup()
+    {
+
+        LayoutInflater factory = LayoutInflater.from(OutputActivity.this);
+        final View deleteDialogView = factory.inflate(R.layout.feedbackpopup, null);
+        final AlertDialog deleteDialog = new AlertDialog.Builder(OutputActivity.this).create();
+        deleteDialog.setView(deleteDialogView);
+
+
+        TextView loveapp=(TextView)deleteDialogView.findViewById(R.id.header);
+        loveapp.setText("Rate us if you like this app?");
+        loveapp.setTextSize(15);
+        Button feedbacksubmit = (Button) deleteDialogView.findViewById(R.id.feedbacksubmit);
+        // For Live Native Express Adview
+        String natice_advanceadd;
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        admob_app_id = prefs.getString("admob_app_id", "");
+        if (admob_app_id.equalsIgnoreCase("")){
+            admob_app_id=getString(R.string.admob_app_id);
+            natice_advanceadd=getString(R.string.natice_advanceadd);
+        }else {
+            admob_app_id = prefs.getString("admob_app_id", "");
+            natice_advanceadd = prefs.getString("natice_advanceadd","");
+        }
+        final TemplateView[] template = new TemplateView[1];
+
+        //Initializing the AdLoader   objects
+        AdLoader adLoader = new AdLoader.Builder(OutputActivity.this, natice_advanceadd).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+            private ColorDrawable background;@Override
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                NativeTemplateStyle styles = new
+                        NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                template[0] = deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback);
+                template[0].setStyles(styles);
+                template[0].setNativeAd(unifiedNativeAd);
+                deleteDialogView.findViewById(R.id.nativeTemplateViewFeedback).setVisibility(View.VISIBLE);
+                // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                //   Toast.makeText(MainActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            }
+
+        }).build();
+
+
+        // load Native Ad with the Request
+        adLoader.loadAds(new AdRequest.Builder().build(),5);
+
+        feedbacksubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.putString("rateUs", "Done");
+                editor.commit();
+
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                }
+
+                deleteDialog.dismiss();
+            }
+        });
+
+        deleteDialog.show();
+
+
+
+
+    }
+
+
     private void showInterstitial() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if ( fulladdcount!=1) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
         }
     }
     public void shareVideo(final String title, String path) {
@@ -246,12 +367,12 @@ public class OutputActivity extends AppCompatActivity {
                 null, new MediaScannerConnection.OnScanCompletedListener() {
                     public void onScanCompleted(String path, Uri uri) {
                         Intent shareIntent = new Intent(
-                                android.content.Intent.ACTION_SEND);
+                                Intent.ACTION_SEND);
                         shareIntent.setType("video/*");
                         shareIntent.putExtra(
-                                android.content.Intent.EXTRA_SUBJECT, title);
+                                Intent.EXTRA_SUBJECT, title);
                         shareIntent.putExtra(
-                                android.content.Intent.EXTRA_TITLE, title);
+                                Intent.EXTRA_TITLE, title);
                         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
                         shareIntent
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
@@ -302,7 +423,7 @@ public class OutputActivity extends AppCompatActivity {
 
 
                 } catch (NumberFormatException e) {
-                    Crashlytics.log("Line no 510"+e);
+                    FirebaseCrashlytics.getInstance().log("Line no 510"+e);
                     //Toast.makeText(getBaseContext(), R.string.bad_video, Toast.LENGTH_SHORT).show();
                     File fdelete = new File(outputs.getPath());
                     if (fdelete.exists()) {
@@ -341,7 +462,7 @@ public class OutputActivity extends AppCompatActivity {
                 video_location.setVisibility(View.GONE);
             }
         }catch (Exception e){
-            Crashlytics.log("Show Detial"+e);
+            FirebaseCrashlytics.getInstance().log("Show Detial"+e);
         }
     }
     @Override
@@ -368,11 +489,56 @@ public class OutputActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i = new Intent(OutputActivity.this,VideoListActivity.class);
-        startActivity(i);
-        finish();
 
+        if (Scrren!=null) {
+            if (Scrren.equalsIgnoreCase("MyVideo")) {
+                Intent i = new Intent(OutputActivity.this, MyVideoListActivity.class);
+                startActivity(i);
+                finish();
+            } else {
+
+            }
+        }else{
+            Intent i = new Intent(OutputActivity.this, VideoListActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 
+public void FCMregistration(){
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        // Create channel to show notifications.
+        String channelId  = getString(R.string.default_notification_channel_id);
+        String channelName = getString(R.string.default_notification_channel_name);
+        NotificationManager notificationManager =
+                getSystemService(NotificationManager.class);
+        notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+                channelName, NotificationManager.IMPORTANCE_LOW));
+    }
+
+    // If a notification message is tapped, any data accompanying the notification
+    // message is available in the intent extras. In this sample the launcher
+    // intent is fired when the notification is tapped, so any accompanying data would
+    // be handled here. If you want a different intent fired, set the click_action
+    // field of the notification message to the desired intent. The launcher intent
+    // is used when no click_action is specified.
+    //
+    // Handle possible data accompanying notification message.
+    // [START handle_data_extras]
+
+    // [END handle_data_extras]
+    FirebaseMessaging.getInstance().subscribeToTopic(getString(R.string.default_notification_channel_name))
+            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+                    String msg = getString(R.string.msg_subscribed);
+                    if (!task.isSuccessful()) {
+                        msg = getString(R.string.msg_subscribe_failed);
+                    }
+                    Log.d("Output Activity", msg);
+                    //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                }
+            });
+}
 
 }

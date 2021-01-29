@@ -30,6 +30,7 @@
             android:gravity="center_horizontal" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -110,6 +111,8 @@
 
 
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
