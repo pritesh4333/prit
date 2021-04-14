@@ -230,15 +230,17 @@ Pin = 4333
 
 HDFC account details
 customer id - 139493794
-mobile pass and net pass-prit@4333
+mobile pass and net pass-Prit@4333
 account number 50100352191117
 ifsc code - HDFC0004417
 name - pritesh chaganbhai
+card no - 5260 9901 0343 1512
+10/25 EXP 1512 604 CVV
 
 
 
 all cards pin
-Ic 4333 corp 5237 IDFC 4333 SBI 4333
+Ic 4333 corp 5237 IDFC 4333 SBI 4333 HDFC 4333
 
 7 Q Ekta socity mahajanwadi mira gaonthan near vishnu mandir gaondevi compund near bapa sitaram mandir thane 401107
 
@@ -264,7 +266,7 @@ pradeep password= 0963
 
 aditya birla capital login 
 username-Priteshparmar100
-password otp
+password Prit.4333
 
 7363 
  13622
@@ -296,6 +298,27 @@ komal policy
 918721399   1993   89.50  2082.5
 totoal                     3605
 
+ 
+ komal policy 
+ policy number 896106763
+ m no 8976876079
+ premium amt 2015
+ emaild = jilkakomal@gmail
+ dob 11/02/1995
+
+ komal policy  
+ policy number 918721399
+ m no 8976876079
+ premium amt 1993.00
+ emaild = jilkakomal@gmail
+ dob 11/02/1995
+ 
+  komal policy 
+ policy number 918721400
+ m no 8976876079
+ premium amt 1456.00
+ emaild = jilkakomal@gmail
+ dob 11/02/1995
  
 Tata AIA Login detail
 policy no C206202725
@@ -446,6 +469,9 @@ mobile no 8976876079
 premium amount 1993.00
 email id = jilkakomal@gmail.com
 dob 11/02/1995
+
+icici Mutual fund karan trivedi
+folio number 16882767
  
 
 https://people.zoho.com/taxgenie/zp#home/dashboard
@@ -639,3 +665,12 @@ Hi Tech surgical system LLP
 
 https://www.instagram.com/reel/CIC1H-LpzQ-/?__a=1
 
+122 cash 
+bs4
+disc break 1
+mira road AL moter penkar pada tabela pase 
+amar palace road 
+
+New Gmail id
+Email id :- ToolCreation9987@gmail.com
+pass:- 9987246931
