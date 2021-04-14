@@ -250,8 +250,67 @@ Authorization key=AAAA5VQ30VI:APA91bFuHn7pVQZLi8u3718KMMhcpywrRd9hEi5e0muF8w2rrf
 }
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+///// Video compressor 
+///// priteshparmar102@gmail
+post https://fcm.googleapis.com/fcm/send
+header key value 
+Content-Type    application/json
+Authorization key=AAAA5VQ30VI:APA91bFuHn7pVQZLi8u3718KMMhcpywrRd9hEi5e0muF8w2rrfHP7uE4gJDxetpgFSBvbGcJ0V7NSP0x7tJdLhlr5orczVe6WdG0KAuJurGbDVw7wzc8WlPU2GQF-YUHqJOa-dTwvP9L
+
+
+//Test
+{
+    "to" : "/topics/VideoCompressorChannelName",
+    "data": {
+    "title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+ "admob_app_id":"ca-app-pub-4959089160488184~8667649661",
+     "banner_home_footer":"ca-app-pub-3940256099942544/6300978111",
+      "interstitial_full_screen":"ca-app-pub-3940256099942544/1033173712",
+       "natice_advanceadd":"ca-app-pub-3940256099942544/1044960115"
+    },"notification":{
+    	"title" : "test",
+    "body" : "Bodypostmanasdasdasdasdasdasdadsadasdfsdfsdfsdfsdfsdfasfasfafe",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"yes",
+    "admob_app_id":"ca-app-pub-4959089160488184~8667649661",
+     "banner_home_footer":"ca-app-pub-3940256099942544/6300978111",
+      "interstitial_full_screen":"ca-app-pub-3940256099942544/1033173712",
+       "natice_advanceadd":"ca-app-pub-3940256099942544/1044960115"
+    }
+}
+
+// production
+{
+    "to" : "/topics/VideoCompressorChannelName",
+    "data": {
+    "title" : "Stay home stay safe",
+    "body" : "Stay home stay safe.",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"No",
+        "admob_app_id":"ca-app-pub-4688988588571726~5618809292",
+     "banner_home_footer":"ca-app-pub-4688988588571726/5196746896",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/6283238484",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/2379011868"
+    },"notification":{
+    	"title" : "Stay home stay safe",
+    "body" : "Stay home stay safe.",
+    "image" : "https://i.ibb.co/HY25sV1/dp.png",
+    "update":"No",
+     "admob_app_id":"ca-app-pub-4688988588571726~5618809292",
+     "banner_home_footer":"ca-app-pub-4688988588571726/5196746896",
+      "interstitial_full_screen":"ca-app-pub-4688988588571726/6283238484",
+       "natice_advanceadd":"ca-app-pub-4688988588571726/2379011868"
+    }
+}
+
 
 Logo Maker
 https://www.designhill.com/tools/logo-maker
 https://video-to-mp3.flycricket.io/privacy.html
+https://video-compressor-1.flycricket.io/privacy.html
 https://app.flycricket.com/app/95ba5c4cfc6a4cb59bb8c836419d5771

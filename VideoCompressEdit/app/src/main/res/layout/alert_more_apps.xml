@@ -33,7 +33,7 @@
         <LinearLayout
             android:id="@+id/videocompressorproapps"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
 
@@ -63,6 +63,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <ImageView
@@ -86,7 +87,7 @@
                 <LinearLayout
                     android:id="@+id/aartiapp"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical">
