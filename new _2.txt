@@ -459,16 +459,28 @@ Total apps 46
 komal pilciy details
 Policy Number 896106763
 mobile no 8976876079
-premium amount 2015
+premium amount 2060.34   
 email id = jilkakomal@gmail.com
 dob 11/02/1995
 
 komal pilciy details
 Policy Number 918721399
 mobile no 8976876079
-premium amount 1993.00
+premium amount 1993.00 1521.5
 email id = jilkakomal@gmail.com
 dob 11/02/1995
+
+komal pilciy details
+Policy Number 918721400
+mobile no 8976876079
+premium amount 2082.5
+email id = jilkakomal@gmail.com
+dob 11/02/1995
+
+komal policy 
+918721400   1456  65.50   1521.5
+918721399   1993   89.50  2082.5
+totoal                     3605
 
 icici Mutual fund karan trivedi
 folio number 16882767
@@ -674,3 +686,35 @@ amar palace road
 New Gmail id
 Email id :- ToolCreation9987@gmail.com
 pass:- 9987246931
+-----------------------------------------------------------------------------------------------------
+Investment declaration 
+
+
+komal cancer 1187 
+pritesh komal health insurance 11491
+pritesh accident 1160
+pritesh cancer 857 
+future genraly 3528
+
+Life insurance Totoal  18223
+
+
+Term insurance total 33252
+
+LIC payment 
+
+pradeep 5090
+prit 5026
+papa 5444
+mom 1376
+
+komal 	8060
+komal Lic 43260
+
+pritesh 11628
+
+Lic total 79853
+
+
+Mutual fund 12000
+---------------------------------------------------------------------------------------------------------
