@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Reels Video Downloader</string>
+    <string name="details_video_info">%1$sx%2$s, %3$s, %4$s</string>
+
+</resources>
