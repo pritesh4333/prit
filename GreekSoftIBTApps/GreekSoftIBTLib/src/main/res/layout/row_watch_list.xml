@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@color/bajaj_black"
+    android:id="@+id/watchlist_row"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/symbolname_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:text=""
+            android:textColor="@color/white"
+         />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/descriptionname_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="horizontal"
+            android:freezesText="true"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:text="NSE"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/ltp_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:focusable="false"
+            android:gravity="end"
+            android:text="34178.00"
+            android:textColor="@color/white"
+         />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/change_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:focusable="false"
+            android:gravity="end"
+            android:text="-8.50(0.25)"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!--    <bfsl.GreekTextView-->
+    <!--        android:id="@+id/strip"-->
+    <!--        android:layout_width="7dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginBottom="2dp"-->
+    <!--        android:layout_marginTop="2dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:visibility="gone"></bfsl.GreekTextView>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:background="@drawable/ripple_effect_view"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="fill_parent"-->
+    <!--            android:layout_weight="2.2"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <bfsl.GreekTextView-->
+    <!--                android:id="@+id/symbolname_text"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:paddingLeft="5dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:text="hdfc"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="11sp" />-->
+
+    <!--            <bfsl.GreekTextView-->
+    <!--                android:id="@+id/descriptionname_text"-->
+    <!--                android:layout_width="fill_parent"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:fadingEdge="horizontal"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:paddingLeft="5dp"-->
+    <!--                android:scrollHorizontally="true"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:text="hdfc"-->
+    <!--                android:visibility="gone"-->
+    <!--                android:freezesText="true"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="9sp"/>-->
+    <!--        </LinearLayout>-->
+
+    <!--        <bfsl.GreekTextView-->
+    <!--            android:id="@+id/ltp_text"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:layout_marginBottom="7dp"-->
+    <!--            android:layout_marginTop="7dp"-->
+    <!--            android:layout_weight="1.2"-->
+    <!--            android:focusable="false"-->
+    <!--            android:gravity="center|end"-->
+    <!--            android:paddingRight="5dp"-->
+    <!--            android:text="hdfc"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="11sp" />-->
+
+    <!--        <bfsl.GreekTextView-->
+    <!--            android:id="@+id/change_text"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_weight="1.0"-->
+    <!--            android:focusable="false"-->
+    <!--            android:gravity="right|center"-->
+    <!--            android:text="hdfc"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="11sp" />-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_weight="1">-->
+
+    <!--            <bfsl.GreekTextView-->
+    <!--                android:id="@+id/perchange_text"-->
+    <!--                style="@style/ListItem.Head"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_toLeftOf="@+id/updownArrow"-->
+    <!--                android:layout_weight="0.9"-->
+    <!--                android:focusable="false"-->
+    <!--                android:gravity="right|end"-->
+    <!--                android:text="123456"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="11sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <ImageView-->
+
+    <!--                android:id="@+id/updownArrow"-->
+    <!--                android:layout_width="12dp"-->
+    <!--                android:layout_height="12dp"-->
+    <!--                android:layout_alignParentRight="true"-->
+    <!--                android:layout_marginRight="5dp"-->
+    <!--                android:layout_marginTop="4dp" />-->
+    <!--            &lt;!&ndash; <ImageView-->
+    <!--                 android:id="@+id/down"-->
+    <!--                 android:layout_alignParentRight="true"-->
+    <!--                 android:layout_width="10dp"-->
+    <!--                 android:layout_height="10dp"-->
+    <!--                 />&ndash;&gt;-->
+    <!--        </RelativeLayout>-->
+
+    <!--        &lt;!&ndash;<bfsl.GreekTextView&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:id="@+id/perchange_text"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_marginBottom="5dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:gravity="right|center"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:text="hdfc"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:textSize="11sp" />&ndash;&gt;-->
+    <!--        &lt;!&ndash; <arcadiaiew.GreekTextView-->
+    <!--             android:id="@+id/holdingValues"-->
+    <!--             android:layout_width="0dp"-->
+    <!--             android:layout_height="match_parent"-->
+    <!--             android:text="Holding Price"-->
+    <!--             android:textColor="@color/white"-->
+    <!--             android:layout_marginTop="5dp"-->
+    <!--             android:layout_marginBottom="5dp"-->
+    <!--             android:layout_marginLeft="5dp"-->
+    <!--             android:layout_marginRight="5dp"-->
+    <!--             android:gravity="center"-->
+    <!--             android:layout_gravity="center_vertical"-->
+    <!--             android:layout_weight="1"-->
+    <!--             />&ndash;&gt;-->
+    <!--    </LinearLayout>-->
+</LinearLayout>

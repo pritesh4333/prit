@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/red_but_sel"
+            android:visibility="gone" />
+
+        <com.acumengroup.ui.textview.ScrollingTextView
+            android:id="@+id/tv_sch_name"
+            style="@style/ListItem.Head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="2dp"
+            android:text="Symbol"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <com.acumengroup.ui.textview.ScrollingTextView
+            android:id="@+id/tv_recorddate"
+            style="@style/ListItem.Head"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="2dp"
+            android:text="LTP (\u20B9)"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/tv_DivAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="2dp"
+            android:text="Vol(000)"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

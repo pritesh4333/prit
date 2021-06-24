@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pagerFragmentPortfolio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/snap"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone">
+
+        <include layout="@layout/fragment_snapshot"></include>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/watchlist"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone">
+
+        <include layout="@layout/fragment_watchlist"></include>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/last_visited"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone">
+
+        <include layout="@layout/fragment_portfolio_lastvisited">
+
+        </include>
+
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fltLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <com.acumengroup.mobile.portfolio.portfolioFloatAction
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|end">
+
+        </com.acumengroup.mobile.portfolio.portfolioFloatAction>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.acumengroup.mobile.viewpagerindicator.TabPageIndicator
+        android:id="@+id/indicator"
+        style="@style/StyledIndicators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.acumengroup.ui.CustomViewPager
+        android:id="@+id/portfolioPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fltLayout"
+        android:visibility="visible" />
+
+    <!--<RelativeLayout
+    android:id="@+id/fltBtns"
+    android:layout_below="@+id/snap"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/float_Button_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/flt_snapshot"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                app:backgroundTint="@color/orange_bg"
+                app:elevation="8dp"
+                app:borderWidth="0dp"
+                android:scaleType="center"
+                android:src="@drawable/my_snapshot"/>
+
+           <com.bfsl.ui.textview.GreekTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/QT_SNAPSHOT_TXT"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/flt_watchlist"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                app:backgroundTint="@color/orange_bg"
+                app:elevation="6dp"
+                app:borderWidth="0dp"
+                android:scaleType="center"
+                android:src="@drawable/my_watchlist"/>
+
+         <com.bfsl.ui.textview.GreekTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/GREEK_MENU_WATCHLIST_TXT"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/flt_last_visited"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                app:backgroundTint="@color/orange_bg"
+                app:elevation="6dp"
+                app:borderWidth="0dp"
+                android:scaleType="center"
+                android:src="@drawable/last_visited"/>
+          <com.bfsl.ui.textview.GreekTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/GREEK_MENU_LASTVISITED_TXT"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>-->
+
+</RelativeLayout>

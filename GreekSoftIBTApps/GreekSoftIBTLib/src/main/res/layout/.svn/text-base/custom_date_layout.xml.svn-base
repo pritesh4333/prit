@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/custom_date_parentLayout"
+    android:layout_above="@+id/data_popup_layout"
+    android:background="@color/bajaj_black"
+    android:orientation="vertical">
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectDate_txt"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="SELECT DATE"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#fff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/middle_layout"
+        android:layout_marginTop="20dp"
+        android:background="@color/bajaj_black"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fron_txt"
+                android:text="From"
+                android:paddingLeft="@dimen/_2sdp"
+                android:textColor="@color/white"/>
+
+        <com.acumengroup.ui.edittext.GreekEditText
+            android:id="@+id/edt_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/cal_iconi"
+            android:hint=""
+            android:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:inputType="number"
+            android:singleLine="true"
+            android:clickable="true"
+            android:focusable="false"
+            android:textColorHint="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/to_txt"
+                android:text="To"
+                 android:gravity="right"
+                android:layout_marginRight="@dimen/_1sdp"
+                android:paddingLeft="@dimen/_2sdp"
+                android:textColor="@color/white"/>
+
+        <com.acumengroup.ui.edittext.GreekEditText
+            android:id="@+id/edt_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:backgroundTint="@color/white"
+            android:singleLine="true"
+            android:clickable="true"
+            android:focusable="false"
+            android:textColor="#fff"
+            android:drawableRight="@drawable/cal_iconi"
+            android:hint=""
+            android:textColorHint="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        
+        android:background="@drawable/single_line_border_bajaj"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/CP_SUBMIT_BTN"
+        android:textColor="@color/white" />
+
+</LinearLayout>

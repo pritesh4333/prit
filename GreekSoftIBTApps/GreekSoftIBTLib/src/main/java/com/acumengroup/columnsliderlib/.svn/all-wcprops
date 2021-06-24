@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 266
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib
+END
+DataSetObserverProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/DataSetObserverProxy.java
+END
+AdaptiveTableManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableManager.java
+END
+ScrollType.java
+K 25
+svn:wc:ra_dav:version-url
+V 282
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/ScrollType.java
+END
+AdaptiveTableLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableLayout.java
+END
+AdaptiveTableState.java
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableState.java
+END
+AdaptiveTableAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableAdapter.java
+END
+OnItemClickListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/OnItemClickListener.java
+END
+Recycler.java
+K 25
+svn:wc:ra_dav:version-url
+V 280
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/Recycler.java
+END
+ViewHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 282
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/ViewHolder.java
+END
+ViewHolderType.java
+K 25
+svn:wc:ra_dav:version-url
+V 286
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/ViewHolderType.java
+END
+LayoutDirectionHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 293
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/LayoutDirectionHelper.java
+END
+LayoutDirection.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/LayoutDirection.java
+END
+LinkedAdaptiveTableAdapterImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 302
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/LinkedAdaptiveTableAdapterImpl.java
+END
+SmoothScrollRunnable.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/SmoothScrollRunnable.java
+END
+DragAndDropPoints.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/DragAndDropPoints.java
+END
+AdaptiveTableManagerRTL.java
+K 25
+svn:wc:ra_dav:version-url
+V 295
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableManagerRTL.java
+END
+SparseMatrix.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/SparseMatrix.java
+END
+AdaptiveTableDataSetObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 300
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableDataSetObserver.java
+END
+AdaptiveTableLayoutSettings.java
+K 25
+svn:wc:ra_dav:version-url
+V 299
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/AdaptiveTableLayoutSettings.java
+END
+ShadowHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/ShadowHelper.java
+END
+OnItemLongClickListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 295
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/OnItemLongClickListener.java
+END
+ViewHolderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 286
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/ViewHolderImpl.java
+END
+DragAndDropScrollRunnable.java
+K 25
+svn:wc:ra_dav:version-url
+V 297
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/DragAndDropScrollRunnable.java
+END
+LinkedAdaptiveTableAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 298
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/LinkedAdaptiveTableAdapter.java
+END
+DataAdaptiveTableLayoutAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 302
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/DataAdaptiveTableLayoutAdapter.java
+END
+ScrollHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/columnsliderlib/ScrollHelper.java
+END

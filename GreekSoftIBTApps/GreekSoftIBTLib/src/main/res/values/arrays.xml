@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="watchlistTypes">
+        <item>All</item>
+        <item>Equity</item>
+        <item>FNO</item>
+        <item>Currency</item>
+        <item>Commodity</item>
+    </string-array>
+    <string-array name="MFwatchlistTypes">
+        <item>Mutual Fund</item>
+        <!--<item>Equity</item>-->
+        <!--<item>FNO</item>-->
+        <!--<item>Currency</item>-->
+        <!--<item>Commodity</item>-->
+    </string-array>
+
+
+
+
+    <string-array name="marketOutlook">
+        <item> SELECT MARKET OUTLOOK</item>
+        <item>BULLISH</item>
+        <item>BEARISH</item>
+        <item>NEUTRAL</item>
+        <item>VOLATILE</item>
+
+    </string-array>
+
+
+    <string-array name="volatilestrategy">
+
+        <item>BEAR PUT SPREAD</item>
+        <item>BULL CALL SPREAD</item>
+        <item>CASH BACKED CALL </item>
+        <item>LONG CALL</item>
+        <item>LONG RATIO CALL SPREAD</item>
+        <item>PROTECTIVE PUT</item>
+        <item>LONG PUT</item>
+        <item>LONG RATIO PUT SPREAD</item>
+        <item>SYNTHETIC LONG PUT</item>
+        <item>LONG CONDOR </item><!--(IRON CONDOR)-->
+        <item>LONG IRON BUTTERFLY</item>
+        <item>LONG STRADDLE</item>
+        <item>LONG STRANGLE </item><!--(LONG COMBINATION)-->
+        <item>SYNTHETIC LONG STOCK</item>
+        <item>SHORT CALL CALENDAR SPREAD </item><!--(SHORT CALL TIME SPREAD)-->
+        <item>SYNTHETIC SHORT STOCK</item>
+        <item>SHORT CALL BUTTERFLY</item>
+        <item>SHORT PUT BUTTERFLY</item>
+        <item>SHORT PUT CALENDAR SPREAD </item><!--(SHORT PUT TIME SPREAD)-->
+
+    </string-array>
+    <string-array name="volatileincrease">
+        <item>BEAR PUT SPREAD</item>
+        <item>BULL CALL SPREAD</item>
+        <item>CASH BACKED CALL </item><!--(CASH-SECURED CALL)-->
+        <item>LONG CALL</item>
+        <item>LONG RATIO CALL SPREAD</item>
+        <item>PROTECTIVE PUT</item>
+        <item>LONG PUT</item>
+        <item>LONG RATIO PUT SPREAD</item>
+        <item>SYNTHETIC LONG PUT</item>
+        <item>LONG CONDOR </item><!--(IRON CONDOR)-->
+        <item>LONG IRON BUTTERFLY</item>
+        <item>LONG STRADDLE</item>
+        <item>LONG STRANGLE </item><!--(LONG COMBINATION)-->
+        <item>SYNTHETIC LONG STOCK</item>
+    </string-array>
+
+    <string-array name="neutralstrategy">
+        <item>BULL PUT SPREAD</item>
+        <item>CASH BACKED PUT </item><!--(CASH-SECURED PUT)-->
+        <item>COVERED CALL</item>
+        <item>COVERED RATIO SPREAD</item>
+        <item>COVERED STRANGLE</item>
+        <item>NAKED PUT </item><!--(UNCOVERED PUT SHORT PUT)-->
+        <item>PROTECTIVE PUT</item>
+        <item>SHORT RATIO PUT SPREAD</item>
+        <item>BEAR CALL SPREAD</item>
+        <item>LONG CALL CALENDAR SPREAD </item><!--(CALL HORIZONTAL)-->
+        <item>LONG PUT CALENDAR SPREAD </item><!--(PUT HORIZONTAL)-->
+        <item>COVERED PUT</item>
+        <item>NAKED CALL </item><!--(UNCOVERED CALL SHORT CALL)-->
+        <item>SHORT RATIO CALL SPREAD</item>
+        <item>LONG CALL CONDOR</item>
+        <item>LONG PUT CONDOR</item>
+        <item>SHORT CONDOR (IRON CONDOR)</item>
+        <item>SHORT STRANGLE </item><!--(SHORT COMBINATION)-->
+        <item>LONG CALL BUTTERFLY</item>
+        <item>LONG PUT BUTTERFLY</item>
+        <item>SHORT IRON BUTTERFLY</item>
+
+    </string-array>
+
+
+    <string-array name="neutralincrease">
+
+        <item>BULL PUT SPREAD</item>
+        <item>CASH BACKED PUT </item><!--(CASH-SECURED PUT)-->
+        <item>COVERED CALL</item>
+        <item>COVERED RATIO SPREAD</item>
+        <item>COVERED STRANGLE</item>
+        <item>NAKED PUT </item><!--(UNCOVERED PUT SHORT PUT)-->
+        <item>PROTECTIVE PUT</item>
+        <item>SHORT RATIO PUT SPREAD</item>
+        <item>BEAR CALL SPREAD</item>
+        <item>LONG CALL CALENDAR SPREAD </item><!--(CALL HORIZONTAL)-->
+        <item>LONG PUT CALENDAR SPREAD </item><!--(PUT HORIZONTAL)-->
+
+
+    </string-array>
+
+
+    <string-array name="bearishstrategy">
+
+        <item>BEAR CALL SPREAD</item>
+        <item>BEAR PUT SPREAD</item>
+        <item>LONG PUT</item>
+        <item>LONG RATIO PUT SPREAD</item>
+        <item>SYNTHETIC LONG PUT</item>
+        <item>NAKED CALL </item><!--(UNCOVERED CALL SHORT CALL)-->
+        <item>SHORT RATIO CALL SPREAD</item>
+        <item>SHORT STOCK</item>
+        <item>SYNTHETIC SHORT STOCK</item>
+
+
+    </string-array>
+
+
+    <string-array name="bearishincrease">
+
+        <item>BEAR CALL SPREAD</item>
+        <item>BEAR PUT SPREAD</item>
+        <item>LONG PUT</item>
+        <item>LONG RATIO PUT SPREAD</item>
+        <item>SYNTHETIC LONG PUT</item>
+
+
+    </string-array>
+
+    <string-array name="bearishdecrease">
+
+        <item>BEAR CALL SPREAD</item>
+        <item>NAKED CALL</item>
+        <item>SHORT RATIO CALL SPREAD</item>
+    </string-array>
+    <string-array name="bearishnochange">
+
+        <item>SYNTHETIC SHORT STOCK</item>
+        <item>SHORT STOCK</item>
+    </string-array>
+
+    <string-array name="neutraldecrease">
+
+        <item>BULL PUT SPREAD</item>
+        <item>COVERED CALL</item>
+        <item>COVERED RATIO SPREAD</item>
+        <item>COVERED STRANGLE</item>
+        <item>NAKED PUT</item>
+        <item>SHORT RATIO PUT SPREAD</item>
+        <item>BEAR CALL SPREAD</item>
+        <item>COVERED PUT</item>
+        <item>NAKED CALL</item>
+        <item>SHORT RATIO CALL SPREAD</item>
+        <item>LONG CALL CONDOR</item>
+        <item>LONG PUT CONDOR</item>
+        <item>SHORT CONDOR</item>
+        <item>SHORT STRANGLE</item>
+    </string-array>
+
+    <string-array name="neutralnochange">
+
+        <item>LONG PUT BUTTERFLY</item>
+        <item>SHORT CALL BUTTERFLY</item>
+        <item>SHORT IRON BUTTERFLY</item>
+    </string-array>
+
+    <string-array name="volatiledecrease">
+
+        <item>CASH BACKED CALL</item>
+        <item>SHORT CALL CALENDAR SPREAD</item>
+
+    </string-array>
+
+    <string-array name="volatilenochange">
+
+        <item>SYNTHETIC SHORT STOCK</item>
+        <item>SHORT CALL BUTTERFLY</item>
+        <item>SHORT PUT BUTTERFLY</item>
+        <item>SHORT PUT CALENDAR SPREAD</item>
+
+    </string-array>
+
+    <string-array name="bullishstrategy">
+
+        <item>BULL CALL SPREAD</item>
+        <item>BULL PUT SPREAD</item>
+        <item>CASH BACKED CALL </item><!--(CASH-SECURED CALL)-->
+        <item>CASH BACKED PUT </item><!--(CASH-SECURED PUT)-->
+        <item>COLLAR</item>
+        <item>COVERED CALL</item>
+        <item>COVERED RATIO SPREAD</item>
+        <item>COVERED STRANGLE</item>
+        <item>LONG CALL</item>
+        <item>LONG RATIO CALL SPREAD</item>
+        <item>LONG STOCK</item>
+        <item>NAKED PUT </item><!--(UNCOVERED PUT SHORT PUT)-->
+        <item>PROTECTIVE PUT</item>
+        <item>SHORT RATIO PUT SPREAD</item>
+        <item>COVERED PUT</item>
+        <item>SYNTHETIC LONG STOCK</item>
+
+    </string-array>
+
+    <string-array name="bullishdecrease">
+        <item>BULL PUT SPREAD</item>
+        <item>CASH BACKED CALL </item><!--(CASH-SECURED CALL)-->
+        <item>COVERED CALL</item>
+        <item>COVERED RATIO SPREAD</item>
+        <item>COVERED STRANGLE</item>
+        <item>NAKED PUT</item><!-- (UNCOVERED PUT SHORT PUT)-->
+        <item>SHORT RATIO PUT SPREAD</item>
+        <item>COVERED PUT</item>
+
+
+    </string-array>
+    <string-array name="bullishincrease">
+        <item>BULL CALL SPREAD</item>
+        <item>BULL PUT SPREAD</item>
+        <item>CASH BACKED CALL</item><!-- (CASH-SECURED CALL)-->
+        <item>CASH BACKED PUT </item><!--(CASH-SECURED PUT)-->
+        <item>COLLAR</item>
+        <item>COVERED CALL</item>
+        <item> COVERED RATIO SPREAD</item>
+        <item>COVERED STRANGLE</item>
+        <item>LONG CALL</item>
+        <item>LONG RATIO CALL SPREAD</item>
+        <item> LONG STOCK</item>
+        <item>NAKED PUT</item><!-- (UNCOVERED PUT SHORT PUT)-->
+        <item>PROTECTIVE PUT</item>
+        <item>SHORT RATIO PUT SPREAD</item>
+
+
+    </string-array>
+
+    <string-array name="bullishnochange">
+        <item>SYNTHETIC LONG STOCK</item>
+    </string-array>
+
+
+    <string-array name="volatility">
+        <item>SELECT VOLATILITY</item>
+        <item>ALL VOLATILITY</item>
+        <item>INCREASE</item>
+        <item>DECREASE</item>
+        <item>NOCHANGE</item>
+
+    </string-array>
+
+    <string-array name="combination">
+        <item>SELECT COMBINATION</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="interval">
+        <item>SELECT INTERVAL</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+    <string-array name="alertOption">
+        <item>Price</item>
+        <item>Percent</item>
+        <item>Volume</item>
+    </string-array>
+    <string-array name="exchangeType">
+        <item>NSE</item>
+        <item>BSE</item>
+    </string-array>
+    <string-array name="segmentType">
+        <item>Equity</item>
+        <item>Commodity</item>
+    </string-array>
+
+    <string-array name="alertMovement">
+        <item>Moves Above</item>
+        <item>Moves Below</item>
+    </string-array>
+    <string-array name="exchangetTypeSpinner">
+        <item>NSE</item>
+        <item>BSE</item>
+        <item>MCX</item>
+        <item>NCDEX</item>
+    </string-array>
+    <string-array name="exchangeTypeComodityCurr">
+        <item>CURRENCY</item>
+        <item>COMMODITY</item>
+    </string-array>
+    <string-array name="exchangeTypemf">
+        <item>Our Recommendation</item>
+        <item>Top Fund</item>
+    </string-array>
+
+    <string-array name="marketFilterEquity">
+        <item>Top Gainers</item>
+        <item>Top Losers</item>
+        <!--<item>Top Performing Sectors</item>
+        <item>Worst Performing Sectors</item>-->
+        <item>Most Active (Vol.)</item>
+        <item>Most Active (Val.)</item>
+    </string-array>
+    <string-array name="marketFilterDerivative">
+        <item>Top Gainers - Futures</item>
+        <item>Top Losers - Futures</item>
+        <item>Most Active Futures contracts (Vol.)</item>
+        <item>Most Active Index Option contracts (Vol.)</item>
+        <item>Most Active Stock Option contracts (Vol.)</item>
+    </string-array>
+    <!--   <string-array name="marketFilterDerivative">
+           <item>Top Gainers - Futures</item>
+           <item>Top Losers - Futures</item>
+           <item>Most Active Futures contracts (Vol.)</item>
+           <item>Most Active Index Option </item>
+           <item>Most Active Stock Option </item>
+       </string-array>-->
+    <string-array name="marketFilterComCurrency">
+        <item>Top Gainers</item>
+        <item>Top Losers</item>
+        <item>Most Active Contracts (Vol.)</item>
+    </string-array>
+    <string-array name="marketFiltermf">
+        <item>Equity</item>
+        <item>Debt</item>
+        <item>ELSS</item>
+    </string-array>
+
+    <!--Research Report Section-->
+
+    <!--Symbol Search Fragment-->
+
+    <string-array name="allocationType">
+        <!-- <item>Market Cap</item>-->
+        <item>Sector</item>
+        <item>Company</item>
+    </string-array>
+
+    <string-array name="eqAssetType">
+        <item>Equity</item>
+        <item>Future</item>
+        <item>Options</item>
+        <item>Currency</item>
+        <item>Commodity</item>
+        <!--        <item>Stock Futures</item>-->
+        <!--        <item>Stock Options</item>-->
+        <!--        <item>VIX Futures</item>-->
+        <!--        <item>Indices</item>-->
+    </string-array>
+
+    <string-array name="commAssetType">
+        <item>Commodity</item>
+    </string-array>
+
+    <string-array name="paymentMode">
+        <item>Payment Mode</item>
+        <item>Cash</item>
+        <item>Ledger</item>
+    </string-array>
+
+    <string-array name="transactionMode">
+        <item>Select Transaction Mode</item>
+        <item>Demat</item>
+        <item>Physical</item>
+    </string-array>
+
+    <string-array name="stptransactionMode">
+        <item>Physical</item>
+    </string-array>
+
+    <string-array name="buySellType">
+        <item>Select Buy Sell Type</item>
+        <item>Fresh</item>
+        <item>Additional</item>
+    </string-array>
+
+    <string-array name="frequencyType">
+        <item>Select Frequency Type</item>
+        <item>MONTHLY</item>
+        <item>WEEKLY</item>
+        <item>QUARTERLY</item>
+
+    </string-array>
+
+    <string-array name="EuinDecl">
+        <item>Select EUIN Decl</item>
+        <item>NO</item>
+        <item>YES</item>
+    </string-array>
+
+
+    <string-array name="dptransactionMode">
+        <item>CDSL</item>
+        <item>NSDL</item>
+        <item>Physical</item>
+    </string-array>
+    <string-array name="market_list">
+        <item>BULLISH</item>
+        <item>BEARISH</item>
+        <item>NEUTRAL</item>
+        <item>VOLATILE</item>
+    </string-array>
+
+    <string-array name="volatiy_list">
+        <item>ALL VOLATILITY</item>
+        <item>INCREASE</item>
+        <item>DECREASE</item>
+        <item>NOCHANGE</item>
+    </string-array>
+
+
+    <string-array name="colors">
+    <item>#960616</item>
+    <item>#ea1d2c</item>
+    <item>#ef6c53</item>
+    <item>#e4977c</item>
+    <item>#ffffff</item>
+
+    <item>#a16118</item>
+    <item>#f4932f</item>
+    <item>#f8ae63</item>
+    <item>#fbc58d</item>
+    <item>#cccccc</item>
+
+    <item>#cbb920</item>
+    <item>#fff126</item>
+    <item>#fff371</item>
+    <item>#fff69e</item>
+    <item>#b7b7b7</item>
+
+    <item>#007238</item>
+    <item>#00a553</item>
+    <item>#43b77a</item>
+    <item>#85c99e</item>
+    <item>#898989</item>
+
+    <item>#00746a</item>
+    <item>#00a99c</item>
+    <item>#2ebbb3</item>
+    <item>#7fcdc7</item>
+    <item>#707070</item>
+
+    <item>#004c7f</item>
+    <item>#0073ba</item>
+    <item>#4a8dc8</item>
+    <item>#81a8d7</item>
+    <item>#555555</item>
+
+    <item>#62095f</item>
+    <item>#912a8e</item>
+    <item>#a665a7</item>
+    <item>#bb8dbe</item>
+    <item>#1d1d1d</item>
+
+    <item>#9c005d</item>
+    <item>#e9088c</item>
+    <item>#ee6fa9</item>
+    <item>#f29bc1</item>
+    <item>#000000</item>
+    </string-array>
+
+
+    <string-array name="drawing_tools">
+        <item>Annotation</item>
+        <item>Channel</item>
+        <item>Doodle</item>
+        <item>Ellipse</item>
+        <item>Fib-arc</item>
+        <item>Fib-fan</item>
+        <item>Fib-retrace</item>
+        <item>Fib-timezone</item>
+        <item>Gartley</item>
+        <item>Horizontal line</item>
+        <item>Line</item>
+        <item>Pitch fork</item>
+        <item>Ray</item>
+        <item>Rectangle</item>
+        <item>Segment</item>
+        <item>Vertical line</item>
+    </string-array>
+
+
+
+
+
+    <string-array name="chart_styles">
+        <item>Line</item>
+        <item>Candle</item>
+        <item>Bar</item>
+        <item>Wave</item>
+        <item>Colored bar</item>
+        <item>Colored line</item>
+        <item>Hollow candle</item>
+        <item>Volume candle</item>
+        <item>Scatterplot</item>
+        <item>Baseline delta</item>
+        <item>Baseline delta mountain</item>
+        <item>Mountain</item>
+        <item>Colored mountain</item>
+
+        <item>Heikin Ashi</item>
+        <item>Kagi</item>
+        <item>Renko</item>
+        <item>Range Bars</item>
+        <item>Point &amp; Figure</item>
+    </string-array>
+
+    <string-array name="studies_list_headers">
+        <item>ACTIVE STUDIES</item>
+        <item>ADD AVAILABLE STUDIES</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:drawable="@color/actions_sel" android:state_enabled="true" android:state_selected="true"/>-->
+
+
+
+   <!-- <item android:drawable="@color/common_red_bg" android:state_enabled="true" android:state_selected="true"
+        />
+    <item android:drawable="@color/grayStrip_bg" android:state_enabled="false" />-->
+    - <!-- <item android:drawable="@color/orange"/>
+  -->
+    <!--<item android:drawable="@color/common_red_bg" />-->
+
+    <item android:drawable="@drawable/rounded_shape" android:state_enabled="true" />
+    <item android:drawable="@drawable/rounded_shape_gray" android:state_enabled="false" />
+
+
+
+</selector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="@style/tab_text"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="33dp"
+    android:textSize="12sp"
+    android:textColor="@color/black"
+    android:gravity="left"
+    android:fontFamily="@font/daxot"
+    android:layout_gravity="left"
+    android:paddingLeft="5dp"
+    android:ellipsize="marquee"/>

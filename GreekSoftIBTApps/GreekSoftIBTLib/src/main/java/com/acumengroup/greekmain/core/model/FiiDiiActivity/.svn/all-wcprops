@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 286
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity
+END
+FpiDerivativeResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 313
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiDerivativeResponse.java
+END
+FpiInvestmentDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 312
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiInvestmentDetails.java
+END
+FpiInvestmentRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 312
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiInvestmentRequest.java
+END
+FiiInvestmentModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 310
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FiiInvestmentModel.java
+END
+FpiDerivativesModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 311
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiDerivativesModel.java
+END
+FpiInvestmentHistoryRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 319
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiInvestmentHistoryRequest.java
+END
+FpiDerivativeRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 312
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiDerivativeRequest.java
+END
+FpiInvestmentResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 313
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiInvestmentResponse.java
+END
+FpiDerivativeHistoryRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 319
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/FiiDiiActivity/FpiDerivativeHistoryRequest.java
+END

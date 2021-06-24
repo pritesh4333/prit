@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_drawable"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fno_SpinnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/exchangeeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/optionsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+           android:layout_margin="5dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/expirySpinner"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <include layout="@layout/include_header_orderbook_portfolio"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/fnoListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            layout="@layout/include_error_msg"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/disclaimerTxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:padding="10dp"
+        android:text="* Disclaimer"
+        android:textColor="@color/red_textcolor"
+        android:visibility="gone"/>
+
+</LinearLayout>

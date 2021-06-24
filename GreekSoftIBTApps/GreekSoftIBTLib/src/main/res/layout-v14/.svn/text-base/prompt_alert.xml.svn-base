@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@color/light_black"
+    android:orientation="vertical"
+
+    android:padding="10dp"
+    app:layout_collapseParallaxMultiplier="1.0">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageCloseBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_close_white_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/textViewValue3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Exchange Name"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/textViewValue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="0000.00"
+            android:textColor="@color/dark_blue_positive"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/textViewValue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Scrip Name..."
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    .
+
+    <LinearLayout
+        android:id="@+id/asset_layouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/exchangeSpin"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:transitionGroup="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aset_layouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/assetTypeSpin"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <com.acumengroup.ui.edittext.GreekEditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_style_alert"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:visibility="gone">
+        <!--<requestFocus />-->
+    </com.acumengroup.ui.edittext.GreekEditText>
+
+    <com.acumengroup.ui.edittext.GreekEditText
+        android:id="@+id/qty_text_custom"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_style_alert"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:hint="Enter price"
+        android:textColorHint="@color/grayStrip_bg" />
+
+    <com.acumengroup.ui.button.GreekButton
+        android:id="@+id/btnCreate"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/ed_clientPass"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="Create"
+        android:textColor="@color/white" />
+    <!--<RadioGroup
+        android:id="@+id/btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:background="@drawable/button_style_alert"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <RadioButton
+            android:id="@+id/btnNSE"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/trade_new_radio_bg"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="NSE"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/btnBSE"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/trade_new_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="BSE"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/btnMCX"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/trade_new_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="MCX"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RadioGroup>-->
+
+    <!-- <arcadiaymbolsearch.DelayAutoCompleteTextView
+         android:id="@+id/search_texts"
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:background="@drawable/button_style_alert"
+         android:hint="@string/SS_SEARCH_HINT_TXT"
+         android:imeOptions="flagNoExtractUi|actionSearch"
+         android:inputType="textCapSentences"
+         android:paddingLeft="10dp"
+         android:paddingRight="2dp"
+         android:textColor="@color/white"
+         android:maxLines="1"
+         android:layout_marginTop="5dp"
+         android:drawableRight="@drawable/search_alert"
+         android:textCursorDrawable="@null"
+         android:textColorHint="@color/white">
+     <requestFocus />
+     </arcadiaymbolsearch.DelayAutoCompleteTextView>-->
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <arcadiaymbolsearch.DelayAutoCompleteTextView
+                android:id="@+id/search_texts"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/button_style_alert"
+                android:hint="@string/SS_SEARCH_HINT_TXT"
+                android:imeOptions="flagNoExtractUi|actionSearch"
+                android:inputType="textCapSentences"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textColorHint="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="5dp">
+
+                <ProgressBar
+                    android:id="@+id/pb_loading_indicator"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:indeterminateDrawable="@drawable/progress_style"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/srch_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/search_icon"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bajaj_black"
+    tools:context=".BottomTabScreens.IndicesTabFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/exchange_spinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/indices_spinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/column_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/bajaj_gray"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.2"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/symbolname_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text="Symbol"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/descriptionname_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fadingEdge="horizontal"
+                    android:freezesText="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="hdfc"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/ltp_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="1.2"
+                android:focusable="false"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="LTP"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/change_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1.0"
+                android:focusable="false"
+                android:gravity="right|center"
+                android:text="Change"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/perchange_text"
+                    style="@style/ListItem.Head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/updownArrow"
+                    android:layout_weight="0.9"
+                    android:focusable="false"
+                    android:gravity="right|center"
+                    android:text="%Change"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+
+                    android:id="@+id/updownArrow"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="5dp" />
+                <!-- <ImageView
+                     android:id="@+id/down"
+                     android:layout_alignParentRight="true"
+                     android:layout_width="10dp"
+                     android:layout_height="10dp"
+                     />-->
+            </RelativeLayout>
+
+            <!--<bfsl.GreekTextView-->
+            <!--android:id="@+id/perchange_text"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right|center"-->
+            <!--android:text="hdfc"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="11sp" />-->
+            <!-- <arcadiaiew.GreekTextView
+                 android:id="@+id/holdingValues"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:text="Holding Price"
+                 android:textColor="@color/white"
+                 android:layout_marginTop="5dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginLeft="5dp"
+                 android:layout_marginRight="5dp"
+                 android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+                 />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/stocdetail_indices_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp">
+
+   <!-- <CheckBox
+        android:id="@+id/selectChkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:button="@null"
+        android:drawableLeft="@drawable/greek_check_box"
+        android:drawablePadding="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>-->
+
+    <CheckBox
+        android:id="@+id/selectChkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:layout_marginTop="7dp"
+        android:layout_centerVertical="true"
+        android:drawablePadding="10dp"
+        android:focusableInTouchMode="false"
+        android:padding="4dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@string/GREEK_TEXTVIEW_FONT"
+        android:background="@drawable/ripple_effect_view"
+        android:singleLine="true"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>

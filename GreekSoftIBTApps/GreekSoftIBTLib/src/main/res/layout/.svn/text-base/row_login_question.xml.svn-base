@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:id="@+id/row_list_question"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/question_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/white"
+        android:scaleX=".70"
+        android:scaleY=".70"
+        android:checked="false" />
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="question"/>
+
+    </LinearLayout>
+
+    <com.acumengroup.ui.edittext.GreekEditText
+        android:id="@+id/answer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:textSize="14dp"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:password="true"
+        android:maxLength="12"
+        android:enabled="false"
+        android:backgroundTint="@color/login_text_color"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/white" />
+
+</LinearLayout>

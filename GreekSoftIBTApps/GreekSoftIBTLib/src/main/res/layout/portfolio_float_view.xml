@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/float_Button_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"-->
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_dashboard"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/my_dashboard_white"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp"
+                    app:rippleColor="@color/white" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/portfolio_dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:text="Dashboard"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"-->
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_snapshot"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/my_snapshot"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp"
+                    app:rippleColor="@color/white" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/portfolio_scrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:text="@string/QT_SNAPSHOT_TXT"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"-->
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_watchlist"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="center"
+                    android:src="@drawable/my_watchlist"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/portfolio_watchlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/GREEK_MENU_WATCHLIST_TXT"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- android:layout_marginRight="20dp"
+                 android:layout_marginLeft="10dp"-->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_last_visited"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_last_white_24dp"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/portfolio_lastvisited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/GREEK_MENU_LASTVISITED_TXT"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!--<RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/float_Button_linear"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/flt_snapshot"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:elevation="0dp"
+                    app:borderWidth="0dp"
+                    app:pressedTranslationZ="20dp"
+                    app:rippleColor="@color/blue_bg"
+                    android:scaleType="center"
+                    android:src="@drawable/my_snapshot"
+                    />
+
+                <arcadiaiew.GreekTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/QT_SNAPSHOT_TXT"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/flt_watchlist"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:elevation="0dp"
+                    app:borderWidth="0dp"
+                    app:pressedTranslationZ="20dp"
+                    android:scaleType="center"
+                    app:rippleColor="@color/blue_bg"
+                    android:src="@drawable/my_watchlist"/>
+
+                <arcadiaiew.GreekTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GREEK_MENU_WATCHLIST_TXT"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/flt_last_visited"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:elevation="0dp"
+                    app:borderWidth="0dp"
+                    app:pressedTranslationZ="20dp"
+                    android:scaleType="center"
+                    app:rippleColor="@color/black"
+                    android:src="@drawable/last_visited"/>
+                <arcadiaiew.GreekTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GREEK_MENU_LASTVISITED_TXT"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

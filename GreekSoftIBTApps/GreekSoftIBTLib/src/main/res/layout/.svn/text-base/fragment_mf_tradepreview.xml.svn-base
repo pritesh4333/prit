@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/order_status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/order_status"
+            style="@style/BoldStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_check_circle_green_24dp"
+            android:text=""
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/order_det_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/order_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:visibility="visible" />
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/botttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.acumengroup.ui.button.GreekButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="0.50"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Back" />
+
+        <com.acumengroup.ui.button.GreekButton
+            android:id="@+id/confirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="0.50"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Confirm" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 294
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist
+END
+RemoveSymbolFromGroupResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 329
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist/RemoveSymbolFromGroupResponse.java
+END
+AddSymbolToGroupRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 323
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist/AddSymbolToGroupRequest.java
+END
+SymbolDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 312
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist/SymbolDetail.java
+END
+MFSymbolDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 314
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist/MFSymbolDetail.java
+END
+AddSymbolToGroupResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 324
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist/AddSymbolToGroupResponse.java
+END
+RemoveSymbolFromGroupRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 328
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model/portfolioeditwatchlist/RemoveSymbolFromGroupRequest.java
+END

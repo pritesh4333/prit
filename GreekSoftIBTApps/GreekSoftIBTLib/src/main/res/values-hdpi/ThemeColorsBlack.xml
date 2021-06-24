@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="textColorCustom">#FFFFFF</color>
+    <color name="textColorGreenBlack">#57AD32</color>
+    <color name="textColorRedBlack">#ae1a1a</color>
+    <color name="marketStatusStripBlack">#252525</color>
+    <color name="topViewBgBlack">@color/black</color>
+    <color name="dividerColorBlack">#d7d0d0</color>
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/ripple_effect_view"
+    android:orientation="horizontal">
+
+
+    <TwoLineListItem
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:mode="twoLine">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:layout_alignStart="@id/text2"
+            android:layout_alignLeft="@id/text2"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </TwoLineListItem>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_145sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/buyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_round_green_circle_24dp"
+            android:gravity="center"
+            android:text="B"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/sellTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_round_red_circle_24dp"
+            android:gravity="center"
+            android:text="S"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/chartTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_round_gray_circle_24dp"
+            android:gravity="center"
+            android:text="C"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/tvExchange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:text="NSE"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

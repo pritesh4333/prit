@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="GREEK">
+        <item name="android:windowBackground">@color/bajaj_gray</item>
+<!--        <item name="android:popupBackground">@color/bajaj_gray</item>-->
+        <item name="buttonStyle">@style/ButtonSelector</item>
+        <item name="spinnerStyle">@style/SpinnerSelector</item>
+        <item name="radioButtonStyle">@style/radioButtonStyle</item>
+        <item name="editTextStyle">@style/edittextSelector</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="android:textColorHintInverse">@style/TextLabelblack</item>-->
+        <!--<item name="android:textColorHint">@style/TextLabelblack</item>-->
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
+        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!--<item name="android:textColorHint">@style/TextLabelblack</item>-->
+
+    </style>
+
+    <style name="GREEK_2">
+        <item name="android:windowBackground">@color/white</item>
+<!--        <item name="android:popupBackground">@color/white</item>-->
+      <!--  <item name="android:background">@color/white</item>-->
+        <item name="android:buttonStyle">@style/ButtonSelector2</item>
+        <item name="android:spinnerStyle">@style/SpinnerSelector1</item>
+        <item name="android:radioButtonStyle">@style/radioButtonStyle</item>
+        <item name="android:editTextStyle">@style/edittextSelector</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:textColorHint">@color/white</item>-->
+        <!--<item name="android:textColorHintInverse">@style/TextLabelwhite</item>-->
+        <!--<item name="android:textColorHint">@style/TextLabelwhite</item>-->
+        <item name="windowNoTitle">true</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
+        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <!--<item name="android:textColorHint">@style/TextLabelwhite</item>-->
+
+    </style>
+
+</resources>

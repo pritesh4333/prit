@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bajaj_gray"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical">
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Authorize Sell Transaction"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold">
+
+    </com.acumengroup.ui.textview.GreekTextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Instrument"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="Balance \n Qty"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_12sdp"
+            android:text="Free \n Qty"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Qty to \n Authorize"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_3sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/Allauthrize_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_weight="0.5"
+            android:button="@drawable/checkbox_selector"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="invisible">
+
+        </androidx.appcompat.widget.AppCompatCheckBox>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/instrument_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="start"
+            android:text="Instrument"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/qty_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Balance \n Qty"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/freeqty_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Free \n Qty"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/qty_to_authorize_edittxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="Qty to \n Authorize"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/sell_transection_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_4sdp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:text="No Data Available"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/prc_to_cdsl"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/single_line_border_bajaj"
+                android:text="Process to CDSL"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/bottomTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Tick on stocks which you wish to Authorize to sell"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

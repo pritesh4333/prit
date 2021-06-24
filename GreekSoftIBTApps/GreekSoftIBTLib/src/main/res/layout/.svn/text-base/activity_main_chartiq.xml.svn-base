@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.acumengroup.mobile.GreekBaseActivity">
+    <LinearLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_drawable"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/symbolText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/lastText1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textColor="@color/white" />
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/highText1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textColor="@color/white" />
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/lowText1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textColor="@color/white" />
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/closeText1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textColor="@color/white" />
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/changeTextchart"
+                        style="@style/BoldStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="10dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/typesBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/candle_chart_ic_30" />
+
+                <ImageButton
+                    android:id="@+id/crossHairBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/pointer_active_ic_30" />
+
+                <Spinner
+                    android:id="@+id/resolutionSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/crosshairlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:background="@color/black"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingRight="@dimen/_5sdp"
+                >
+
+                <!-- <ImageButton
+                     android:id="@+id/crossHairBtn_full"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:srcCompat="@drawable/pointer_active_ic_30" />-->
+                <ImageButton
+                    android:id="@+id/crossHairBtn_full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/button_boarder"
+                    app:srcCompat="@drawable/pointer_inactive_ic_30" />
+
+
+
+            </LinearLayout>
+            <include layout="@layout/drawing_toolbar"
+                android:visibility="visible"/>
+            <LinearLayout
+                android:id="@+id/mp_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/rlOverlay"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+
+                        android:fillViewport="true">
+
+
+                        <LinearLayout
+                            android:id="@+id/btn_map"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                app:srcCompat="@drawable/area_chart_ic_w_30" />
+
+                            <ImageButton
+                                android:id="@+id/btn_chart"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                app:srcCompat="@drawable/ic_chart_white_24dp"
+                                tools:ignore="VectorDrawableCompat" />
+
+                            <ImageButton
+                                android:id="@+id/btn_candle_chart"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                app:srcCompat="@drawable/candle_chart_ic_w_30" />
+
+                            <ImageButton
+                                android:id="@+id/btn_ohcl_chart"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                app:srcCompat="@drawable/ohlc_chart_ic_w_30" />
+
+                            <Button
+                                android:id="@+id/btn_indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                android:text="Studies"
+                                android:visibility="visible" />
+
+                            <Button
+                                android:id="@+id/btn_draw"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                android:text="Draw"
+                                android:visibility="visible" />
+
+                            <ImageButton
+                                android:id="@+id/btn_crosshair"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_boarder"
+                                app:srcCompat="@drawable/pointer_inactive_ic_30" />
+
+                            <Button
+                                android:id="@+id/btn_compare"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1.2"
+                                android:background="@drawable/button_boarder"
+                                android:text="compare" />
+                            <!-- <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:onClick="startStudiesActivity"
+                                 android:orientation="vertical">
+     
+                                 <ImageView
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="0dp"
+                                     android:layout_weight="1"
+                                     android:scaleType="fitCenter"
+                                     android:src="@drawable/studies_light"/>
+     
+     
+     
+                             </LinearLayout>
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:onClick="onDrawMenuClick"
+                                 android:orientation="vertical">
+     
+                                 <ImageView
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="0dp"
+                                     android:layout_weight="1"
+                                     android:scaleType="fitCenter"
+                                     android:src="@drawable/draw_light"/>
+     
+     
+     
+                             </LinearLayout>-->
+
+                            <!-- <ImageButton
+                                 android:id="@+id/typesBtn6"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 app:srcCompat="@drawable/candle_chart_ic_30" />
+                             <ImageButton
+                                 android:id="@+id/typesBtn7"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 app:srcCompat="@drawable/candle_chart_ic_30" />
+                             <ImageButton
+                                 android:id="@+id/typesBtn8"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 app:srcCompat="@drawable/ohlc_chart_ic_w_30" />-->
+
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/chatlayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:layout_toLeftOf="@+id/rlOverlaybtn"
+                    android:layout_toRightOf="@+id/rlOverlay"
+                    android:orientation="horizontal">
+
+
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/empty_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="No Chart Data Available"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/blankview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_weight="1">
+                    </LinearLayout>
+
+                    <com.acumengroup.chartiq.sdk.ChartIQ
+                        android:id="@+id/webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/bajaj_black"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <!--<include layout="@layout/drawing_toolbar"
+                            android:visibility="visible"/>-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+                            <com.acumengroup.ui.textview.GreekTextView
+                                android:id="@+id/symbolText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:padding="2dp"
+                                android:textColor="@color/white" />
+                            <com.acumengroup.ui.textview.GreekTextView
+                                android:id="@+id/ltpText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:padding="2dp"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.acumengroup.ui.textview.GreekTextView
+                                    android:id="@+id/lastText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:padding="2dp"
+                                    android:background="@color/transparent"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textColor="@color/white" />
+
+                                <com.acumengroup.ui.textview.GreekTextView
+                                    android:id="@+id/highText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:padding="2dp"
+                                    android:background="@color/transparent"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <com.acumengroup.ui.textview.GreekTextView
+                                    android:id="@+id/lowText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:padding="2dp"
+                                    android:background="@color/transparent"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textColor="@color/white" />
+
+
+                                <com.acumengroup.ui.textview.GreekTextView
+                                    android:id="@+id/closeText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:padding="2dp"
+                                    android:background="@color/transparent"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <com.acumengroup.ui.textview.GreekTextView
+                                    android:id="@+id/volText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:padding="2dp"
+                                    android:background="@color/transparent"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/rlOverlaybtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:paddingRight="@dimen/_2sdp"
+                    android:layout_alignParentRight="true">
+
+                    <ScrollView
+                        android:id="@+id/radio_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fillViewport="true">
+
+                        <RadioGroup
+                            android:id="@+id/resolutionBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+
+                            <RadioButton
+                                android:id="@+id/btn1M"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="1M"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/btn5M"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="5M"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                            <RadioButton
+                                android:id="@+id/btnM"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="15M"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/btn10M"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="30M"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                            <RadioButton
+                                android:id="@+id/btn45M"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="45M"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+
+                            <RadioButton
+                                android:id="@+id/btn15M"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="1H"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/btn20M"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="1D"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/btn1H"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="1W"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <!--<RadioButton
+                            android:id="@+id/btn1D"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/chart_radio_style"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:text="1D"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+    
+                          <RadioButton
+                           android:id="@+id/btn1W"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/_5sdp"
+                           android:layout_weight="1"
+                           android:background="@drawable/chart_radio_style"
+                           android:button="@null"
+                           android:gravity="center"
+                           android:padding="8dp"
+                           android:singleLine="true"
+                           android:text="1W"
+                           android:textColor="@color/white"
+                           android:textSize="12sp" />-->
+
+                            <RadioButton
+                                android:id="@+id/btn30D"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="M1"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/btn1y"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chart_radio_style"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="Y1"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </ScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/buy_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="BUY"
+                    android:textColor="@color/white" />
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/sell_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="SELL"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/top_toolbar"/>
+
+
+
+        <include layout="@layout/drawing_toolbar"
+            android:visibility="visible"/>
+
+        <!--  <include layout="@layout/bottom_toolbar"
+              android:visibility="visible"/>-->
+    </LinearLayout>
+    <com.acumengroup.mobile.MovableFloatingActionButton
+        android:id="@+id/movablefab"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="bottom|end"
+        android:visibility="visible"
+        app:backgroundTint="@color/common_red_bg"
+        app:srcCompat="@drawable/ic_expand"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

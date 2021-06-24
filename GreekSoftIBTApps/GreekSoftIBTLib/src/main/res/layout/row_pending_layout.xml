@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/orderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_black"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/script_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="SCRIPT NAME"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/script_name"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="start"
+                android:layout_toRightOf="@id/script_name"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=".NSE"
+                android:textColor="@color/white"
+                android:textSize="10sp">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+        </RelativeLayout>
+
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="ACTION"
+            android:textColor="@color/white">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="QTY/LOT"
+
+            android:textColor="@color/white">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="PRICE"
+            android:textColor="@color/white">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LegsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/legOneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bajaj_black"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/script_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="SCRIPT NAME"
+                    android:textColor="@color/white">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/type_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/script_name1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="start"
+                    android:layout_toRightOf="@id/script_name1"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=".NSE"
+                    android:textColor="@color/white"
+                    android:textSize="10sp">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+            </RelativeLayout>
+
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/action1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="ACTION"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/qty1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="QTY/LOT"
+
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/price1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="PRICE"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/legTwoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bajaj_black"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/script_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="SCRIPT NAME"
+                    android:textColor="@color/white">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/type_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/script_name2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="start"
+                    android:layout_toRightOf="@id/script_name2"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=".NSE"
+                    android:textColor="@color/white"
+                    android:textSize="10sp">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+            </RelativeLayout>
+
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/action2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="ACTION"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/qty2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="QTY/LOT"
+
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/price2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="PRICE"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/legThreeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bajaj_black"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/script_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="SCRIPT NAME"
+                    android:textColor="@color/white">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/type_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/script_name3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="start"
+                    android:layout_toRightOf="@id/script_name3"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=".NSE"
+                    android:textColor="@color/white"
+                    android:textSize="10sp">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+            </RelativeLayout>
+
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/action3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="ACTION"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/qty3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="QTY/LOT"
+
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/price3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="PRICE"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/legFourLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bajaj_black"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/script_name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="SCRIPT NAME"
+                    android:textColor="@color/white">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/type_name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/script_name4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="start"
+                    android:layout_toRightOf="@id/script_name4"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=".NSE"
+                    android:textColor="@color/white"
+                    android:textSize="10sp">
+
+                </com.acumengroup.ui.textview.GreekTextView>
+
+            </RelativeLayout>
+
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/action4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="ACTION"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/qty4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="QTY/LOT"
+
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/price4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="PRICE"
+                android:textColor="@color/white">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

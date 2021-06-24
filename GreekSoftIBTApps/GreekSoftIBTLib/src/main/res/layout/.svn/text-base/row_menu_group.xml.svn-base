@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bajaj_black">
+
+   <!-- <com.bfsl.ui.textview.GreekTextView
+        android:id="@+id/imgyellowImage"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/orange_bg"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"/>-->
+
+    <ImageView
+        android:id="@+id/imgGroupImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:clickable="false"
+        />
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/txtMenuNames"
+        style="@style/DrawerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgFocusImage"
+        android:layout_toRightOf="@+id/imgGroupImage"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/white"
+        android:text="Hello"/>
+
+    <ImageView
+        android:id="@+id/imgFocusImage"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/ic_lock_black_24dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,444 @@
+10
+
+dir
+12380
+http://192.168.206.222/svn/Zeus/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/core/model
+http://192.168.206.222/svn/Zeus
+
+
+
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b62f6d51-9b08-254e-a7d9-d18bbd69c088
+
+cancelWSP
+dir
+
+tradesendneworder
+dir
+
+DematHolding.java
+file
+
+
+
+
+2021-06-18T06:33:20.321816Z
+0eadbac0020fc2e68bc5cb3921a39ef4
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23239
+
+dematltpdetails
+dir
+
+cancelOrder
+dir
+
+PersonaklDetail
+dir
+
+userloginvalidation
+dir
+
+MarketStatusPostRequest.java
+file
+
+
+
+
+2021-06-18T06:33:20.322816Z
+ba729b29edd28d6a93c91eb7659f9006
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2570
+
+LoginWithOTP
+dir
+
+marketsindianindices
+dir
+
+StrategyFinder
+dir
+
+searchmultistockdetails
+dir
+
+intradaychart
+dir
+
+UserDetail
+dir
+
+MutualFundOrderLog.java
+file
+
+
+
+
+2021-06-18T06:33:20.324816Z
+38d509681263efa4bd118fd9ab30f878
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7582
+
+recommonDisplay
+dir
+
+MutualFundSipNewOrder
+dir
+
+tradeorderbook
+dir
+
+portfolioeditwatchlist
+dir
+
+cancelSTPOrder
+dir
+
+marketssinglescrip
+dir
+
+FiiDiiActivity
+dir
+
+searchequityinformation
+dir
+
+GreekResponseModel.java
+file
+
+
+
+
+2021-06-18T06:33:20.326816Z
+d8475476d24f8e9e0c4ad21322bda614
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+417
+
+searchfnoexpirystrikeprice
+dir
+
+las
+dir
+
+forgotpassword
+dir
+
+marketsmultiplescrip
+dir
+
+ChatMessage
+dir
+
+marketsglobalindices
+dir
+
+streamerorderconfirmation
+dir
+
+PanValidation
+dir
+
+greekportfolio
+dir
+
+MarketStatusPostResponse.java
+file
+
+
+
+
+2021-06-18T06:33:20.327816Z
+41dec76964f2202af0517ad9fe9ed00b
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2044
+
+mutualfundmutualfundmodifyorder
+dir
+
+bankdetail
+dir
+
+heartbeat
+dir
+
+portfoliogetuserwatchlist
+dir
+
+FundTransfer
+dir
+
+tradecancelorder
+dir
+
+STPOrder
+dir
+
+AvailableSchemeListModel.java
+file
+
+
+
+
+2021-06-18T06:33:20.329817Z
+dabc4b373eb5b9e713e88c0dcd317d09
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5534
+
+trademodifyorder
+dir
+
+SWPOrder
+dir
+
+streamerbroadcast
+dir
+
+GCM
+dir
+
+GreekRequestModel.java
+file
+
+
+
+
+2021-06-18T06:33:20.330817Z
+42ac56feae80b41a742de8469ba577d0
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+398
+
+changepassword
+dir
+
+portfoliotrending
+dir
+
+Notifications
+dir
+
+marketsindicesstock
+dir
+
+mutualfundmutualfundsendneworder
+dir
+
+tradenetpositionsummary
+dir
+
+tradeprofitlossandnetquantity
+dir
+
+tradetodaysprofitlossnetquantity
+dir
+
+TradeDematHoldingResponse.java
+file
+
+
+
+
+2021-06-18T06:33:20.332817Z
+ba004a69b1a18f27914bd4f486ce00de
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1969
+

@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/common_red_bg"
+              android:orientation="vertical"
+              android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row11"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Symbol" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row12"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:text="Qty/Lot"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row13"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical|end"
+            android:text="Net Price"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row14"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:text="LTP"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row21"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/white"
+            android:text="Exchange"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row22"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/white"
+            android:text="Product"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row23"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/white"
+            android:text="Net Amount"
+            android:visibility="visible"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row24"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/white"
+            android:text="MTM"
+            />
+    </LinearLayout>
+
+</LinearLayout>

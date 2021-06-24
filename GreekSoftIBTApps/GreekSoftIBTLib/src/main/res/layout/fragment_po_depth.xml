@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/depth_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/depth_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@color/place_order_buysell_header"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:orientation="horizontal">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/buyers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Buyers"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/buyers_qty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Buy Qty"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/buyers_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Buy Price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/total_buy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Total Buy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/buyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/depth_header_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@color/place_order_buysell_header"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:orientation="horizontal">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/seller"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Sellers"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/sell_qty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Sell Qty"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/sell_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Sell Price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/total_sell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Total Sell"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/sellList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

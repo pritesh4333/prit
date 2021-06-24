@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+   <!-- <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/common_red_bg" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>-->
+
+    <item android:drawable="@drawable/button_state_bg" />
+
+    <!-- <item  android:state_disable="true" android:drawable="@color/secondaryTextColor"
+        />-->
+
+
+ <!--  <item android:drawable="@drawable/rounded_shape_gray"
+        android:state_disable="true"/>
+
+    <item android:drawable="@drawable/rounded_shape"
+        android:state_enabled="true"/>-->
+
+</ripple>
+

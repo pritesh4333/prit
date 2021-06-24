@@ -1,0 +1,218 @@
+package com.acumengroup.greekmain.core.constants;
+
+public interface GreekConstants extends LabelConfig, ServiceConstants {
+
+    // Config
+    String INFO_CONFIG_MSG = "msg";
+    String INFO_CONFIG_ACTION = "action";
+
+    //Activity Request Codes
+    int CUSTOMER_LOGIN = 5001;
+    int GUEST_LOGIN = 5002;
+    int GUEST_REGISTER = 5003;
+    int OTP_REGISTER = 5004;
+
+    // Activity Result Code
+    int LOGIN_SUCCESS = 1000;
+    int PASSWORD_CHANGE_NEEDED = 1003;
+    int EXIT_CODE = 3;
+    int NAV_TO_MARKET_STARTUP_SCREEN = 1000;
+    int NAV_TO_CHAT_MESSAGE_SCREEN = 1011;
+    int NAV_TO_LAS_MESSAG_SCREEN = 1021;
+    int NAV_TO_HOLDING_SCREEN = 1022;
+    int NAV_TO_NOTIFICATION_SCREEN = 1012;
+    int NAV_TO_NEWS_DETAIL = 60;
+    int NAV_TO_NEWS_SEARCH = 61;
+    int NAV_TO_NEWS_DISPLAY = 62;
+    int NAV_TO_NEWS_PAGER = 69;
+    int NAV_TO_RECOMMENDATION_SCREEN = 64;
+    int NAV_TO_ALERT_SCREEN = 65;
+    int NAV_TO_FUNDTRANSFER_SCREEN = 66;
+    int NAV_TO_TRANSFER_PAYING =790;
+    int NAV_TO_EDIS_MARGIN = 792;
+    int NAV_TO_TRANSFER_PAYOUT=791;
+    int NAV_TO_TRANSPASSWORD =780;
+    int NAV_TO_LOGINPASSWORD = 789;
+    int NAV_TO_NEWS_TAB =788;
+    int NAV_TO_BOTTOM_PORTFOLIO_TXT = 79;
+    int NAV_TO_BOTTOM_MARKET=121;
+
+    int NAV_TO_FUNDTRANSFERDETAILS_SCREEN = 70;
+    int NAV_TO_BANK_DETAILS_SCREEN = 71;
+    int NAV_TO_MFUND_DETAILS_SCREEN = 74;
+    int NAV_TO_MFUND_DASHBOARD_SCREEN = 75;
+    int NAV_TO_POSITION_ORDER_DETAIL_SCREEN = 105;
+    int NAV_TO_DEMAT_DETAIL_SCREEN = 106;
+
+
+    int NAV_TO_MARKET_HOME_SCREEN = 72;
+
+    int NAV_TO_EDIS_DASHBOARD_REPORT = 222;
+    int NAV_TO_EDIS_TRANSACTION_DETAILS = 777;
+    int NAV_TO_OVERVIEWSCREEN = 120;
+    int NAV_TO_ORDER_BOTTOM_FRAGMENT = 112;
+
+
+    int NAV_TO_CHANGE_DEFAULTSCREEN_SCREEN = 76;
+    int NAV_TO_CHANGEPASSWORD_SCREEN = 67;
+    int NAV_TO_CONTRACTINFO_SCREEN = 68;
+    int NAV_TO_QUOTES_SCREEN = 8;
+    int NAV_TO_TRADE_SCREEN = 9;
+    int NAV_TO_SYMBOL_SEARCH_SCREEN = 10;
+    int NAV_TO_ORDER_PREVIEW_SCREEN = 11;
+    int NAV_TO_STRATEGY_DATA_SCREEN = 1001;
+    int NAV_TO_STRATEGY_BUILDUP_SCREEN = 1002;
+    int NAV_TO_LAS_STEPS_FORMS_SCREEN = 180;
+    int NAV_TO_ORDER_RESULTS_SCREEN = 12;
+    int NAV_TO_ORDER_BOOK_DETAILS_SCREEN = 13;
+    int NAV_TO_MF_ORDER_BOOK_DETAILS_SCREEN = 18;
+    int NAV_TO_ORDER_BOOK_SCREEN = 14;
+    int NAV_TO_MF_ORDER_BOOK_SCREEN = 17;
+    int NAV_TO_CHARTS_SCREEN = 15;
+    int NAV_TO_ROTATE_CHARTS_SCREEN = 150;
+    int NAV_TO_FUNDAMENTAL_SCREEN = 215;
+    int NAV_TO_MARKET_DEPTH_SCREEN = 16;
+    int NAV_TO_TRANS_PASS = 6;
+    int NAV_TO_INDICES_STOCK_SCREEN = 20;
+    int NAV_TO_PL_DETAILS_SCREEN = 21;
+    int NAV_TO_WATCHLIST_SCREEN_SCREEN = 23;
+    int NAV_TO_EDIT_WATCHLIST_SCREEN = 24;
+    int NAV_TO_WATCHLIST_SCREEN = 94;
+    int NAV_TO_PORTFOLIO_BOTTOM_SCREEN = 194;
+    int NAV_TO_PORTFOLIO_HOLDING_SCREEN = 193;
+    int NAV_TO_PORTFOLIO_DASHBOARD_SCREEN = 192;
+    int NAV_TO_PORTFOLIO_POSITION_SCREEN = 191;
+    int NAV_TO_LASTVISITED_SCREEN = 95;
+    int NAV_TO_MYSCRIPTS_SCREEN = 96;
+    int NAV_TO_PENDING_TAB_SCREEN = 97;
+    int NAV_TO_EXECUTED_TAB_SCREEN = 98;
+    int NAV_TO_REJECTED_TAB_SCREEN = 99;
+    int NAV_TO_CANCELLED_TAB_SCREEN = 107;
+    int NAV_TO_ADD_NEW_PORTFOLIO_SCREEN = 25;
+    int NAV_TO_MF_EDIT_WATCHLIST_SCREEN = 28;
+    int NAV_TO_MF_ADD_NEW_PORTFOLIO_SCREEN = 35;
+    int NAV_TO_NETPOSITION_SCREEN = 30;
+    int NAV_TO_DEMATHOLDING_SCREEN = 31;
+    int NAV_TO_DEMATHOLDING_SINGLE_SCREEN = 36;
+    int NAV_TO_FNORESULT_SCREEN = 32;
+
+    int NAV_TO_TODAY_PL_DETAILS_SCREEN = 37;
+
+    int SKIP_UPDATE_CODE = 40;
+
+    int NAV_TO_PORTFOLIO_DETAIL = 45;
+
+    int NAV_TO_MUTUALFUND_ACTION = 26;
+    int NAV_TO_MUTUALFUND_TRADE_PREVIEW = 27;
+
+    int NAV_TO_MUTUALFUND_BANK_DETAILS = 80;
+    int NAV_TO_MUTUALFUND_PERSONAL_DETAILS = 81;
+    int NAV_TO_MUTUALFUND_KYC_DETAILS = 82;
+    int NAV_TO_MUTUALFUND_KYC_UPLOAD = 83;
+    int NAV_TO_MUTUALFUND_KYC_PAN_UPLOAD = 84;
+    int NAV_TO_MUTUALFUND_KYC_AADHAR_UPLOAD = 184;
+    int NAV_TO_MUTUALFUND_KYC_BANK_UPLOAD = 284;
+    int NAV_TO_MUTUALFUND_KYC_CHEQUE_UPLOAD = 384;
+    int NAV_TO_USER_DETAILS_CREATION = 87;
+    int NAV_TO_USER_SCREEN = 786;
+    int NAV_TO_MUTUALFUND_KYC_IPVP_UPLOAD = 85;
+    int NAV_TO_MUTUALFUND_SIGNATURE_UPLOAD = 86;
+    int NAV_TO_MUTUALFUND_BANK_MANDATE = 88;
+    int NAV_TO_ALL_BANKDETAILS_MF = 89;
+    int NAV_TO_USERCREATION_PAN_DETAILS = 90;
+    int NAV_TO_PAN_DETAILS = 91;
+    int NAV_TO_MF_WATCHLIST_MF = 92;
+    int NAV_TO_UPLOAD__PAN_DETAILS = 93;
+
+    //Strategy Finder Fragment
+    int NAV_TO_STRATEGY_OPTION_FILTER = 100;
+    int NAV_TO_STRATEGY_FILTER = 101;
+    int NAV_TO_STRATEGY_FINDER = 102;
+    int NAV_TO_STRATEGY_SCAN = 103;
+    int NAV_TO_STRATEGY_SCANDETAIL = 104;
+    int NAV_TO_MARKET_EDIT_FRAGMENT = 110;
+
+
+    int NAV_TO_BOTTOM_POT_FOLIO_FRAGMENT = 111;
+
+
+    int NAV_TO_MUTUAL_FUND_SIP = 46;
+    int NAV_TO_MUTUAL_FUND_XSIP = 41;
+    int NAV_TO_MUTUAL_FUND_STP = 42;
+    int NAV_TO_MUTUAL_FUND_SWP = 43;
+    int NAV_TO_MUTUAL_FUND_MANDATE = 34;
+    int NAV_TO_MUTUAL_FUND_SIP_SUMMARY = 47;
+    int NAV_TO_MUTUALFUND_NO_SENSITIVE = 48;
+    int NAV_TO_MUTUALFUND_TRADE = 44;
+    int NAV_TO_MUTUALFUND_GET_QUOTE = 49;
+    int GREEK_MENU_OPENPOSITION = 52;
+    int GREEK_MENU_NETPOSITION = 50;
+    int GREEK_MENU_ORDERPOSITION = 51;
+    int GREEK_MENU_DEMATHOLDING = 59;
+    int GREEK_MENU_DEMAT_HOLDING_SINGLE = 73;
+
+    int NAV_TO_CUMULATIVE_SCREEN = 53;
+    int NAV_TO_TRADE_BOOK_SCREEN = 54;
+    int NAV_TO_TRADE_BOOK_DETAILS_SCREEN = 55;
+    int NAV_TO_ADD_TO_WATCHLIST_SCREEN = 57;
+    int NAV_TO_MARGIN_SUMMARY = 58;
+    int NAV_TO_CONTRACT_INFO_SCREEN = 63;
+    int NAV_TO_FIIDII_SCREEN = 77;
+    int NAV_TO_CHARTING_SCREEN = 78;
+
+    String RFILE_REFLECTION_DATA = "RFILE_REFLECTION_DATA";
+
+
+    int ALERTS_ACTION_ID = 4;
+    int FORCELOGOFF = 1;
+    int ORDERFORCELOGOFF = 2;
+    int ALL = 0;
+
+    //Watchlist & LastVisited Constants
+    String EXCHANGE = "Exchange";
+    String SYMBOL = "Symbol";
+    String LAST_TRADED_PRICE = "LTP";
+    String CHG_RS = "Chg (Rs)";
+    String CHG_PERCENTILE = "Chg (%)";
+    String VOLUME = "Volume";
+    String PREVIOUS_OPEN = "Open";
+    String PREVIOUS_CLOSE = "Close";
+    String DAY_HIGH = "High";
+    String DAY_LOW = "Low";
+    String HIGH_52WEEK = "52 W High";
+    String LOW_52WEEK = "52 W Low";
+    String OPEN_INTEREST = "OI";
+    String OPEN_INTEREST_PERCENTILE = "OI(%)";
+    String GREEK_VIEW = "GREEKSOFT View";
+    String SCRIPTNAME = "ScriptName";
+    String DESCRIPTION = "description";
+    String ASSET_TYPE = "assetType";
+    String TOKEN = "Token";
+    String SEQNO = "seqNo";
+    String UNIQUEID = "uniqueID";
+    String LOT = "lot";
+    String TICKSIZE = "tickSize";
+    String MULTIPLIER = "multiplier";
+    String EXPIRYDATE = "expiryDate";
+    String STRICKPRICE = "strickPrice";
+    String INSTRUMENTNAME = "InstrumentName";
+    String OPTIONTYPE = "optionType";
+    String STOCK_NAME = "Stock Name";
+    String UNITS = "Qty/Units";
+    String OVERALL_GAIN_LOSS = "Overall Gain/Loss";
+    String OVERALL_GAIN_LOSS_PERCENTILE = "% Gain/Loss";
+    String TODAY_GAIN_LOSS = "Today's Gain/Loss";
+    String TODAY_GAIN_LOSS_PERCENTILE = "Today's Gain/Loss %";
+    String PURCHASE_PRICE = "Purchase Price";
+    String PURCHASE_VALUE = "Purchase Value";
+    String MARKET_VALUE = "Market Value";
+
+    //Product name Constant
+     String Delivery_product="0";
+     String Intraday_product="1";
+     String MTF_product="2";
+     String TNC_product="3";
+     String Catalyst_product="4";
+     String SSEQ_product="5";
+
+}

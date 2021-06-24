@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.acumengroup.ui.textview.GreekTextView
+    android:id="@android:id/text1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:gravity="left"
+    android:singleLine="true"
+    android:textSize="12dp"
+    android:fontFamily="@string/GREEK_TEXTVIEW_FONT"
+    style="@style/tab_text"
+    android:paddingLeft="15dp"
+    android:textColor="@color/white"
+    android:marqueeRepeatLimit="marquee_forever"
+    android:selectAllOnFocus="true"
+    android:textStyle="bold"/>

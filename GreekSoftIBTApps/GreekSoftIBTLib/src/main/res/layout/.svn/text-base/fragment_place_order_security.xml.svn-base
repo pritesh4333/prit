@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/security_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical"
+    tools:context=".trade.PlaceOrderSecurityFragment">
+
+
+    <LinearLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/market_grey_dark"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/security_nametxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="SecurityName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/security_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="match_parent"
+            android:background="@color/bajaj_black">
+
+        </View>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/isin_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="ISIN"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_marginRight="@dimen/_5sdp"
+            android:id="@+id/isin_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/market_grey_light"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/FreezeQty_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="Freeze qty"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/FreezeQty_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="match_parent"
+            android:background="@color/bajaj_black">
+
+        </View>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/face_valuetxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text="Face Value"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_marginRight="@dimen/_5sdp"
+            android:id="@+id/face_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="00"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/market_grey_dark"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/elm_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/elm_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="match_parent"
+            android:background="@color/bajaj_black">
+
+        </View>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/var_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/var_value"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/market_grey_light"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/elm_percentage_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/elm_percentage_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="match_parent"
+            android:background="@color/bajaj_black">
+
+        </View>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/var_percentage_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/var_percentage_value"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

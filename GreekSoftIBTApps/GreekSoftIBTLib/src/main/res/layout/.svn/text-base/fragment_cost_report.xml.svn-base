@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cost_report_parentLayout"
+    android:background="@color/bajaj_black"
+    android:orientation="vertical"
+    tools:context=".reports.CostReport">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2"
+        android:layout_gravity="center"
+        android:background="@color/bajaj_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/txt_cost_report"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="COST REPORT"
+            android:textColor="@color/white" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/cost_report_txt_ttlPNL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:text="4 JUNE 2020 | 5.15 AM"
+            android:textColor="@color/date_color" />
+
+
+        <ImageButton
+            android:id="@+id/sort_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_filter_white"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/cost_report_spinner"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/table_relativeLayout">
+
+        <com.acumengroup.columnsliderlib.AdaptiveTableLayout
+            android:id="@+id/cost_report_tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cellMargin="1dp"
+            app:dragAndDropEnabled="true"
+            app:fixedHeaders="true"
+            app:solidRowHeaders="true" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No Data Available"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@color/bajaj_gray"
+            android:visibility="gone">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/total_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_weight="0.2"
+                android:gravity="center_vertical"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/total_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_weight="0.8"
+                android:gravity="end|center_vertical"
+                android:text="0.000000000000000000000"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

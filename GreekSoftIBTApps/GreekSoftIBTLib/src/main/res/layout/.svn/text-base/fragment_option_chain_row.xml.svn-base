@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="#000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/ripple_effect_view"
+        android:orientation="horizontal">
+
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/txt_strike"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="1144756"
+            android:textColor="@color/buyColor"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/bajaj_gray" />
+        <!--   <HorizontalScrollView
+               android:layout_width="0dp"
+               android:layout_height="40dp"
+               android:layout_weight="1.5"
+               >-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/ripple_effect_view"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Call"
+                    android:textColor="#0099ff"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Put"
+                    android:textColor="#0099ff"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/ltp_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="15472.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/ltp_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="15472.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/change_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/change_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_iv_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="4565"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_iv_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="4565"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_ltp_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_ltp_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--start bid ask-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_oi_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="4894"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_oi_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="4894"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_chg_per_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_chg_per_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_vol_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="1554554"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_vol_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="1554554"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_askprice_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bajaj_gray" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_askprice_put"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

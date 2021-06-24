@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2010 Johan Nilsson <http://markupartist.com>
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <color name="place_order_header">#404b6a</color>
+    <color name="place_order_buysell_header">#363636</color>
+
+
+    <color name="modify_order_cancel_btn">#000000</color>
+    <color name="modify_order_header_txtcolor">#bababa</color>
+    <color name="modify_order_bottom">#252525</color>
+    <color name="modify_order_border">#707070</color>
+
+
+
+
+    <color name="light_blue_positive">#50b2bff5</color>
+    <color name="light_red_negative">#c74f50</color>
+    <color name="light_spinner">#e9e5e5</color>
+    <color name="light_green_textcolor">#12442b</color>
+
+    <color name="light_red_negative_white">#f48f94</color>
+
+
+    <color name="dark_blue_positive">#0000A0</color>
+    <color name="dark_green_positive">#00a651</color>
+    <color name="dark_red_negative">#c74f50</color>
+    <color name="light_blue">#a1c8ed</color>
+    <color name="bajaj_blue">#404b6a</color>
+
+
+
+    <color name="action_bar_positive">#0000ff</color>
+    <color name="light_gray">#EBEBEB</color>
+    <color name="light_white">#F5F5F5</color>
+
+
+    <color name="header_bg">#414042</color>
+
+    <color name="market_grey">#EBEBEB</color>
+    <color name="market_grey_1">#F5F5F5</color>
+    <color name="market_grey_light">#1a1a1a</color>
+    <color name="market_grey_dark">#111111</color>
+
+    <color name="shadow_start">#80000000</color>
+    <color name="market_grey_text">#7F7F7F</color>
+    <color name="market_heder_color">#F5F5F5</color>
+    <color name="separator_grey">#d7d7d7</color>
+    <color name="buttonColor">#ff8c24</color>
+    <color name="selectColor">#404b6a</color>
+
+
+    <!-- Bajaj requirements -->
+    <color name="login_bg">#222222</color>
+    <color name="login_button_bg">#042e6f</color>
+    <color name="bajaj_light_red">#c74f50</color>
+    <color name="login_text_color">#999999</color>
+
+
+
+    <color name="overview_title_tab">#ff8c24</color>
+
+
+
+
+
+
+    <color name="side_strip_color">@color/secondaryBackground</color>
+
+    <color name="primaryBackground">#ffffff</color>
+    <color name="alternateBackground">#dddddd</color>
+    <color name="secondaryBackground">@color/common_red_bg</color>
+
+    <!--
+    <color name="primaryTextColor">#000000</color>-->
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#7f7f7f</color>
+    <color name="alternateTextColor">#ffffff</color>
+
+    <color name="list_head_row_color">@color/primaryTextColor</color>
+    <color name="list_subhead_row_color">@color/secondaryTextColor</color>
+    <color name="list_item_alternate_color">@color/alternateTextColor</color>
+    <dimen name="list_subhead_text_size">@dimen/subHeadTextSize</dimen>
+
+    <color name="buyColor">#48c66b</color>
+    <color name="whitetheambuyColor">#0B7E3B</color>
+    <color name="sellColor">#c74f50</color>
+   <!-- <color name="sellColor">#be1a1a</color>-->
+   <!-- <color name="buyColor">#1e31c7</color>-->
+    <color name="portfolio_color">#fbfbfb</color>
+    <color name="unselectedTxtColor">#7d7b7b</color>
+
+    <color name="backgroundColorWhite">#FFF2F1F1</color>
+
+    <color name="marketDepthGreyColor">#cecece</color>
+
+    <dimen name="appTitleTextSize">16sp</dimen>
+    <dimen name="subHeadTextSize">13sp</dimen>
+
+    <!--Switch Button -->
+
+    <color name="blue_600">#1E88E5</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="blue_900">#0D47A1</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="green_900">#1B5E20</color>
+    <color name="green_A700">#00C853</color>
+    <color name="red_400">#EF5350</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <array name="chartcolor">
+        <item>#ff9933</item>
+        <item>#ff0000</item>
+        <item>#0066ff</item>
+        <item>#ff00ff</item>
+        <item>#00ff00</item>
+        <item>#fff200</item>
+
+    </array>
+    <color name="background_tab_pressed">#6633B5E5</color>
+     <color name="shadow_end">#00000000</color>
+     <!--<color name="orange">#FBB230</color>-->
+    <color name="pulltorefresh">#E9E9E9</color>
+
+    <!-- Reports -->
+    <color name="blue_bg">#0000ff</color>
+    <!--<color name="yellow_menu">#F9AF4E</color>-->
+    <color name="grey_text">#A6A6A6</color>
+    <color name="gray_border">#999999</color>
+    <color name="gray_date">#585757</color>
+    <color name="white_subheading">#cccccc</color>
+    <color name="white_light">#F7F7F7</color>
+    <color name="gray_background">#2a2a2a</color>
+    <!--<color name="orange_textcolor">#F0A42C</color>-->
+    <color name="green_textcolor">#57AD32</color>
+    <color name="green_bg">#ff5aaa3a</color>
+    <color name="red_bg">#ffd50a15</color>
+    <color name="red_font_color">#be1a1a</color>
+    <color name="pink_bg">#ff69b4</color>
+
+    <color name="blue_background">#404b6a</color>
+
+    <color name="red">#ffd50a15</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#111111</color>
+    <color name="yellow_button">#FCC03A</color>
+    <color name="light_orange">#eb7e1f</color>
+    <!-- <color name="orange_bg">#FBB030</color>-->
+    <!--<color name="common_red_bg">#AC1A1A</color>-->
+    <color name="common_red_bg">#404b6a</color>
+    <color name="grayStrip_bg">#FF666666</color>
+    <color name="bajaj_gray">#222222</color>
+    <color name="bajaj_black">#111111</color>
+    <color name="date_color">#267cfd</color>
+    <color name="row_color">#e1e1e1</color>
+
+    <color name="grey_textcolor">#BFBFBF</color>
+    <color name="red_textcolor">#DA0000</color>
+    <!--<color name="trade_but_sel">#FBB030</color>-->
+    <color name="red_but_sel">#D69C85</color>
+    <!--<color name="actions_sel">#C58C2A</color>-->
+
+    <!-- Action Bar -->
+    <!--<color name="yellow_header">#fbb12f</color>&ndash;&gt;-->
+    <!--  <color name="yellow_header">#AC1A1A</color>-->
+    <color name="red_header">#AC1A1A</color>
+    <!--<color name="ticker_bg">#fbb030</color>
+    <color name="actionbar_seperator_left">#fcc13a</color>
+    <color name="actionbar_seperator_right">#c8973c</color>-->
+
+    <!-- Symbol Search -->
+    <color name="transparent">#05000000</color>
+    <color name="transparent_black">#90000000</color>
+    <color name="list_header_text_bg">#898989</color>
+
+    <!-- Trade -->
+
+    <!-- Portfolio -->
+
+    <color name="gray_text_bg">#484848</color>
+
+    <!--Menu Drawer section-->
+
+    <color name="cardview_dark">#222222</color>
+    <color name="market_depth_light">#878787</color>
+    <color name="market_depth_dark">#7f7f7f</color>
+
+    <color name="default_header_color">#CCC</color>
+    <color name="selected_study_color">#111111</color>
+</resources>

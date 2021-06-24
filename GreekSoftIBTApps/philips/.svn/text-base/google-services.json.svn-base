@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1042399347836",
+    "project_id": "android-apps-89197",
+    "storage_bucket": "android-apps-89197.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042399347836:android:616a7d433ce1bf6aa1f5f9",
+        "android_client_info": {
+          "package_name": "com.tog.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042399347836-6e1787tcen7feqqlg75iev9sn0viotbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVRKmNXtufasZn42vwoqPCRcfEF3qxKXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042399347836-6e1787tcen7feqqlg75iev9sn0viotbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042399347836:android:c548b11793ed758da1f5f9",
+        "android_client_info": {
+          "package_name": "com.vishwas.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042399347836-6e1787tcen7feqqlg75iev9sn0viotbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVRKmNXtufasZn42vwoqPCRcfEF3qxKXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042399347836-6e1787tcen7feqqlg75iev9sn0viotbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

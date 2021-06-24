@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quicktour1"
+    android:layout_width="match_parent"
+    android:background="@drawable/vishwas_watchlist_intro"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_quicktour"
+        android:layout_marginBottom="45dp"/>
+
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/txt_quicktour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        style="@style/quicktourTxt"
+
+        android:text="Quick Tour"
+        android:textColor="@color/light_orange" />
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingStart="24dp">
+
+    <LinearLayout
+        android:id="@+id/childitemlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_gray"
+        android:paddingLeft="16dp"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/childitem"
+            style="@style/DrawerItem.Child"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Label"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/imgFocusImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            app:srcCompat="@drawable/ic_lock_black_24dp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

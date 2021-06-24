@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 304
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfStrategyDataScreen/model
+END
+SFBuildUpResponse.kt
+K 25
+svn:wc:ra_dav:version-url
+V 325
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfStrategyDataScreen/model/SFBuildUpResponse.kt
+END
+ScanDataResponse.kt
+K 25
+svn:wc:ra_dav:version-url
+V 324
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfStrategyDataScreen/model/ScanDataResponse.kt
+END
+IOCOrderRequest.kt
+K 25
+svn:wc:ra_dav:version-url
+V 323
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfStrategyDataScreen/model/IOCOrderRequest.kt
+END
+TradeNotificationRequest.kt
+K 25
+svn:wc:ra_dav:version-url
+V 332
+/svn/Zeus/!svn/ver/12045/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfStrategyDataScreen/model/TradeNotificationRequest.kt
+END

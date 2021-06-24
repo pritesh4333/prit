@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parent_layout"
+    android:background="@color/bajaj_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/poalogo"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+             android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/dmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_11sdp"
+        android:text="Dear Investor You are not allowed to Sell this Stock due to Non Submission of POA \n\nYou can Sell this Stock by authorizing it on CDSL (Depository participant) as per New Regulations"
+        >
+
+    </com.acumengroup.ui.textview.GreekTextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/dlearnmore"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_600"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="Learn More">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+        <com.acumengroup.ui.button.GreekButton
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/single_line_border_bajaj"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:id="@+id/btn_proceed"
+            android:textStyle="bold" />
+        <com.acumengroup.ui.button.GreekButton
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/single_line_border_bajaj_gray"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:id="@+id/btn_cancel"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+10
+
+dir
+12380
+http://192.168.206.222/svn/Zeus/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekSoftIBTAPPS/GreekSoftIBTApps/app/src/main/res
+http://192.168.206.222/svn/Zeus
+
+
+
+2021-05-03T04:20:32.739808Z
+12045
+priteshparmar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b62f6d51-9b08-254e-a7d9-d18bbd69c088
+
+values
+dir
+
+mipmap-anydpi-v26
+dir
+
+drawable
+dir
+
+mipmap-hdpi
+dir
+
+mipmap-xxhdpi
+dir
+
+values-night
+dir
+
+drawable-v24
+dir
+
+mipmap-mdpi
+dir
+
+layout
+dir
+
+mipmap-xhdpi
+dir
+
+mipmap-xxxhdpi
+dir
+

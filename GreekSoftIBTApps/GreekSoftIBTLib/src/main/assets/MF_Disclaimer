@@ -1,0 +1,12 @@
+<p>  Mutual Fund Investments are subject to market risk, please read the offer document carefully before investing.
+<p>  All Mutual Fund Purchase / Additional Transaction received in GREEK Lite Mutual Fund Platform will be report to BSE Star MF - Exchange and Units will be credit to Client DP Account as per BSE Settlement Calendar.
+<p>  All Mutual Fund Redemption Transaction received in GREEK Lite Mutual Fund Platform will be report to BSE Star MF - Exchange and Amount will be credit to Client Ledger Account as per BSE Settlement Calendar.
+
+<p> <b> Liquid schemes:</b> All liquid schemes are bifurcated into L0 category & Normal Category.  Click <a href='https://www.bsestarmf.in/RptSchemeMaster.aspx'>here</a> to know the list of schemes
+               <p> <b>L0 Category:</b> Cut off time of order placement for this category is 1.00 PM to get the previous day's NAV (T-1 day). Order placed after the cutoff time will be considered as an AMO Order and it will be reported to exchange on Next working day ( Subject to available clear balance in your ledger Account )
+               <p> <b>Normal category:</b>  Cut off time of order placement for this category is 3.00 PM to get the Current Day's Closing NAV (T Day). Order placed after the cutoff time will be considered as an AMO Order and it will be reported to exchange on Next working day ( Subject to available clear balance in your ledger Account )
+              Amount cut-off is not applicable for Liquid Schemes
+
+<p> <b>*Non Liquid Scheme:</b> All Non liquid schemes are bifurcated into L1 category & Normal Category. In both these categories Current Day's (T Day) closing NAV  will be considered. Click <a href='https://www.bsestarmf.in/RptSchemeMaster.aspx'>here</a> to know the list of schemes
+               <p> <b>L1 Category:</b> Cut off time of order placement for this category is 1.00 PM and amount cutoff is Rs 2 Lakhs & above.Order placed after the cutoff time will be considered as an AMO Order and it will be reported to exchange on Next working day ( Subject to available clear balance in your ledger Account ) 
+               <p> <b>Normal category:</b>  Cut off time of order placement for this category is 3.00 PM and amount cutoff is below Rs 2 Lakhs.Order placed after the cutoff time will be considered as an AMO Order and it will be reported to exchange on Next working day ( Subject to available clear balance in your ledger Account )
