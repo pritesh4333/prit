@@ -5,11 +5,11 @@ package app.reelsdownloadervideo.storydownloader;
 import java.util.ArrayList;
 import java.util.List;
 
-import static app.reelsdownloadervideo.storydownloader.MyReelsList.Myitems;
+import static app.reelsdownloadervideo.storydownloader.MyvideoList.Myitems;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import static app.reelsdownloadervideo.storydownloader.MyReelsList.Mymenu_shares;
+import static app.reelsdownloadervideo.storydownloader.MyvideoList.Mymenu_shares;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;

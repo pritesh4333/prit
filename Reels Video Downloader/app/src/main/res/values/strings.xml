@@ -1,5 +1,17 @@
 <resources>
-    <string name="app_name">Reels Video Downloader</string>
+    <string name="app_name">reels  video downloader.</string>
     <string name="details_video_info">%1$sx%2$s, %3$s, %4$s</string>
+    <!--Live ids-->
+    <string name="app_id">ca-app-pub-5358249725879040~1546541491</string>
+    <string name="footer">ca-app-pub-5358249725879040/3020239413</string>
+    <string name="full_screen">ca-app-pub-5358249725879040/3758606019</string>
+    <string name="native_add">ca-app-pub-5358249725879040/8627789317</string>
+    <!--Testing ids-->
+<!--    <string name="app_id">ca-app-pub-5358249725879040~1546541491</string>-->
+<!--    <string name="footer">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="native_add">ca-app-pub-3940256099942544/2247696110</string>-->
 
+    <!--<string name="native_add">ca-app-pub-3940256099942544/2247696110</string>    New-->
+    <!--<string name="native_video">ca-app-pub-3940256099942544/1044960115</string>    old-->
 </resources>

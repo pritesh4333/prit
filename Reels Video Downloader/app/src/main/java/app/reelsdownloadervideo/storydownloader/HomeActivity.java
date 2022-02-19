@@ -12,13 +12,17 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +35,25 @@ import android.widget.ProgressBar;
 
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.play.core.tasks.OnSuccessListener;
+import com.google.android.play.core.tasks.Task;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,25 +69,117 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
+import static com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE;
+
 public class HomeActivity extends AppCompatActivity {
     Boolean permistion = false;
     private static final int REQUEST_PERMISSIONS_CODE = 100;
     EditText Enter_URL;
+    public static final String MY_PREFS = "reelsdown";
     ProgressBar progressbar;
       TextView progresstext;
     AlertDialog alertpopup;
     View progress_dailog;
+    private static final int MY_REQUEST_CODE = 1;
     ArrayList<String> imgUrlss=new ArrayList<>();
     File mypath;
+    AppUpdateManager appUpdateManager1;
+    AdView myAdView;
+    InterstitialAd mInterstitialAd;
+    public static  int fulladdcount=0;
+    String app_id,footer_add,fullscreen_add,native_add;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity_main);
-
+        //app update
+        appUpdateManager1 = AppUpdateManagerFactory.create(HomeActivity.this);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         getUI();
+        loadAdds();
+        checkforNewUpdate();
+
+    }
+
+    public void loadAdds() {
+        // Loading banner adds
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS, MODE_PRIVATE);
+        app_id = prefs.getString("admob_app_id", "");
+        if (app_id.equalsIgnoreCase("")){
+            app_id=getString(R.string.app_id);
+            footer_add=getString(R.string.footer);
+            native_add=getString(R.string.native_add);
+            fullscreen_add=getString(R.string.full_screen);
+        }else {
+            app_id = prefs.getString("app_id", "");
+            footer_add = prefs.getString("footer_add", "");
+            native_add=prefs.getString("native_add", "");
+            fullscreen_add=prefs.getString("fullscreen_add", "");
+
+        }
+        MobileAds.initialize(this, app_id);
+        LinearLayout adContainer = findViewById(R.id.banner);
+        myAdView = new AdView(HomeActivity.this);
+        myAdView.setAdSize(AdSize.BANNER);
+        myAdView.setAdUnitId(footer_add);
+        adContainer.addView(myAdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        myAdView.loadAd(adRequest);
+
+        /// Initializing the Google Admob SDK  NATIVE
+        MobileAds.initialize(HomeActivity.this, new OnInitializationCompleteListener() {@Override
+        public void onInitializationComplete(InitializationStatus initializationStatus) {
+
+            //Showing a simple Toast Message to the user when The Google AdMob Sdk Initialization is Completed
+            //  Toast.makeText(HomeActivity.this, "AdMob Sdk Initialize " + initializationStatus.toString(), Toast.LENGTH_LONG).show();
+        }
+        });
+
+
+    }
+
+
+    private void showInterstitial() {
+        if ( fulladdcount!=1) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        }
+    }
+    private void checkforNewUpdate() {
+
+        // Creates instance of the manager.
+
+
+         Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager1.getAppUpdateInfo();
+
+         appUpdateInfoTask.addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
+            @Override
+            public void onSuccess(AppUpdateInfo appUpdateInfo) {
+                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                         && appUpdateInfo.isUpdateTypeAllowed(IMMEDIATE)) {
+                     try {
+                        appUpdateManager1.startUpdateFlowForResult(
+                                // Pass the intent that is returned by 'getAppUpdateInfo()'.
+                                appUpdateInfo,
+                                // Or 'AppUpdateType.FLEXIBLE' for flexible updates.
+                                IMMEDIATE,
+                                // The current activity making the update request.
+                                HomeActivity.this,
+                                // Include a request code to later monitor this update request.
+                                MY_REQUEST_CODE);
+                    } catch (IntentSender.SendIntentException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                 }
+            }
+        });
+
+
     }
     public void chekpermisstion() {
 
@@ -92,6 +207,54 @@ public class HomeActivity extends AppCompatActivity {
 
             permistion = true;
 
+        }
+    }
+    @Override
+    public void onPause() {
+        if (myAdView != null) {
+            myAdView.pause();
+        }
+        super.onPause();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (myAdView != null) {
+            myAdView.resume();
+        }
+        appUpdateManager1
+                .getAppUpdateInfo()
+                .addOnSuccessListener(
+                        new OnSuccessListener<AppUpdateInfo>() {
+                            @Override
+                            public void onSuccess(AppUpdateInfo appUpdateInfo) {
+
+                                if (appUpdateInfo.updateAvailability()
+                                        == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
+                                    // If an in-app update is already running, resume the update.
+                                    try {
+                                        appUpdateManager1.startUpdateFlowForResult(
+                                                appUpdateInfo,
+                                                IMMEDIATE,
+                                                HomeActivity.this,
+                                                MY_REQUEST_CODE);
+                                    } catch (IntentSender.SendIntentException e) {
+                                        e.printStackTrace();
+                                    }
+                                } else {
+                                 }
+                            }
+                        });
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == MY_REQUEST_CODE) {
+            if (resultCode != RESULT_OK) {
+                checkforNewUpdate();
+            }else{
+             }
         }
     }
     @Override
@@ -136,7 +299,7 @@ public class HomeActivity extends AppCompatActivity {
                     } catch (Exception e) {
                     }
 
-                    Intent ii = new Intent(HomeActivity.this, MyReelsList.class);
+                    Intent ii = new Intent(HomeActivity.this, MyvideoList.class);
                     startActivity(ii);
 
                 } else {
@@ -160,10 +323,10 @@ public class HomeActivity extends AppCompatActivity {
                 if (permistion) {
 
                     if (Enter_URL.getText().toString().trim().isEmpty()) {
-                        Enter_URL.setError("Please Enter Enter_URL");
+                        Enter_URL.setError("Please Enter OR Past URL");
                     } else if (!Enter_URL.getText().toString().trim().contains("www.instagram.com/reel") &&
-                            !Enter_URL.getText().toString().trim().contains("www.instagram.com/tv")
-                    ) {
+                            !Enter_URL.getText().toString().trim().contains("www.instagram.com/tv")&&
+                            !Enter_URL.getText().toString().trim().contains("www.instagram.com/p/")) {
                         Enter_URL.setError("Provide Instagram Reel or IGTV URL");
                     } else if (!checkInternetConnection(HomeActivity.this)) {
                         Toast.makeText(HomeActivity.this, "Please check Internet connection", Toast.LENGTH_LONG).show();
@@ -189,7 +352,7 @@ public class HomeActivity extends AppCompatActivity {
 
                         String fileUrl = Enter_URL.getText().toString().trim();
 
-                        String[] parts = fileUrl.split("igshid");
+                        String[] parts = fileUrl.split("utm_medium=copy_link");
 
                         new DownloadJson().execute(parts[0] + "__a=1");
                     }
@@ -220,7 +383,13 @@ public class HomeActivity extends AppCompatActivity {
         }
         return false;
     }
-
+    @Override
+    public void onDestroy() {
+        if (myAdView != null) {
+            myAdView.destroy();
+        }
+        super.onDestroy();
+    }
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
 
         @Override
@@ -278,6 +447,30 @@ public class HomeActivity extends AppCompatActivity {
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) about.getLayoutParams();
             params.setMargins(5, 10, 5, 5);
             about.setLayoutParams(params);
+            final TemplateView[] template = new TemplateView[1];
+
+            //Initializing the AdLoader   objects
+            AdLoader adLoader = new AdLoader.Builder(HomeActivity.this, native_add).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                private ColorDrawable background;@Override
+                public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                    NativeTemplateStyle styles = new
+                            NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                    template[0] = deleteDialogView.findViewById(R.id.nativeTemplateView);
+                    template[0].setStyles(styles);
+                    template[0].setNativeAd(unifiedNativeAd);
+                    deleteDialogView.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
+                    // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                    //   Toast.makeText(HomeActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+                }
+
+            }).build();
+
+
+            // load Native Ad with the Request
+            adLoader.loadAds(new AdRequest.Builder().build(),5);
             Dialog.show();
             submitfeedback.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -326,7 +519,30 @@ public class HomeActivity extends AppCompatActivity {
             progresstext = (TextView) progress_dailog.findViewById(R.id.progresspercentage);
             progressbar = (ProgressBar) progress_dailog.findViewById(R.id.progress_bar);
 
+            final TemplateView[] template = new TemplateView[1];
 
+            //Initializing the AdLoader   objects
+            AdLoader adLoader = new AdLoader.Builder(HomeActivity.this, native_add).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+                private ColorDrawable background;@Override
+                public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                    NativeTemplateStyle styles = new
+                            NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                    template[0] = progress_dailog.findViewById(R.id.nativeTemplateView);
+                    template[0].setStyles(styles);
+                    template[0].setNativeAd(unifiedNativeAd);
+                    progress_dailog.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
+                    // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                    //   Toast.makeText(HomeActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+                }
+
+            }).build();
+
+
+            // load Native Ad with the Request
+            adLoader.loadAds(new AdRequest.Builder().build(),5);
             alertpopup.show();
         }
 
@@ -399,7 +615,7 @@ public class HomeActivity extends AppCompatActivity {
                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                 .show();
                     }else {
-                        String[] partss = fileUrl.split("igshid");
+                        String[] partss = fileUrl.split("utm_medium=copy_link");
                          new DownloadJson().execute(partss[0] + "__a=1");
                     }
                 } else {
@@ -409,6 +625,7 @@ public class HomeActivity extends AppCompatActivity {
                     JSONObject jsonObject22 = jsonObject11.getJSONObject("shortcode_media");
                     try {
                         loudScreaming = jsonObject22.getString("video_url");
+
                     }catch(Exception e){
                         imgUrlss= new ArrayList<>();
                         JSONArray jsonArray=jsonObject22.getJSONArray("display_resources");
@@ -419,11 +636,32 @@ public class HomeActivity extends AppCompatActivity {
                          }
 
                     }
-                    Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
-                    intents.putExtra("url",loudScreaming.substring(39));
-                    intents.putExtra("path",mypath.toString());
-                    startService(intents);
 
+                    if(loudScreaming.equalsIgnoreCase("")){
+                        try {
+                            JSONObject jsonObject3 = jsonObject22.getJSONObject("edge_sidecar_to_children");
+                            JSONArray jsonArray = jsonObject3.getJSONArray("edges");
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject jsonObject4 = jsonArray.getJSONObject(i).getJSONObject("node");
+                                loudScreaming = jsonObject4.getString("video_url");
+                                Log.e("video and post url ", loudScreaming);
+                            }
+
+                        }catch(Exception e) {
+                            Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
+                            intents.putExtra("url", loudScreaming.substring(39));
+                            intents.putExtra("path", mypath.toString());
+                            startService(intents);
+
+                         }
+
+                    }else {
+
+                        Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
+                        intents.putExtra("url", loudScreaming.substring(39));
+                        intents.putExtra("path", mypath.toString());
+                        startService(intents);
+                    }
 
 
 
@@ -441,6 +679,77 @@ public class HomeActivity extends AppCompatActivity {
             }
 
         }
+    }
+    @Override
+    public void onBackPressed() {
+
+
+
+        ViewGroup viewGroup = findViewById(android.R.id.content);
+         final View dialogView = LayoutInflater.from(this).inflate(R.layout.back_press_alert_layout, viewGroup, false);
+         AlertDialog.Builder Alrtbuilder = new AlertDialog.Builder(this);
+        Alrtbuilder.setView(dialogView);
+
+        final AlertDialog alertDialog = Alrtbuilder.create();
+        TextView rateus=(TextView)dialogView.findViewById(R.id.rateus_btn);
+        TextView no=(TextView)dialogView.findViewById(R.id.no_btn);
+        TextView yes=(TextView)dialogView.findViewById(R.id.yes_btn);
+
+
+        final TemplateView[] template = new TemplateView[1];
+
+        //Initializing the AdLoader   objects
+        AdLoader adLoader = new AdLoader.Builder(HomeActivity.this, native_add).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+
+            private ColorDrawable background;@Override
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                NativeTemplateStyle styles = new
+                        NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                template[0] = dialogView.findViewById(R.id.nativeTemplateView);
+                template[0].setStyles(styles);
+                template[0].setNativeAd(unifiedNativeAd);
+                dialogView.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
+                // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                //   Toast.makeText(HomeActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            }
+
+        }).build();
+
+
+        // load Native Ad with the Request
+        adLoader.loadAds(new AdRequest.Builder().build(),5);
+
+        rateus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                }
+            }
+        });
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.cancel();
+            }
+        });
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+                finish();
+            }
+        });
+
+
+
+        alertDialog.show();
+
     }
 }
 

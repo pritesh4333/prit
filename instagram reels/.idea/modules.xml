@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Reels_Video_Downloader_-_Instagram_Video_Downloader.iml" filepath="$PROJECT_DIR$/.idea/modules/Reels_Video_Downloader_-_Instagram_Video_Downloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Reels_Video_Downloader_-_Instagram_Video_Downloader.iml" filepath="$PROJECT_DIR$/.idea/modules/Reels_Video_Downloader_-_Instagram_Video_Downloader.iml" group="Reels_Video_Downloader_-_Instagram_Video_Downloader" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Reels_Video_Downloader_-_Instagram_Video_Downloader.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Reels_Video_Downloader_-_Instagram_Video_Downloader.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/Reels_Video_Downloader_-_Instagram_Video_Downloader.nativetemplates.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/Reels_Video_Downloader_-_Instagram_Video_Downloader.nativetemplates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Reels Video Downloader - Instagram Video Downloader/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/nativetemplates.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/nativetemplates.iml" group="Reels Video Downloader - Instagram Video Downloader/nativetemplates" />
     </modules>
   </component>
 </project>

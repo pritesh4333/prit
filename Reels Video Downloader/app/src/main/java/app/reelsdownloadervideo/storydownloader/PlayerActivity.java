@@ -1,38 +1,44 @@
 package app.reelsdownloadervideo.storydownloader;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 
+import android.view.MenuItem;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.drawable.ColorDrawable;
 import android.media.MediaMetadataRetriever;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import android.widget.Toast;
 import android.widget.VideoView;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
-import android.view.LayoutInflater;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import java.io.File;
 import java.text.DecimalFormat;
 
-
+import static app.reelsdownloadervideo.storydownloader.HomeActivity.MY_PREFS;
 
 
 public class PlayerActivity extends AppCompatActivity {
@@ -48,6 +54,10 @@ public class PlayerActivity extends AppCompatActivity {
     TextView soutputtxts;
      ImageView soutput_shares;
     TextView svideo_locations;
+    AdView myAdView;
+    InterstitialAd mInterstitialAd;
+    public static  int fulladdcount=0;
+    String app_id,footer_add,fullscreen_add,native_add;
      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +81,7 @@ public class PlayerActivity extends AppCompatActivity {
         svv_videos.setMediaController(smediaControllers);
         svv_videos.start();
         sOutputVideoPlayingStatuss=true;
+         loadAds();
 
 
         soutput_deletes.setOnClickListener(new View.OnClickListener() {
@@ -121,7 +132,7 @@ public class PlayerActivity extends AppCompatActivity {
                                         System.out.println("file Deleted :" + str_videos);
                                         Toast.makeText(PlayerActivity.this, "File Deleted.", Toast.LENGTH_LONG).show();
 
-                                        Intent i = new Intent(PlayerActivity.this, MyReelsList.class);
+                                        Intent i = new Intent(PlayerActivity.this, MyvideoList.class);
                                         startActivity(i);
                                         finish();
 
@@ -177,14 +188,87 @@ public class PlayerActivity extends AppCompatActivity {
 
 
     }
+    private void loadAds() {
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS, MODE_PRIVATE);
+        app_id = prefs.getString("admob_app_id", "");
+        if (app_id.equalsIgnoreCase("")){
+            app_id=getString(R.string.app_id);
+            footer_add=getString(R.string.footer);
+            native_add=getString(R.string.native_add);
+            fullscreen_add=getString(R.string.full_screen);
+        }else {
+            app_id = prefs.getString("app_id", "");
+            footer_add = prefs.getString("footer_add", "");
+            native_add=prefs.getString("native_add", "");
+            fullscreen_add=prefs.getString("fullscreen_add", "");
 
+        }
+        MobileAds.initialize(this, app_id);
+        LinearLayout adContainer = findViewById(R.id.banner);
+        myAdView = new AdView(PlayerActivity.this);
+        myAdView.setAdSize(AdSize.BANNER);
+        myAdView.setAdUnitId(footer_add);
+        adContainer.addView(myAdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        myAdView.loadAd(adRequest);
+
+        /// Initializing the Google Admob SDK  NATIVE
+        MobileAds.initialize(PlayerActivity.this, new OnInitializationCompleteListener() {@Override
+        public void onInitializationComplete(InitializationStatus initializationStatus) {
+
+            //Showing a simple Toast Message to the user when The Google AdMob Sdk Initialization is Completed
+            //  Toast.makeText(HomeActivity.this, "AdMob Sdk Initialize " + initializationStatus.toString(), Toast.LENGTH_LONG).show();
+        }
+        });
+
+        // Show full page add
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(fullscreen_add);
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                showInterstitial();
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Toast.makeText(getApplicationContext(), "Ad is closed!", Toast.LENGTH_SHORT).show();
+
+                fulladdcount=1;
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Toast.makeText(getApplicationContext(), "Ad failed to load! error code: " + errorCode, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                fulladdcount=1;
+                // Toast.makeText(getApplicationContext(), "Ad left application!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdOpened() {
+                fulladdcount=1;
+                // Toast.makeText(getApplicationContext(), "Ad is opened!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void showInterstitial() {
+        if ( fulladdcount!=1) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        }
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();
 
         if (sScrrens!=null) {
             if (sScrrens.equalsIgnoreCase("MyVideo")) {
-                Intent i = new Intent(PlayerActivity.this, MyReelsList.class);
+                Intent i = new Intent(PlayerActivity.this, MyvideoList.class);
                 startActivity(i);
                 finish();
             } else {
@@ -198,7 +282,27 @@ public class PlayerActivity extends AppCompatActivity {
             finish();
         }
     }
-
+    @Override
+    public void onDestroy() {
+        if (myAdView != null) {
+            myAdView.destroy();
+        }
+        super.onDestroy();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (myAdView != null) {
+            myAdView.resume();
+        }
+    }
+    @Override
+    public void onPause() {
+        if (myAdView != null) {
+            myAdView.pause();
+        }
+        super.onPause();
+    }
     public void share(final String title, String path) {
 
         MediaScannerConnection.scanFile(PlayerActivity.this, new String[] { path },

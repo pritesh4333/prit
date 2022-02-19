@@ -27,7 +27,13 @@
         android:textColor="#FFFFFF"
         android:textSize="12dp"></TextView>
 
-
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:layout_alignParentBottom= "true"
+        android:visibility= "gone"
+        android:id= "@+id/nativeTemplateView"
+        app:gnt_template_type= "@layout/gnt_medium_template_view"
+        android:layout_width= "match_parent"
+        android:layout_height= "wrap_content" />
     <ProgressBar
 
         android:id="@+id/progress_bar"
@@ -35,6 +41,7 @@
         style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginTop="5dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
