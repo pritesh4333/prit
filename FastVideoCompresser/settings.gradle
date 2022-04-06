@@ -1,0 +1,5 @@
+
+rootProject.name = "FastVideoCompresser"
+include ':app'
+include ':nativetemplates'
+include ':android-ffmpeg'

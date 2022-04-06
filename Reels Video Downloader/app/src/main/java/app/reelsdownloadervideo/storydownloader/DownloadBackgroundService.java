@@ -157,7 +157,7 @@ public class DownloadBackgroundService extends IntentService {
     }
     private void Download(){
         Retrofit retroit = new Retrofit.Builder()
-                .baseUrl("https://instagram.fbom3-2.fna.fbcdn.net")
+                .baseUrl("https://scontent")
                 .build();
 //        /v/t50.2886-16/127269787_211801773747556_5761008962867874100_n.mp4?_nc_ht=instagram.fbom3-2.fna.fbcdn.net&_nc_cat=104&_nc_ohc=8_Pfz4ckLEwAX_66hnk&oe=5FFA45F4&oh=d7a338221fdb4a5816a0f4dd0089e85a
 //        https://instagram.fbom3-1.fna.fbcdn.net/v/t50.2886-16/10000000_455577532272035_2963416881860536950_n.mp4?_nc_ht=instagram.fbom3-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=CTpAJtMs7pUAX__smvO&oe=5FFA8DF1&oh=a4e77b10008b8a3b0247c886717cf5d1

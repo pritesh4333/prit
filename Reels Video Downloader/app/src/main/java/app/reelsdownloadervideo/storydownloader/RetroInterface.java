@@ -7,9 +7,11 @@ import okhttp3.ResponseBody;
 
 
 public interface RetroInterface {
-    String BASE_URLS = "https://instagram.fbom3-2.fna.fbcdn.net";
 
     @GET()
     @Streaming
     Call<ResponseBody> downloadFiles(@Url String s);
+
+    @GET()
+    Call<ResponseBody> downloadresponse(@Url String s);
 }

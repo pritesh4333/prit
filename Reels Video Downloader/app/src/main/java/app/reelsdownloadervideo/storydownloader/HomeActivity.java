@@ -1,11 +1,14 @@
 package app.reelsdownloadervideo.storydownloader;
 
+import static android.os.Environment.DIRECTORY_DOCUMENTS;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -38,7 +41,6 @@ import android.widget.Toast;
 
 import com.google.android.ads.nativetemplates.NativeTemplateStyle;
 import com.google.android.ads.nativetemplates.TemplateView;
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -55,6 +57,17 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.android.play.core.tasks.Task;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -66,10 +79,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class HomeActivity extends AppCompatActivity {
     Boolean permistion = false;
@@ -77,7 +96,7 @@ public class HomeActivity extends AppCompatActivity {
     EditText Enter_URL;
     public static final String MY_PREFS = "reelsdown";
     ProgressBar progressbar;
-      TextView progresstext;
+    TextView progresstext;
     AlertDialog alertpopup;
     View progress_dailog;
     private static final int MY_REQUEST_CODE = 1;
@@ -154,14 +173,14 @@ public class HomeActivity extends AppCompatActivity {
         // Creates instance of the manager.
 
 
-         Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager1.getAppUpdateInfo();
+        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager1.getAppUpdateInfo();
 
-         appUpdateInfoTask.addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
+        appUpdateInfoTask.addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
             @Override
             public void onSuccess(AppUpdateInfo appUpdateInfo) {
                 if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
-                         && appUpdateInfo.isUpdateTypeAllowed(IMMEDIATE)) {
-                     try {
+                        && appUpdateInfo.isUpdateTypeAllowed(IMMEDIATE)) {
+                    try {
                         appUpdateManager1.startUpdateFlowForResult(
                                 // Pass the intent that is returned by 'getAppUpdateInfo()'.
                                 appUpdateInfo,
@@ -175,7 +194,7 @@ public class HomeActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 } else {
-                 }
+                }
             }
         });
 
@@ -187,13 +206,13 @@ public class HomeActivity extends AppCompatActivity {
 
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &&
                 (ContextCompat.checkSelfPermission(getApplicationContext(),
-                Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
+                        Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
 
             if ((ActivityCompat.shouldShowRequestPermissionRationale(HomeActivity.this,
 
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)) && (ActivityCompat.
                     shouldShowRequestPermissionRationale(HomeActivity.this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE))) {
+                            Manifest.permission.READ_EXTERNAL_STORAGE))) {
 
             } else {
                 ActivityCompat.requestPermissions(HomeActivity.this,
@@ -242,7 +261,7 @@ public class HomeActivity extends AppCompatActivity {
                                         e.printStackTrace();
                                     }
                                 } else {
-                                 }
+                                }
                             }
                         });
     }
@@ -254,7 +273,7 @@ public class HomeActivity extends AppCompatActivity {
             if (resultCode != RESULT_OK) {
                 checkforNewUpdate();
             }else{
-             }
+            }
         }
     }
     @Override
@@ -337,12 +356,27 @@ public class HomeActivity extends AppCompatActivity {
                         bManagers.registerReceiver(broadcastReceiver, intentFilters);
 
                         try {
-                              mypath = new File(Environment.getExternalStorageDirectory(), "Reels-Video-Downloader");
+                            mypath = new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS).getPath()
+                                    + "/PRIT");
 
                             if (!mypath.exists()) {
-                                if (!mypath.mkdirs()) {
-                                }
+                                mypath.mkdir();
+                                Toast.makeText(getApplicationContext(), "not exist", Toast.LENGTH_SHORT).show();
                             }
+//                              mypath = new File(Environment.getExternalStorageDirectory(), "Reels-Video-Downloader");
+//                            boolean isCreada = mypath.exists();
+//                            if(!isCreada) {
+//                                mypath.mkdirs();
+//                                Log.e("path ","folder created");
+//                            }else{
+//                                Log.e("path ","folder allready  create ");
+//                            }
+//                            if (!mypath.exists()) {
+//                                if (!mypath.mkdirs()) {
+//                                    Log.e("path ","folder create failed");
+//                                }
+//                                Log.e("path ","folder created");
+//                            }
                         } catch (Exception e) {
                         }
 
@@ -350,11 +384,164 @@ public class HomeActivity extends AppCompatActivity {
 
                         immn.hideSoftInputFromWindow(download_btn.getWindowToken(), 0);
 
-                        String fileUrl = Enter_URL.getText().toString().trim();
+                        String fileUrl = Enter_URL.getText().toString().trim().replace("reel","p");
 
                         String[] parts = fileUrl.split("utm_medium=copy_link");
 
-                        new DownloadJson().execute(parts[0] + "__a=1");
+                         new DownloadJson().execute(parts[0] + "__a=1");
+//                        new BackgroundTask(HomeActivity.this) {
+//                            @Override
+//                            public void onPreExecute() {
+//                                ViewGroup viewGroups = findViewById(android.R.id.content);
+//                                progress_dailog = LayoutInflater.from(HomeActivity.this).inflate(R.layout.progress, viewGroups, false);
+//
+//
+//                                //Now we need an AlertDialog.Builder object
+//                                AlertDialog.Builder builders = new AlertDialog.Builder(HomeActivity.this);
+//
+//                                //setting the view of the builder to our custom view that we already inflated
+//                                builders.setView(progress_dailog);
+//
+//
+//
+//
+//                                alertpopup = builders.create();
+//                                alertpopup.setCancelable(false);
+//                                alertpopup.setCanceledOnTouchOutside(false);
+//                                progresstext = (TextView) progress_dailog.findViewById(R.id.progresspercentage);
+//                                progressbar = (ProgressBar) progress_dailog.findViewById(R.id.progress_bar);
+//
+//                                final TemplateView[] template = new TemplateView[1];
+//
+//                                //Initializing the AdLoader   objects
+//                                AdLoader adLoader = new AdLoader.Builder(HomeActivity.this, native_add).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+//
+//                                    private ColorDrawable background;@Override
+//                                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+//
+//                                        NativeTemplateStyle styles = new
+//                                                NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+//
+//                                        template[0] = progress_dailog.findViewById(R.id.nativeTemplateView);
+//                                        template[0].setStyles(styles);
+//                                        template[0].setNativeAd(unifiedNativeAd);
+//                                        progress_dailog.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
+//                                        // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+//                                        //   Toast.makeText(HomeActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+//                                    }
+//
+//                                }).build();
+//
+//
+//                                // load Native Ad with the Request
+//                                adLoader.loadAds(new AdRequest.Builder().build(),5);
+//                                alertpopup.show();
+//                            }
+//
+//                            @Override
+//                            public String doInBackground(String url) {
+//                                try {
+//                                    OkHttpClient client = new OkHttpClient();
+//
+//                                    Request request =
+//                                            new Request.Builder()
+//                                                    .url(url)
+//                                                    .build();
+//
+//                                    Response response = client.newCall(request).execute();
+//                                    if (response.isSuccessful()) {
+//                                        return response.body().string();
+//                                    }
+//                                } catch (IOException ioException) {
+//                                    ioException.printStackTrace();
+//                                }
+//                                return "Download failed";
+//                            }
+//
+//                            @Override
+//                            public void onPostExecute(String result) {
+//                                String loudScreaming="";
+//                                String src="";
+//                                try {
+//                                    if (result == null ) {
+//                                        alertpopup.dismiss();
+//                                        String fileUrl = Enter_URL.getText().toString().trim();
+//                                        if (fileUrl.contains("-")||fileUrl.contains("_")){
+//                                            new AlertDialog.Builder(HomeActivity.this)
+//                                                    .setTitle("Private Account")
+//                                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                                                        public void onClick(DialogInterface dialog, int which) {
+//                                                            Enter_URL.setText("");
+//                                                        }
+//                                                    })
+//                                                    .setIcon(android.R.drawable.ic_dialog_alert)
+//                                                    .show();
+//                                        }else {
+//                                            String[] partss = fileUrl.split("utm_medium=copy_link");
+//                                            new DownloadJson().execute(partss[0] + "__a=1");
+//                                        }
+//                                    } else {
+//
+//                                        JSONObject jsonObjects = new JSONObject(result);
+//                                        JSONObject jsonObject11 = jsonObjects.getJSONObject("graphql");
+//                                        JSONObject jsonObject22 = jsonObject11.getJSONObject("shortcode_media");
+//                                        try {
+//                                            loudScreaming = jsonObject22.getString("video_url");
+//
+//                                        }catch(Exception e){
+//                                            imgUrlss= new ArrayList<>();
+//                                            JSONArray jsonArray=jsonObject22.getJSONArray("display_resources");
+//                                            for (int i =0;i<jsonArray.length();i++){
+//                                                JSONObject jsonObject3= jsonArray.getJSONObject(i);
+//                                                src = jsonObject3.getString("src");
+//                                                imgUrlss.add(src);
+//                                            }
+//
+//                                        }
+//
+//                                        if(loudScreaming.equalsIgnoreCase("")){
+//                                            try {
+//                                                JSONObject jsonObject3 = jsonObject22.getJSONObject("edge_sidecar_to_children");
+//                                                JSONArray jsonArray = jsonObject3.getJSONArray("edges");
+//                                                for (int i = 0; i < jsonArray.length(); i++) {
+//                                                    JSONObject jsonObject4 = jsonArray.getJSONObject(i).getJSONObject("node");
+//                                                    loudScreaming = jsonObject4.getString("video_url");
+//                                                    Log.e("video and post url ", loudScreaming);
+//                                                }
+//
+//                                            }catch(Exception e) {
+//                                                Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
+//                                                intents.putExtra("url", loudScreaming.substring(39));
+//                                                intents.putExtra("path", mypath.toString());
+//                                                startService(intents);
+//
+//                                            }
+//
+//                                        }else {
+//
+//                                            Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
+//                                            intents.putExtra("url", loudScreaming.substring(39));
+//                                            intents.putExtra("path", mypath.toString());
+//                                            startService(intents);
+//                                        }
+//
+//
+//
+//
+//                                    }
+//                                } catch(JSONException e){
+//                                    e.printStackTrace();
+//                                    alertpopup.dismiss();
+//                                    HomeActivity.this.runOnUiThread(new Runnable() {
+//                                        public void run() {
+//                                            Enter_URL.setText("");
+//                                            Toast.makeText(HomeActivity.this,"Bad URL",Toast.LENGTH_LONG).show();
+//                                        }
+//                                    });
+//                                }
+//
+//                            }
+//                        }.execute(parts[0] + "__a=1");
                     }
                 } else {
 
@@ -422,80 +609,85 @@ public class HomeActivity extends AppCompatActivity {
     };
 
 
-        public void showmessage(String message) {
-            Enter_URL.setText("");
-            LayoutInflater factorys = LayoutInflater.from(HomeActivity.this);
-            final View deleteDialogView = factorys.inflate(R.layout.popup, null);
+    public void showmessage(String message) {
+        Enter_URL.setText("");
+        LayoutInflater factorys = LayoutInflater.from(HomeActivity.this);
+        final View deleteDialogView = factorys.inflate(R.layout.popup, null);
 
-            final AlertDialog Dialog = new AlertDialog.Builder(HomeActivity.this).create();
-            Dialog.setView(deleteDialogView);
-
-
-            Button submitfeedback = (Button) deleteDialogView.findViewById(R.id.submitfeedback);
-            TextView about = (TextView) deleteDialogView.findViewById(R.id.about);
-            TextView likeapp = (TextView) deleteDialogView.findViewById(R.id.likeapp);
-            likeapp.setText("Download");
+        final AlertDialog Dialog = new AlertDialog.Builder(HomeActivity.this).create();
+        Dialog.setView(deleteDialogView);
 
 
-            likeapp.setVisibility(View.VISIBLE);
-            submitfeedback.setVisibility(View.GONE);
-            about.setVisibility(View.VISIBLE);
-            about.setText(message);
-            about.setTextSize(17);
-            about.setTextColor(HomeActivity.this.getResources().getColor(R.color.white));
-            about.setBackgroundColor(HomeActivity.this.getResources().getColor(R.color.greencolor));
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) about.getLayoutParams();
-            params.setMargins(5, 10, 5, 5);
-            about.setLayoutParams(params);
-            final TemplateView[] template = new TemplateView[1];
+        Button submitfeedback = (Button) deleteDialogView.findViewById(R.id.submitfeedback);
+        TextView about = (TextView) deleteDialogView.findViewById(R.id.about);
+        TextView likeapp = (TextView) deleteDialogView.findViewById(R.id.likeapp);
+        likeapp.setText("Download");
 
-            //Initializing the AdLoader   objects
-            AdLoader adLoader = new AdLoader.Builder(HomeActivity.this, native_add).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
 
-                private ColorDrawable background;@Override
-                public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+        likeapp.setVisibility(View.VISIBLE);
+        submitfeedback.setVisibility(View.GONE);
+        about.setVisibility(View.VISIBLE);
+        about.setText(message);
+        about.setTextSize(17);
+        about.setTextColor(HomeActivity.this.getResources().getColor(R.color.white));
+        about.setBackgroundColor(HomeActivity.this.getResources().getColor(R.color.greencolor));
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) about.getLayoutParams();
+        params.setMargins(5, 10, 5, 5);
+        about.setLayoutParams(params);
+        final TemplateView[] template = new TemplateView[1];
 
-                    NativeTemplateStyle styles = new
-                            NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+        //Initializing the AdLoader   objects
+        AdLoader adLoader = new AdLoader.Builder(HomeActivity.this, native_add).forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
 
-                    template[0] = deleteDialogView.findViewById(R.id.nativeTemplateView);
-                    template[0].setStyles(styles);
-                    template[0].setNativeAd(unifiedNativeAd);
-                    deleteDialogView.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
-                    // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
-                    //   Toast.makeText(HomeActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            private ColorDrawable background;@Override
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+
+                NativeTemplateStyle styles = new
+                        NativeTemplateStyle.Builder().withMainBackgroundColor(background).build();
+
+                template[0] = deleteDialogView.findViewById(R.id.nativeTemplateView);
+                template[0].setStyles(styles);
+                template[0].setNativeAd(unifiedNativeAd);
+                deleteDialogView.findViewById(R.id.nativeTemplateView).setVisibility(View.VISIBLE);
+                // Showing a simple Toast message to user when Native an ad is Loaded and ready to show
+                //   Toast.makeText(HomeActivity.this, "Native Ad is loaded ,now you can show the native ad  ", Toast.LENGTH_LONG).show();
+            }
+
+        }).build();
+
+
+        // load Native Ad with the Request
+        adLoader.loadAds(new AdRequest.Builder().build(),5);
+        Dialog.show();
+        submitfeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("market://details?id=" + getPackageName())));
+
+                } catch (android.content.ActivityNotFoundException anfe) {
+
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
                 }
 
-            }).build();
+                Dialog.dismiss();
+            }
+        });
+
+        Dialog.show();
+
+    }
 
 
-            // load Native Ad with the Request
-            adLoader.loadAds(new AdRequest.Builder().build(),5);
-            Dialog.show();
-            submitfeedback.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-
-                    try {
-
-                        startActivity(new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("market://details?id=" + getPackageName())));
-
-                    } catch (android.content.ActivityNotFoundException anfe) {
-
-                        startActivity(new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
-                    }
-
-                    Dialog.dismiss();
-                }
-            });
-
-            Dialog.show();
-
-        }
     private class DownloadJson extends AsyncTask<String, String, String> {
+        public static final String REQUEST_METHOD = "GET";
+        public static final int READ_TIMEOUT = 15000;
+        public static final int CONNECTION_TIMEOUT = 15000;
 
         protected void onPreExecute() {
             super.onPreExecute();
@@ -547,57 +739,36 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         protected String doInBackground(String... params) {
-
-
-            HttpURLConnection connection = null;
-
-            BufferedReader reader = null;
-            try {
-                java.net.URL urls = new URL(params[0]);
-
-                connection = (HttpURLConnection) urls.openConnection();
+            StringBuffer chaine = new StringBuffer("");
+            try{
+                URL url = new URL(params[0]);
+                HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+                connection.setRequestProperty("User-Agent", "");
+                connection.setRequestMethod("GET");
+                connection.setDoInput(true);
                 connection.connect();
 
+                InputStream inputStream = connection.getInputStream();
 
-                InputStream streams = connection.getInputStream();
-
-                reader = new BufferedReader(new InputStreamReader(streams));
-
-                StringBuffer buffer = new StringBuffer();
+                BufferedReader rd = new BufferedReader(new InputStreamReader(inputStream));
                 String line = "";
-
-                while ((line = reader.readLine()) != null) {
-                    buffer.append(line+"\n");
+                while ((line = rd.readLine()) != null) {
+                    chaine.append(line);
                 }
-
-                return buffer.toString();
-
-
-            } catch (MalformedURLException e) {
-
-            } catch (IOException e) {
-
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-
-                try {
-
-                    if (reader != null) {
-                        reader.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+                return String.valueOf(chaine);
             }
-            return null;
+
+            catch (IOException e) {
+                // Writing exception to log
+                e.printStackTrace();
+            }
+            return String.valueOf(chaine);
         }
 
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+            Log.e("Return Response ", result);
             String loudScreaming="";
             String src="";
             try {
@@ -609,14 +780,14 @@ public class HomeActivity extends AppCompatActivity {
                                 .setTitle("Private Account")
                                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                         Enter_URL.setText("");
+                                        Enter_URL.setText("");
                                     }
                                 })
                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                 .show();
                     }else {
                         String[] partss = fileUrl.split("utm_medium=copy_link");
-                         new DownloadJson().execute(partss[0] + "__a=1");
+                        new DownloadJson().execute(partss[0] + "__a=1");
                     }
                 } else {
 
@@ -625,7 +796,7 @@ public class HomeActivity extends AppCompatActivity {
                     JSONObject jsonObject22 = jsonObject11.getJSONObject("shortcode_media");
                     try {
                         loudScreaming = jsonObject22.getString("video_url");
-
+                        Log.e("Download URl  ", loudScreaming);
                     }catch(Exception e){
                         imgUrlss= new ArrayList<>();
                         JSONArray jsonArray=jsonObject22.getJSONArray("display_resources");
@@ -633,7 +804,7 @@ public class HomeActivity extends AppCompatActivity {
                             JSONObject jsonObject3= jsonArray.getJSONObject(i);
                             src = jsonObject3.getString("src");
                             imgUrlss.add(src);
-                         }
+                        }
 
                     }
 
@@ -649,16 +820,16 @@ public class HomeActivity extends AppCompatActivity {
 
                         }catch(Exception e) {
                             Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
-                            intents.putExtra("url", loudScreaming.substring(39));
+                            intents.putExtra("url", loudScreaming.substring(16));
                             intents.putExtra("path", mypath.toString());
                             startService(intents);
 
-                         }
+                        }
 
                     }else {
 
                         Intent intents = new Intent(HomeActivity.this, DownloadBackgroundService.class);
-                        intents.putExtra("url", loudScreaming.substring(39));
+                        intents.putExtra("url", loudScreaming.substring(16));
                         intents.putExtra("path", mypath.toString());
                         startService(intents);
                     }
@@ -680,14 +851,46 @@ public class HomeActivity extends AppCompatActivity {
 
         }
     }
+
+    private abstract class BackgroundTask {
+
+        private Activity activity;
+        public BackgroundTask(Activity activity) {
+            this.activity = activity;
+        }
+
+        private void startBackground(final String url) {
+            new Thread(new Runnable() {
+                public void run() {
+
+                    final String result=  doInBackground(url);
+                    activity.runOnUiThread(new Runnable() {
+                        public void run() {
+
+                            onPostExecute(result);
+                        }
+                    });
+                }
+            }).start();
+        }
+        public void execute(String url){
+            onPreExecute();
+            startBackground(url);
+        }
+        public abstract void onPreExecute();
+        public abstract String doInBackground(String url);
+        public abstract void onPostExecute(String result);
+
+
+    }
     @Override
     public void onBackPressed() {
 
 
 
         ViewGroup viewGroup = findViewById(android.R.id.content);
-         final View dialogView = LayoutInflater.from(this).inflate(R.layout.back_press_alert_layout, viewGroup, false);
-         AlertDialog.Builder Alrtbuilder = new AlertDialog.Builder(this);
+        final View dialogView = LayoutInflater.from(this).inflate(R.layout.back_press_alert_layout, viewGroup, false);
+        AlertDialog.Builder Alrtbuilder = new AlertDialog.Builder(this);
         Alrtbuilder.setView(dialogView);
 
         final AlertDialog alertDialog = Alrtbuilder.create();
