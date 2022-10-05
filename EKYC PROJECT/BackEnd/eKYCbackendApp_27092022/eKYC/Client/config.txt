@@ -1,0 +1,15 @@
+port=3001
+isSecure=true
+sslKey=wildcard_greeksoft_in.key
+sslCert=wildcard_greeksoft_in.crt
+cdslPoscode=1200006235
+cdslUsername=RAJDEEP
+cdslPassword=D7640C9779
+emailHost=192.168.206.150
+emailPort=25
+emailId=nirlay.mehta@greeksoft.co.in
+emailPass=Nirlay@123
+isSecureSMTP=false
+vishwasSmsIsSecure=false
+isProduction=true
+

@@ -1,0 +1,8 @@
+db=gmx_ekyc
+host=127.0.0.1
+user=root
+password=greek
+usemysql=1
+ismanager=1
+useIBTTriggers=0
+

@@ -1,0 +1,5 @@
+port=3002
+isSecure=true
+sslKey=wildcard_greeksoft_in.key
+sslCert=wildcard_greeksoft_in.crt
+
