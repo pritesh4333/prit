@@ -1,0 +1,19 @@
+Hello All,
+ 
+Please find the below svn link for ekyc frontend projects for Vishwas and Vitt
+ 
+1.vishwas Admin
+http://192.168.209.251/svn/Zeus/Flutter_Projects/Flutter_Apps/ekyc_admin
+ 
+2. Vishwas Client
+http://192.168.209.251/svn/Zeus/Flutter_Projects/Flutter_Apps/ekyc_stable_02022022/E-kycApp
+ 
+3. SilverStream(Vitt) Client
+http://192.168.209.251/svn/Zeus/Flutter_Projects/Flutter_Apps/Vitt/Vitt/EkycStableProject
+ 
+4. SilverStream(Vitt) Admin
+http://192.168.209.251/svn/Zeus/Flutter_Projects/Flutter_Apps/Vitt/Vitt/EkycAdmin
+ 
+ 
+PFA of Ekyc Digio Sing process document and steps for vishwas and vitt 
+ 
