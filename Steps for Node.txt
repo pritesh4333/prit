@@ -1,0 +1,6 @@
+1. Create one folder
+2. cmd redirect to project path
+3. cmd type npm init
+4. add package name author name etc and project details
+5. cmd type npm install express to download project framework
+6. start server node server.js
