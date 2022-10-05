@@ -1,0 +1,78 @@
+name: ekyc_admin
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  cupertino_icons: ^1.0.2
+  http: ^0.13.3
+  rxdart:
+  marquee:
+  tuple:
+  auto_size_text:
+  flutter_svg:
+  syncfusion_flutter_datagrid:
+  intl:
+  syncfusion_flutter_datepicker:
+  crypto:
+  awesome_dialog:
+  #one_context:
+  linked_scroll_controller:
+
+  #  for mobile
+  popover :
+  dotted_border:
+  percent_indicator: ^4.2.2
+  popup_menu: ^1.0.5
+  syncfusion_flutter_datagrid_export: ^20.2.40-beta
+  syncfusion_flutter_xlsio: ^20.2.40-beta
+  flutter_animated_dialog: ^2.0.1
+  video_player: ^2.4.5
+  google_maps_cluster_manager: ^3.0.0+1
+  google_maps: ^6.2.0
+  syncfusion_flutter_pdfviewer: ^20.2.40-beta
+  file_picker: ^4.1.3
+  image: ^3.2.0
+ 
+   
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/Resources/Images/
+    - assets/images/
+  
+  # fonts:
+  #  - family: Roboto
+  #    fonts:
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-Black.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-BlackItalic.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-Bold.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-BoldItalic.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-Italic.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-Light.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-LightItalic.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-Medium.ttf
+  #    - asset: lib/Resources/Fonts/Roboto/Roboto-MediumItalic.ttf
+  # fonts:
+  #   - family: Roboto-Regular
+  #     fonts:
+  #     - asset: lib/Resources/Fonts/Roboto/Roboto-Regular.ttf
+  #     - asset: lib/Resources/Fonts/Roboto/Roboto-Thin.ttf
+  #     - asset: lib/Resources/Fonts/Roboto/Roboto-ThinItalic.ttf
+  fonts:
+    - family: Roboto
+      fonts:
+      - asset: lib/Resources/Fonts/Roboto/Roboto-Black.ttf
+    - family: RobotoRegular
+      fonts:
+      - asset: lib/Resources/Fonts/Roboto/Roboto-Regular.ttf

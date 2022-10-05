@@ -1,0 +1,97 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		//	For Dev Server .apk
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"apk",
+				"--split-per-abi",
+				"--no-sound-null-safety",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Flutter: 1) Dev .apk",
+			"detail": ""
+		},
+		//	For Test Server .apk
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"apk",
+				"--split-per-abi",
+				"--no-sound-null-safety",
+				"--profile",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Flutter: 2) Test .apk",
+			"detail": ""
+		},
+		//	For LIVE Server .apk
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"apk",
+				"--split-per-abi",
+				"--no-sound-null-safety",
+				"--release",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Flutter: 3) Live .apk",
+			"detail": ""
+		},
+		//	For LIVE Server web Package
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"web",
+				//"--web-renderer",
+                //"html",
+                //"canvaskit",
+				"--release",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Flutter: 4) Live Web Package",
+			"detail": ""
+		},
+		//	For LIVE Server macOS App
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"macos",
+				"--release",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Flutter: 5) Live macOS App",
+			"detail": ""
+		},
+		//	For LIVE Server Windows .exe
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"windows",
+				"--release",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Flutter: 6) Live Windows .exe",
+			"detail": ""
+		},
+	]
+}
