@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/customProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:clickable="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dip">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/progressTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/product_logo"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_30sdp"
+                 app:srcCompat="@mipmap/mandot_login_icon" />
+
+
+            <LinearLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginRight="@dimen/_50sdp"
+                android:orientation="vertical">
+
+                <!--            Login layout start-->
+                <LinearLayout
+                    android:id="@+id/login_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/single_line_border_orange">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="@dimen/_15sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/ti_clientCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:textColorHint="@color/login_text_color">
+
+                                    <com.acumengroup.ui.edittext.GreekEditText
+                                        android:id="@+id/ed_clientCode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/transparent_black"
+                                        android:cursorVisible="true"
+                                        android:drawableStart="@drawable/ic_person_black_24dp"
+                                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:hint="Client Code"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLength="10"
+                                        android:nextFocusDown="@+id/ed_clientPass"
+                                        android:paddingLeft="@dimen/_5sdp"
+                                        android:paddingRight="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="16sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/ti_clientPass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:textColorHint="@color/login_text_color"
+                                    app:passwordToggleEnabled="true"
+                                    app:passwordToggleTint="@android:color/darker_gray">
+
+                                    <com.acumengroup.ui.edittext.GreekEditText
+                                        android:id="@+id/ed_clientPass"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:backgroundTint="@color/transparent_black"
+                                        android:cursorVisible="true"
+                                        android:drawableStart="@drawable/ic_lock_black_24dp"
+                                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:ems="10"
+                                        android:hint="Password"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textPassword"
+                                        android:maxLength="12"
+                                        android:nextFocusRight="@id/ed_clientTPass"
+                                        android:nextFocusDown="@+id/ed_clientTPass"
+                                        android:paddingLeft="@dimen/_5sdp"
+                                        android:paddingRight="@dimen/_10sdp"
+                                        android:password="true"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="16sp" />
+
+                                    <requestFocus />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/ti_clientTPass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:textColorHint="@color/login_text_color"
+                                    android:visibility="gone"
+                                    app:passwordToggleEnabled="true"
+                                    app:passwordToggleTint="@android:color/darker_gray">
+
+                                    <com.acumengroup.ui.edittext.GreekEditText
+                                        android:id="@+id/ed_clientTPass"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerHorizontal="true"
+                                        android:backgroundTint="@color/login_text_color"
+                                        android:cursorVisible="true"
+                                        android:drawableStart="@drawable/ic_lock_white_24dp"
+                                        android:drawableLeft="@drawable/ic_lock_white_24dp"
+                                        android:drawablePadding="@dimen/_5sdp"
+                                        android:ems="10"
+                                        android:hint="Transaction Password"
+                                        android:maxLength="12"
+                                        android:paddingLeft="@dimen/_5sdp"
+                                        android:paddingRight="@dimen/_10sdp"
+                                        android:password="true"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="16sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.acumengroup.ui.textview.GreekTextView
+                                    android:id="@+id/txtloginotp"
+                                    style="@android:style/TextAppearance.Small"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ti_clientTPass"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_25sdp"
+                                    android:gravity="center_horizontal"
+                                    android:text="Login with OTP"
+                                    android:textColor="#042e6f"
+                                    android:textStyle="bold"
+                                    android:singleLine="true"
+                                    android:maxLines="1"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <com.acumengroup.ui.button.GreekButton
+                        android:id="@+id/btnLogin"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardView"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-25dp"
+                        android:background="@drawable/orange_trading_button_effect"
+                        android:gravity="center"
+                        android:padding="@dimen/_6sdp"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <!--            desclaimer and forgot layout start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txtdisclaimer"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Disclaimer *"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txtForgotPass"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|end"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:text="Forgot Password?"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <!--            desclaimer and forgot layout end-->
+
+                    <!--            gust login and quick tour layout start-->
+                    <LinearLayout
+                        android:id="@+id/bottom_btn_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txtOpenAcct"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtForgotPass"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Don't have an Account?"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:textColor="#404b6a"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <com.acumengroup.ui.button.GreekButton
+                            android:id="@+id/btnsignUp"
+                            style="@android:style/TextAppearance.Medium"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="@drawable/navyblue_trading_button_effect"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Sign up"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:visibility="visible"/>
+
+
+                        <LinearLayout
+                            android:id="@+id/detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:orientation="horizontal">
+
+
+                            <com.acumengroup.ui.button.GreekButton
+                                android:id="@+id/btn_GuestLogin"
+                                style="@android:style/TextAppearance.Medium"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/orange_border_trading_btn_effect"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Guest Login"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:textSize="@dimen/_14sdp"
+                                android:textColor="#042e6f"
+                                android:textStyle="bold" />
+
+
+                            <com.acumengroup.ui.button.GreekButton
+                                android:id="@+id/quicktourbtn"
+                                style="@android:style/TextAppearance.Medium"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/orange_border_trading_btn_effect"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:textSize="@dimen/_14sdp"                            android:padding="@dimen/_5sdp"
+                                android:text="Quick Tour"
+                                android:textColor="#042e6f"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--            gust login and quick tour layout end-->
+
+
+                </LinearLayout>
+                <!--            Login layout end-->
+
+
+                <!--            Create MPIN layout start-->
+                <LinearLayout
+
+                    android:id="@+id/create_mpin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/single_line_border_orange">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/mpincardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="@dimen/_15sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.acumengroup.ui.textview.GreekTextView
+                                        style="@android:style/TextAppearance.Small"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ti_clientTPass"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:gravity="center_horizontal"
+                                        android:text="Welcome onboard !"
+                                        android:textColor="#042e6f"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_30sdp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:weightSum="6">
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/create_mpin_edit_one"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/create_mpin_edit_two"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/create_mpin_edit_three"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold"
+                                                android:gravity="center_horizontal" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/create_mpin_edit_four"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/create_mpin_edit_five"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/create_mpin_edit_six"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/create_visible_layout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/mpin_showImg"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@color/white"
+                                                android:src="@drawable/ic_baseline_visibility_24" />
+
+                                            <com.acumengroup.ui.textview.GreekTextView
+                                                android:id="@+id/mpin_showTxt"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:padding="@dimen/_5sdp"
+                                                android:text="SHOW"
+                                                android:textSize="@dimen/_12sdp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <com.acumengroup.ui.button.GreekButton
+                            android:id="@+id/mpinCreate_btn"
+                            style="@android:style/TextAppearance.Medium"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardView"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-25dp"
+                            android:background="@drawable/orange_trading_button_effect"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:text="Create MPIN"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <!--            Create MPIN layout end-->
+                    <!--            Mpin desclaimer and forgot layout start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/create_mipn_disclaimer"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Disclaimer *"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/create_mpin_txtForgot"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|end"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:gravity="right|end"
+                            android:text="Forgot MPIN"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <!--           Mpin  desclaimer and forgot layout end-->
+                </LinearLayout>
+                <!--            Create MPIN layout end-->
+
+                <!--            Login MPIN layout start-->
+                <LinearLayout
+                    android:id="@+id/login_mpin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/single_line_border_orange">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="@dimen/_15sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.acumengroup.ui.textview.GreekTextView
+                                        android:id="@+id/welcome_text"
+                                        style="@android:style/TextAppearance.Small"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ti_clientTPass"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:gravity="center_horizontal"
+                                        android:text="Welcome onboard !"
+                                        android:textColor="#042e6f"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_30sdp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:weightSum="6">
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/login_mpin_edit_one"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:selectAllOnFocus="true"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:text="1"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/login_mpin_edit_two"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:selectAllOnFocus="true"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:text="1"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/login_mpin_edit_three"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:selectAllOnFocus="true"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:text="1"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/login_mpin_edit_four"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:selectAllOnFocus="true"
+                                                android:textAlignment="center"
+                                                android:text="1"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/login_mpin_edit_five"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:selectAllOnFocus="true"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:text="1"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/login_mpin_edit_six"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:selectAllOnFocus="true"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:text="1"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/login_visible_layout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageButton
+                                                android:id="@+id/login_mpin_showImg"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@color/white"
+                                                android:src="@drawable/ic_baseline_visibility_24" />
+
+                                            <com.acumengroup.ui.textview.GreekTextView
+                                                android:id="@+id/login_mpin_showTxt2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:text="SHOW"
+                                                android:textSize="@dimen/_12sdp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <com.acumengroup.ui.button.GreekButton
+                            android:id="@+id/validated_mpin_btn"
+                            style="@android:style/TextAppearance.Medium"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardView"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-25dp"
+                            android:background="@drawable/orange_trading_button_effect"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:text="Login"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <!--            Create MPIN layout end-->
+                    <!--            Mpin desclaimer and forgot layout start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/login_mipn_disclaimer"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Disclaimer *"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/login_mpin_txtForgot"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|end"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:text="Forgot MPIN"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <!--           Mpin  desclaimer and forgot layout end-->
+                </LinearLayout>
+                <!--            Login MPIN layout end-->
+
+                <!--            OTP layout start-->
+                <LinearLayout
+                    android:id="@+id/otp_mpin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/single_line_border_orange">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="@dimen/_15sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.acumengroup.ui.textview.GreekTextView
+                                        style="@android:style/TextAppearance.Small"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ti_clientTPass"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:gravity="center_horizontal"
+                                        android:text="Enter OTP"
+                                        android:textColor="#042e6f"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_30sdp"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:weightSum="6">
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/otp_mpin_edit_one"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/otp_mpin_edit_two"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/otp_mpin_edit_three"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/otp_mpin_edit_four"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/otp_mpin_edit_five"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+                                            <com.acumengroup.ui.edittext.GreekEditText
+                                                android:id="@+id/otp_mpin_edit_six"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:layout_marginTop="@dimen/_15sdp"
+                                                android:layout_marginBottom="@dimen/_10sdp"
+                                                android:background="@drawable/mpin_edittext_effect"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="1"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/otp_visible_layout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageButton
+                                                android:id="@+id/otp_mpin_showImg"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@color/white"
+                                                android:src="@drawable/ic_baseline_visibility_24" />
+
+                                            <com.acumengroup.ui.textview.GreekTextView
+                                                android:id="@+id/otp_mpin_showTxt"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_5sdp"
+                                                android:text="SHOW"
+                                                android:textSize="@dimen/_12sdp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <com.acumengroup.ui.button.GreekButton
+                            android:id="@+id/otp_submit"
+                            style="@android:style/TextAppearance.Medium"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardView"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-25dp"
+                            android:background="@drawable/orange_trading_button_effect"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:text="SUBMIT"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <!--            Create MPIN layout end-->
+                    <!--            Mpin desclaimer and forgot layout start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/otp_mipn_disclaimer"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Disclaimer *"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/otp_mpin_txtForgot"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|end"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:text="Resend OTP"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <!--           Mpin  desclaimer and forgot layout end-->
+                </LinearLayout>
+                <!--            OTP layout end-->
+
+                <!--            RESET layout start-->
+                <LinearLayout
+                    android:id="@+id/reset_mpin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/single_line_border_orange">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="@dimen/_15sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.acumengroup.ui.textview.GreekTextView
+                                        style="@android:style/TextAppearance.Small"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ti_clientTPass"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:gravity="center_horizontal"
+                                        android:text="Reset MPIN"
+                                        android:textColor="#042e6f"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:weightSum="6">
+
+                                        <com.acumengroup.ui.edittext.GreekEditText
+                                            android:id="@+id/reset_mpin_edit_one"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginLeft="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_15sdp"
+                                            android:layout_marginBottom="@dimen/_30sdp"
+                                            android:background="@drawable/mpin_edittext_effect"
+                                            android:inputType="numberPassword"
+                                            android:maxLength="1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+                                        <com.acumengroup.ui.edittext.GreekEditText
+                                            android:id="@+id/reset_mpin_edit_two"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginLeft="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_15sdp"
+                                            android:layout_marginBottom="@dimen/_30sdp"
+                                            android:background="@drawable/mpin_edittext_effect"
+                                            android:inputType="numberPassword"
+                                            android:maxLength="1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+                                        <com.acumengroup.ui.edittext.GreekEditText
+                                            android:id="@+id/reset_mpin_edit_three"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginLeft="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_15sdp"
+                                            android:layout_marginBottom="@dimen/_30sdp"
+                                            android:background="@drawable/mpin_edittext_effect"
+                                            android:inputType="numberPassword"
+                                            android:maxLength="1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+                                        <com.acumengroup.ui.edittext.GreekEditText
+                                            android:id="@+id/reset_mpin_edit_four"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginLeft="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_15sdp"
+                                            android:layout_marginBottom="@dimen/_30sdp"
+                                            android:background="@drawable/mpin_edittext_effect"
+                                            android:inputType="numberPassword"
+                                            android:maxLength="1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+                                        <com.acumengroup.ui.edittext.GreekEditText
+                                            android:id="@+id/reset_mpin_edit_five"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginLeft="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_15sdp"
+                                            android:layout_marginBottom="@dimen/_30sdp"
+                                            android:background="@drawable/mpin_edittext_effect"
+                                            android:inputType="numberPassword"
+                                            android:maxLength="1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+                                        <com.acumengroup.ui.edittext.GreekEditText
+                                            android:id="@+id/reset_mpin_edit_six"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginLeft="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_15sdp"
+                                            android:layout_marginBottom="@dimen/_30sdp"
+                                            android:background="@drawable/mpin_edittext_effect"
+                                            android:inputType="numberPassword"
+                                            android:maxLength="1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <com.acumengroup.ui.button.GreekButton
+                            android:id="@+id/reset_submit"
+                            style="@android:style/TextAppearance.Medium"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardView"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-25dp"
+                            android:background="@drawable/orange_trading_button_effect"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:padding="@dimen/_6sdp"
+                            android:text="Reset MPIN"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <!--            Create MPIN layout end-->
+                    <!--            Mpin desclaimer and forgot layout start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/reset_mipn_disclaimer"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Disclaimer *"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/reset_mpin_txtForgot"
+                            style="@android:style/TextAppearance.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|end"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:gravity="right|end"
+                            android:text="Forgot MPIN"
+                            android:textColor="#042e6f"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+                    <!--           Mpin  desclaimer and forgot layout end-->
+                </LinearLayout>
+                <!--            RESET layout end-->
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txtbottom_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnsignUp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="1dp"
+                    android:gravity="center"
+                    android:text="SEBI Registratiopn No.:INZ000218931|BSE-(Member ID:6706)  NSE-(Member ID:90177)|Dp registration No: IN-DP-418-2019"
+                    android:textColor="@color/transparent_black"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txtbottom_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtbottom_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:text="CDSL Dp No.:12088600,NSDL Dp No.:IN304300,AMFI registration No.: ARN-163403"
+                    android:textColor="@color/transparent_black"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/vishwas_txtbottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtbottom_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:text="For Vishwas Fincap services \nSEBI Reg. No: NSE Cash-INZ000189835, NSE F&amp;O-INF231402430,NSE Currency-INE231402430, BSE Cash-INZ000189835, BSE F&amp;O-INF011402436, MCX Regn. No. INZ000019530, NSEL Membership Code - 13270, CDSL DP ID: 1207420"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

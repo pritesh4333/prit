@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="diffsName"
+            type="com.acumengroup.mobile.bajajStrategyFinder.sfHomeScreen.model.StrategyName" />
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_strategy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_black"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_strategy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="@{diffsName.component2()}" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"></View>
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_strategy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:text="@{diffsName.component3()}"
+                    android:textSize="12sp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/white">
+
+            </View>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

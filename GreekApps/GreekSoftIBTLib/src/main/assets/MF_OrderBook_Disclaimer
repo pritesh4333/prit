@@ -1,0 +1,15 @@
+<p>You can modify or cancel Order which is place after cutoff time, till the status not getting change to Executed.
+
+<p><u>Transaction Status:</u>
+
+<p><b>In Process:</b> Transaction received and sent for risk validation (Client ledger Account Margin checking),
+
+<p><b>Pending:</b> Transaction risk Validated (Client ledger Account Margin checked)
+
+<p><b>Executed:</b> Transaction executed and reported to BSE Star MF Exchange (It cannot be modified or cancelled)
+
+<p><b>Ordered:</b> Transaction Accepted by BSE Star MF Exchange.
+
+<p><b>Rejected:</b> Transaction Rejected due to margin not available in client ledger account or any other reason by exchange.
+
+<p><b>Cancelled:</b> Transaction cancelled by client

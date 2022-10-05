@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 260
+/svn/Zeus/!svn/ver/16363/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login
+END
+UserProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 277
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/UserProfile.java
+END
+LoginQuestionsActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/16383/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/LoginQuestionsActivity.java
+END
+ForgotPasswordActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/ForgotPasswordActivity.java
+END
+UserKycValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 283
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/UserKycValidation.java
+END
+CustomOTPDialogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/CustomOTPDialogFragment.java
+END
+LASFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 277
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/LASFragment.java
+END
+QuickTourActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 283
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/QuickTourActivity.java
+END
+UserCreationBankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/UserCreationBankDetails.java
+END
+LasStepsFormFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 286
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/LasStepsFormFragment.java
+END
+ForgotPasswordFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14278/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/ForgotPasswordFragment.java
+END
+SetTransactionPasswordFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 296
+/svn/Zeus/!svn/ver/14121/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/SetTransactionPasswordFragment.java
+END
+UserCreationPanDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/UserCreationPanDetails.java
+END
+CustomForgotPwdDialogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 295
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/CustomForgotPwdDialogFragment.java
+END
+VerhoeffAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 283
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/VerhoeffAlgorithm.java
+END
+UserCreationPersonalDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 293
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/UserCreationPersonalDetails.java
+END
+LoginPasswordFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14121/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/LoginPasswordFragment.java
+END
+OpenAccountVerification.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/16383/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/OpenAccountVerification.java
+END
+CustomTransactionDialogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 297
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/CustomTransactionDialogFragment.java
+END
+PasswordChangeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/PasswordChangeActivity.java
+END
+OTPForOpenAccountActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/16383/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/OTPForOpenAccountActivity.java
+END
+LoginActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 279
+/svn/Zeus/!svn/ver/16383/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/LoginActivity.java
+END
+ChangePasswordActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14121/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/ChangePasswordActivity.java
+END
+AboutActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 279
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/AboutActivity.java
+END
+QuickTourFragment1.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/QuickTourFragment1.java
+END
+SetPasswordActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 285
+/svn/Zeus/!svn/ver/14121/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/SetPasswordActivity.java
+END
+ChangePasswordFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/ChangePasswordFragment.java
+END
+PasswordChangeFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/PasswordChangeFragment.java
+END
+TransPasswordFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14121/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/login/TransPasswordFragment.java
+END

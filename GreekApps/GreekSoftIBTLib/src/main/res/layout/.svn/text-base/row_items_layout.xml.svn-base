@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/primaryBackground"
+    android:paddingBottom="0dp"
+    android:paddingTop="2dp">
+
+    <!--    <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/yellow_header"/>-->
+
+    <LinearLayout
+        android:id="@+id/linearParent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/ripple_effect_view"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="2.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/tvSymbol"
+                style="@style/ListItem.Head"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text="Symbol"
+                android:textColor="@color/black"
+                android:textSize="11sp">
+
+
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+        </LinearLayout>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/tvLtp"
+            style="@style/ListItem.Head"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1.2"
+            android:gravity="center|end"
+            android:paddingRight="5dp"
+            android:text="LTP (\u20B9)"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/tvVol"
+            style="@style/ListItem.Head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="right|end"
+            android:text="Vol(000)"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/tvChg"
+                style="@style/ListItem.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/updownArrow"
+                android:layout_weight="0.9"
+                android:gravity="right|end"
+                android:text="123456"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:id="@+id/updownArrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp" />
+            <!-- <ImageView
+                 android:id="@+id/down"
+                 android:layout_alignParentRight="true"
+                 android:layout_width="10dp"
+                 android:layout_height="10dp"
+                 />-->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <View
+            android:id="@+id/dividerDerivative"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/white" />
+    </LinearLayout>
+</LinearLayout>

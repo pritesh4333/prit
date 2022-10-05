@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/tv_co_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="LT Midcap Found - Growth"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_sixteen"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/tv_no_shares"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUM 3,307 Cr."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_twelve"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:progressDrawable="@drawable/ic_star_filed_24dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/ic_shape_reactanle"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/block_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txt_one_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Year"
+                            android:textColor="@color/grayStrip_bg"
+                            android:textSize="@dimen/text_size_ten" />
+
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txt_one_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-4.36%"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_twelve"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/grayStrip_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/block_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txt_two_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Year"
+                            android:textColor="@color/grayStrip_bg"
+                            android:textSize="@dimen/text_size_ten" />
+
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txt_two_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-4.36%"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_twelve"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/grayStrip_bg"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/block_three"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txt_three_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Year"
+                            android:textColor="@color/grayStrip_bg"
+                            android:textSize="@dimen/text_size_ten" />
+
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:id="@+id/txt_three_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-4.36%"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_twelve"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

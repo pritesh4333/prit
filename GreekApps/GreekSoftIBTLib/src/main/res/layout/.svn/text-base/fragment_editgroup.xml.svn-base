@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable">
+
+    <Spinner
+        android:id="@+id/groupNameSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="4dp" />
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/errorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/symbolList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomButtons"
+        android:layout_below="@+id/groupNameSpinner"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_drawable" />
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.acumengroup.ui.button.GreekButton
+            android:id="@+id/deleteGrpBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Delete Group" />
+
+        <com.acumengroup.ui.button.GreekButton
+            android:id="@+id/deleteSymbolBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Delete Symbol" />
+    </LinearLayout>
+
+</RelativeLayout>

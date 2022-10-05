@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="textColorCustomWhite">#373636</color>
+    <color name="textColorCustomWhite">#FF000000</color>-->
+    <color name="textColorCustomWhite">#FF000000</color>
+    <color name="textColorBlueWhite">#1e31c7</color>
+    <color name="textColorRedWhite">#ae1a1a</color>
+    <color name="marketStatusStripWhite">#dbdbdb</color>
+    <color name="topViewBgWhite">#d7d7d7</color>
+    <color name="backgroundColorWhite">#FFF2F1F1</color>
+    <color name="dividerColorWhite">#2e2d2d</color>
+    <color name="floatingBgColor">#e4e4e4</color>
+    <color name="backgroundStripColorWhite">#faf7f6</color>
+
+</resources>

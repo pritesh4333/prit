@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+    <declare-styleable name="GreekView">
+        <attr name="customTypeFace" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <attr name="android:orientation" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandablePanelView">
+        <attr name="completionPercent" format="float" />
+        <attr name="completeExpandAnimationSpeed" format="integer" />
+        <attr name="completeShrinkAnimationSpeed" format="integer" />
+        <attr name="beginExpanded" format="boolean" />
+        <attr name="bounceCount" format="integer" />
+        <attr name="invertBehavior" format="boolean" />
+        <attr name="animableViewId" format="reference" />
+        <attr name="autoAnimateOnClick" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AdaptiveTableLayout">
+        <attr name="fixedHeaders" format="boolean"/>
+        <attr name="cellMargin" format="dimension"/>
+        <attr name="solidRowHeaders" format="boolean"/>
+        <attr name="dragAndDropEnabled" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+</resources>

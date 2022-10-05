@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bajaj_black">
+
+
+    <LinearLayout
+        android:id="@+id/pipLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titile"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <com.acumengroup.pagersliderlib.PagerSlidingTabStrip
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/bajaj_gray"
+        android:textColor="@color/white"
+        app:pstsIndicatorColor="@color/common_red_bg"
+        app:pstsIndicatorHeight="45dp"
+        app:pstsShouldExpand="false"
+        app:pstsTextAllCaps="false"
+        />
+
+    <com.acumengroup.ui.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.acumengroup.ui.CustomViewPager>
+
+</LinearLayout>

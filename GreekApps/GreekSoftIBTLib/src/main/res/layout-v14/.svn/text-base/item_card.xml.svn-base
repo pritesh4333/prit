@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bajaj_black">
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/dataTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:gravity="center"
+                android:text="Max Gain"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/dataSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:gravity="center"
+                android:text="Max Loss"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewLine2"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/linear1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

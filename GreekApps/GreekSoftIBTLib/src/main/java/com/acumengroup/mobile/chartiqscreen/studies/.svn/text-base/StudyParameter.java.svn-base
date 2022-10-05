@@ -1,0 +1,16 @@
+package com.acumengroup.mobile.chartiqscreen.studies;
+
+import java.io.Serializable;
+import java.util.HashMap;
+
+public class StudyParameter implements Serializable {
+    String color;
+    String defaultColor;
+    String heading;
+    String name;
+    String type;
+    Object value;
+    Object defaultInput;
+    Object defaultOutput;
+    HashMap<String, Object> options;
+}

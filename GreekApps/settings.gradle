@@ -1,0 +1,6 @@
+include ':philips'
+include ':GreekSoftIBTLib'
+include ':app'
+rootProject.name = "Vishwas"
+include ':Mandot'
+include ':Cliqtrade'

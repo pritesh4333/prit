@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bajaj_black"
+    android:id="@+id/parent_layout"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option Filter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_24dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/midleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@color/bajaj_gray"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Avoid deep ITM delta"
+                        android:textColor="@color/white" />
+
+
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/edt_delta"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:maxLength="4"
+                        android:background="@color/bajaj_black"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:text="0"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+
+                    android:orientation="horizontal">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Ask Bid gap less or equal to"
+                        android:textColor="@color/white" />
+
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/edt_bidGap"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/bajaj_black"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:text="0%"
+                        android:maxLength="4"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Volume greater than or equal to"
+                        android:textColor="@color/white" />
+
+
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/edt_volume"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/bajaj_black"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:text="0"
+                        android:maxLength="4"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Open interest greater than or equal to"
+                        android:textColor="@color/white" />
+
+
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/edt_openInterest"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/bajaj_black"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:text="0"
+                        android:maxLength="4"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:text="Strike Range"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Term"
+                            android:textSize="@dimen/_10sdp"
+                            android:textColor="@color/white" />
+
+
+                        <Spinner
+                            android:id="@+id/spinner_term"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="From "
+                            android:textColor="@color/white" />
+
+
+                        <com.acumengroup.ui.edittext.GreekEditText
+                            android:id="@+id/edt_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:background="@color/bajaj_black"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:maxLength="2"
+                            android:text="00"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.acumengroup.ui.textview.GreekTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="To"
+                            android:textSize="@dimen/_10sdp"
+                            android:textColor="@color/white" />
+
+
+                        <com.acumengroup.ui.edittext.GreekEditText
+                            android:id="@+id/edt_to"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:background="@color/bajaj_black"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:maxLength="2"
+                            android:text="0"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:gravity="start"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Option's Call/Put"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Call"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <CheckBox
+                        android:id="@+id/chk_call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="put"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/chk_put"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:gravity="start"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Hide Max Gain/Loss"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Max Gain"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="true"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <CheckBox
+                        android:id="@+id/chk_Mgain"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Max Loss"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/chk_MLoss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:textSize="@dimen/_10sdp"
+                        android:gravity="start"
+                        android:text="Refresh Timer"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Minute"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/edt_sec"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/bajaj_black"
+                        android:gravity="center"
+                        android:text="1"
+                        android:maxLength="2"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.edittext.GreekEditText>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Alert"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/chk_alert"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:gravity="center">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:gravity="start"
+                        android:text="Reference Price"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Bid/Ask"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <CheckBox
+                        android:id="@+id/chk_bidAsk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="LTP"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/chk_ltp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center">
+
+                    </CheckBox>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/saveOption"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/single_line_border_bajaj"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/btnRset"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_weight="1"
+
+                    android:background="@color/bajaj_gray"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Reset"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/btnClose"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:background="@color/bajaj_gray"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Close"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

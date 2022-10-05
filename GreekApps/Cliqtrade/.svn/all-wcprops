@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 211
+/svn/Zeus/!svn/ver/16373/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/Cliqtrade
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/Cliqtrade/.gitignore
+END
+google-services.json
+K 25
+svn:wc:ra_dav:version-url
+V 232
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/Cliqtrade/google-services.json
+END
+proguard-rules.pro
+K 25
+svn:wc:ra_dav:version-url
+V 230
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/Cliqtrade/proguard-rules.pro
+END
+build.gradle
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/Cliqtrade/build.gradle
+END

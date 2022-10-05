@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58058947686",
+    "project_id": "androidproject-df3ab",
+    "storage_bucket": "androidproject-df3ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58058947686:android:16de444bba5a49ecef41a7",
+        "android_client_info": {
+          "package_name": "com.mandot.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58058947686-eun3sbljq0ph6f8fcdri4p2culacjh17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3d1RJDBISYmxNDvXvA_jhVSuZxCCyT9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58058947686-eun3sbljq0ph6f8fcdri4p2culacjh17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

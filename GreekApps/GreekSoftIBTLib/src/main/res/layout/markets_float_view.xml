@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/float_Button_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/equity_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!--android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"-->
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_market_equity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/equity_icon"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/market_equity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:text="@string/EQ_HEADER_TXT"
+                    android:textSize="10sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fno_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!--android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"-->
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_market_derivative"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+
+                    android:scaleType="center"
+                    android:src="@drawable/derivative_selector"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/market_fno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/SS_DERIVATIVES_TXT"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/currency_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- android:layout_marginRight="20dp"
+                 android:layout_marginLeft="10dp"-->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_currency"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/derivative_selector"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/market_commodity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/SS_CURRENCY_TXT"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- android:layout_marginRight="10dp"
+                 android:layout_marginLeft="10dp"-->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flt_market_global"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/global_selector"
+                    app:backgroundTint="@color/common_red_bg"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/market_global"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/EQ_GLOBAL_TXT"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout><!--
+    <android.support.design.widget.FloatingActionButton
+    android:id="@+id/flt_market_global"
+    android:layout_width="54dp"
+    android:layout_height="54dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="5dp"
+    app:backgroundTint="@color/common_red_bg"
+    app:elevation="6dp"
+    app:borderWidth="0dp"
+    android:scaleType="center"
+    android:src="@drawable/global_icon"/>-->

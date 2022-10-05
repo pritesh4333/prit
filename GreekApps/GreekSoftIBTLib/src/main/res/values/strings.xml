@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="MESSAGE_DISPLAY_MF">Register for Mutual Fund.Contact Admin to enable Mutual fund</string>
+    <string name="MESSAGE_DISPLAY_IBT">Register for Retail Trading.Contact Admin to enable Retail Trading</string>
+    <string name="QT_BEST5_BTN">Market Depth</string>
+    <string name="QT_BID_TXT">Bid (Size)</string>
+    <string name="QT_ASK_TXT">Ask (Size)</string>
+    <string name="QT_SNAPSHOT_TXT">Scrip</string>
+    <string name="QT_CASH_INST_TYPE">Cash</string>
+    <string name="QT_OPTIONS_INST_TYPE">Options</string>
+    <string name="QT_FUTURES_INST_TYPE">Futures</string>
+    <string name="SS_SEARCH_HINT_TXT"></string>
+    <string name="SS_EQUITY_TXT">Equity</string>
+    <string name="SS_DERIVATIVES_TXT">FNO</string>
+    <string name="SS_CURRENCY_TXT">Currency</string>
+    <string name="SS_MUTUAL_TXT">Mutual Fund</string>
+    <string name="SS_COMMODITIES_TXT">Commodity</string>
+    <string name="SS_RECENT_SEARCH_TXT">Search Result</string>
+    <string name="TD_BEST5_BTN">Best 5</string>
+    <string name="TD_BUY_BTN">Buy</string>
+    <string name="TD_SELL_BTN">Sell</string>
+    <string name="TD_SL_LIMIT_PRICE_HINT_TXT">SL Limit Price</string>
+    <string name="TD_PLACE_ORDER_BTN">Place Order</string>
+    <string name="TD_LIMIT_ORDER_TYPE">Limit</string>
+    <string name="TD_MARKET_ORDER_TYPE">Market</string>
+    <string name="TD_SYMBOL_EMPTY_MSG">Please Select a Symbol</string>
+    <string name="TD_QTY_EMPTY_MSG">Please enter the Quantity</string>
+    <string name="TD_PRICE_EMPTY_MSG">Please enter the Price</string>
+    <string name="TD_TRIG_PRICE_EMPTY_MSG">Please enter the Trigger Price</string>
+    <string name="TD_STOPLOSS_PRICE_EMPTY_MSG">Please enter the Stoploss Price</string>
+    <string name="TD_TARGET_PRICE_EMPTY_MSG">Please enter the Target Price</string>
+    <string name="GREEK_MENU_PORTFOLIO_TXT">Portfolio</string>
+    <string name="GREEK_MENU_REPORT_TXT">Back Office Reports</string>
+    <string name="GREEK_MENU_FUND_TRANSFER">Fund Transfer</string>
+    <string name="GREEK_MENU_MYSTOCKS_TXT">My Scrip</string>
+    <string name="GREEK_MENU_WATCHLIST_TXT">Watchlist</string>
+    <string name="GREEK_MENU_LASTVISITED_TXT">Last Visited</string>
+
+    <string name="GREEK_MENU_LEDGER_TXT">Ledger Report</string>
+    <string name="GREEK_MENU_P_L_TXT">P &amp; L Report</string>
+    <string name="GREEK_MENU_HOLDING_TXT">Holdings Report</string>
+    <string name="GREEK_MENU_SAUDA_TXT">Trade Summary</string>
+
+    <string name="GREEK_MENU_PORTFOLIO_REPORT">Portfolio Reports</string>
+    <string name="GREEK_MENU_TRANSACTION_REPORT">Transaction Reports</string>
+    <string name="GREEK_MENU_FINANCIAL_STATEMENT">Client Financial Statement</string>
+    <string name="GREEK_MENU_P_L_REPORT_DETAILS">P &amp; L Report Details</string>
+
+    <string name="GREEK_MENU_ABOUTUS_TXT">About Us</string>
+    <string name="GREEK_MENU_VERSION_TXT">Version 5.0</string>
+
+
+    <string name="GREEK_MENU_APP_SETTING_TXT">Default Screen</string>
+    <string name="GREEK_MENU_CHANGE_PASSWORD_TXT">Change Password</string>
+    <string name="GREEK_MENU_CHANGE_THEME_TXT">Theme</string>
+
+
+    <string name="tag">ExpandablePanel</string>
+    <string name="wrong_number_children_error">Wrong children number. You must insert two children inside ExpandablePanelView in order to make it work.</string>
+    <string name="GREEK_MENU_FUND_TRANSFERS_TXT">Netbanking Transfer</string>
+    <string name="GREEK_MENU_UPI">UPI Transfer</string>
+    <string name="GREEK_MENU_FUND_TRANSFER_DETAILS_TXT">Fund Transfer Details</string>
+
+    <string name="GREEK_MENU_MF_DASHBOARD_TXT">MF Dashboard</string>
+    <string name="GREEK_MENU_MF_WATCHLIST_TXT">Watchlist</string>
+    <string name="GREEK_MENU_MF_TRANSACTION_TXT">Transaction</string>
+    <string name="GREEK_MENU_MF_REPORT_TXT">Reports</string>
+
+    <string name="GREEK_CHANGE_PASSWORD_SUCCESS_TXT">Your Password has been Changed Successfully</string>
+    <string name="GREEK_INCORRECT_PASSWORD_MSG">Incorrect User OR Password</string>
+    <string name="GREEK_DUPLICATE_PASSWORD_MSG">Duplicate password is not Allowed</string>
+    <string name="GREEK_MAX_MSG">Max attempts has been Exceeded</string>
+    <string name="GREE_ID_PASS_MSG">ID and Password should not be same</string>
+    <string name="GREE_LOGIN_TRANSC_PASS_MSG">Login Password and Transaction Password should not be Same</string>
+    <string name="GREE_OLD_NEW_PASS_MSG">New Password and Confirm Password are not same</string>
+    <string name="GREE_NO_SCRIPT_MSG">Script not available. Please select the script</string>
+    <string name="GREE_FO_SCRIPT_BANNED_MSG">Fresh Trading not allowed for FO banned script</string>
+    <string name="GREEK_NOT_ALLOWED_FRESH_ORDER_MSG">Fresh orders restricted for User :</string>
+
+    <string name="GREEK_MENU_EXIT">Exit</string>
+    <string name="GREEK_MENU_MUTFUNDS_TXT">Mutual Fund</string>
+    <string name="GREEK_MENU_SETTINGS_TXT">Setting</string>
+    <string name="GREEK_MENU_PROFILE_TXT">Profile</string>
+    <string name="GREEK_MENU_LAS_TXT">LAS</string>
+    <string name="GREEK_MENU_MORE_TXT">More</string>
+    <string name="GREEK_MENU_LINKS">Links</string>
+    <string name="GREEK_MENU_IPO">IPO</string>
+    <string name="GREEK_MENU_EKYC">E-Kyc</string>
+    <string name="GREEK_MENU_ALERT">Alert</string>
+    <string name="GREEK_MENU_CHARTING">Charting</string>
+    <string name="GREEK_MENU_NOTIFICATONS">Notifications</string>
+    <string name="GREEK_MENU_RECOMMENDATION">Recommendation</string>
+    <string name="GREEK_NSE_LINKS_TXT">NSE</string>
+    <string name="GREEK_SSL_LINKS_TXT">SSL</string>
+    <string name="GREEK_BACK_OFFICE_LINKS_TXT">Back Office</string>
+    <string name="GREEK_OFFLINE_BANK_LINKS_TXT">Fund Transfer Offline</string>
+
+
+    <string name="GREEK_SEBI_LINKS_TXT">SEBI</string>
+    <string name="GREEK_BSE_LINKS_TXT">BSE</string>
+    <string name="GREEK_MCX_LINKS_TXT">MCX</string>
+    <string name="GREEK_NCDEX_LINKS_TXT">NCDEX</string>
+    <string name="GREEK_MENU_LOGOUT_TXT">Logout</string>
+    <string name="GREEK_OK">OK</string>
+
+    <!--<string name="GREEK_TEXTVIEW_FONT">Roboto-Regular.ttf</string>
+    <string name="GREEK_EDITTEXT_FONT">Roboto-Regular.ttf</string>
+    <string name="GREEK_BUTTON_FONT">Roboto-Regular.ttf</string>
+    <string name="GREEK_TEXTVIEW_SIZE">12</string>-->
+
+    <string name="GREEK_TEXTVIEW_FONT">DaxOT.ttf</string>
+    <string name="GREEK_EDITTEXT_FONT">DaxOT.ttf</string>
+    <string name="GREEK_BUTTON_FONT">DaxOT.ttf</string>
+    <string name="CP_TRANS_PASSWORD_EXPIRED_MSG">Your Transaction password is expired. Please change the password to continue</string>
+    <string name="CP_USER_TRANS_PASSWORD_INVALID_MSG">Invalid transaction password</string>
+
+
+    <string name="GREEK_LOGOUT_ALERT_MSG">Do you want to logout?</string>
+    <string name="GREEK_NO_DATA_MSG">No Data Available.</string>
+    <string name="OR_ORDER_CANCEL_MSG">Order Sent for Cancellation</string>
+
+
+    <string name="GREEK_THEME_ALERT">Do you want to change the theme?</string>
+    <string name="at_therate">\@</string>
+
+    <string name="CP_OLD_PASSWORD_LBL_TXT">Old Password</string>
+    <string name="CP_NEW_PASSWORD_LBL_TXT">New Password</string>
+    <string name="CP_SUBMIT_BTN">Submit</string>
+    <string name="CP_CANCEL_BTN">Cancel</string>
+    <string name="CP_OLD_PASSWORD_EMPTY_MSG">Please Enter the Old Password</string>
+    <string name="CP_USER_ID_EMPTY_MSG">Please Enter the User ID</string>
+    <string name="CP_NEW_PASSWORD_EMPTY_MSG">Please Enter the New Password</string>
+    <string name="CP_LIMIT_PASSWORD_EMPTY_MSG">Please Enter New Password Between 8 To 12 Characters</string>
+    <string name="CP_ALPHANUMERIC_MSG">Password should contain alphanumeric characters</string>
+    <string name="CP_SYMBOL_MSG">Password should contain atleast one special symbol.</string>
+    <string name="CP_OLD_NEW_SAME_MSG">Old Password and New Password cannot be same</string>
+    <string name="CP_PASSWORD_EMPTY_MSG">Confirm Password Cannot be empty</string>
+    <string name="CP_CONFIRM_NEW_PASSWORD_MSG">Confirm password and new password must be same</string>
+    <string name="CP_PASSWORD_EXPIRED_MSG">Your Login password is expired. Please change the password to continue</string>
+    <string name="CP_BOTH_PASSWORD_EXPIRED_MSG">Your Login and Transaction password is expired. Please change the password to continue</string>
+    <string name="CP_USER_PASSWORD_INVALID_MSG">Invalid user or password</string>
+    <string name="CP_MPIN_INVALID_MSG">Invalid MPIN</string>
+    <string name="CP_MPIN_NOTCREATED_MSG">MPIN is not Created</string>
+    <string name="CP_OTP_INVALID_MSG">Invalid OTP</string>
+    <string name="CP_USER_TPASSWORD_INVALID_MSG">Invalid Transaction password</string>
+    <string name="CP_TRANSPASSWORD_EMPTY_MSG">Please Enter Transaction Password</string>
+    <string name="CP_OTP_EMPTY_MSG">Please Enter OTP</string>
+
+    <string name="MARKET_NOT_ALLOWED">Market not allowed</string>
+    <string name="CP_FAILURE_MSG">Failure</string>
+    <string name="CP_DUPLICATE_MSG">Duplicate Login</string>
+    <string name="CP_MAX_ATTEMPTS_MSG"> Max Attempts Exceeded</string>
+    <string name="LP_MAX_ATTEMPTS_MSG">Login Password Max Attempts Exceeded</string>
+    <string name="TP_MAX_ATTEMPTS_MSG">Transaction Password Max Attempts Exceeded</string>
+    <string name="CP_USER_SUSPENDED">User Suspended</string>
+    <string name="LP_FORGOT_ANSWER">Mail has been sent.</string>
+    <string name="PASSWORD_UPDATED">Password Updated Successfully.</string>
+    <string name="LP_INVALID_CLIENT_NAME">Invalid Client Name</string>
+    <string name="CP_ENTER_TEXT_MSG">Please enter a text to Search for.</string>
+    <string name="CP_INACTIVE_MSG">Inactive User</string>
+    <string name="CP_INVALID_2FA_MSG">Invalid 2FA Answer</string>
+    <string name="SESSION_INVALID">Session Invalid</string>
+    <string name="CP_LOGIN_ERROR_MSG">LOGIN ERROR</string>
+    <string name="FP_HEADER_TXT">Forgot Password</string>
+    <string name="FP_EMAIL_LBL_TXT">Email Id</string>
+    <string name="FP_USER_ID_EMPTY_MSG">User Id Cannot be Empty</string>
+    <string name="FP_PAN_NO_EMPTY">PAN Number Cannot be Empty</string>
+    <string name="FP_EMAIL_ID_EMPTY">Email Id Cannot be Empty</string>
+    <string name="FP_EMAIL_ID_PROPER_FORMAT">Please Enter a valid Email Id</string>
+    <string name="GS_MOBILE_NO">Mobile Number</string>
+
+    <!--MESSAGES-->
+    <string name="GR_SUCCESSFUL_MSG">Successful</string>
+    <string name="GR_ADDED_SUCCESS_MSG">Added Successfully</string>
+    <string name="GR_DELETE_SUCCESS_MSG">Deleted Successfully</string>
+    <string name="GR_DELETE_FAILURE_MSG">Error occurred while deleting scrip</string>
+    <string name="GR_SYMBOL_EXIST_MSG">Symbol Already exist</string>
+    <string name="GR_SELECT_SYMBOL_MSG">Select atleast 1 symbol</string>
+    <string name="GR_ASK_TO_DELETE_MSG">Are you sure to delete this Group?</string>
+    <string name="GR_NO_QUOTE_DATA_MSG">Quote data not Available</string>
+    <string name="GR_GROUP_NAME_EXIST_MSG">Group name already exists</string>
+    <string name="GR_GROUP_NAME_ERROR_MSG">Group name not allowed</string>
+    <string name="GR_GROUP_NAME_CANT_EMPTY_MSG">Group name cannot be empty</string>
+    <string name="GR_MAX_GROUP_ADD_MSG">Maximum of 4 groups can be Added</string>
+    <string name="GR_NO_GROUP_EXIST_MSG">No group Exist</string>
+    <string name="GR_MIN_QTY_MSG">Minimum quantity should be ONE</string>
+    <string name="GR_SQROFF_QTY_MSG">Qty Should be less than SqrOff Qty</string>
+
+    <string name="GREEK_MENU_EDIS_TXT">E-DIS</string>
+
+    <string name="MF_SCHEME_NAME_TXT">Scheme Name</string>
+    <string name="EQ_GLOBAL_TXT">Global</string>
+    <string name="EQ_HEADER_TXT">Equity</string>
+    <string name="AL_PRICE_MSG">Enter Price</string>
+    <string name="AL_ZERO_MSG">Should not be zero</string>
+    <string name="AL_PERCENT_MSG">Enter Percent</string>
+    <string name="AL_VOLUME_MSG">Enter Volume</string>
+
+
+    <!-- HINTS FOR TEXTINPUTLAYOUT -->
+
+
+    <!--NAMES FOR POPUP ON SCRIPS-->
+    <string name="POPUP_SCRIPT_TRADE">Buy Order</string>
+    <string name="POPUP_SCRIPT_TRADE_SELL">Sell Order</string>
+    <string name="POPUP_SCRIPT_QUOTE">Mkt. Picture</string>
+    <string name="POPUP_SCRIPT_CHARTS">Chart</string>
+    <string name="POPUP_SCRIPT_REMOVE">Delete Symbol</string>
+
+    <string name="login_dummy_dob">01/01/1901</string>
+    <string name="fcm_api_key">AIzaSyD3YdA8WM4m8onjI_KbhUXrNjG52Lw8I7M</string>
+    <string name="no_access">Login to view this feature.</string>
+    <string name="open_account_msg">Login to enjoy the services.</string>
+    <string name="coming_soon_msg">Coming Soon</string>
+    <string name="view_photo"> <u>View Photo</u> </string>
+    <string name="view_video"> <u>View Video</u> </string>
+
+
+    <string name="las_message">APPNAME offers Quick Secured Financial, of up to Rs.100 crores. Get a loan against your Securities, mutual funds, insurance, or bonds, stock, shares (equity shares and demat shares and more) for all your financial needs.</string>
+    <string name="hl_message">Loan up to Rs. 100 crores, for your diverse financial needs.
+With a convenient online application process, and a dedicated relationship manager, APPNAME Loan Against Securities is the hassle-free way to get funds without liquidating your assets.
+</string>
+
+    <string name="rs_message">Dedicated Relationship Manager available 24/7 to assist you with all your requests.</string>
+    <string name="wd_message">APPNAME offers a comprehensive list of Shares, Mutual Funds, FMPs, ESOPs, IPOs and Bonds which are accepted as collateral for Loan.
+</string>
+
+
+    <string name="ed_message">No requirement for Financial documents to avail Loan Against Securities which make loan process hassle free.
+</string>
+    <string name="oa_message">You can manage your loan account from anywhere, with our customer portal - Experia
+</string>
+    <string name="np_message">Nil part payment and foreclosure allows you to make repayment of Loan at your convenience, as and when it’s feasible for you.
+</string>
+    <string name="rupee_symbol">\u20B9</string>
+
+    <string name="GREEK_DIALOG_OK">OK</string>
+    <string name="GREEK_BUTTON_CLICK_DELAY">2000</string>
+    <string name="GREEK_BUTTON_CLICK_DELAY_ENABLED">true</string>
+    <string name="WatchList_hint"><font size="12">Get Quote(e.g. Reliance, TCS)</font></string>
+    <!--<string name="SEBI_STRING">\n Greeksoft Technologies Pvt. Ltd. \n NSE SEBI Reg No: \n EQ:  XXX000000000 \n FO: XXX000000000 \n CD: XXX000000000 \n Member Code No: 00000 \n\n\n  Version No. \n NCDEX Version no: 32.31.30.30 </string>-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="day_apos_s_b_f">Day\'s + B/F*</string>
+    <string name="day_apos_s">Day\'s</string>
+    <string name="str_agree">I hereby authorize APPNAME to share my data to APPNAME to against my Loan Against Securities Application</string>
+    <string name="retail_user_equity_other_segments"><![CDATA[Retail User (Equity & other segments )]]></string>
+    <string name="disclaimer">
+
+        <![CDATA[<p>
+
+The materials and/or information available or obtained at/through the website/mobile platform/Application(Android/iOS) is/are not guaranteed or warranted in terms of completeness, correctness, accuracy, reliability or otherwisehowsoever by APPNAME and/or its affiliates/group companies or its directors or employees.
+
+
+
+\n <p> Placing any reliance on website/mobile platform/Application or any material available through website/mobile platform/Application, is at the sole risk of the User. Users should seek professional advice and ensure due diligence with regard to their specific investment goals and financial position, using independent advisors as per their requirement before acting on the basis of the information contained in the website/mobile platform/Application
+
+
+
+\n <p> Any reports/market research/data/information, etc. on the website/mobile platform/Application are either prepared from generally available information or by third party entities and are solely the personal views of the contributors. The decision with respect to any financial product or opportunity or nature or suitability or choice or the viability of any product or service shall always be sole responsibility and decision of the User.</p>
+
+
+
+\n <p> Any data/text/information/report/research/document etc. displayed on the website/mobile platform/Application is not to be treated as professional or investment advice/advertisement or constitute a solicitation or offer by APPNAME or its affiliates or group companies to buy or sell any securities, futures, options or other financial instruments or provide any investment advice or service.</p>
+
+
+
+\n <p> APPNAME does not endorse any advertisers on the website/mobile platform/Application. Users are advised to verify the veracity of all information on your own before placing any reliance on the same. The linked sites present on the website/mobile platform/Application are not under our control and we are not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. We are providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement by us of such site.</p>
+
+
+
+\n <p> In no event shall APPNAME shall be liable for any direct, indirect, punitive, incidental, special, consequential damages (including lost revenues or profits, loss of business or loss of data) or any damages whatsoever connected with the use or performance of the website/mobile platform/Application, with the delay or inability to use the website/mobile platform/Application  or related services, the provision or failure to provide services, or for any information, products, services and related graphics obtained through the website/mobile platform/Application, or otherwise arising out of the use of the mobile platform/Application whether based on contract, tort, negligence, strict liability or otherwise.</p>
+
+\n <p> Thewebsite/Mobile Platform/Application may collect certain information for the purpose as required from the regulatory perspective or for the purpose of storage or reaching out for any financial related products.</p>
+
+\n <p> <b> The user agrees with following points : </b></p>
+
+\n <p> •	APPNAME may update the Application to newer versions and/ or vary the terms of usage from time to time without any notice and use of any version shall imply that the user has agreed to the terms of use in force at the relevant time.</p>
+
+\n <p> •	The user shall not use the Application for any purpose that is unlawful or prohibited by any Rules, Regulations and laws of the country. The user shall also not modify the Application so as to interfere with any person’s use and enjoyment of any services provided by APPNAME.</p>
+
+\n <p> •	The user agrees that, unless otherwise stated, copyright and all intellectual property rights in all material presented in the Application and in the web pages of APPNAME to which he is given access from the Application, including but not limited to text, audio, video or graphical images, trademarks and logos are the property of APPNAME connection or of its group companies and are protected under applicable Indian laws and he agrees not to use any framing techniques to enclose any trademark or logo or other proprietary information of APPNAME connection or remove, conceal or obliterate any copyright or other proprietary notice or any credit-line or date-line or other mark or source identifier therein, including without limitation, the size, color, location or style of all proprietary marks </p>
+
+\n <p> •	The user shall defend, indemnify and hold harmless APPNAME, its affiliates and their respective directors, officers, employees and agents from and against all claims and expenses arising out of the breach of any of the terms by him or his misuse of the Application.</p>
+
+\n <p>  •	The user agrees that he shall be fully responsible and/or liable for any and all unauthorized use and/or misuse of his/her/its password and/or User ID and for any and all acts done by any person through the Web/ Mobile Trading System in the User’s account in any manner whatsoever. The orders and instructions and all contracts and transactions entered into pursuant thereto and the settlement thereof will be in accordance with the Exchange Provisions.</p>
+
+\n <p> •	The orders and instructions and all contracts and transactions entered into pursuant thereto and the settlement thereof will be in accordance with the Exchange Provisions.The Stock Exchange may cancel a trade suo-moto without giving any reason thereof. In the event of such cancellation, APPNAME shall be entitled to cancel relative contract/s with user.The User understands and agrees that APPNAME connection  may at any time, at its sole discretion and without prior notice, may prohibit or restrict the User\'s ability to place orders or trade in securities through APPNAME connection .</p>
+
+\n <p> •	The users are cautioned that trading/investments in financial markets are subject to market risks and are advised to seek trading/investment advise before investing. There is no guarantee/assurance as to returns or profits or capital protection or appreciation </p>
+
+\n <p> •	APPNAME and its employees, directors, associates, and/or employees, directors, associates of group entities or affiliates is not inducing you for trading/investing in the financial market(s). Trading/Investment decision is the user’s sole responsibility. The user must also read the Risk Disclosure Document and Do’s and Don’ts before investing. </p>
+
+\n <p> The brand name APPNAME and logo are the registered trademarks of APPNAME (India) Pvt. Ltd.
+</p>APPNAME]]>
+
+    </string>
+
+    <string name="GREEK_MENU_STRATEGY_TXT">Strategy Finder</string>
+    <string name="GREEK_MENU_STRATEGY_BUILDER_TXT">Strategy Builder</string>
+    //STRATEGY Strings
+    <string name="strikerange">Strike range</string>
+    <string name="itmdelta">Avoid deep ITM delta</string>
+    <string name="bidgap">Ask bid gap less than equal to</string>
+    <string name="volume">Volume greater than or equal to</string>
+    <string name="op_int">Op. int. greater than or equal to</string>
+    <string name="opt_call">Option call put</string>
+    <string name="ref_price">Reference price</string>
+
+
+    <string name="about">
+APPNAME is a 100% subsidiary of APPNAME offering wide spectrum of Capital Market Solutions covering Equities, Mutual funds, Corporate deposits, Bonds, Insurance, Loans &amp; Distribution Offerings which are been offered to Corporates, High-net-worth individuals and Families.
+APPNAME isade a registered member of NSE &amp; BSE for Equities &amp; Derivative Segment and also a depository participant with CDSL &amp; NSDL. We offer our services across Online ( Web &amp; Mobile ) and Offline Platforms.Our approach is to offer personalized solutions and execution expertise to our clients. Our passion towards customer centricity has enabled us to create our Products &amp; Services in a manner that suits the unique needs of our customers. Convenience &amp; Unparalleled service to our clients will of paramount importance to us. Being a part of APPNAME, we draw the same level of values &amp; trust, thus we offer a high level of transparency and credibility across all our Products &amp; Services.</string>
+    <string name="search_for_studies">Search for studies</string>
+    <string name="default_notification_channel_id">GreekSoftIBTLib</string>
+
+    <string name="GREEK_ERROR_CONNECT">It is taking more than expected time.Please check the connection.</string>
+    <string name="GREEK_ERROR_UNABLE_CONNECT">Unable to connect server </string>
+    <string name="GREEK_ERROR_SOCKET_TIMEOUT">It is taking more than expected time.Please check the connection.</string>
+    <string name="CONNECTION_TIMEOUT_ERROR">It is taking more than expected time.Please check the connection.</string>
+    <string-array name="date">
+        <item>30 Jan 2020</item>
+        <item>1 Feb 2020</item>
+        <item>2 Feb 2020</item>
+        <item>3 Feb 2020</item>
+        <item>4 Feb 2020</item>
+    </string-array>
+    <string-array name="time_units">
+        <item>millisecond</item>
+        <item>second</item>
+        <item>minute</item>
+    </string-array>
+</resources>

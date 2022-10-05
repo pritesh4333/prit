@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fno_SpinnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.edittext.GreekEditText
+            android:id="@+id/start_text"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:editable="false"
+            android:hint="From Date:"
+            android:textColor="@color/white"
+            android:drawableEnd="@drawable/ic_date_range_white_24dp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_date_range_white_24dp" />
+
+        <com.acumengroup.ui.edittext.GreekEditText
+            android:id="@+id/endDate_text"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:editable="false"
+            android:hint="To Date:"
+            android:textColor="@color/white"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_date_range_black_24dp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/include_header_orderbook_portfolio" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/fnoListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            layout="@layout/include_error_msg"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/disclaimerTxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:padding="10dp"
+        android:text="* Disclaimer"
+        android:textColor="@color/red_textcolor"
+        android:visibility="gone" />
+
+</LinearLayout>

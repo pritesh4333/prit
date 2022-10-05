@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 217
+/svn/Zeus/!svn/ver/16378/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib
+END
+consumer-rules.pro
+K 25
+svn:wc:ra_dav:version-url
+V 236
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/consumer-rules.pro
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/.gitignore
+END
+google-services.json
+K 25
+svn:wc:ra_dav:version-url
+V 238
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/google-services.json
+END
+proguard-rules.pro
+K 25
+svn:wc:ra_dav:version-url
+V 236
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/proguard-rules.pro
+END
+build.gradle
+K 25
+svn:wc:ra_dav:version-url
+V 230
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/build.gradle
+END

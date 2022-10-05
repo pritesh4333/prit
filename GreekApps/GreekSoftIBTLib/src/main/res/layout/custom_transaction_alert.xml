@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transaction_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_drawable"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/title_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layout"
+            android:layout_alignTop="@+id/layout"
+            android:background="@color/common_red_bg"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="Enter Transaction Password"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/transcation_pass_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Enter Transaction Password"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.acumengroup.ui.edittext.GreekEditText
+                android:id="@+id/transcation_pass_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/progressBars"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentBottom="@+id/transcation_pass_edittext"
+                android:layout_alignRight="@+id/transcation_pass_edittext"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/button_ok_transc"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="Ok"
+                android:textColor="@color/white" />
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/button_cancel_transc"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/txt_forgot_trans_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="right"
+            android:text="Forgot Password?"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/customProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout"
+        android:background="#AA000000"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dip">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/progressTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

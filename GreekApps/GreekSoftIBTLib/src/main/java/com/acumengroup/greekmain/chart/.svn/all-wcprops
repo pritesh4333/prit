@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 263
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart
+END
+OutlineChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 281
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/OutlineChart.java
+END
+XYChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 276
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/XYChart.java
+END
+NotifyChartData.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/NotifyChartData.java
+END
+AbstractChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 282
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/AbstractChart.java
+END
+BarChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 277
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/BarChart.java
+END
+ProfitLossChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/ProfitLossChart.java
+END
+LineChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 278
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/LineChart.java
+END
+CandleOHLCChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/CandleOHLCChart.java
+END
+VolumeBarChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 283
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/greekmain/chart/VolumeBarChart.java
+END

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+   >
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="sfDataViewModel"
+            type="com.acumengroup.mobile.bajajStrategyFinder.sfStrategyDataScreen.viewModel.StrategyDataViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/sf_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_drawable"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/sf_dhader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/we_found"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="WE FOUND -"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/txt_wefound"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                    </View>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/stock_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:text="STOCK NAME - "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/stock_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@={sfDataViewModel.symbolWithExpiry}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/between"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="BETWEEN -"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/between_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@={sfDataViewModel.betweenDiffr}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                    </View>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/market_outlook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1.5"
+                        android:text="MARKET OUTLOOK - "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/market_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="@={sfDataViewModel.marketOutLook}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp">
+
+                    </com.acumengroup.ui.textview.GreekTextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{(view)->sfDataViewModel.onClickSettingoption(view)}"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_filter_white">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.acumengroup.columnsliderlib.AdaptiveTableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cellMargin="1dp"
+                app:dragAndDropEnabled="true"
+                app:fixedHeaders="true"
+                app:solidRowHeaders="true" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Data Available"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,558 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:buttonStyle">@style/ButtonSelector</item>
+        <item name="android:spinnerStyle">@style/SpinnerSelector</item>
+        <item name="android:radioButtonStyle">@style/radioButtonStyle</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
+        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <item name="android:datePickerDialogTheme">@style/Dialog.Theme</item>
+        <item name="android:itemBackground">@color/bajaj_gray</item>
+        <item name="android:itemTextAppearance">@style/itemText</item>
+
+        <item name="ms_stepperStyle">@style/DotStepperStyle</item>
+
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="whitetheme" parent="AppTheme.Base">
+        <item name="android:textColorPrimary">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="blacktheme" parent="AppTheme.Base">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="DotStepperStyle">
+        <item name="ms_stepperType">dots</item>
+        <item name="ms_activeStepColor">#FFFFFF</item>
+        <item name="ms_inactiveStepColor">#006867</item>
+        <item name="ms_bottomNavigationBackground">?attr/colorAccent</item>
+    </style>
+
+    <style name="BrandedSwitch.control" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/grayStrip_bg</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+    </style>
+
+    <style name="BrandedSwitch.text" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BrandedCheckBox" parent="AppTheme.Base">
+        <item name="colorAccent">#aaf000</item>
+        <item name="colorControlNormal">#ff0000</item>
+    </style>
+
+    <style name="BrandedSwitch" parent="AppTheme.Base">
+        <item name="colorAccent">#39ac39</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="GREEKTheme" parent="AppTheme.Base">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <item name="android:windowBackground">@null</item>
+        <item name="colorAccent">#FF959595</item>
+        <item name="android:editTextStyle">@style/edittextSelector</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="editTextStyle">@style/edittextSelector</item>
+    </style>
+
+    <style name="MyTheme.TranslucentNavigation" parent="AppTheme.Base">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/daxot</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+<!--    <style name="popupMenuStyle" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        <item name="android:background">@color/white</item>-->
+<!--        <item name="android:textColor">@color/black</item>-->
+
+<!--    </style>-->
+
+
+
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabText</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+       <!-- <item name="tabIndicatorColor">@color/white</item>-->
+
+    </style>
+
+    <style name="TabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/daxot</item>
+    </style>
+
+
+    <style name="quicktourTxt" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/daxot</item>
+    </style>
+
+    <style name="itemText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/daxot</item>
+    </style>
+
+
+
+
+    <style name="Widget.BottomNavigationView14" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/daxot</item>
+
+    </style>
+
+    <style name="tab_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@string/GREEK_TEXTVIEW_FONT</item>
+    </style>
+
+    <style name="GREEKTheme1" parent="AppTheme.Base">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:background">@color/white</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="colorAccent">#FF959595</item>
+        <item name="android:editTextStyle">@style/edittextSelector</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="editTextStyle">@style/edittextSelector</item>
+    </style>
+    #d71616
+
+    <style name="edittextSelector" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:colorControlNormal">#FF959595</item>
+        <item name="android:colorControlActivated">#FF646464</item>
+        <item name="android:colorControlHighlight">#FF646464</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="popupMenuWhite" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:itemBackground">@android:color/darker_gray</item>
+    </style>
+
+    <style name="MyBottomSheetStyle" parent="@style/BottomSheet">
+        <item name="bottom_sheet_bg_color">@color/white</item>
+        <item name="bottom_sheet_title_text_appearance">@style/TitleAppearance</item>
+        <item name="bottom_sheet_list_text_appearance">@style/ListAppearance</item>
+        <item name="bottom_sheet_grid_text_appearance">@style/GridAppearance</item>
+    </style>
+
+    <style name="TitleAppearance" parent="BottomSheet.Title.TextAppearance">
+        <item name="android:textColor">@color/grayStrip_bg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_eighteen</item>
+    </style>
+
+    <style name="ListAppearance" parent="BottomSheet.ListItem.TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_sixteen</item>
+    </style>
+
+    <style name="GridAppearance" parent="BottomSheet.GridItem.TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_sixteen</item>
+    </style>
+
+
+    <style name="radioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/greek_radio</item>
+    </style>
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/common_red_bg</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/common_red_bg</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/light_red_negative</item>
+    </style>
+    <!-- The background color of the Bottomsheet -->
+    <style name="CustomTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- The text appearance of the title -->
+    <style name="DrawerItem" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- The text appearance of the list items -->
+    <style name="DrawerItem.Child">
+        <item name="android:textSize">13sp</item>
+    </style>
+    <!-- The text appearance of the grid items -->
+    <style name="ListItem" parent="@android:style/TextAppearance">
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <!-- The text appearance of the message -->
+    <style name="ListItem.Head">
+        <item name="android:textColor">@color/list_head_row_color</item>
+        <item name="android:textSize">@dimen/list_subhead_text_size</item>
+    </style>
+    <!-- The text appearance of the title for a message Bottomsheet-->
+    <style name="ListItem.Head.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- The text appearance of the buttons -->
+    <style name="ListItem.Head.First">
+        <item name="android:marqueeRepeatLimit">2</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- The color to tint the Bottomsheet icon -->
+    <style name="ListItem.Head.Values">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- The spacing between grid items -->
+    <style name="TextLabelblack" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/black</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+    </style>
+    <!-- The bottom padding of the grid -->
+    <style name="TextLabelwhite" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/white</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+    </style>
+    <!-- The top padding of the grid -->
+    <style name="ListItem.SubHead">
+        <item name="android:textColor">@color/list_subhead_row_color</item>
+        <item name="android:textSize">@dimen/list_subhead_text_size</item>
+    </style>
+    <!-- The selector to be used for the items in the list/grid -->
+    <style name="StyledIndicators" parent="@android:style/Theme.Light">
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
+        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+    </style>
+    <!-- The number of columns to show when using the grid style -->
+    <style name="CustomCirclePageIndicator">
+        <item name="fillColor">#FF888888</item>
+        <item name="strokeColor">#FF000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="radius1">10dp</item>
+        <item name="centered">true</item>
+    </style>
+
+
+    <!--<style name="foodRatingBar" parent="@android:style/Widget.RatingBar">-->
+    <!--<item name="android:progressDrawable">@drawable/customratingstars</item>-->
+    <!--<item name="android:minHeight">22dip</item>-->
+    <!--<item name="android:maxHeight">22dip</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppThemeRatingBar" parent="Theme.AppCompat">-->
+    <!--<item name="ratingBarStyle">@style/MyRatingBar</item>-->
+    <!---->
+    <!--</style>-->
+    <!--<style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">-->
+    <!--<item name="colorAccent">#6200ea</item>-->
+    <!--<item name="android:colorControlNormal">#f9a825</item>-->
+    <!---->
+    <!--</style>-->
+
+    <style name="CustomTitlePageIndicator">
+        <item name="android:background">@color/red</item>
+        <item name="footerColor">#FFAA2222</item>
+        <item name="footerLineHeight">1dp</item>
+        <item name="footerIndicatorHeight">2dp</item>
+        <item name="footerIndicatorStyle">underline</item>
+        <item name="android:textColor">#FFffff</item>
+        <item name="selectedColor">#FFffff</item>
+        <item name="selectedBold">true</item>
+    </style>
+
+    <style name="CustomLinePageIndicator">
+        <item name="strokeWidth">2dp</item>
+        <item name="lineWidth">30dp</item>
+        <item name="unselectedColor">#FFffff</item>
+        <item name="selectedColor">#FF880000</item>
+    </style>
+
+    <!--<style name="RatingBar" parent="Theme.AppCompat">-->
+    <!--<item name="colorControlNormal">#A69D62</item>-->
+    <!--<item name="colorControlActivated">#D3D3D3</item>-->
+    <!--</style>-->
+
+    <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:background">@color/grayStrip_bg</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:divider">@color/white</item>
+        <item name="android:state_expanded">true</item>
+        <item name="android:dividerPadding">10dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+        <item name="android:fontFamily">@string/GREEK_TEXTVIEW_FONT</item>
+    </style>
+
+    <style name="custom_spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gradient_spinner_white</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#DFFFFFFF</item>
+    </style>
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="customTypeFace">DaxOT.ttf</item>
+        <item name="android:fontFamily">@string/GREEK_TEXTVIEW_FONT</item>
+    </style>
+
+    <style name="CustomUnderlinePageIndicator">
+        <item name="selectedColor">#FFCC0000</item>
+        <item name="android:background">#FFCCCCCC</item>
+        <item name="fadeLength">1000</item>
+        <item name="fadeDelay">1000</item>
+    </style>
+
+    <style name="ButtonSelector">
+        <item name="android:background">@drawable/button_arcadia</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+
+
+    </style>
+
+    <style name="ButtonSelector2">
+        <item name="android:background">@drawable/button_arcadia</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+
+
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_drawable</item>
+    </style>
+
+    <style name="SpinnerSelector">
+        <!--  <item name="android:background">@drawable/nse_arrow_spinner</item>-->
+        <item name="android:background">@drawable/gradient_spinner_white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:dropDownSelector">@android:color/darker_gray</item>
+        <item name="android:popupBackground">@drawable/ic_custom_box</item>
+        <item name="android:dropDownVerticalOffset">-2dip</item>
+        <item name="android:dropDownHorizontalOffset">0dip</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:singleLineTitle">true</item>
+        <item name="customTypeFace">DaxOT.ttf</item>
+        <!--<item name="android:fontFamily">@font/daxot</item>-->
+        <!--<item name="android:paddingLeft">1dp</item>-->
+        <item name="android:spinnerMode" tools:targetApi="honeycomb">dropdown</item>
+    </style>
+
+    <declare-styleable name="HorizontalBarView">
+        <attr name="bar_emptyColor" format="color"/>
+        <attr name="bar_fillColor" format="color"/>
+        <attr name="bar_emptyTextColor" format="color"/>
+        <attr name="bar_fillTextColor" format="color"/>
+        <attr name="bar_textSize" format="dimension"/>
+        <attr name="bar_text" format="string"/>
+        <attr name="bar_textPadding" format="dimension"/>
+        <attr name="bar_fillPercentage" format="float"/>
+        <attr name="bar_fontPath" format="string"/>
+    </declare-styleable>
+
+    <style name="SpinnerSelector1">
+        <!--<item name="android:background">@drawable/nse_arrow_spinner</item>-->
+        <item name="android:background">@drawable/gradient_spinner_black</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:dropDownSelector">@color/secondaryBackground</item>
+        <item name="android:popupBackground">@drawable/ic_custom_box</item>
+        <item name="android:dropDownVerticalOffset">-2dip</item>
+        <item name="android:dropDownHorizontalOffset">0dip</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:singleLineTitle">true</item>
+        <item name="customTypeFace">DaxOT.ttf</item>
+        <!--<item name="android:fontFamily">@font/daxot</item>-->
+        <!--<item name="android:paddingLeft">1dp</item>-->
+        <item name="android:spinnerMode" tools:targetApi="honeycomb">dropdown</item>
+    </style>
+
+    <style name="BoldStyle">
+        <item name="customTypeFace">Roboto-Black.ttf</item>
+    </style>
+
+    <style name="RuppeeStyle">
+        <item name="customTypeFace">Rupee_Foradian.ttf</item>
+    </style>
+
+    <style name="ActionBar" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ActionBar.Head">
+        <!--<item name="android:textSize">@dimen/headTextSize</item>-->
+    </style>
+
+
+    <style name="ActionBar.SubHead">
+        <item name="android:textSize">@dimen/subHeadTextSize</item>
+        <item name="android:textColor">@color/alternateTextColor</item>
+    </style>
+
+    <style name="SpecialText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PopupWindowAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:popupBackground">@drawable/base_one</item>
+        <item name="android:spinnerMode" tools:targetApi="honeycomb">dropdown</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/backgroundColorWhite</item>
+        <item name="customTypeFace">font/DaxOT.ttf</item>
+        <item name="editTextColor">@color/bajaj_black</item>
+    </style>
+
+    <style name="InstantAutoComplete" parent="android:style/TextAppearance">
+        <item name="android:fontFamily">@font/daxot</item>
+
+
+    </style>
+
+
+    <style name="Dialog.Theme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/common_red_bg</item>
+        <item name="customTypeFace">DaxOT.ttf</item>
+
+    </style>
+
+    <!--<style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="customTypeFace">Roboto-Regular.ttf</item>
+        <item name="customTypeFace">Calibri.ttf</item>
+    </style>-->
+
+    <attr name="bottom_sheet_bg_color" format="color" />
+
+    <attr name="bottom_sheet_title_text_appearance" format="reference" />
+
+    <attr name="bottom_sheet_list_text_appearance" format="reference" />
+
+
+    <attr name="bottom_sheet_grid_text_appearance" format="reference" />
+
+    <attr name="bottom_sheet_message_text_appearance" format="reference" />
+
+    <attr name="bottom_sheet_message_title_text_appearance" format="reference" />
+
+    <attr name="bottom_sheet_button_text_appearance" format="reference" />
+
+    <!--ActionBar Styling-->
+    <attr name="bottom_sheet_item_icon_color" format="color" />
+
+    <attr name="bottom_sheet_grid_spacing" format="dimension" />
+
+    <attr name="bottom_sheet_grid_bottom_padding" format="dimension" />
+
+    <attr name="bottom_sheet_grid_top_padding" format="dimension" />
+
+    <attr name="bottom_sheet_selector" format="reference" />
+
+    <attr name="bottom_sheet_column_count" format="integer" />
+
+
+    <dimen name="seek_bar_thickness">4dp</dimen>
+
+    <dimen name="seek_bar_thumb_size">20dp</dimen>
+
+</resources>

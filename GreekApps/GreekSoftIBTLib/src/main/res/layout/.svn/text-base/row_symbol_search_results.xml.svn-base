@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/common_red_bg"/>
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/symbolName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_weight="2"
+        android:gravity="start"
+        android:maxLines="2"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="normal"/>
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/exchangeName"
+        style="@style/BoldStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

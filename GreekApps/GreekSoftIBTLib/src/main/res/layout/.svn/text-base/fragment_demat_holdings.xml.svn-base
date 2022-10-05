@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical">
+    <com.acumengroup.pagersliderlib.PagerSlidingTabStrip
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/demat_strip"
+        app:pstsIndicatorColor="@color/white"
+        app:pstsIndicatorHeight="@dimen/tabIndicatorHeight"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="false"
+        app:pstsUnderlineColor="@color/common_red_bg"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        &lt;!&ndash;start&ndash;&gt;
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <bfsl.GreekTextView
+                    android:id="@+id/holdingValuetxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="Holding Value :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <bfsl.GreekTextView
+                    android:id="@+id/holding_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="00.00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <bfsl.GreekTextView
+                    android:id="@+id/CurrentValueTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="Current Value :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <bfsl.GreekTextView
+                    android:id="@+id/curr_holding_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="00.00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            &lt;!&ndash; <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <bfsl.GreekTextView
+                     android:id="@+id/dayMTMTxt"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:paddingBottom="2dp"
+                     android:paddingTop="2dp"
+                     android:text="Day MTM :"
+                     android:textColor="@color/white"
+                     android:textSize="13sp"
+                     android:visibility="visible" />
+
+                 <bfsl.GreekTextView
+                     android:id="@+id/dayMTM"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.5"
+                     android:paddingBottom="2dp"
+                     android:paddingTop="2dp"
+                     android:textColor="@color/white"
+                     android:textSize="13sp"
+                     android:visibility="visible" />
+             </LinearLayout>&ndash;&gt;
+
+        </LinearLayout>
+
+        &lt;!&ndash;    <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="0.01"
+                android:background="@color/black"
+                android:orientation="vertical" />&ndash;&gt;
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <bfsl.GreekTextView
+                    android:id="@+id/dayMTMTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="Holding MTM :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <bfsl.GreekTextView
+                    android:id="@+id/holding_MTM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:text="MTM"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            &lt;!&ndash;  <LinearLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:orientation="horizontal">
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/booked_txt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="Booked"
+                      android:textColor="@color/white"
+                      android:textSize="12sp" />
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/bookedDayTxt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="0.6"
+                      android:gravity="center"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="00.00"
+                      android:textColor="@color/white"
+                      android:textSize="12sp" />
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/bookedDayBFTxt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="00.00"
+                      android:textColor="@color/white"
+                      android:textSize="12sp" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:orientation="horizontal">
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/provisional_txt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="Provisional"
+                      android:textColor="@color/white"
+                      android:textSize="12sp" />
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/profDayTxt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="0.6"
+                      android:gravity="center"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="00.00"
+                      android:textColor="@color/white"
+                      android:textSize="12sp" />
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/profDayBFTxt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="00.00"
+                      android:textColor="@color/white"
+                      android:textSize="12sp" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:orientation="horizontal">
+
+                  <bfsl.GreekTextView
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="Total"
+                      android:textColor="@color/common_red_bg"
+                      android:textSize="12sp" />
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/totalDayTxt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="0.6"
+                      android:gravity="center"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="00.00"
+                      android:textColor="@color/common_red_bg"
+                      android:textSize="12sp" />
+
+                  <bfsl.GreekTextView
+                      android:id="@+id/totalDayBFTxt"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:paddingBottom="2dp"
+                      android:paddingTop="2dp"
+                      android:text="0.00"
+                      android:textColor="@color/common_red_bg"
+                      android:textSize="12sp" />
+              </LinearLayout>&ndash;&gt;
+
+            &lt;!&ndash;end&ndash;&gt;
+        </LinearLayout>
+
+
+    </LinearLayout>-->
+
+    <!--<ViewFlipper
+        android:id="@+id/viewFlipper2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/black"
+        android:orientation="vertical" />-->
+
+
+   <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/include_dematholding_header"/>
+
+        <include
+            layout="@layout/include_error_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refreshList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/positionsListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@null"
+                    android:dividerHeight="0.7dp"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <include
+                layout="@layout/include_error_msg"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/common_red_bg">
+        <arcadiaiew.GreekTextView
+            android:id="@+id/symbolText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+            android:text="Symbol"/>
+        <arcadiaiew.GreekTextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Holding Qty"/>
+        <arcadiaiew.GreekTextView
+            android:id="@+id/ltpText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Ltp"/>
+        <arcadiaiew.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Value"/>
+        <arcadiaiew.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="AvgPrice"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/watchlist_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+    <arcadiaiew.GreekTextView
+        android:id="@+id/errorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/error_msg_border"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="No data available"
+        android:visibility="gone"/>-->
+
+</LinearLayout>

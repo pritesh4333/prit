@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageHeaderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    android:layout_gravity="center"
+    android:background="@color/black"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_img"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_3sdp"
+        android:src="@drawable/ic_person_white_24dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/user_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="USERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAME"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp">
+
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/pageHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="UCC CODE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp">
+
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

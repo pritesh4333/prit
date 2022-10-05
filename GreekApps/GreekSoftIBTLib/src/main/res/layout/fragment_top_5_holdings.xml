@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_header_top5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/market_heder_color"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Company Name"
+            android:textColor="@color/market_grey_text" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Market Value(\u20B9 Cr.)"
+            android:textColor="@color/market_grey_text" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/tvRandom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Hold %"
+            android:textColor="@color/market_grey_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/txt_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Holding"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/allocationTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true" />
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_top5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/transparent"
+        android:visibility="visible" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/include_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>

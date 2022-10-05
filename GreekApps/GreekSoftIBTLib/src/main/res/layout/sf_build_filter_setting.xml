@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/setting_layout"
+    android:background="@color/bajaj_black">
+    <LinearLayout
+        android:id="@+id/setting_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_gray"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        >
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/strategy__filter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting Strategy Filter "
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/popup_close"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_close_white_24dp" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bajaj_gray"></View>
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/sf_menu_builder_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Builder Filter"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:textSize="15sp" />
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/sf_new_portfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Portfolio"
+        android:layout_marginLeft="10dp"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/sf_delete_portfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Portfolio"
+        android:layout_marginLeft="10dp"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/sf_column_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Column Profile"
+        android:layout_marginLeft="10dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/sf_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:layout_marginLeft="10dp"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

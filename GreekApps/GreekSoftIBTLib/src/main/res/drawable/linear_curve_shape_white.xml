@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <item android:drawable="@drawable/white_theme_scrip_bg">
+
+        <shape >
+            <corners android:radius="35dp"/>
+            <stroke android:width="5dp" android:color="@color/common_red_bg"></stroke>
+            <gradient android:endColor="@color/black" android:startColor="@color/black"/>
+        </shape>
+
+    </item>
+</layer-list>

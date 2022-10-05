@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select server you want to connect"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        />
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/urlinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter url"
+            android:text="https://apmosys.greeksoft.in"
+            android:textColorHint="@color/gray_border">
+
+        </EditText>
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:layout_gravity="center"
+            android:background="@color/gray_border"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Submit" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tester_secure"
+        android:background="@color/gray_border"
+        android:textColor="@color/black"
+         android:textSize="@dimen/_12sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Tester Secure \n https://tester.greeksoft.in" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tester_non_secure"
+        android:background="@color/gray_border"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Tester Non Secure \n http://tester.greeksoft.in" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/developergreeksoftin"
+        android:background="@color/gray_border"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Developer Secure \n https://developer.greeksoft.in" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flutter_secure"
+            android:background="@color/gray_border"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Flutter Secure \n https://flutter.greeksoft.in:3000" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/developer_non_secure"
+        android:background="@color/gray_border"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Developer Non Secure \n http://developer.greeksoft.in" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/satendra_non_secure"
+            android:background="@color/gray_border"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Satendra non Secure \n http://192.168.209.116:3000" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/satendra_secure"
+            android:background="@color/gray_border"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Satendra  Secure \n https://192.168.209.116:3000" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fiftin_server"
+            android:background="@color/gray_border"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="http://192.168.209.15:3000" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seventeenfour_server"
+            android:background="@color/gray_border"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="http://182.76.70.74:3000" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dynu_secure"
+        android:background="@color/gray_border"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Dynu Secure \n https://greeksoft.dynu.com" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/philips_secure"
+        android:background="@color/gray_border"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Philips  Live \n https://login.tradeongo.com" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</LinearLayout>

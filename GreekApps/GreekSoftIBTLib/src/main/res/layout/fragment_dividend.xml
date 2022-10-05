@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_header_dividend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/market_heder_color"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Company Name"
+            android:textColor="@color/market_grey_text"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Record Date"
+            android:textColor="@color/market_grey_text"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Dividend (\u20B9/unit)"
+            android:textColor="@color/market_grey_text"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_dividend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+    <include
+        layout="@layout/include_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</LinearLayout>

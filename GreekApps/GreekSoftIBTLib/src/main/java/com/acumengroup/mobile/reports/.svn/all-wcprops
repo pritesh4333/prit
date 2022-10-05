@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 262
+/svn/Zeus/!svn/ver/15734/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports
+END
+EdisMarginPledgeReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/Zeus/!svn/ver/14306/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/EdisMarginPledgeReport.java
+END
+DematDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 280
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/DematDetails.java
+END
+EdisTransactionDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/EdisTransactionDetails.java
+END
+BitWiseComparasion.java
+K 25
+svn:wc:ra_dav:version-url
+V 286
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/BitWiseComparasion.java
+END
+EdisTpinFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/EdisTpinFragment.java
+END
+HoldingReportFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/HoldingReportFragment.java
+END
+CostReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 278
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/CostReport.java
+END
+TransactionReportFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 293
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/TransactionReportFragment.java
+END
+FpiDerivativesFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FpiDerivativesFragment.java
+END
+TransactionFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/TransactionFragment.java
+END
+OpenPositionFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/OpenPositionFragment.java
+END
+OrderBookDetailsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/OrderBookDetailsFragment.java
+END
+SaudaFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 281
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/SaudaFragment.java
+END
+PLDetailsNetPositionsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 297
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/PLDetailsNetPositionsFragment.java
+END
+FundTransfer_payout_fragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 296
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FundTransfer_payout_fragment.java
+END
+FOProfitLossReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 286
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FOProfitLossReport.java
+END
+NewsDisplayFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/NewsDisplayFragment.java
+END
+demat_tabs_fragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/demat_tabs_fragment.java
+END
+BitWiseOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 284
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/BitWiseOperation.java
+END
+EdisDashboardReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14362/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/EdisDashboardReport.java
+END
+InterestReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 282
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/InterestReport.java
+END
+AgeingHoldingReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/AgeingHoldingReport.java
+END
+MFOrderBookFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/MFOrderBookFragment.java
+END
+PortfolioReportFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/PortfolioReportFragment.java
+END
+CombinedLedgerReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/CombinedLedgerReport.java
+END
+NetPositionFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/NetPositionFragment.java
+END
+TestingRazopayActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/Zeus/!svn/ver/15734/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/TestingRazopayActivity.java
+END
+MarginFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 282
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/MarginFragment.java
+END
+PLReportDetailsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/PLReportDetailsFragment.java
+END
+MFOrderBookDetailsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 294
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/MFOrderBookDetailsFragment.java
+END
+TradeBookDetailsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/TradeBookDetailsFragment.java
+END
+BankDetailsScreenFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 293
+/svn/Zeus/!svn/ver/14164/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/BankDetailsScreenFragment.java
+END
+FundDisplayFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 287
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FundDisplayFragment.java
+END
+PositionOrderDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/PositionOrderDetails.java
+END
+CustomNetpositionDialogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 299
+/svn/Zeus/!svn/ver/14394/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/CustomNetpositionDialogFragment.java
+END
+MarginPledgeTransactionDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 298
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/MarginPledgeTransactionDetails.java
+END
+OrderBookFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 285
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/OrderBookFragment.java
+END
+FpiInvestmentFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FpiInvestmentFragment.java
+END
+FiiDiiActivitiesTabsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 296
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FiiDiiActivitiesTabsFragment.java
+END
+PAndLFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 281
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/PAndLFragment.java
+END
+DematHoldingFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/DematHoldingFragment.java
+END
+FundTransferFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 288
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FundTransferFragment.java
+END
+CumulativePositionFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 294
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/CumulativePositionFragment.java
+END
+FundTransferDetailsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 295
+/svn/Zeus/!svn/ver/14164/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FundTransferDetailsFragment.java
+END
+LoanAgainstReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 285
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/LoanAgainstReport.java
+END
+LedgerDetailsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/LedgerDetailsFragment.java
+END
+RecommDisplayFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 289
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/RecommDisplayFragment.java
+END
+FundTransfer_tabs_Fragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 294
+/svn/Zeus/!svn/ver/14164/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FundTransfer_tabs_Fragment.java
+END
+FinancialStatementFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 294
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/FinancialStatementFragment.java
+END
+DematHoldingFragmentNew.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/DematHoldingFragmentNew.java
+END
+TradeBookFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 285
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/reports/TradeBookFragment.java
+END

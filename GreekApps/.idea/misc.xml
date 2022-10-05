@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/Cliqtrade/src/main/res/layout/activity_url_selection.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout-v14/alert_quick_five_actions.xml" value="0.1625" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout-v14/create_watchlist_layout.xml" value="0.1" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout-v14/fragment_edis_dashboard_report2.xml" value="0.17291666666666666" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout-v14/fragment_edis_transaction_details.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout-v14/fragment_positions_tab.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout-v14/row_positions_layout.xml" value="0.33" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/alert_fragment.xml" value="0.18802083333333333" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/alert_validate_otp.xml" value="0.190625" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/authorizepopup_layout.xml" value="0.33" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/authorizetrancection_layout.xml" value="0.25" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/bottom_sheet_layout.xml" value="0.1265625" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/custom_productchg_alert.xml" value="0.1671875" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/custom_spinner.xml" value="0.12760416666666666" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_dashboard_tab.xml" value="0.25" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_holding_tab.xml" value="0.2171875" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_netposition_bottom_layout.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_news.xml" value="0.10989583333333333" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_news_tab.xml" value="0.13645833333333332" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_order_preview.xml" value="0.33" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_pending_tab.xml" value="0.2171875" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_position_order_details.xml" value="0.25677083333333334" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_positions.xml" value="0.12760416666666666" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_sfscan.xml" value="0.15572916666666667" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_symbolsearch.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/fragment_watchlist_new.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/pager_fragment_portfolio.xml" value="0.1" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/pager_fragment_reports_news.xml" value="0.10989583333333333" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/poapopup_layout.xml" value="0.11614583333333334" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/row_holding_tab.xml" value="0.33" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/row_watch_list.xml" value="0.25677083333333334" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/sf_build_accounting_fragment.xml" value="0.5" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/sf_build_report_fragment.xml" value="0.5" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/GreekSoftIBTLib/src/main/res/layout/sf_build_var_fragment.xml" value="0.5" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/Mandot/src/main/res/layout/activity_url_selection.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/Mandot/src/main/res/layout/mandot_login_screen.xml" value="0.25677083333333334" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/app/src/main/res/layout/activity_url_selection.xml" value="0.33" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/app/src/main/res/layout/vishwas_login.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/app/src/main/res/layout/vishwas_splash_.xml" value="0.13385416666666666" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/philips/src/main/res/layout/activity_url_selection.xml" value="0.2609375" />
+        <entry key="..\:/F Drive/AndroidWorkSpace/GreekApp_bajaj/GreekApps/philips/src/main/res/layout/philips_login_screen.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

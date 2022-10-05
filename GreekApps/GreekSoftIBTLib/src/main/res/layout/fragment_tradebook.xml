@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fno_SpinnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="3dp">
+
+        <Spinner
+            android:id="@+id/optionsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="10dp" />
+
+        <Spinner
+            android:id="@+id/expirySpinner"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <include layout="@layout/row_tradebook_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/tradeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/fnoListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/showmsgLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="You do not have any trades for today"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</LinearLayout>

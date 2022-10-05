@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/las_bg"
+    android:background="@color/bajaj_black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/las_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/bajaj_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/las_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="LOAN AGAINST REPORT"
+            android:textColor="@color/white" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/txt_ttlPNL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:textColor="@color/date_color" />
+
+
+        <ImageButton
+            android:id="@+id/sort_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_filter_white"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.acumengroup.columnsliderlib.AdaptiveTableLayout
+            android:id="@+id/tableLayoutview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cellMargin="1dp"
+            app:dragAndDropEnabled="true"
+            app:fixedHeaders="true"
+            app:solidRowHeaders="true" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No Data Available"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

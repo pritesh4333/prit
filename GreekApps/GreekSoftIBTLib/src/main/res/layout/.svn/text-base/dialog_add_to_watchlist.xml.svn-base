@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+    android:id="@+id/addWatchlistPopupLayout"
+              android:background="@color/light_black"
+              android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/addWatchlistHeader"
+        style="@style/BoldStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0.8"
+        android:text="Select Group"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/grpSpinner"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"/>
+</LinearLayout>
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+       android:paddingRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <com.acumengroup.ui.button.GreekButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="110dp"
+            android:layout_height="34dp"
+            android:text="Ok"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/button_ok_transc"
+            android:background="@drawable/ripple_effect"/>
+
+        <com.acumengroup.ui.button.GreekButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="110dp"
+            android:layout_height="34dp"
+            android:text="Cancel"
+            android:layout_weight="1"
+            android:layout_marginLeft="18dp"
+            android:id="@+id/button_cancel_transc"
+            android:background="@drawable/ripple_effect"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_effect_view"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_playlist_add_black_24dp" />
+
+            <Spinner
+                android:id="@+id/groupSpinner"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+
+        <com.acumengroup.ui.edittext.GreekEditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_search_gray_24dp"
+            android:drawablePadding="10dp"
+            android:focusable="false"
+            android:hint="@string/WatchList_hint"
+            android:padding="10dp"
+            android:textColorHint="@color/gray_border" />
+
+        <ImageView
+            android:id="@+id/img_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_filter" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_layout"
+        android:background="@color/bajaj_gray"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.button.GreekButton
+            android:id="@+id/btn_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/single_line_border_bajaj"
+            android:gravity="center"
+            android:text="Create Watchlist"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.acumengroup.ui.edittext.GreekEditText
+            android:id="@+id/edt_searchtxt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="1.5"
+            android:background="@drawable/single_line_w_border"
+            android:drawableRight="@drawable/ic_search_gray_24dp"
+            android:drawablePadding="@dimen/_2sdp"
+            android:focusable="false"
+            android:hint="@string/WatchList_hint"
+            android:padding="@dimen/_5sdp"
+            android:textColorHint="@color/grayStrip_bg" />
+
+        <ImageView
+            android:id="@+id/img_btn"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/ic_filter_white"
+             />
+
+
+    </LinearLayout>
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_1sdp"-->
+<!--        android:paddingTop="@dimen/_2sdp"-->
+<!--        android:paddingBottom="@dimen/_2sdp"-->
+<!--        android:background="@color/bajaj_gray"></View>-->
+
+    <LinearLayout
+        android:id="@+id/ll_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="7">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect_view"
+            app:srcCompat="@drawable/ic_playlist_add_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect_view"
+            app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2.5" />
+
+        <Spinner
+            android:id="@+id/col1Spinner"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_red_bg"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/symbolText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+            android:text="Symbol"
+            android:textColor="@color/white" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/ltpText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="LTP"
+            android:textColor="@color/white" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/changeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Change"
+            android:textColor="@color/white" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/perchangeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="% Change"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+<!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--            android:id="@+id/refreshList"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/watchlist_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bajaj_black" />
+
+            <!--<com.yydcdut.sdlv.SlideAndDragListView
+                android:id="@+id/watchlist_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@color/transparent"
+                android:divider="@android:color/black"
+                android:dividerHeight="0.5dip">
+
+            </com.yydcdut.sdlv.SlideAndDragListView>-->
+
+<!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+        <include
+            layout="@layout/include_error_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

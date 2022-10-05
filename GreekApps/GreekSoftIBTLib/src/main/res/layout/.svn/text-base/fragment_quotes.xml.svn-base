@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable">
+
+    <LinearLayout
+        android:id="@+id/parentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/exchangeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/exchange"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/asset_type"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizonscroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left">
+
+                <RadioGroup
+                    android:id="@+id/btnGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bestaskbid_new"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="Market"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/btnBuy"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="Buy"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/btnSell"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="Sell"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/btnChart"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="@string/POPUP_SCRIPT_CHARTS"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/watchlist_quote"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="Watchlist"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/info_quote"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="Info"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/news_quote"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/ripple_effect"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="News"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:weightSum="3"
+       >
+        <Button
+            android:id="@+id/btn_mkt_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:layout_marginTop="2dp"
+            android:text="Market Depth"/>
+
+
+        <Button
+            android:id="@+id/btn_trade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_margin="2dp"
+            android:text="Trade"/>
+
+    <Button
+        android:id="@+id/btn_opt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:layout_marginTop="2dp"
+            android:text=":"/>
+
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/optionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/callputSpinner"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/expirySpinner"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/strikePriceSpinner"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/bestaskbid"
+                customTypeFace="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/QT_BEST5_BTN" />
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/tradeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="Order" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parentHeader">
+
+        <LinearLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/quoteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                <include layout="@layout/include_quote_ticker" />
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <arcadiaiew.GreekTextView
+                            android:id="@+id/bid_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="false"
+                            android:enabled="false"
+                            android:text="@string/QT_BID_TXT"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"/>
+
+                        <arcadiaiew.GreekTextView
+                            android:id="@+id/bid_value"
+                            style="@style/BoldStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/market_grey"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="0.0"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <arcadiaiew.GreekTextView
+                            android:id="@+id/ask_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="false"
+                            android:enabled="false"
+                            android:singleLine="true"
+                            android:text="@string/QT_ASK_TXT"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"/>
+
+                        <arcadiaiew.GreekTextView
+                            android:id="@+id/ask_value"
+                            style="@style/BoldStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/market_grey"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="0.0"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_investment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="vertical">
+
+                        &lt;!&ndash;<arcadiaiew.GreekTextView
+                            android:id="@+id/change_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="false"
+                            android:enabled="false"
+                            android:singleLine="true"
+                            android:text="12+Month Investment"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"/>
+
+                        <arcadiaiew.GreekTextView
+                            android:id="@+id/target_value"
+                            style="@style/BoldStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/market_grey"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="0.0"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>&ndash;&gt;
+                    </LinearLayout>
+                </LinearLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/market_grey" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/quoteList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/listLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@android:color/transparent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/listLeft"
+                    android:layout_alignParentBottom="true"
+                    android:background="#8b8b8b" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/listLeft"
+                android:layout_alignParentBottom="true"
+                android:background="#8b8b8b" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/oi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Open Interest"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </com.acumengroup.ui.textview.GreekTextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/listLeft"
+                android:layout_alignParentBottom="true"
+                android:background="#8b8b8b" />
+
+            <RelativeLayout
+                android:id="@+id/chartSection"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <LinearLayout
+                    android:id="@+id/chart_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/tapToExpand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="false"
+                    android:gravity="bottom"
+                    android:padding="2dp"
+                    android:textSize="10sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarChart"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/newsSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/tvNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#e1e1e1"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="Top News"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ListView
+                    android:id="@+id/newsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNews"
+                    android:listSelector="@android:color/transparent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarNews"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/include_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/parentHeader" />
+
+</RelativeLayout>

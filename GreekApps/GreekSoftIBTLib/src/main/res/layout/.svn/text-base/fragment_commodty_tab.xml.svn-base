@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/bajaj_black"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".BottomTabScreens.OverviewTabFragment">
+
+
+    <LinearLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/linearleft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_nifty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="NA"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_nifty_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_nifty_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="0.00(0.00%)"
+                    android:textColor="@color/red_400"
+                    android:textSize="11sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="@color/white"
+                    android:weightSum="2">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/txt_day_high_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1.2"
+                        android:gravity="left"
+                        android:text="Day's High"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+
+                    <com.acumengroup.ui.textview.GreekTextView
+
+                        android:id="@+id/txt_nifty_day_high"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.8"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/txt_day_low_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1.2"
+                        android:text="Day's Low"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+
+                    <com.acumengroup.ui.textview.GreekTextView
+                        android:id="@+id/txt_nifty_day_low"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.8"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_sensex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="NA"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_sensex_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_sensex_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="0.00(0.00%)"
+                    android:textColor="@color/green_400"
+                    android:textSize="11sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColor="@color/white">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_day_high_name_sensex"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1.2"
+                    android:gravity="left"
+                    android:text="Day's High"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_sensex_day_high"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.8"
+                    android:gravity="right"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_day_low_name_sensex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1.2"
+                    android:text="Day's Low"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_sensex_daylow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.8"
+                    android:gravity="right"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_black"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/linera1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_first_symbol_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="NA"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_frst_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_first_symbol_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+
+                    android:id="@+id/txt_first_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_frst_value"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="0.00(0.00%)"
+                    android:textColor="@color/red_400"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_first_edit"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="right|top"
+                android:background="@drawable/ic_edit_white_24dp"
+                android:gravity="right|top"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linera2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingRight="10dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_snd_symbol_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="NA"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_snd_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_snd_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0.00(0.00%)"
+                    android:textColor="@color/red_400"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/img_snd_edit"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="right|top"
+                android:background="@drawable/ic_edit_white_24dp"
+                android:gravity="right|top"
+                android:padding="5dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linera3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingRight="10dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_thrd_symbol_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="NA"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_thrd_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txt_thrd_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0.00(0.00%)"
+                    android:textColor="@color/green_400"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_thrd_edit"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="right|top"
+                android:background="@drawable/ic_edit_white_24dp"
+                android:gravity="right|top"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/marekt_movers_spinn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/marekt_movers_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.7"
+            android:paddingLeft="5dp"
+            android:text="Market Statistics"
+            android:textColor="@color/white">
+
+        </com.acumengroup.ui.textview.GreekTextView>
+
+        <Spinner
+            android:id="@+id/market_statistic_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_weight="0.3">
+
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/overvie_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:cacheColorHint="@color/market_depth_dark"
+            android:childDivider="#000"
+            android:childIndicatorLeft="16dp"
+            android:divider="#FFFF"
+            android:dividerHeight="1dp"
+            android:groupIndicator="@null"
+            android:scrollbars="vertical" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/txt_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="No Data"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

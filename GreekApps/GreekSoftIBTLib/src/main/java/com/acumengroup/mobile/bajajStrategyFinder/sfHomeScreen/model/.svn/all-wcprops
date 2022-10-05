@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 293
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfHomeScreen/model
+END
+DayOrderRequest.kt
+K 25
+svn:wc:ra_dav:version-url
+V 312
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfHomeScreen/model/DayOrderRequest.kt
+END
+ScanPostRequest.kt
+K 25
+svn:wc:ra_dav:version-url
+V 312
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfHomeScreen/model/ScanPostRequest.kt
+END
+StrategyName.kt
+K 25
+svn:wc:ra_dav:version-url
+V 309
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfHomeScreen/model/StrategyName.kt
+END
+SymbolModel.kt
+K 25
+svn:wc:ra_dav:version-url
+V 308
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfHomeScreen/model/SymbolModel.kt
+END
+OptionFilterRequest.kt
+K 25
+svn:wc:ra_dav:version-url
+V 316
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/bajajStrategyFinder/sfHomeScreen/model/OptionFilterRequest.kt
+END

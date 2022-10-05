@@ -1,0 +1,77 @@
+<LinearLayout
+    android:id="@+id/orderBookListHeader"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bajaj_blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row11"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textColor="@color/white"
+            android:text="Symbol" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row12"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:text="Alert Type"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row13"
+            style="@style/ListItem.Head.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:text="Direction"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row21"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_weight="3"
+            android:text="Exchange"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row22"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:text="Range"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/row23"
+            style="@style/ListItem.SubHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:text="Status"/>
+    </LinearLayout>
+
+</LinearLayout>

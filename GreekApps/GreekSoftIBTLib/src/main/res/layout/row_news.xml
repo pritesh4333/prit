@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/login_button_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/dateUpper"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"/>
+
+
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/dateLower"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dateUpper"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/newsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/dateUpper"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/newsdetailTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/dateLower"
+            android:layout_below="@+id/newsTxt"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            >
+
+
+
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/newsTxt"
+            android:drawableLeft="@drawable/ic_access_time_black_24dp"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

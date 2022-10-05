@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/totalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="5dp">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/lastText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textColor="@color/white" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/changeTextchart"
+                style="@style/BoldStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="10dp" />
+        </LinearLayout>
+
+
+
+        <RadioGroup
+            android:id="@+id/resolutionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn1M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/trade_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="1M"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/btn5M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/trade_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="5M"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/btn10M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/trade_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="10M"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/btn15M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/trade_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="15M"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/btn20M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/trade_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="20M"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RadioGroup>
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No Chart Data Available"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <com.acumengroup.greekmain.chart.scroll.ChartInterceptScrollView
+            android:id="@+id/scrollChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/chartLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </com.acumengroup.greekmain.chart.scroll.ChartInterceptScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:padding="5dp">
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/buy_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="BUY"
+                android:textColor="@color/white" />
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/sell_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="SELL"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible"
+            android:layout_marginRight="5dp"
+            android:gravity="center">
+
+            <com.acumengroup.ui.button.GreekButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Interval"
+                android:paddingRight="5dp"
+                android:background="@color/transparent"
+                android:paddingLeft="5dp"
+                android:visibility="gone"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/typesBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:background="@color/transparent"
+                android:src="@drawable/candle_chart_ic_w_30" />
+
+            <ImageButton
+                android:id="@+id/crossHairBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/pointer_inactive_ic_30" />
+            <ImageButton
+                android:id="@+id/rotateBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_fullscreen_black_24dp" />
+            <ImageButton
+                android:id="@+id/settingBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:srcCompat="@drawable/ic_settings_white_24dp" />
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/resolutionSpinner"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

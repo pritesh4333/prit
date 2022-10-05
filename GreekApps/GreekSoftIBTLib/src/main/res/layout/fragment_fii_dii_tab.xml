@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fifi_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bajaj_black"
+    android:orientation="vertical"
+    tools:context=".BottomTabScreens.FiiDiiTabFragment">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bajaj_blue"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_time"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_types"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/fiidii_List"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear"
+        android:visibility="gone" />
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BottomTabScreens.DerivativeTabFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/derivative_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bajaj_black"
+            android:cacheColorHint="@color/market_depth_dark"
+            android:childDivider="#000"
+            android:childIndicatorLeft="16dp"
+            android:divider="#FFFF"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:dividerHeight="1dp"
+            android:groupIndicator="@null"
+            android:scrollbars="vertical" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No Data Available"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

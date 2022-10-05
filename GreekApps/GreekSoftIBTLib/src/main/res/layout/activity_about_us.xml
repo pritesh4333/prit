@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bajaj_black"
+    android:id="@+id/parent_layout"
+    android:orientation="vertical">
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_us"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        android:text="About Us"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/white"
+  />
+
+    <LinearLayout
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="vertical">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/version_no_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="left"
+            android:padding="@dimen/_5sdp"
+            style="@android:style/TextAppearance.Small"
+            android:textColor="@color/white" />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/version_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

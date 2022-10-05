@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 266
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/ChatMessage
+END
+ChatAppMsgViewHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 292
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/ChatMessage/ChatAppMsgViewHolder.java
+END
+MessageListAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 290
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/ChatMessage/MessageListAdapter.java
+END
+ChatMessageFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 291
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/ChatMessage/ChatMessageFragment.java
+END
+ChatAppMsgDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 285
+/svn/Zeus/!svn/ver/14052/android_client/trunk/trunk_retail_mobile_011217_CommodityMargin/GreekApp_Algopan_IBT/GreekApplication_Bajaj_Live/GreekApp_Bajaj_Live_Optimization/GreekApps/GreekITBAppEncrypted/GreekSoftIBTLib/src/main/java/com/acumengroup/mobile/ChatMessage/ChatAppMsgDTO.java
+END

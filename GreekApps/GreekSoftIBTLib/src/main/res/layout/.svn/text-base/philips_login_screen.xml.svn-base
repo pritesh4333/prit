@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/customProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dip">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/progressTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_alignParentTop="true">
+
+
+            <ImageView
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:srcCompat="@drawable/vishwas_login_icon" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/single_line_border_orange">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardElevation="@dimen/_15sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ti_clientCode"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColorHint="@color/login_text_color"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.acumengroup.ui.edittext.GreekEditText
+                                    android:id="@+id/ed_clientCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/transparent_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/ic_person_white_24dp"
+                                    android:drawableLeft="@drawable/ic_person_white_24dp"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:hint="Client Code"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLength="10"
+                                    android:nextFocusDown="@+id/ed_clientPass"
+                                    android:paddingLeft="@dimen/_5sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="16sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ti_clientPass"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ti_clientCode"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColorHint="@color/login_text_color"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/ti_clientCode"
+                                app:passwordToggleEnabled="true"
+                                app:passwordToggleTint="@android:color/darker_gray">
+
+                                <com.acumengroup.ui.edittext.GreekEditText
+                                    android:id="@+id/ed_clientPass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:backgroundTint="@color/transparent_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:ems="10"
+                                    android:hint="Password"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPassword"
+                                    android:maxLength="12"
+                                    android:nextFocusRight="@id/ed_clientTPass"
+                                    android:nextFocusDown="@+id/ed_clientTPass"
+                                    android:paddingLeft="@dimen/_5sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:password="true"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="16sp" />
+
+                                <requestFocus />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ti_clientTPass"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ti_clientPass"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColorHint="@color/login_text_color"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/ti_clientPass"
+                                app:passwordToggleEnabled="true"
+                                app:passwordToggleTint="@android:color/darker_gray">
+
+                                <com.acumengroup.ui.edittext.GreekEditText
+                                    android:id="@+id/ed_clientTPass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:backgroundTint="@color/login_text_color"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:ems="10"
+                                    android:hint="Transaction Password"
+                                    android:maxLength="12"
+                                    android:paddingLeft="@dimen/_5sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:password="true"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="16sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.acumengroup.ui.textview.GreekTextView
+                                android:id="@+id/txtloginotp"
+                                style="@android:style/TextAppearance.Small"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ti_clientTPass"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:gravity="center_horizontal"
+                                android:text="Login with OTP"
+                                android:textColor="#042e6f"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/ti_clientTPass" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/btnLogin"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardView"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-25dp"
+                    android:background="@drawable/orange_trading_button_effect"
+                    android:gravity="center"
+                    android:padding="@dimen/_6sdp"
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txtdisclaimer"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Disclaimer *"
+                    android:textColor="#042e6f"
+                    android:visibility="visible" />
+
+                <com.acumengroup.ui.textview.GreekTextView
+                    android:id="@+id/txtForgotPass"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|end"
+                    android:layout_weight="1"
+                    android:gravity="right|end"
+                    android:text="Forgot Password?"
+                    android:textColor="#042e6f"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/txtOpenAcct"
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtForgotPass"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Don't have an Account?"
+                android:textColor="#404b6a"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/btnsignUp"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/navyblue_trading_button_effect"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Sign up"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
+
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/btn_GuestLogin"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/orange_border_trading_btn_effect"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Guest Login"
+                    android:textColor="#042e6f" />
+
+
+                <com.acumengroup.ui.button.GreekButton
+                    android:id="@+id/quicktourbtn"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/orange_border_trading_btn_effect"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Quick Tour"
+                    android:textColor="#042e6f" />
+
+            </LinearLayout>
+
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/txtbottom_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnsignUp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="1dp"
+                android:gravity="center"
+                android:text="SEBI Registratiopn No.:INZ000218931|BSE-(Member ID:6706)  NSE-(Member ID:90177)|Dp registration No: IN-DP-418-2019"
+                android:textColor="@color/transparent_black"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:id="@+id/txtbottom_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtbottom_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:gravity="center"
+                android:text="CDSL Dp No.:12088600,NSDL Dp No.:IN304300,AMFI registration No.: ARN-163403"
+                android:textColor="@color/transparent_black"
+                android:textSize="10sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

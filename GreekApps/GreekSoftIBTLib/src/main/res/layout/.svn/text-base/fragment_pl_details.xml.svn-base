@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_drawable"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:orientation="horizontal">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/symbolName"
+            style="@style/BoldStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+   <!-- <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/header11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="Profit/Loss"
+            android:textColor="@color/white"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/header12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Day&apos;s"
+            android:textColor="@color/white"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/header13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Day&apos;s + B/F*"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/column11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Booked"
+            />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/bookedDayTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/bookedDayBFTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/column12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Provisional"
+            />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/profDayTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/profDayBFTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/plDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/column13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="Total"
+            android:textColor="@color/common_red_bg"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/totalDayTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/totalDayBFTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/netQtyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="visible">
+
+        <com.acumengroup.ui.textview.GreekTextView
+            style="@style/BoldStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="My Avg Price"
+            android:textColor="@color/common_red_bg"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/netAvgQtyTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+        <com.acumengroup.ui.textview.GreekTextView
+            android:id="@+id/netAvgPriceTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+  <!--  </android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <com.acumengroup.ui.textview.GreekTextView
+        android:id="@+id/bottomTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:text="*B/F=Previous Day Position(s) Brought Forward"
+        android:textSize="13sp"/>
+
+</LinearLayout>

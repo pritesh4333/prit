@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alertBg"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drawable">
+
+
+        <LinearLayout
+            android:id="@+id/spinner_layout_outer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/exchange"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/filter"
+                    android:layout_width="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="35dp"
+                    android:visibility="visible"
+                    android:layout_weight="2"/>
+        </LinearLayout>
+                <include layout="@layout/include_header_alert"></include>
+</LinearLayout>
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshList"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/spinner_layout_outer"
+            android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listMarketEquity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/include_error_msg"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/flt_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_add_white_24dp"
+            app:backgroundTint="@color/common_red_bg"
+            app:rippleColor="@color/marketDepthGreyColor" />
+
+</RelativeLayout>

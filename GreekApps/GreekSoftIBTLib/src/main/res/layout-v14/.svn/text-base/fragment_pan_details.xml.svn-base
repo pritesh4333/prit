@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <com.acumengroup.ui.textview.GreekTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Pan Verification"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_first_pan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <!--<bfsl.GreekEditText
+                        android:id="@+id/ed_pan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ed_brokerId"
+                        android:layout_gravity="center"
+                        android:cursorVisible="true"
+                        android:drawablePadding="5dp"
+                        android:hint="Pan Number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />-->
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/ed_pan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:cursorVisible="true"
+                        android:hint="Pan Number *"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.acumengroup.ui.edittext.GreekEditText
+                        android:id="@+id/ed_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_date_range_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:drawableEnd="@drawable/ic_date_range_black_24dp"
+                        android:hint="Date of Birth"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:editable="false"
+                        android:textColor="@color/black" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+            <com.acumengroup.ui.button.GreekButton
+                android:id="@+id/btn_pan_nxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Next" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

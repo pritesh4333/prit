@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="CONFIG_NAMES">
+        <item>info</item>
+        <item>app</item>
+        <item>label</item>
+        <item>loginImage</item>
+    </string-array>
+
+</resources>
