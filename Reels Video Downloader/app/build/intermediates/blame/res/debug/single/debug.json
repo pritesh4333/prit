@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\menu_menushare.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\menu\\menushare.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_reelsiconn.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\mipmap-xhdpi\\reelsiconn.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_player.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\activity_player.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\share.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_downloadicon.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\downloadicon.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gall.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\gall.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_activity_main.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\home_activity_main.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_my_reels_list.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\my_reels_list.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_progress.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\progress.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_popup.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\popup.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_reels_list_data.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\reels_list_data.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_right.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\right.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dele.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\dele.png"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\layout_back_press_alert_layout.xml.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\layout\\back_press_alert_layout.xml"
+    },
+    {
+        "merged": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification.png.flat",
+        "source": "D:\\git_project_orignal\\prit\\Reels Video Downloader\\app\\src\\main\\res\\drawable\\notification.png"
+    }
+]
